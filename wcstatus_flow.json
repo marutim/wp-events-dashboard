@@ -1,0 +1,48 @@
+{
+ "source": "WordCamp Central wordcamp-status report (browser session)",
+ "period": "2026-01-01..2026-07-22",
+ "monthly": {
+  "2026-01": {
+   "newApps": 18,
+   "confirmed": 7,
+   "closed": 8,
+   "attrition": 6
+  },
+  "2026-02": {
+   "newApps": 19,
+   "confirmed": 11,
+   "closed": 5,
+   "attrition": 8
+  },
+  "2026-03": {
+   "newApps": 21,
+   "confirmed": 15,
+   "closed": 10,
+   "attrition": 12
+  },
+  "2026-04": {
+   "newApps": 17,
+   "confirmed": 14,
+   "closed": 7,
+   "attrition": 7
+  },
+  "2026-05": {
+   "newApps": 21,
+   "confirmed": 8,
+   "closed": 9,
+   "attrition": 3
+  },
+  "2026-06": {
+   "newApps": 16,
+   "confirmed": 8,
+   "closed": 8,
+   "attrition": 4
+  },
+  "2026-07": {
+   "newApps": 12,
+   "confirmed": 12,
+   "closed": 2,
+   "attrition": 0
+  }
+ }
+}

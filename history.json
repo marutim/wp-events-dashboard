@@ -1,0 +1,103 @@
+[
+ {
+  "date": "2026-04-28",
+  "eventsLast14": 3,
+  "eventsYTD_tuReported": 41,
+  "eventsScheduledRest": 24,
+  "eventsYTD": 46,
+  "_source": "Thursday Update archive (backfilled)"
+ },
+ {
+  "date": "2026-05-12",
+  "eventsLast14": 6,
+  "eventsYTD_tuReported": 47,
+  "eventsScheduledRest": 23,
+  "eventsYTD": 53,
+  "note": "TU also reported +56.67% vs same point 2025, and a 2025 full-year record of 103.",
+  "_source": "Thursday Update archive (backfilled)"
+ },
+ {
+  "date": "2026-06-09",
+  "eventsLast14": 4,
+  "eventsYTD_tuReported": 59,
+  "eventsScheduledRest": 22,
+  "eventsYTD": 63,
+  "_source": "Thursday Update archive (backfilled)"
+ },
+ {
+  "date": "2026-06-24",
+  "groups": 702,
+  "active": 422,
+  "dormant": 251,
+  "neverHosted": 29,
+  "met90d": 298,
+  "membershipsSum": 556895,
+  "officialMembers": 484204,
+  "officialCountries": 98,
+  "officialEvents": 54054,
+  "events90d": 729,
+  "lowRsvp90": 115,
+  "organizers": 2382,
+  "activeMembers90d": 23093,
+  "_source": "backfilled from the 2026-06-24 Meetup Pro CSV exports + Insights page (pre-API)"
+ },
+ {
+  "date": "2026-07-20",
+  "groups": 704,
+  "active": 415,
+  "dormant": 259,
+  "neverHosted": 30,
+  "met90d": 296,
+  "membershipsSum": 554959,
+  "officialMembers": 488901,
+  "officialCountries": 98,
+  "officialEvents": 54213,
+  "events90d": 695,
+  "lowRsvp90": 107,
+  "organizers": 2371,
+  "activeMembers90d": 22144,
+  "eventsLast14": 2,
+  "eventsYTD": 71,
+  "eventsScheduledRest": 34,
+  "eventsByTypeYTD": {
+   "WordCamp": 20,
+   "Campus Connect": 32,
+   "Student Club": 3,
+   "Other Event": 16
+  },
+  "eventsByTypeRest": {
+   "WordCamp": 21,
+   "Campus Connect": 10,
+   "DoAction": 1,
+   "Other Event": 2
+  },
+  "eventsPrevYearYTD": 46,
+  "eventsPrevYearFull": 102,
+  "eventsGrowthPct": 54.3,
+  "eventsProjected": 105,
+  "_undatedRecords": 7,
+  "_basis": "event start date (not wcpt-closed status)"
+ },
+ {
+  "date": "2026-07-22",
+  "pipeline": {
+   "funnel": {
+    "wcpt-needs-vetting": 4,
+    "wcpt-needs-orientati": 20,
+    "wcpt-more-info-reque": 21,
+    "wcpt-interview-sched": 2,
+    "wcpt-approved-pre-pl": 18,
+    "wcpt-pre-planning": 26,
+    "wcpt-needs-budget-re": 1,
+    "wcpt-budget-rev-sche": 3,
+    "wcpt-needs-contract": 1,
+    "wcpt-needs-fill-list": 3,
+    "wcpt-needs-schedule": 1
+   },
+   "activeFunnelTotal": 100,
+   "scheduled": 42,
+   "declined": 571,
+   "cancelled": 411
+  }
+ }
+]

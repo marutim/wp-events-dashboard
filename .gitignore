@@ -1,0 +1,11 @@
+# Secrets — never commit
+api/meetup_secrets.json
+api/wccentral_secrets.json
+*.pem
+*.key
+*_private*
+
+# OS / editor junk
+.DS_Store
+__pycache__/
+*.pyc
