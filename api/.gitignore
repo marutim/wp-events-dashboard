@@ -1,0 +1,6 @@
+# Never commit real secrets or private keys
+meetup_secrets.json
+wccentral_secrets.json
+*.pem
+*.key
+*_private*

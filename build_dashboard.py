@@ -1,0 +1,261 @@
+#!/usr/bin/env python3
+"""
+Build events-dashboard.html from dashboard_data.json.
+
+dashboard_data.json is assembled by the pull scripts + the browser pulls:
+  - meetups: from data.js (Meetup API)
+  - events:  verified WordCamp Central public counts
+  - pipeline.funnel/records/scheduled/cancelled: pull_pipeline.py + browser funnel detail
+  - pipeline.momentum: WordCamp Central wordcamp-status report (browser session)
+
+Run:  python3 build_dashboard.py    ->  writes events-dashboard.html
+"""
+import json, os
+HERE = os.path.dirname(os.path.abspath(__file__))
+DATA = json.dumps(json.load(open(os.path.join(HERE, "dashboard_data.json"))), ensure_ascii=False)
+
+TEMPLATE = r'''<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WordPress Community Events — Dashboard</title>
+<style>
+:root{--bg:#FAF7F2;--card:#fff;--ink:#23201A;--muted:#756D60;--line:#EBE5DA;--usrow:#FCEEE9;
+--blue:#3858E9;--green:#2F7D5B;--amber:#B07A22;--red:#C0492B;--grey:#B0A99C;--chip:#F1ECE3;
+--blue-tint:#EAEEFD;--green-tint:#E9F3ED;--amber-tint:#F7EFDE;--red-tint:#FBECE7;
+--serif:'Source Serif 4',Georgia,'Times New Roman',serif;
+--sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+--shadow:0 1px 2px rgba(45,32,12,.05),0 2px 6px rgba(45,32,12,.05);--radius:14px;}
+@media (prefers-color-scheme:dark){:root{--bg:#17150F;--card:#211E17;--ink:#ECE6DA;--muted:#A79E8C;--line:#332E24;--usrow:#3A241E;--chip:#2A251C;--blue-tint:#1B2340;--green-tint:#16281E;--amber-tint:#2C2617;--red-tint:#301C16;--shadow:0 1px 2px rgba(0,0,0,.3),0 2px 8px rgba(0,0,0,.25);}}
+:root[data-theme="dark"]{--bg:#17150F;--card:#211E17;--ink:#ECE6DA;--muted:#A79E8C;--line:#332E24;--usrow:#3A241E;--chip:#2A251C;--blue-tint:#1B2340;--green-tint:#16281E;--amber-tint:#2C2617;--red-tint:#301C16;--shadow:0 1px 2px rgba(0,0,0,.3),0 2px 8px rgba(0,0,0,.25);}
+:root[data-theme="light"]{--bg:#FAF7F2;--card:#fff;--ink:#23201A;--muted:#756D60;--line:#EBE5DA;--usrow:#FCEEE9;--chip:#F1ECE3;--blue-tint:#EAEEFD;--green-tint:#E9F3ED;--amber-tint:#F7EFDE;--red-tint:#FBECE7;--shadow:0 1px 2px rgba(45,32,12,.05),0 2px 6px rgba(45,32,12,.05);}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--sans)}
+.wrap{max-width:1120px;margin:0 auto;padding:24px 20px 70px}
+h1{font-family:var(--serif);font-size:32px;font-weight:600;letter-spacing:-.01em;margin:0 0 5px;text-wrap:balance}
+.sub{color:var(--muted);margin:0 0 20px;font-size:13.5px;max-width:64ch}
+.tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);margin-bottom:22px;flex-wrap:wrap}
+.tab{padding:9px 16px;font-size:14px;font-weight:600;color:var(--muted);cursor:pointer;border:1px solid transparent;border-bottom:none;border-radius:9px 9px 0 0}
+.tab.on{color:var(--ink);background:var(--card);border-color:var(--line)}
+.view{display:none} .view.on{display:block}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:12px;margin-bottom:22px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:15px 17px;box-shadow:var(--shadow)}
+.tile .n{font-family:var(--serif);font-size:29px;font-weight:600;line-height:1.05} .tile .l{font-size:12px;color:var(--muted);margin-top:3px}
+.tile.hot{background:var(--blue-tint)} .tile.hot .n{color:var(--blue)}
+.tile.good{background:var(--green-tint)} .tile.good .n{color:var(--green)}
+.tile.us{background:var(--red-tint)} .tile.us .n{color:var(--red)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin-bottom:20px;box-shadow:var(--shadow)}
+.card h2{font-size:12px;margin:0 0 14px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.card p b{color:var(--ink)}
+.defs{display:grid;gap:15px;margin-top:2px}
+.def{display:grid;grid-template-columns:170px 1fr;gap:16px;align-items:baseline}
+.term{font-family:var(--serif);font-weight:600;font-size:17px}
+.desc{color:var(--muted);font-size:14px;line-height:1.55}.desc b{color:var(--ink);font-weight:600}
+@media(max-width:560px){.def{grid-template-columns:1fr;gap:3px}}
+.frow{display:grid;grid-template-columns:200px 1fr 52px;align-items:center;gap:10px;margin:5px 0}
+.frow .lbl{font-size:13px;text-align:right}
+.frow .barwrap{background:var(--chip);border-radius:6px;height:20px;overflow:hidden;display:flex}
+.frow .bar{height:100%}
+.frow .cnt{font-size:13px;font-weight:600;color:var(--muted)}
+.b-blue{background:var(--blue);opacity:.85}.b-green{background:var(--green)}.b-red{background:var(--red)}
+.b-amber{background:var(--amber)}.b-grey{background:var(--grey)}
+.legend{font-size:12px;color:var(--muted);margin-top:8px}.legend span{margin-right:14px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:middle}
+.wmap{width:100%;height:auto;display:block;margin:0 0 4px}
+.wmap .land{fill:var(--chip);stroke:var(--line);stroke-width:.6}
+.wmap .pt{opacity:.85}.wmap .pt.a{fill:var(--green)}.wmap .pt.d{fill:var(--red)}.wmap .pt.n{fill:var(--grey)}
+.wmap .pt.ef{fill:var(--blue)}.wmap .pt.el{fill:var(--red)}.wmap .pt.en{fill:var(--green)}
+.mrow{display:grid;grid-template-columns:64px 1fr;align-items:center;gap:10px;margin:6px 0}
+.mrow .mo{font-size:12px;color:var(--muted);text-align:right}
+.mbars{display:flex;flex-direction:column;gap:3px}
+.mbar{display:flex;align-items:center;gap:8px}
+.mbar .t{height:12px;border-radius:3px}.mbar .v{font-size:11px;color:var(--muted)}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+.controls input,.controls select{font:13px inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+.controls input{flex:1;min-width:170px}
+.btn{font:13px inherit;padding:7px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;cursor:pointer;color:var(--ink)}
+.btn.on{background:var(--red);color:#fff;border-color:var(--red)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.03em;color:var(--muted);cursor:pointer;white-space:nowrap;user-select:none}
+tr.us td{background:var(--usrow)} td.num{text-align:right;font-variant-numeric:tabular-nums}
+.stage,.fmt{display:inline-block;font-size:11px;padding:2px 7px;border-radius:20px;white-space:nowrap}
+.stage{background:var(--chip)} .fmt{border:1px solid var(--line);color:var(--muted)}
+.usdot{color:var(--red);font-weight:700} a{color:var(--blue);text-decoration:none} a:hover{text-decoration:underline}
+.foot{color:var(--muted);font-size:12px;margin-top:10px}
+.src{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-size:12px;color:var(--muted)}
+.src b{color:var(--ink)}
+@media(max-width:640px){.frow{grid-template-columns:120px 1fr 40px}.hidem{display:none}}
+</style></head><body><div class="wrap">
+<h1>WordPress Community Events</h1>
+<p class="sub" id="sub"></p>
+<div class="tabs">
+  <div class="tab on" data-v="overview">Overview</div>
+  <div class="tab" data-v="pipeline">Pipeline</div>
+  <div class="tab" data-v="meetups">Meetups</div>
+  <div class="tab" data-v="events">Events &amp; WordCamps</div>
+</div>
+<div class="view on" id="overview"></div>
+<div class="view" id="meetups"></div>
+<div class="view" id="events"></div>
+<div class="view" id="pipeline"></div>
+<div class="src" id="src"></div>
+</div>
+<script>
+const D=__DATA__;
+const $=id=>document.getElementById(id);
+$('sub').textContent=`As of ${D.asOf} · Meetup API + WordCamp Central (public and authenticated). Live operational snapshot.`;
+function tiles(a){return `<div class="tiles">`+a.map(t=>`<div class="tile ${t[0]}"><div class="n">${t[1]}</div><div class="l">${t[2]}</div></div>`).join('')+`</div>`;}
+function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner=segs.map(s=>`<div class="bar ${s[0]}" style="width:${w(s[1])}%"></div>`).join('');return `<div class="frow"><div class="lbl">${lbl}</div><div class="barwrap">${inner}</div><div class="cnt">${total}</div></div>`;}
+
+/* OVERVIEW — cross-cutting summary, two tiles per domain */
+(function(){
+ const usPipe=D.pipeline.records.filter(r=>r.us).length;
+ $('overview').innerHTML=
+  tiles([['hot',D.meetups.groups,'meetup groups'],['',D.meetups.members.toLocaleString(),'members'],
+  ['good',D.events.ytd,'events YTD (+'+Math.round((D.events.ytd-D.events.ytdPrev)/D.events.ytdPrev*100)+'%)'],['',D.events.calendar,'on the 2026 calendar'],
+  ['hot',D.pipeline.records.length,'WordCamps in pipeline'],['us',usPipe,'US events in flight']])
+ +`<div class="card"><h2>What counts as a community event</h2>
+   <p style="margin:0 0 16px;color:var(--muted)">The community runs several kinds of events.</p>
+   <div class="defs">
+     <div class="def"><div class="term">Meetups</div><div class="desc">Locally organized groups that hold meetings regularly, usually monthly, listed through the official WordPress chapter on Meetup.com.</div></div>
+     <div class="def"><div class="term">WordCamps</div><div class="desc">Larger conferences. Three are flagships, <b>WordCamp US</b>, <b>WordCamp Europe</b>, and <b>WordCamp Asia</b>, with <b>WordCamp India</b> joining as the fourth in 2027. The rest are local WordCamps, run by a city or region.</div></div>
+     <div class="def"><div class="term">Lighter-lift events</div><div class="desc">WordPress Campus Connect (held on a university campus), Women WordPress Day, WordPress Developer Day, WordPress Student Clubs, WordPress Day for AI, and do_action (a charity hackathon). Usually a single day, and far less to pull off.</div></div>
+   </div></div>`;
+})();
+
+/* MEETUPS */
+(function(){
+ const m=D.meetups, mx=Math.max(...m.recency.map(r=>r[1]));
+ const cf=l=>l.includes('30 days')||l.includes('1 to 3')?'b-green':l.includes('3 to 6')||l.includes('6 to 12')?'b-amber':l.includes('Never')?'b-grey':'b-red';
+ let rec=m.recency.map(r=>barRow(r[0],[[cf(r[0]),r[1]]],r[1]+' ('+Math.round(r[1]/m.groups*100)+'%)',mx)).join('');
+ let dead=m.deadBig.map(g=>`<tr><td><a href="${g.url}" target="_blank" rel="noopener">${g.group}</a></td><td class="hidem">${g.city}</td><td>${g.country}</td><td class="num">${(g.members||0).toLocaleString()}</td><td>${g.last||'never'}</td></tr>`).join('');
+ const M=m.map, ord={a:0,d:1,n:2};
+ let dots='';
+ M.points.slice().sort((p,q)=>ord[p[2]]-ord[q[2]]).forEach(p=>dots+=`<circle class="pt ${p[2]}" cx="${p[0]}" cy="${p[1]}" r="2"/>`);
+ const mapCard=`<div class="card"><h2>Global footprint — ${m.groups} groups in ${m.countries} countries</h2>
+   <svg class="wmap" viewBox="0 0 ${M.w} ${M.h}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="World map of WordPress meetup groups colored by activity"><path class="land" d="${M.land}"/>${dots}</svg>
+   <div class="legend"><span><i class="dot" style="background:var(--green)"></i>active ${M.counts.a}</span><span><i class="dot" style="background:var(--red)"></i>inactive 12mo+ ${M.counts.d}</span><span><i class="dot" style="background:var(--grey)"></i>never met ${M.counts.n}</span></div>
+   <p class="foot">Every registered group in the official chapter, placed by its city. Red is where an assembled audience has gone quiet.</p></div>`;
+ $('meetups').innerHTML=
+  tiles([['hot',m.groups,'groups'],['',m.members.toLocaleString(),'members'],['',m.countries,'countries'],
+   ['good',m.met90,'met in 90 days'],['us',m.dormant,'inactive 12mo+'],['',m.organizers.toLocaleString(),'organizers']])
+  +mapCard
+  +`<div class="card"><h2>When each group last met</h2>${rec}
+    <div class="legend"><span><i class="dot b-green"></i>active</span><span><i class="dot b-amber"></i>fading (3&ndash;12mo)</span><span><i class="dot b-red"></i>inactive 1yr+</span><span><i class="dot b-grey"></i>never</span></div>
+    <p class="foot">${m.toWatch} groups last met 3&ndash;12 months ago &mdash; the ones most likely to go quiet next.</p></div>`
+  +`<div class="card"><h2>Big audiences that stopped meeting &mdash; top reactivation targets</h2>
+    <table><thead><tr><th>Group</th><th class="hidem">City</th><th>Country</th><th class="num">Members</th><th>Last met</th></tr></thead><tbody>${dead}</tbody></table>
+    <p class="foot">Groups over 500 members with no event in a year or more. The audience is already assembled.</p></div>`
+  +`<div class="card"><h2>United States</h2><p style="margin:0">${m.us.groups} US groups, ${m.us.met90} of them (${Math.round(m.us.met90/m.us.groups*100)}%) met in the last 90 days. Meetups here are not the problem &mdash; what is missing is anything built on top of them.</p></div>`;
+})();
+
+/* EVENTS */
+(function(){
+ const e=D.events, yrs=Object.keys(e.byYear).sort();
+ const ymax=Math.max(...yrs.map(y=>e.byYear[y].reduce((a,b)=>a+b,0)));
+ let yl=yrs.map(y=>{const v=e.byYear[y];return barRow(y,[['b-red',v[1]],['b-blue',v[0]],['b-green',v[2]]],v[0]+v[1]+v[2],ymax);}).join('');
+ const cmax=Math.max(...e.byCountry.map(c=>c[1]),1);
+ let cl=e.byCountry.map(c=>barRow(c[0],[[c[0]==='United States'?'b-red':'b-blue',c[1]]],c[1],cmax)).join('');
+ const fmax=Math.max(...e.formats.map(f=>f[1]));
+ let fl=e.formats.map(f=>barRow(f[0],[['b-blue',f[1]]],f[1],fmax)).join('');
+ const EM=e.map, eord={f:2,l:1,n:0};
+ let edots='';
+ EM.points.slice().sort((p,q)=>eord[p[2]]-eord[q[2]]).forEach(p=>edots+=`<circle class="pt e${p[2]}" cx="${p[0]}" cy="${p[1]}" r="2.4"/>`);
+ const emap=`<div class="card"><h2>Where the events are, and where they are not</h2>
+   <svg class="wmap" viewBox="0 0 ${EM.w} ${EM.h}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="World map of 2026 WordPress events by type"><path class="land" d="${D.meetups.map.land}"/>${edots}</svg>
+   <div class="legend"><span><i class="dot" style="background:var(--blue)"></i>flagship ${EM.counts.f}</span><span><i class="dot" style="background:var(--red)"></i>local WordCamp ${EM.counts.l}</span><span><i class="dot" style="background:var(--green)"></i>newer format ${EM.counts.n}</span></div>
+   <p class="foot">2026 events cluster in South Asia, Latin America, and Europe. The United States is a single dot, WordCamp US.</p></div>`;
+ const B=e.bench, bt=B?B.orgFirst+B.orgReturn:0, at=B?B.attFirst+B.attReturn:0;
+ const bench=B?`<div class="card"><h2>Bench renewal — are we growing new organizers?</h2>
+   ${barRow('Organizers',[['b-green',B.orgFirst],['b-grey',B.orgReturn]],Math.round(B.orgFirst/bt*100)+'% new',bt)}
+   ${barRow('Attendees',[['b-green',B.attFirst],['b-grey',B.attReturn]],Math.round(B.attFirst/at*100)+'% new',at)}
+   <div class="legend"><span><i class="dot b-green"></i>first-time</span><span><i class="dot b-grey"></i>returning</span></div>
+   <p class="foot"><b>${B.orgFirst}</b> first-time organizers stepped up this year, ${Math.round(B.orgFirst/bt*100)}% of the total. First-timers are the bench a WordCamp needs. From WordCamp Central's counts report, not visible on any public listing.</p></div>`:'';
+ $('events').innerHTML=
+  tiles([['',e.ytd,'events YTD'],['good','+'+Math.round((e.ytd-e.ytdPrev)/e.ytdPrev*100)+'%','vs '+e.ytdPrev+' last year'],
+   ['us',0,'US local/newer events'],['hot',30,'countries ran an event']])
+  +`<p class="foot" style="margin:-6px 0 16px">For the live, public list of upcoming events, see <a href="https://events.wordpress.org" target="_blank" rel="noopener">events.wordpress.org</a>. This dashboard focuses on what a public listing cannot show.</p>`
+  +bench
+  +emap
+  +`<div class="card"><h2>Community events by year</h2>${yl}
+    <div class="legend"><span><i class="dot b-red"></i>Local WordCamps</span><span><i class="dot b-blue"></i>Flagships</span><span><i class="dot b-green"></i>Newer formats</span></div>
+    <p class="foot">Local WordCamps fell from ${e.byYear['2019'][1]} in 2019 to ${e.byYear['2026'][1]} now. Newer formats went from zero to ${e.byYear['2026'][2]}.</p></div>`
+  +`<div class="card"><h2>2026 local WordCamps &amp; newer formats, by country</h2>${cl}
+    <p class="foot">Flagships and meetups counted separately. The United States is at zero.</p></div>`
+  +`<div class="card"><h2>2026 by format</h2>${fl}</div>`;
+})();
+
+/* PIPELINE */
+(function(){
+ const P=D.pipeline, order=P.funnelOrder;
+ const counts={};order.forEach(s=>counts[s]=0);P.records.forEach(r=>{if(counts[r.stage]!==undefined)counts[r.stage]++});
+ const mx=Math.max(...Object.values(counts),1);
+ let fh=order.map(s=>barRow(s,[['b-blue',counts[s]]],counts[s],mx)).join('');
+ fh+=barRow('→ Scheduled',[['b-green',P.scheduledCount]],P.scheduledCount,mx);
+ const usN=P.records.filter(r=>r.us).length, wcN=P.records.filter(r=>r.format==='WordCamp').length;
+
+ // momentum (wordcamp-status flow)
+ let mom='';
+ if(P.momentum){
+   const mos=Object.keys(P.momentum).sort();
+   const allv=mos.flatMap(k=>[P.momentum[k].newApps,P.momentum[k].confirmed,P.momentum[k].attrition]);
+   const mmax=Math.max(...allv,1);
+   const wbar=(cls,v)=>`<div class="mbar"><div class="t ${cls}" style="width:${Math.max(2,Math.round(v/mmax*180))}px"></div><div class="v">${v}</div></div>`;
+   const rows=mos.map(k=>{const d=P.momentum[k];const nm=k.slice(5)+'/'+k.slice(2,4);
+     return `<div class="mrow"><div class="mo">${nm}</div><div class="mbars">${wbar('b-blue',d.newApps)}${wbar('b-green',d.confirmed)}${wbar('b-red',d.attrition)}</div></div>`;}).join('');
+   const T=k=>mos.reduce((a,m)=>a+P.momentum[m][k],0);
+   mom=`<div class="card"><h2>Pipeline momentum — 2026 monthly flow</h2>${rows}
+     <div class="legend"><span><i class="dot b-blue"></i>new applications</span><span><i class="dot b-green"></i>confirmed (→ scheduled)</span><span><i class="dot b-red"></i>lost (cancelled/declined)</span></div>
+     <p class="foot">YTD: <b>${T('newApps')}</b> new applications entered the funnel, <b>${T('confirmed')}</b> reached scheduled, <b>${T('closed')}</b> happened, <b>${T('attrition')}</b> were lost. Every month nets positive. Source: WordCamp Central status-change log.</p></div>`;
+ }
+
+ $('pipeline').innerHTML=
+  tiles([['hot',P.records.length,'in the funnel'],['good',P.scheduledCount,'confirmed'],['us',usN,'US in flight'],
+   ['',wcN,'WordCamps'],['',P.cancelledCount,'cancelled all-time'],['',P.declinedCount,'declined all-time']])
+  +`<div class="card"><h2>Application funnel — where events are stuck</h2>${fh}
+    <p class="foot">${P.testCount} test records excluded. A confirmed event has cleared every stage above.</p></div>`
+  +mom
+  +`<div class="card"><h2>The ${P.records.length} events in flight — outreach list</h2>
+    <div class="controls"><input id="q" placeholder="Search title, city, country…">
+    <select id="fmt"><option value="">All formats</option></select>
+    <select id="stg"><option value="">All stages</option></select>
+    <button class="btn" id="usbtn">US only</button></div>
+    <table><thead><tr><th data-k="stage">Stage</th><th data-k="format">Format</th><th data-k="title">Event</th>
+    <th data-k="location" class="hidem">Location</th><th data-k="country">Country</th></tr></thead><tbody id="tb"></tbody></table>
+    <p class="foot" id="cnt"></p></div>`;
+ const fmts=[...new Set(P.records.map(r=>r.format))].sort();
+ $('fmt').innerHTML+=fmts.map(f=>`<option>${f}</option>`).join('');
+ $('stg').innerHTML+=order.map(s=>`<option>${s}</option>`).join('');
+ const rank={};order.forEach((s,i)=>rank[s]=i);
+ let st={q:'',fmt:'',stg:'',us:false,sort:'stage',dir:1};
+ function rows(){let r=P.records.filter(x=>{if(st.us&&!x.us)return false;if(st.fmt&&x.format!==st.fmt)return false;if(st.stg&&x.stage!==st.stg)return false;if(st.q){const s=(x.title+' '+x.location+' '+x.country).toLowerCase();if(!s.includes(st.q))return false;}return true;});
+   r.sort((a,b)=>{let av,bv;if(st.sort==='stage'){av=rank[a.stage];bv=rank[b.stage];}else{av=(a[st.sort]||'').toString().toLowerCase();bv=(b[st.sort]||'').toString().toLowerCase();}return av<bv?-st.dir:av>bv?st.dir:0;});return r;}
+ function render(){const r=rows();$('tb').innerHTML=r.map(x=>`<tr class="${x.us?'us':''}"><td><span class="stage">${x.stage}</span></td><td><span class="fmt">${x.format}</span></td><td>${x.link?`<a href="${x.link}" target="_blank" rel="noopener">${x.title}</a>`:x.title}</td><td class="hidem">${x.location||'—'}</td><td>${x.us?'<span class="usdot">● </span>':''}${x.country}</td></tr>`).join('');$('cnt').textContent=`${r.length} shown${st.us?' · US only':''}`;}
+ $('q').oninput=e=>{st.q=e.target.value.toLowerCase();render();};
+ $('fmt').onchange=e=>{st.fmt=e.target.value;render();};
+ $('stg').onchange=e=>{st.stg=e.target.value;render();};
+ $('usbtn').onclick=e=>{st.us=!st.us;e.target.classList.toggle('on',st.us);render();};
+ document.querySelectorAll('#pipeline th[data-k]').forEach(th=>th.onclick=()=>{const k=th.dataset.k;st.dir=(st.sort===k)?-st.dir:1;st.sort=k;render();});
+ render();
+})();
+
+$('src').innerHTML=`<b>Sources.</b> Meetups: Meetup GraphQL API (official WordPress chapter). Events &amp; pipeline: WordCamp Central REST — public for scheduled/past, authenticated (your session) for the funnel and the status-change log. Momentum from the WordCamp Central <b>wordcamp-status</b> report. Financial reports intentionally excluded. events.wordpress.org / GatherPress will slot in as a fourth feed when live.`;
+
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('.view').forEach(x=>x.classList.remove('on'));
+  t.classList.add('on');$(t.dataset.v).classList.add('on');
+});
+</script></body></html>'''
+
+full = TEMPLATE.replace("__DATA__", DATA)
+open(os.path.join(HERE, "events-dashboard.html"), "w").write(full)
+print("wrote events-dashboard.html")
+
+# Artifact-ready version: the publish skeleton supplies <!doctype><html><head></head><body>,
+# so strip our document wrapper and keep <title> + <style> + content + <script>.
+body = full
+body = body[body.index("<title>"):]                       # drop <!doctype><html><head>
+body = body.replace("</head><body>", "\n")                # seam between head and body
+body = body.replace("</body></html>", "\n")               # drop closing wrapper
+open(os.path.join(HERE, "events-dashboard.artifact.html"), "w").write(body)
+print("wrote events-dashboard.artifact.html")
