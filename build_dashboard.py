@@ -82,6 +82,17 @@ tr.us td{background:var(--usrow)} td.num{text-align:right;font-variant-numeric:t
 .foot{color:var(--muted);font-size:12px;margin-top:10px}
 .src{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-size:12px;color:var(--muted)}
 .src b{color:var(--ink)}
+.mgtabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.mgtab{font:13px inherit;padding:6px 13px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--muted);cursor:pointer}
+.mgtab:hover{border-color:var(--blue)}
+.mgtab.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.mgtab .mgn{font-size:12px;opacity:.7;margin-left:3px}
+.mgtab.on .mgn{opacity:.95}
+.mgpager{display:flex;align-items:center;gap:12px;margin-top:14px;flex-wrap:wrap}
+.mgpg{font:13px inherit;padding:6px 13px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);cursor:pointer}
+.mgpg:hover:not(:disabled){border-color:var(--blue)}
+.mgpg:disabled{opacity:.4;cursor:default}
+.mgpginfo{font-size:13px;color:var(--muted)}
 @media(max-width:640px){.frow{grid-template-columns:120px 1fr 40px}.hidem{display:none}}
 </style></head><body><div class="wrap">
 <h1>WordPress Community Events</h1>
@@ -144,7 +155,34 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
   +`<div class="card"><h2>Big audiences that stopped meeting &mdash; top reactivation targets</h2>
     <table><thead><tr><th>Group</th><th class="hidem">City</th><th>Country</th><th class="num">Members</th><th>Last met</th></tr></thead><tbody>${dead}</tbody></table>
     <p class="foot">Groups over 500 members with no event in a year or more. The audience is already assembled.</p></div>`
+  +`<div class="card"><h2>All groups by activity</h2>
+    <div class="mgtabs" id="mgtabs"></div>
+    <table><thead><tr><th>Group</th><th class="hidem">City</th><th>Country</th><th class="num">Members</th><th>Last met</th></tr></thead><tbody id="mgbody"></tbody></table>
+    <div class="mgpager" id="mgpager"></div>
+    <p class="foot" id="mgfoot"></p></div>`
   +`<div class="card"><h2>United States</h2><p style="margin:0">${m.us.groups} US groups, ${m.us.met90} of them (${Math.round(m.us.met90/m.us.groups*100)}%) met in the last 90 days. Meetups here are not the problem &mdash; what is missing is anything built on top of them.</p></div>`;
+
+ /* All-groups table: tabs (All/Active/Fading/Inactive/Never) + 25-per-page pagination */
+ const AG=(m.allGroups||[]).slice();  // pre-sorted members desc
+ const PAGE=25, CATS=[['all','All'],['Active','Active'],['Fading','Fading'],['Inactive','Inactive'],['Never','Never']];
+ let curCat='all', curPage=1;
+ const rowsFor=c=>c==='all'?AG:AG.filter(g=>g.cat===c);
+ const esc=x=>String(x==null?'':x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+ function drawTabs(){
+   $('mgtabs').innerHTML=CATS.map(c=>`<button class="mgtab${c[0]===curCat?' on':''}" data-c="${c[0]}">${c[1]}<span class="mgn">${rowsFor(c[0]).length}</span></button>`).join('');
+   $('mgtabs').querySelectorAll('.mgtab').forEach(b=>b.onclick=()=>{curCat=b.dataset.c;curPage=1;drawTabs();drawTable();});
+ }
+ function drawTable(){
+   const rows=rowsFor(curCat), pages=Math.max(1,Math.ceil(rows.length/PAGE));
+   if(curPage>pages)curPage=pages;
+   const slice=rows.slice((curPage-1)*PAGE,curPage*PAGE);
+   $('mgbody').innerHTML=slice.length?slice.map(g=>`<tr><td><a href="${esc(g.url)}" target="_blank" rel="noopener">${esc(g.group)}</a></td><td class="hidem">${esc(g.city)}</td><td>${esc(g.country)}</td><td class="num">${(g.members||0).toLocaleString()}</td><td>${esc(g.last)||'never'}</td></tr>`).join(''):`<tr><td colspan="5" style="color:var(--muted)">No groups in this category.</td></tr>`;
+   const from=rows.length?(curPage-1)*PAGE+1:0, to=Math.min(curPage*PAGE,rows.length);
+   $('mgfoot').textContent=`Showing ${from}–${to} of ${rows.length} groups.`;
+   $('mgpager').innerHTML=`<button class="mgpg" data-p="prev"${curPage<=1?' disabled':''}>← Prev</button><span class="mgpginfo">Page ${curPage} / ${pages}</span><button class="mgpg" data-p="next"${curPage>=pages?' disabled':''}>Next →</button>`;
+   $('mgpager').querySelectorAll('.mgpg').forEach(b=>b.onclick=()=>{if(b.dataset.p==='prev'&&curPage>1)curPage--;else if(b.dataset.p==='next'&&curPage<pages)curPage++;drawTable();});
+ }
+ drawTabs();drawTable();
 })();
 
 /* EVENTS */
