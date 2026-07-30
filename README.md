@@ -93,9 +93,9 @@ In the repo, **Settings → Pages → Build and deployment → Deploy from a bra
 
 ## Design notes
 
-- Palette follows [WPCredits-Tracker](https://wordpress.github.io/WPCredits-Tracker/): WordPress blue `#3858E9`, cream ground, serif display.
+- Palette follows [wordpress.org](https://wordpress.org/): WordPress blue `#3858E9` on a light white-gray ground (`#F6F7F7`), white cards, near-black ink (`#1E1E1E`), hairline borders (`#DCDCDE`), serif display.
 - Maps are **self-contained inline SVG** (equirectangular projection, land outline baked in), not Leaflet — a published Claude Artifact blocks external tiles, CDN scripts, and web fonts.
-- Dark mode via CSS custom-property tokens.
+- Light theme is forced via CSS custom-property tokens (`data-theme="light"` on `<html>`); the dashboard does not follow system dark mode.
 
 ## Lesson worth keeping
 
