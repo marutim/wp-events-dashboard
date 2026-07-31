@@ -205,22 +205,28 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
    $('mzout').onclick=()=>{const c=ctr();zoomAt(c[0],c[1],1.42);};
    $('mzr').onclick=()=>{vb={x:0,y:0,w:W,h:H};apply();hide();};
    let drag=null;
-   svg.addEventListener('pointerdown',e=>{if(e.target.classList.contains('pt'))return;drag={sx:e.clientX,sy:e.clientY,ox:vb.x,oy:vb.y};svg.classList.add('grabbing');try{svg.setPointerCapture(e.pointerId);}catch(_){}});
+   svg.addEventListener('pointerdown',e=>{if(e.target.classList.contains('pt'))return;hide();drag={sx:e.clientX,sy:e.clientY,ox:vb.x,oy:vb.y};svg.classList.add('grabbing');try{svg.setPointerCapture(e.pointerId);}catch(_){}});
    svg.addEventListener('pointermove',e=>{if(!drag)return;const r=svg.getBoundingClientRect();vb.x=drag.ox-(e.clientX-drag.sx)/r.width*vb.w;vb.y=drag.oy-(e.clientY-drag.sy)/r.height*vb.h;clamp();apply();});
    ['pointerup','pointercancel','pointerleave'].forEach(ev=>svg.addEventListener(ev,()=>{drag=null;svg.classList.remove('grabbing');}));
-   function hide(){tip.style.display='none';pinned=false;}
+   let hideT=null;
+   const cancelHide=()=>{if(hideT){clearTimeout(hideT);hideT=null;}};
+   const scheduleHide=()=>{if(pinned)return;cancelHide();hideT=setTimeout(()=>{tip.style.display='none';},260);};
+   function hide(){cancelHide();tip.style.display='none';pinned=false;}
    function show(el,cx,cy){
      const g=byId[el.getAttribute('data-i')]; if(!g)return;
      const loc=[g.city,g.country].filter(Boolean).map(esc).join(', ');
-     tip.innerHTML=(pinned?`<span class="cl" id="mtcl">×</span>`:'')+`<b>${esc(g.group)}</b><br>${loc}<br>${(g.members||0).toLocaleString()} members · last met ${esc(g.last)||'never'}<br><a href="${esc(g.url)}" target="_blank" rel="noopener">Open group ↗</a>`;
+     tip.innerHTML=(pinned?`<span class="cl" id="mtcl">×</span>`:'')+`<b>${esc(g.group)}</b><br>${loc}<br>${(g.members||0).toLocaleString()} members · last met ${esc(g.last)||'never'}<br><a href="${esc(g.url)}" target="_blank" rel="noopener noreferrer">Open group ↗</a>`;
      const r=wrap.getBoundingClientRect(); tip.style.display='block';
      let lx=Math.min(cx-r.left+12, r.width-tip.offsetWidth-6), ly=Math.min(cy-r.top+12, r.height-tip.offsetHeight-6);
      tip.style.left=Math.max(4,lx)+'px'; tip.style.top=Math.max(4,ly)+'px';
      if(pinned){const c=$('mtcl'); if(c)c.onclick=hide;}
    }
-   svg.addEventListener('mousemove',e=>{if(pinned||drag)return;if(e.target.classList.contains('pt'))show(e.target,e.clientX,e.clientY);else tip.style.display='none';});
-   svg.addEventListener('mouseleave',()=>{if(!pinned)tip.style.display='none';});
-   svg.addEventListener('click',e=>{if(e.target.classList.contains('pt')){pinned=true;show(e.target,e.clientX,e.clientY);}else hide();});
+   svg.addEventListener('mouseover',e=>{if(pinned||drag)return;if(e.target.classList.contains('pt')){cancelHide();show(e.target,e.clientX,e.clientY);}});
+   svg.addEventListener('mouseout',e=>{if(e.target.classList.contains('pt'))scheduleHide();});
+   svg.addEventListener('mouseleave',scheduleHide);
+   svg.addEventListener('click',e=>{if(e.target.classList.contains('pt')){pinned=true;cancelHide();show(e.target,e.clientX,e.clientY);}else hide();});
+   tip.addEventListener('mouseenter',cancelHide);
+   tip.addEventListener('mouseleave',()=>{if(!pinned)tip.style.display='none';});
  })();
 })();
 
