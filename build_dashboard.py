@@ -63,10 +63,10 @@ h1{font-family:var(--serif);font-size:32px;font-weight:600;letter-spacing:-.01em
 .wmap .pt{opacity:.85}.wmap .pt.a{fill:var(--green)}.wmap .pt.d{fill:var(--red)}.wmap .pt.n{fill:var(--grey)}
 .wmap .pt.ef{fill:var(--blue)}.wmap .pt.el{fill:var(--red)}.wmap .pt.en{fill:var(--green)}
 .mapwrap{position:relative}
-#wmap{cursor:grab;touch-action:none}
-#wmap.grabbing{cursor:grabbing}
-#wmap .pt{cursor:pointer}
-#wmap .pt:hover{r:3.4}
+#wmap,#wmap2{cursor:grab;touch-action:none}
+#wmap.grabbing,#wmap2.grabbing{cursor:grabbing}
+#wmap .pt,#wmap2 .pt{cursor:pointer}
+#wmap .pt:hover,#wmap2 .pt:hover{r:3.6}
 .mapzoom{position:absolute;top:8px;right:8px;display:flex;flex-direction:column;gap:4px;z-index:4}
 .mapzoom button{width:30px;height:30px;border:1px solid var(--line);background:var(--card);border-radius:6px;cursor:pointer;font-size:17px;line-height:1;color:var(--ink);box-shadow:var(--shadow);padding:0}
 .mapzoom button:hover{border-color:var(--blue)}
@@ -258,11 +258,15 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
  let fl=e.formats.map(f=>barRow(f[0],[['b-blue',f[1]]],f[1],fmax)).join('');
  const EM=e.map, eord={f:2,l:1,n:0};
  let edots='';
- EM.points.slice().sort((p,q)=>eord[p[2]]-eord[q[2]]).forEach(p=>edots+=`<circle class="pt e${p[2]}" cx="${p[0]}" cy="${p[1]}" r="2.4"/>`);
+ EM.points.slice().sort((p,q)=>eord[p[2]]-eord[q[2]]).forEach(p=>edots+=`<circle class="pt e${p[2]}" cx="${p[0]}" cy="${p[1]}" r="2.4" data-i="${p[3]}"/>`);
  const emap=`<div class="card"><h2>Where the events are, and where they are not</h2>
-   <svg class="wmap" viewBox="0 0 ${EM.w} ${EM.h}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="World map of 2026 WordPress events by type"><path class="land" d="${D.meetups.map.land}"/>${edots}</svg>
+   <div class="mapwrap" id="mapwrap2">
+    <svg class="wmap" id="wmap2" viewBox="0 0 ${EM.w} ${EM.h}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="World map of 2026 WordPress events by type"><path class="land" d="${D.meetups.map.land}"/>${edots}</svg>
+    <div class="mapzoom"><button type="button" id="mzin2" aria-label="Zoom in">+</button><button type="button" id="mzout2" aria-label="Zoom out">&minus;</button><button type="button" id="mzr2" aria-label="Reset view" style="font-size:13px">&#8635;</button></div>
+    <div class="maptip" id="maptip2"></div>
+   </div>
    <div class="legend"><span><i class="dot" style="background:var(--blue)"></i>flagship ${EM.counts.f}</span><span><i class="dot" style="background:var(--red)"></i>local WordCamp ${EM.counts.l}</span><span><i class="dot" style="background:var(--green)"></i>newer format ${EM.counts.n}</span></div>
-   <p class="foot">2026 events cluster in South Asia, Latin America, and Europe. The United States is a single dot, WordCamp US.</p></div>`;
+   <p class="foot">2026 events cluster in South Asia, Latin America, and Europe. The United States is a single dot, WordCamp US. <span style="color:var(--muted)">Scroll or use +/&minus; to zoom, drag to pan, hover or tap a dot for details.</span></p></div>`;
  const B=e.bench, bt=B?B.orgFirst+B.orgReturn:0, at=B?B.attFirst+B.attReturn:0;
  const bench=B?`<div class="card"><h2>Bench renewal — are we growing new organizers?</h2>
    ${barRow('Organizers',[['b-green',B.orgFirst],['b-grey',B.orgReturn]],Math.round(B.orgFirst/bt*100)+'% new',bt)}
@@ -281,6 +285,47 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
   +`<div class="card"><h2>2026 local WordCamps &amp; newer formats, by country</h2>${cl}
     <p class="foot">Flagships and meetups counted separately. The United States is at zero.</p></div>`
   +`<div class="card"><h2>2026 by format</h2>${fl}</div>`;
+
+ /* Interactive events map: zoom/pan + per-event popups (dependency-free) */
+ (function(){
+   const svg=$('wmap2'), wrap=$('mapwrap2'), tip=$('maptip2');
+   if(!svg||!wrap||!tip) return;
+   const EL=EM.eventList||[];
+   const esc=x=>String(x==null?'':x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+   const W=EM.w, H=EM.h, ASPECT=H/W, MINW=110;
+   let vb={x:0,y:0,w:W,h:H}, pinned=false;
+   const clamp=()=>{vb.w=Math.min(W,vb.w);vb.h=vb.w*ASPECT;vb.x=Math.max(0,Math.min(W-vb.w,vb.x));vb.y=Math.max(0,Math.min(H-vb.h,vb.y));};
+   const apply=()=>svg.setAttribute('viewBox',`${vb.x} ${vb.y} ${vb.w} ${vb.h}`);
+   function zoomAt(cx,cy,f){const r=svg.getBoundingClientRect();const ux=vb.x+(cx-r.left)/r.width*vb.w,uy=vb.y+(cy-r.top)/r.height*vb.h;const nw=Math.min(W,Math.max(MINW,vb.w*f)),s=nw/vb.w;vb.x=ux-(ux-vb.x)*s;vb.y=uy-(uy-vb.y)*s;vb.w=nw;vb.h=nw*ASPECT;clamp();apply();}
+   const ctr=()=>{const r=svg.getBoundingClientRect();return[r.left+r.width/2,r.top+r.height/2];};
+   svg.addEventListener('wheel',e=>{e.preventDefault();zoomAt(e.clientX,e.clientY,e.deltaY<0?0.82:1.22);},{passive:false});
+   $('mzin2').onclick=()=>{const c=ctr();zoomAt(c[0],c[1],0.7);};
+   $('mzout2').onclick=()=>{const c=ctr();zoomAt(c[0],c[1],1.42);};
+   $('mzr2').onclick=()=>{vb={x:0,y:0,w:W,h:H};apply();hide();};
+   let drag=null;
+   svg.addEventListener('pointerdown',e=>{if(e.target.classList.contains('pt'))return;hide();drag={sx:e.clientX,sy:e.clientY,ox:vb.x,oy:vb.y};svg.classList.add('grabbing');try{svg.setPointerCapture(e.pointerId);}catch(_){}});
+   svg.addEventListener('pointermove',e=>{if(!drag)return;const r=svg.getBoundingClientRect();vb.x=drag.ox-(e.clientX-drag.sx)/r.width*vb.w;vb.y=drag.oy-(e.clientY-drag.sy)/r.height*vb.h;clamp();apply();});
+   ['pointerup','pointercancel','pointerleave'].forEach(ev=>svg.addEventListener(ev,()=>{drag=null;svg.classList.remove('grabbing');}));
+   let hideT=null;
+   const cancelHide=()=>{if(hideT){clearTimeout(hideT);hideT=null;}};
+   const scheduleHide=()=>{if(pinned)return;cancelHide();hideT=setTimeout(()=>{tip.style.display='none';},260);};
+   function hide(){cancelHide();tip.style.display='none';pinned=false;}
+   function show(el,cx,cy){
+     const g=EL[el.getAttribute('data-i')]; if(!g)return;
+     const line=[g.ty,g.d].filter(Boolean).map(esc).join(' · ');
+     tip.innerHTML=(pinned?`<span class="cl" id="mtcl2">×</span>`:'')+`<b>${esc(g.n)}</b><br>${esc(g.loc)}<br>${line}${g.u?`<br><a href="${esc(g.u)}" target="_blank" rel="noopener noreferrer">Event page ↗</a>`:''}`;
+     const r=wrap.getBoundingClientRect(); tip.style.display='block';
+     let lx=Math.min(cx-r.left+12, r.width-tip.offsetWidth-6), ly=Math.min(cy-r.top+12, r.height-tip.offsetHeight-6);
+     tip.style.left=Math.max(4,lx)+'px'; tip.style.top=Math.max(4,ly)+'px';
+     if(pinned){const c=$('mtcl2'); if(c)c.onclick=hide;}
+   }
+   svg.addEventListener('mouseover',e=>{if(pinned||drag)return;if(e.target.classList.contains('pt')){cancelHide();show(e.target,e.clientX,e.clientY);}});
+   svg.addEventListener('mouseout',e=>{if(e.target.classList.contains('pt'))scheduleHide();});
+   svg.addEventListener('mouseleave',scheduleHide);
+   svg.addEventListener('click',e=>{if(e.target.classList.contains('pt')){pinned=true;cancelHide();show(e.target,e.clientX,e.clientY);}else hide();});
+   tip.addEventListener('mouseenter',cancelHide);
+   tip.addEventListener('mouseleave',()=>{if(!pinned)tip.style.display='none';});
+ })();
 })();
 
 /* PIPELINE */
