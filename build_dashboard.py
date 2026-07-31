@@ -62,6 +62,16 @@ h1{font-family:var(--serif);font-size:32px;font-weight:600;letter-spacing:-.01em
 .wmap .land{fill:var(--chip);stroke:var(--line);stroke-width:.6}
 .wmap .pt{opacity:.85}.wmap .pt.a{fill:var(--green)}.wmap .pt.d{fill:var(--red)}.wmap .pt.n{fill:var(--grey)}
 .wmap .pt.ef{fill:var(--blue)}.wmap .pt.el{fill:var(--red)}.wmap .pt.en{fill:var(--green)}
+.mapwrap{position:relative}
+#wmap{cursor:grab;touch-action:none}
+#wmap.grabbing{cursor:grabbing}
+#wmap .pt{cursor:pointer}
+#wmap .pt:hover{r:3.4}
+.mapzoom{position:absolute;top:8px;right:8px;display:flex;flex-direction:column;gap:4px;z-index:4}
+.mapzoom button{width:30px;height:30px;border:1px solid var(--line);background:var(--card);border-radius:6px;cursor:pointer;font-size:17px;line-height:1;color:var(--ink);box-shadow:var(--shadow);padding:0}
+.mapzoom button:hover{border-color:var(--blue)}
+.maptip{position:absolute;display:none;z-index:6;max-width:210px;background:var(--card);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);padding:9px 11px;font-size:12px;line-height:1.45;color:var(--ink)}
+.maptip .cl{position:absolute;top:3px;right:7px;cursor:pointer;color:var(--muted);font-size:14px;line-height:1}
 .mrow{display:grid;grid-template-columns:64px 1fr;align-items:center;gap:10px;margin:6px 0}
 .mrow .mo{font-size:12px;color:var(--muted);text-align:right}
 .mbars{display:flex;flex-direction:column;gap:3px}
@@ -146,11 +156,15 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
  let dead=m.deadBig.map(g=>`<tr><td><a href="${g.url}" target="_blank" rel="noopener">${g.group}</a></td><td class="hidem">${g.city}</td><td>${g.country}</td><td class="num">${(g.members||0).toLocaleString()}</td><td>${g.last||'never'}</td></tr>`).join('');
  const M=m.map, ord={a:0,d:1,n:2};
  let dots='';
- M.points.slice().sort((p,q)=>ord[p[2]]-ord[q[2]]).forEach(p=>dots+=`<circle class="pt ${p[2]}" cx="${p[0]}" cy="${p[1]}" r="2"/>`);
+ M.points.slice().sort((p,q)=>ord[p[2]]-ord[q[2]]).forEach(p=>dots+=`<circle class="pt ${p[2]}" cx="${p[0]}" cy="${p[1]}" r="2" data-i="${p[3]}"/>`);
  const mapCard=`<div class="card"><h2>Global footprint — ${m.groups} groups in ${m.countries} countries</h2>
-   <svg class="wmap" viewBox="0 0 ${M.w} ${M.h}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="World map of WordPress meetup groups colored by activity"><path class="land" d="${M.land}"/>${dots}</svg>
+   <div class="mapwrap" id="mapwrap">
+    <svg class="wmap" id="wmap" viewBox="0 0 ${M.w} ${M.h}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="World map of WordPress meetup groups colored by activity"><path class="land" d="${M.land}"/>${dots}</svg>
+    <div class="mapzoom"><button type="button" id="mzin" aria-label="Zoom in">+</button><button type="button" id="mzout" aria-label="Zoom out">&minus;</button><button type="button" id="mzr" aria-label="Reset view" style="font-size:13px">&#8635;</button></div>
+    <div class="maptip" id="maptip"></div>
+   </div>
    <div class="legend"><span><i class="dot" style="background:var(--green)"></i>active ${M.counts.a}</span><span><i class="dot" style="background:var(--red)"></i>inactive 12mo+ ${M.counts.d}</span><span><i class="dot" style="background:var(--grey)"></i>never met ${M.counts.n}</span></div>
-   <p class="foot">Every registered group in the official chapter, placed by its city. Red is where an assembled audience has gone quiet.</p></div>`;
+   <p class="foot">Every registered group in the official chapter, placed by its city. Red is where an assembled audience has gone quiet. <span style="color:var(--muted)">Scroll or use +/&minus; to zoom, drag to pan, hover or tap a dot for details.</span></p></div>`;
  $('meetups').innerHTML=
   tiles([['hot',m.groups,'groups'],['',m.members.toLocaleString(),'members'],['',m.countries,'countries'],
    ['good',m.met90,'met in 90 days'],['us',m.dormant,'inactive 12mo+'],['',m.organizers.toLocaleString(),'organizers']])
@@ -191,6 +205,40 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
    $('mgpager').querySelectorAll('.mgpg').forEach(b=>b.onclick=()=>{if(b.dataset.p==='prev'&&curPage>1)curPage--;else if(b.dataset.p==='next'&&curPage<pages)curPage++;drawTable();});
  }
  drawTabs();drawTable();
+
+ /* Interactive map: wheel/button zoom, drag pan, dot popups (dependency-free) */
+ (function(){
+   const svg=$('wmap'), wrap=$('mapwrap'), tip=$('maptip');
+   if(!svg||!wrap||!tip) return;
+   const byId={}; (m.allGroups||[]).forEach(g=>byId[g.id]=g);
+   const W=M.w, H=M.h, ASPECT=H/W, MINW=110;
+   let vb={x:0,y:0,w:W,h:H}, pinned=false;
+   const clamp=()=>{vb.w=Math.min(W,vb.w);vb.h=vb.w*ASPECT;vb.x=Math.max(0,Math.min(W-vb.w,vb.x));vb.y=Math.max(0,Math.min(H-vb.h,vb.y));};
+   const apply=()=>svg.setAttribute('viewBox',`${vb.x} ${vb.y} ${vb.w} ${vb.h}`);
+   function zoomAt(cx,cy,f){const r=svg.getBoundingClientRect();const ux=vb.x+(cx-r.left)/r.width*vb.w,uy=vb.y+(cy-r.top)/r.height*vb.h;const nw=Math.min(W,Math.max(MINW,vb.w*f)),s=nw/vb.w;vb.x=ux-(ux-vb.x)*s;vb.y=uy-(uy-vb.y)*s;vb.w=nw;vb.h=nw*ASPECT;clamp();apply();}
+   const ctr=()=>{const r=svg.getBoundingClientRect();return[r.left+r.width/2,r.top+r.height/2];};
+   svg.addEventListener('wheel',e=>{e.preventDefault();zoomAt(e.clientX,e.clientY,e.deltaY<0?0.82:1.22);},{passive:false});
+   $('mzin').onclick=()=>{const c=ctr();zoomAt(c[0],c[1],0.7);};
+   $('mzout').onclick=()=>{const c=ctr();zoomAt(c[0],c[1],1.42);};
+   $('mzr').onclick=()=>{vb={x:0,y:0,w:W,h:H};apply();hide();};
+   let drag=null;
+   svg.addEventListener('pointerdown',e=>{if(e.target.classList.contains('pt'))return;drag={sx:e.clientX,sy:e.clientY,ox:vb.x,oy:vb.y};svg.classList.add('grabbing');try{svg.setPointerCapture(e.pointerId);}catch(_){}});
+   svg.addEventListener('pointermove',e=>{if(!drag)return;const r=svg.getBoundingClientRect();vb.x=drag.ox-(e.clientX-drag.sx)/r.width*vb.w;vb.y=drag.oy-(e.clientY-drag.sy)/r.height*vb.h;clamp();apply();});
+   ['pointerup','pointercancel','pointerleave'].forEach(ev=>svg.addEventListener(ev,()=>{drag=null;svg.classList.remove('grabbing');}));
+   function hide(){tip.style.display='none';pinned=false;}
+   function show(el,cx,cy){
+     const g=byId[el.getAttribute('data-i')]; if(!g)return;
+     const loc=[g.city,g.country].filter(Boolean).map(esc).join(', ');
+     tip.innerHTML=(pinned?`<span class="cl" id="mtcl">×</span>`:'')+`<b>${esc(g.group)}</b><br>${loc}<br>${(g.members||0).toLocaleString()} members · last met ${esc(g.last)||'never'}<br><a href="${esc(g.url)}" target="_blank" rel="noopener">Open group ↗</a>`;
+     const r=wrap.getBoundingClientRect(); tip.style.display='block';
+     let lx=Math.min(cx-r.left+12, r.width-tip.offsetWidth-6), ly=Math.min(cy-r.top+12, r.height-tip.offsetHeight-6);
+     tip.style.left=Math.max(4,lx)+'px'; tip.style.top=Math.max(4,ly)+'px';
+     if(pinned){const c=$('mtcl'); if(c)c.onclick=hide;}
+   }
+   svg.addEventListener('mousemove',e=>{if(pinned||drag)return;if(e.target.classList.contains('pt'))show(e.target,e.clientX,e.clientY);else tip.style.display='none';});
+   svg.addEventListener('mouseleave',()=>{if(!pinned)tip.style.display='none';});
+   svg.addEventListener('click',e=>{if(e.target.classList.contains('pt')){pinned=true;show(e.target,e.clientX,e.clientY);}else hide();});
+ })();
 })();
 
 /* EVENTS */
