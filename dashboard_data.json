@@ -11693,522 +11693,626 @@
     [
      737.0,
      173.0,
-     "n"
+     "n",
+     0
     ],
     [
      803.2,
      269.4,
-     "n"
+     "n",
+     1
     ],
     [
      704.9,
      181.7,
-     "n"
+     "n",
+     2
     ],
     [
      590.2,
      249.2,
-     "n"
+     "n",
+     3
     ],
     [
      782.5,
      241.7,
-     "n"
+     "n",
+     4
     ],
     [
      702.2,
      191.2,
-     "n"
+     "n",
+     5
     ],
     [
      745.7,
      187.3,
-     "n"
+     "n",
+     6
     ],
     [
      877.0,
      152.7,
-     "n"
+     "n",
+     7
     ],
     [
      499.1,
      140.4,
-     "n"
+     "n",
+     8
     ],
     [
      478.0,
      147.2,
-     "n"
+     "n",
+     9
     ],
     [
      707.4,
      176.7,
-     "n"
+     "n",
+     10
     ],
     [
      836.3,
      186.8,
-     "n"
+     "n",
+     11
     ],
     [
      174.1,
      155.6,
-     "n"
+     "n",
+     12
     ],
     [
      803.5,
      270.6,
-     "n"
+     "n",
+     13
     ],
     [
      498.9,
      140.3,
-     "l"
+     "l",
+     14
     ],
     [
      248.6,
      209.4,
-     "n"
+     "n",
+     15
     ],
     [
      528.9,
      128.6,
-     "n"
+     "n",
+     16
     ],
     [
      746.3,
      178.6,
-     "n"
+     "n",
+     17
     ],
     [
      715.6,
      214.0,
-     "l"
+     "l",
+     18
     ],
     [
      564.8,
      131.4,
-     "l"
+     "l",
+     19
     ],
     [
      547.4,
      108.0,
-     "l"
+     "l",
+     20
     ],
     [
      737.0,
      173.0,
-     "l"
+     "l",
+     21
     ],
     [
      588.6,
      251.2,
-     "n"
+     "n",
+     22
     ],
     [
      555.4,
      110.9,
-     "n"
+     "n",
+     23
     ],
     [
      555.4,
      110.9,
-     "n"
+     "n",
+     24
     ],
     [
      260.5,
      216.3,
-     "l"
+     "l",
+     25
     ],
     [
      888.1,
      151.0,
-     "n"
+     "n",
+     26
     ],
     [
      476.6,
      129.6,
-     "l"
+     "l",
+     27
     ],
     [
      796.3,
      267.4,
-     "n"
+     "n",
+     28
     ],
     [
      812.9,
      270.2,
-     "n"
+     "n",
+     29
     ],
     [
      748.2,
      180.8,
-     "n"
+     "n",
+     30
     ],
     [
      587.0,
      247.7,
-     "n"
+     "n",
+     31
     ],
     [
      266.9,
      222.6,
-     "n"
+     "n",
+     32
     ],
     [
      799.0,
      269.2,
-     "n"
+     "n",
+     33
     ],
     [
      264.4,
      222.3,
-     "n"
+     "n",
+     34
     ],
     [
      706.2,
      203.6,
-     "n"
+     "n",
+     35
     ],
     [
      528.9,
      128.6,
-     "l"
+     "l",
+     36
     ],
     [
      591.4,
      243.8,
-     "l"
+     "l",
+     37
     ],
     [
      737.0,
      173.1,
-     "n"
+     "n",
+     38
     ],
     [
      706.2,
      203.5,
-     "n"
+     "n",
+     39
     ],
     [
      260.5,
      216.9,
-     "n"
+     "n",
+     40
     ],
     [
      702.2,
      191.0,
-     "n"
+     "n",
+     41
     ],
     [
      737.0,
      173.0,
-     "n"
+     "n",
+     42
     ],
     [
      566.0,
      144.5,
-     "l"
+     "l",
+     43
     ],
     [
      706.3,
      203.1,
-     "n"
+     "n",
+     44
     ],
     [
      224.6,
      196.4,
-     "n"
+     "n",
+     45
     ],
     [
      506.8,
      134.6,
-     "n"
+     "n",
+     46
     ],
     [
      592.4,
      248.6,
-     "n"
+     "n",
+     47
     ],
     [
      489.8,
      134.2,
-     "n"
+     "n",
+     48
     ],
     [
      703.0,
      162.7,
-     "n"
+     "n",
+     49
     ],
     [
      755.2,
      180.8,
-     "n"
+     "n",
+     50
     ],
     [
      840.4,
      220.2,
-     "l"
+     "l",
+     51
     ],
     [
      248.6,
      209.4,
-     "n"
+     "n",
+     52
     ],
     [
      266.9,
      222.6,
-     "n"
+     "n",
+     53
     ],
     [
      751.0,
      183.9,
-     "n"
+     "n",
+     54
     ],
     [
      733.3,
      171.6,
-     "n"
+     "n",
+     55
     ],
     [
      710.6,
      175.4,
-     "l"
+     "l",
+     56
     ],
     [
      801.4,
      271.3,
-     "n"
+     "n",
+     57
     ],
     [
      522.0,
      237.1,
-     "l"
+     "l",
+     58
     ],
     [
      501.7,
      134.4,
-     "n"
+     "n",
+     59
     ],
     [
      707.3,
      176.5,
-     "n"
+     "n",
+     60
     ],
     [
      497.5,
      134.3,
-     "n"
+     "n",
+     61
     ],
     [
      488.8,
      139.3,
-     "n"
+     "n",
+     62
     ],
     [
      476.7,
      129.6,
-     "n"
+     "n",
+     63
     ],
     [
      158.0,
      113.1,
-     "l"
+     "l",
+     64
     ],
     [
      588.1,
      250.9,
-     "l"
+     "l",
+     65
     ],
     [
      511.9,
      105.3,
-     "l"
+     "l",
+     66
     ],
     [
      577.8,
      322.3,
-     "l"
+     "l",
+     67
     ],
     [
      538.5,
      125.4,
-     "n"
+     "n",
+     68
     ],
     [
      709.0,
      214.6,
-     "n"
+     "n",
+     69
     ],
     [
      592.3,
      248.8,
-     "l"
+     "l",
+     70
     ],
     [
      260.5,
      216.3,
-     "n"
+     "n",
+     71
     ],
     [
      556.8,
      125.5,
-     "l"
+     "l",
+     72
     ],
     [
      746.2,
      182.3,
-     "l"
+     "l",
+     73
     ],
     [
      266.5,
      222.4,
-     "l"
+     "l",
+     74
     ],
     [
      487.5,
      148.0,
-     "l"
+     "l",
+     75
     ],
     [
      555.1,
      124.3,
-     "n"
+     "n",
+     76
     ],
     [
      521.3,
      124.9,
-     "l"
+     "l",
+     77
     ],
     [
      787.9,
      245.7,
-     "n"
+     "n",
+     78
     ],
     [
      188.7,
      157.1,
-     "f"
+     "f",
+     79
     ],
     [
      590.5,
      249.1,
-     "l"
+     "l",
+     80
     ],
     [
      497.5,
      134.3,
-     "l"
+     "l",
+     81
     ],
     [
      751.1,
      183.9,
-     "n"
+     "n",
+     82
     ],
     [
      545.4,
      116.1,
-     "l"
+     "l",
+     83
     ],
     [
      534.5,
      107.4,
-     "l"
+     "l",
+     84
     ],
     [
      590.9,
      249.0,
-     "l"
+     "l",
+     85
     ],
     [
      489.3,
      137.8,
-     "l"
+     "l",
+     86
     ],
     [
      745.5,
      187.3,
-     "n"
+     "n",
+     87
     ],
     [
      844.2,
      221.4,
-     "n"
+     "n",
+     88
     ],
     [
      591.4,
      243.7,
-     "n"
+     "n",
+     89
     ],
     [
      706.2,
      203.5,
-     "l"
+     "l",
+     90
     ],
     [
      523.5,
      112.5,
-     "l"
+     "l",
+     91
     ],
     [
      266.6,
      222.5,
-     "n"
+     "n",
+     92
     ],
     [
      495.3,
      116.3,
-     "l"
+     "l",
+     93
     ],
     [
      540.2,
      122.1,
-     "l"
+     "l",
+     94
     ],
     [
      475.9,
      135.7,
-     "l"
+     "l",
+     95
     ],
     [
      705.1,
      198.5,
-     "l"
+     "l",
+     96
     ],
     [
      520.2,
      128.6,
-     "l"
+     "l",
+     97
     ],
     [
      555.4,
      111.0,
-     "f"
+     "f",
+     98
     ],
     [
      731.8,
      173.1,
-     "l"
+     "l",
+     99
     ],
     [
      266.6,
      222.4,
-     "n"
+     "n",
+     100
     ],
     [
      702.4,
      197.0,
-     "f"
+     "f",
+     101
     ],
     [
      519.5,
      236.6,
-     "l"
+     "l",
+     102
     ],
     [
      522.1,
      236.1,
-     "n"
+     "n",
+     103
     ]
    ],
    "counts": {
@@ -12217,7 +12321,737 @@
     "n": 63
    },
    "w": 1000,
-   "h": 500
+   "h": 500,
+   "eventList": [
+    {
+     "n": "WordPress Campus Connect Kathmandu, Nepal 2026",
+     "loc": "Kathmandu, Nepal",
+     "d": "2026-08-16",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-model-institute-of-technology-mit-nepal-texas-international-college-new-summit-college/"
+    },
+    {
+     "n": "WordPress Campus Connect Perpus Soetta Tegal",
+     "loc": "Tegal Regency, Indonesia",
+     "d": "2026-08-09",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-tegal-regency-public-library-perpustakaan-soekarno-hatta-kabupaten-tegal/"
+    },
+    {
+     "n": "WordPress Campus Connect Udaipur",
+     "loc": "udaipur, India",
+     "d": "2026-08-08",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-iim-u-faculty-of-management-studies-pacific-university/"
+    },
+    {
+     "n": "WordPress Campus Connect Central and Eastern Uganda Schools",
+     "loc": "Banda, Uganda ",
+     "d": "2026-07-19",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-east-central-uganda-schools/"
+    },
+    {
+     "n": "WordPress Campus Connect Universiti Putra Malaysia, Serdang",
+     "loc": "Serdang, Selangor, Malaysia",
+     "d": "2026-07-25",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-universiti-putra-malaysia/"
+    },
+    {
+     "n": "WordPress Campus Connect Surat, India",
+     "loc": "Surat, India",
+     "d": "2026-08-01",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-sarvajanik-college-of-engineering-and-technology-scet-surat/"
+    },
+    {
+     "n": "WordPress Campus Connect Kolkata",
+     "loc": "Kolkata, India",
+     "d": "2026-07-18",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-kolkata/"
+    },
+    {
+     "n": "WordPress Campus Connect Kyoto University of Advanced Science",
+     "loc": "Kyoto City, Japan",
+     "d": "2026-07-04",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-uzumasa-campus-kyoto-university-of-advanced-science/"
+    },
+    {
+     "n": "WordPress Day for AI Valencia 2026",
+     "loc": "Valencia, Spain",
+     "d": "2026-07-04",
+     "ty": "WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-day-for-ia-valencia-2026/"
+    },
+    {
+     "n": "WordPress Day for AI Faro 2026",
+     "loc": "Faro, Portugal",
+     "d": "2026-10-24",
+     "ty": "WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/wp-day-for-ai-faro-2026/"
+    },
+    {
+     "n": "WordPress Campus Connect Ajmer",
+     "loc": "Ajmer, India",
+     "d": "2026-08-01",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-government-mahila-engineering-college-gweca-ajmer-government-engineering-college-ajmer-shree-vardhman-girls-college-beawar-ajmer-shri-ratanlal-kanwarlal-patni-girls-col/"
+    },
+    {
+     "n": "WordPress Campus Connect National Taitung University",
+     "loc": "Taitung, Taiwan",
+     "d": "2026-05-24",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-national-taitung-university-csie-department/"
+    },
+    {
+     "n": "WordPress Student Club UCR-Esparza",
+     "loc": "UCR-Esparza",
+     "d": "2026-05-20",
+     "ty": "Student Club",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-student-club-ucr-esparza/"
+    },
+    {
+     "n": "WordPress Campus Connect Universitas Muhammadiyah Purwokerto",
+     "loc": "Purwokerto, Indonesia",
+     "d": "2026-06-05",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-universitas-muhammadiyah-purwokerto/"
+    },
+    {
+     "n": "WordCamp Valencia 2026",
+     "loc": "Valencia, Spain",
+     "d": "2026-10-31",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-valencia-2026/"
+    },
+    {
+     "n": "WordPress Campus Connect UVG Guatemala",
+     "loc": "Guatemala City, Guatemala",
+     "d": "2026-08-01",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-uvg-guatemala/"
+    },
+    {
+     "n": "WordPress Campus Connect University of Pisa",
+     "loc": "Pisa, Italy",
+     "d": "2026-05-04",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-university-of-pisa/"
+    },
+    {
+     "n": "WordPress Campus Connect Hajee Mohammad Danesh Science and Technology University (HSTU)",
+     "loc": "Dinajpur, Bangladesh",
+     "d": "2026-08-16",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-hajee-mohammad-danesh-science-and-technology-university-hstu/"
+    },
+    {
+     "n": "WordCamp Bengaluru 2026",
+     "loc": "Bengaluru, Karnataka, India",
+     "d": "2026-11-21",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-bengaluru-2026/"
+    },
+    {
+     "n": "WordCamp Sofia 2026",
+     "loc": "Sofia, Bulgaria",
+     "d": "2026-10-24",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-sofia-2026/"
+    },
+    {
+     "n": "WordCamp Wrocław 2026",
+     "loc": "Wrocław, Poland",
+     "d": "2026-10-02",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-wroclaw-2026/"
+    },
+    {
+     "n": "WordCamp Kathmandu",
+     "loc": "Kathmandu, Bagmati, Kathmandu",
+     "d": "2026-09-18",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-kathmandu-2026/"
+    },
+    {
+     "n": "WordPress Campus Connect Masaka",
+     "loc": "Masaka, Uganda",
+     "d": "2026-04-11",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-masaka-uganda/"
+    },
+    {
+     "n": "WordPress Campus Connect Politechnika Krakowska",
+     "loc": "Kraków, Poland",
+     "d": "2026-04-13",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-politechnika-krakowska-cracow-university-of-technology/"
+    },
+    {
+     "n": "WordPress Campus Connect Uniwersytet Ekonomiczny w Krakowie",
+     "loc": "Kraków, Poland",
+     "d": "2026-04-13",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-uniwersytet-ekonomiczny-w-krakowie/"
+    },
+    {
+     "n": "WordCamp Managua 2026",
+     "loc": "Managua, Nicaragua",
+     "d": "2026-09-26",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-managua-2026/"
+    },
+    {
+     "n": "WordPress Campus Connect Japan University of Economics",
+     "loc": "Tokyo, Japan",
+     "d": "2026-05-09",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-japan-university-of-economics/"
+    },
+    {
+     "n": "WordCamp Galicia 2026",
+     "loc": "A Coruña, Galicia, Spain",
+     "d": "2026-10-16",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-galicia-2026/"
+    },
+    {
+     "n": "WordPress Campus Connect Institut Teknologi Tangerang Selatan",
+     "loc": "Tangerang Selatan, Indonesia",
+     "d": "2026-06-18",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-institut-teknologi-tangerang-selatan/"
+    },
+    {
+     "n": "WordPress Campus Connect Universitas Ciputra Surabaya",
+     "loc": "Surabaya, Indonesia",
+     "d": "2026-05-22",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-universitas-ciputra-surabaya/"
+    },
+    {
+     "n": "WordPress Campus Connect Pundra University of Science &amp; Technology, Bogura",
+     "loc": "Bogura, Bangladesh",
+     "d": "2026-04-18",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-pundra-university-of-science-technology-pub/"
+    },
+    {
+     "n": "WordPress Campus Connect St. Edward&#8217;s S.S Bukuumi",
+     "loc": "Kakumiro, Uganda",
+     "d": "2026-04-25",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-st-edwards-s-s-bukuumi/"
+    },
+    {
+     "n": "WordPress Campus Connect BeeNova HHC Innovation Center, Cartago",
+     "loc": "Cartago, Costa Rica",
+     "d": "2026-09-12",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-beenova-hhc-innovation-center/"
+    },
+    {
+     "n": "WordPress Campus Connect Ekuitas University",
+     "loc": "Bandung, Indonesia",
+     "d": "2026-04-09",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-universitas-ekuitas-indonesia-or-nick-name-ekuitas-university/"
+    },
+    {
+     "n": "WordPress Campus Connect UCR Sede del Pacífico Esparza",
+     "loc": "Puntarenas, Costa Rica",
+     "d": "2026-08-29",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-ucr-sede-del-pacifico-esparza/"
+    },
+    {
+     "n": "Women WordPress day Kolhapur, India",
+     "loc": "Kolhapur, India",
+     "d": "2026-03-14",
+     "ty": "Women WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/kolhapur-india/"
+    },
+    {
+     "n": "WordCamp Pisa 2026",
+     "loc": "Pisa, Italy",
+     "d": "2026-11-13",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-pisa-2026/"
+    },
+    {
+     "n": "WordCamp Lira 2026",
+     "loc": "Lira, Uganda",
+     "d": "2026-08-29",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-lira-2026/"
+    },
+    {
+     "n": "WordPress Campus Connect KIST College, Kathmandu",
+     "loc": "Kathmandu, Nepal",
+     "d": "2026-03-27",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-kist-college-kathmandu/"
+    },
+    {
+     "n": "WordPress Student Club DYPSEM, Kolhapur",
+     "loc": "asia",
+     "d": "2026-04-28",
+     "ty": "Student Club",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-student-club-dypsem/"
+    },
+    {
+     "n": "WordPress Campus Connect Keiser University Latin American Campus",
+     "loc": "San Marcos, Carazo",
+     "d": "2026-03-20",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-keiser-university-latin-american-campus/"
+    },
+    {
+     "n": "Women WordPress Day Surat 2026",
+     "loc": "Surat, India",
+     "d": "2026-03-08",
+     "ty": "Women WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-surat-2026/"
+    },
+    {
+     "n": "Women WordPress Day Kathmandu 2026",
+     "loc": "Kathmandu, Nepal",
+     "d": "2026-03-14",
+     "ty": "Women WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-kathmandu-2026/"
+    },
+    {
+     "n": "WordCamp Athens 2026",
+     "loc": "Athens, Greece",
+     "d": "2026-12-11",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-athens-2026/"
+    },
+    {
+     "n": "WordPress Student Club DYPATU, Kolhapur",
+     "loc": "Kolhapur, India",
+     "d": "2026-04-28",
+     "ty": "Student Club",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-student-club-dypatil/"
+    },
+    {
+     "n": "WordPress Day CDMX 2026",
+     "loc": "CDMX, Mexico",
+     "d": "2026-08-29",
+     "ty": "WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-day-cdmx-2026/"
+    },
+    {
+     "n": "WordPress Campus Connect Escola Pia Mataró",
+     "loc": "Mataró, Spain",
+     "d": "2026-02-18",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-2026-tweek-escola-pia-mataro/"
+    },
+    {
+     "n": "Uganda Website Projects Competition 2026",
+     "loc": "Jinja, Uganda",
+     "d": "2026-06-09",
+     "ty": "Community event",
+     "u": "https://central.wordcamp.org/wordcamps/uganda-website-projects-competition-2026/"
+    },
+    {
+     "n": "WordPress Campus Connect Ribera del Duero",
+     "loc": "Aranda de Duero, España",
+     "d": "2026-01-30",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-wordpress-campus-connect-ribera-del-duero-2026/"
+    },
+    {
+     "n": "WordPress Campus Connect Career Institute, Faisalabad",
+     "loc": "Faisalabad, Pakistan",
+     "d": "2026-02-28",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-career-institute-faisalabad/"
+    },
+    {
+     "n": "Women WordPress Day Sylhet 2026",
+     "loc": "Sylhet, Bangladesh",
+     "d": "2026-02-08",
+     "ty": "Women WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-sylhet-2026/"
+    },
+    {
+     "n": "WordCamp Philippines 2026",
+     "loc": "Iloilo City, Philippines",
+     "d": "2026-08-28",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-philippines-2026/"
+    },
+    {
+     "n": "Women WordPress Day Guatemala 2026",
+     "loc": "Guatemala",
+     "d": "2026-03-28",
+     "ty": "Women WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-guatemala-2026/"
+    },
+    {
+     "n": "WordPress Women Day Cartago 2026",
+     "loc": "Cartago, Costa Rica",
+     "d": "2026-03-28",
+     "ty": "Women WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-cartago-2026/"
+    },
+    {
+     "n": "Women WordPress Day Dhaka 2026",
+     "loc": "Dhaka, Bangladesh",
+     "d": "2026-02-08",
+     "ty": "Women WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-dhaka-2026/"
+    },
+    {
+     "n": "Nepal Photo Festival 2026",
+     "loc": "Pokhara, Nepal",
+     "d": "2026-05-16",
+     "ty": "Community event",
+     "u": "https://central.wordcamp.org/wordcamps/nepal-photo-festival-2026/"
+    },
+    {
+     "n": "WordCamp Rajasthan 2026",
+     "loc": "Jaipur, Rajasthan, India",
+     "d": "2026-10-03",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-rajasthan-2026/"
+    },
+    {
+     "n": "WordPress Campus Connect STITNU Al Farabi Pangandaran",
+     "loc": "Pangandaran, Indonesia",
+     "d": "2026-03-12",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-stitnu-al-farabi/"
+    },
+    {
+     "n": "WordCamp Eket 2026",
+     "loc": "Eket, Akwa Ibom State, Nigeria",
+     "d": "2026-08-15",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-eket-2026/"
+    },
+    {
+     "n": "WordPress Campus Connect Universitat de Lleida",
+     "loc": "Lleida, Spain",
+     "d": "2026-02-18",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-universitat-lleida/"
+    },
+    {
+     "n": "Women WordPress Day Ajmer 2026",
+     "loc": "Ajmer, India",
+     "d": "2026-03-08",
+     "ty": "Women WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-ajmer-2026/"
+    },
+    {
+     "n": "WordPress Campus Connect Zaragoza 2026",
+     "loc": "Zaragoza, ES",
+     "d": "2026-01-23",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-campus-connect-zaragoza-2026/"
+    },
+    {
+     "n": "WordPress Campus Connect Escuela de Arte Toledo",
+     "loc": "Toledo, Spain",
+     "d": "2026-01-28",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-campus-connect-toledo/"
+    },
+    {
+     "n": "WordPress Campus Connect Liceo la Paz A Coruña",
+     "loc": "A Coruña, Spain",
+     "d": "2026-05-07",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-liceo-la-paz-a-coruna/"
+    },
+    {
+     "n": "WordCamp Canada 2026",
+     "loc": "Vancouver, Canada",
+     "d": "2026-11-05",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-canada-2026/"
+    },
+    {
+     "n": "WordCamp Masaka 2026",
+     "loc": "Masaka, Uganda",
+     "d": "2026-07-04",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-masaka-2026/"
+    },
+    {
+     "n": "WordCamp Netherlands 2026",
+     "loc": "Netherlands",
+     "d": "2026-11-12",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-netherlands-2026/"
+    },
+    {
+     "n": "WordCamp Johannesburg 2026",
+     "loc": "Johannesburg, Gauteng, South Africa",
+     "d": "2026-10-30",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-johannesburg-2026/"
+    },
+    {
+     "n": "WordPress Campus Connect University of Pula",
+     "loc": "Pula, Croatia",
+     "d": "2026-04-13",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-wordpress-campus-connect-pula/"
+    },
+    {
+     "n": "WordPress Campus Connect St Philomena College, Puttur",
+     "loc": "Puttur, India",
+     "d": "2026-01-30",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-st-philomena-college-autonomous-puttur/"
+    },
+    {
+     "n": "WordCamp Jinja 2026",
+     "loc": "Jinja, Eastern region, Uganda",
+     "d": "2026-09-19",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-jinja-2026/"
+    },
+    {
+     "n": "Women WordPress Day Nicaragua 2026",
+     "loc": "Managua, Nicaragua",
+     "d": "2026-03-08",
+     "ty": "Women WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-nicaragua-2026/"
+    },
+    {
+     "n": "WordCamp Belgrade 2026",
+     "loc": "Belgrade, Serbia",
+     "d": "2026-09-18",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-belgrade-2026/"
+    },
+    {
+     "n": "WordCamp Rajshahi 2026",
+     "loc": "Rajshahi,Bangladesh",
+     "d": "2026-07-02",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-rajshahi-2026/"
+    },
+    {
+     "n": "WordCamp Costa Rica 2026",
+     "loc": "Costa Rica",
+     "d": "2026-09-18",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-costa-rica-2026/"
+    },
+    {
+     "n": "WordCamp Málaga 2026",
+     "loc": "Málaga, Málaga, Spain",
+     "d": "2026-04-24",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-malaga-2026/"
+    },
+    {
+     "n": "WordPress Developer Day Novi Sad 2026",
+     "loc": "Novi Sad, Serbia",
+     "d": "2026-05-09",
+     "ty": "Community event",
+     "u": "https://central.wordcamp.org/wordcamps/developer-day-novi-sad-2026/"
+    },
+    {
+     "n": "WordCamp Torino 2026",
+     "loc": "Torino (Italy)",
+     "d": "2026-05-08",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-torino-2026/"
+    },
+    {
+     "n": "WordPress Campus Connect Universiti Teknologi Malaysia",
+     "loc": "Johor Bahru, Malaysia",
+     "d": "2026-01-03",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-johor-bahru-malaysia/"
+    },
+    {
+     "n": "WordCamp US 2026",
+     "loc": "Phoenix, AZ, USA",
+     "d": "2026-08-16",
+     "ty": "Flagship WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-us-2026/"
+    },
+    {
+     "n": "WordCamp Kampala 2026",
+     "loc": "Kampala, Uganda",
+     "d": "2026-05-23",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-kampala-2026/"
+    },
+    {
+     "n": "WordCamp Zaragoza 2026",
+     "loc": "Zaragoza, Spain",
+     "d": "2026-01-23",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-zaragoza-2026/"
+    },
+    {
+     "n": "WordPress Campus Connect Dhaka",
+     "loc": "Dhaka, Bangladesh",
+     "d": "2026-05-10",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-dhaka-2026/"
+    },
+    {
+     "n": "WordCamp Vienna 2026",
+     "loc": "Vienna, Austria",
+     "d": "2026-04-10",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-vienna-2026/"
+    },
+    {
+     "n": "WordCamp Leipzig 2026",
+     "loc": "Leipzig, Germany",
+     "d": "2026-05-09",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-leipzig-2026/"
+    },
+    {
+     "n": "WordCamp Mukono 2026",
+     "loc": "Mukono",
+     "d": "2026-03-13",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-mukono-2026/"
+    },
+    {
+     "n": "WordCamp Madrid 2026",
+     "loc": "Madrid, Spain",
+     "d": "2026-03-06",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-madrid-2026/"
+    },
+    {
+     "n": "WordPress Campus Connect RCC Institute of Information Technology, Kolkata",
+     "loc": "Kolkata, India",
+     "d": "2026-01-17",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-rccit-kolkata/"
+    },
+    {
+     "n": "WordPress Campus Connect Cebu 2026",
+     "loc": "Cebu, Philippines",
+     "d": "2026-01-30",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-cebu/"
+    },
+    {
+     "n": "WordPress Campus Connect Lira Public Library",
+     "loc": "Lira Public Library",
+     "d": "2026-02-28",
+     "ty": "Campus Connect",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-lira-uganda/"
+    },
+    {
+     "n": "WordCamp Kolhapur 2026",
+     "loc": "Kolhapur, Maharashtra, India",
+     "d": "2026-01-31",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-kolhapur-2026/"
+    },
+    {
+     "n": "WordCamp Mannheim 2026",
+     "loc": "Mannheim",
+     "d": "2026-07-03",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-mannheim-2026/"
+    },
+    {
+     "n": "WordPress Developer Day 2026 San José",
+     "loc": "San Jose, Costa Rica",
+     "d": "2026-02-21",
+     "ty": "Community event",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-developer-day-san-jose-2026/"
+    },
+    {
+     "n": "WordCamp Bretagne 2026",
+     "loc": "Rennes, Brittany, France",
+     "d": "2026-09-18",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-bretagne-2026/"
+    },
+    {
+     "n": "WordCamp Slovenia",
+     "loc": "Ljubljana, Slovenia",
+     "d": "2026-05-16",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-ljubljana/"
+    },
+    {
+     "n": "WordCamp Portugal 2026",
+     "loc": "Porto, Portugal",
+     "d": "2026-05-15",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-portugal-2026/"
+    },
+    {
+     "n": "WordCamp Pune 2026",
+     "loc": "Pune",
+     "d": "2026-02-08",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-pune-2026/"
+    },
+    {
+     "n": "WordCamp Nice 2026",
+     "loc": "Nice, France",
+     "d": "2026-03-06",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-nice-2026/"
+    },
+    {
+     "n": "WordCamp Europe 2026",
+     "loc": "Krakow, Poland",
+     "d": "2026-06-04",
+     "ty": "Flagship WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-europe-2026/"
+    },
+    {
+     "n": "WordCamp Nepal 2026",
+     "loc": "Butwal, Nepal",
+     "d": "2026-01-23",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-nepal-2026/"
+    },
+    {
+     "n": "Women WordPress Day San José 2026",
+     "loc": "San José, Costa Rica",
+     "d": "2026-03-07",
+     "ty": "Women WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-san-jose-2026/"
+    },
+    {
+     "n": "WordCamp Asia 2026",
+     "loc": "Mumbai, India",
+     "d": "2026-04-09",
+     "ty": "Flagship WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-asia-2026/"
+    },
+    {
+     "n": "WordCamp Port Harcourt 2026",
+     "loc": "Port Harcourt, Nigeria",
+     "d": "2026-02-21",
+     "ty": "WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-port-harcourt-2025/"
+    },
+    {
+     "n": "do_action Uyo 2026",
+     "loc": "Uyo, Akwa Ibom, Nigeria",
+     "d": "2026-08-01",
+     "ty": "do_action",
+     "u": "https://central.wordcamp.org/wordcamps/do_action-uyo-2026/"
+    }
+   ]
   },
   "bench": {
    "orgFirst": 186,
