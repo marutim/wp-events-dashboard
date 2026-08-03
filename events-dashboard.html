@@ -335,7 +335,7 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
    const T=k=>mos.reduce((a,m)=>a+P.momentum[m][k],0);
    mom=`<div class="card"><h2>Pipeline momentum — 2026 monthly flow</h2>${rows}
      <div class="legend"><span><i class="dot b-blue"></i>new applications</span><span><i class="dot b-green"></i>confirmed (→ scheduled)</span><span><i class="dot b-red"></i>lost (cancelled/declined)</span></div>
-     <p class="foot">YTD: <b>${T('newApps')}</b> new applications entered the funnel, <b>${T('confirmed')}</b> reached scheduled, <b>${T('closed')}</b> happened, <b>${T('attrition')}</b> were lost. Every month nets positive. Source: WordCamp Central status-change log.</p></div>`;
+     <p class="foot">YTD: <b>${T('newApps')}</b> new applications entered the funnel, <b>${T('confirmed')}</b> reached scheduled, <b>${T('closed')}</b> happened, <b>${T('attrition')}</b> were lost. New applications and completed events are exact (creation and event dates); confirmed and lost are approximate (last status-change dates). From WordCamp Central.</p></div>`;
  }
 
  $('pipeline').innerHTML=
