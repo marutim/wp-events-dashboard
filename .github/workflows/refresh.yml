@@ -33,7 +33,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: python -m pip install --quiet pyjwt
+        run: python -m pip install --quiet "pyjwt[crypto]"
 
       - name: Pull Meetup network (JWT)
         env:
