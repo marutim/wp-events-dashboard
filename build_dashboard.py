@@ -128,7 +128,9 @@ tr.us td{background:var(--usrow)} td.num{text-align:right;font-variant-numeric:t
 <script>
 const D=__DATA__;
 const $=id=>document.getElementById(id);
-$('sub').textContent=`As of ${D.asOf} · Meetup API + WordCamp Central (public and authenticated). Live operational snapshot.`;
+const MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+const fmtD=s=>{if(!s)return '';const m=/^(\d{4})-(\d{2})-(\d{2})/.exec(String(s));return m?`${m[1]}-${MONTHS[+m[2]-1]}-${m[3]}`:String(s);};
+$('sub').textContent='Meetups, WordCamps, and the WordCamp application pipeline.';
 function tiles(a){return `<div class="tiles">`+a.map(t=>`<div class="tile ${t[0]}"><div class="n">${t[1]}</div><div class="l">${t[2]}</div></div>`).join('')+`</div>`;}
 function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner=segs.map(s=>`<div class="bar ${s[0]}" style="width:${w(s[1])}%"></div>`).join('');return `<div class="frow"><div class="lbl">${lbl}</div><div class="barwrap">${inner}</div><div class="cnt">${total}</div></div>`;}
 
@@ -153,7 +155,7 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
  const m=D.meetups, mx=Math.max(...m.recency.map(r=>r[1]));
  const cf=l=>l.includes('30 days')||l.includes('1 to 3')?'b-green':l.includes('3 to 6')||l.includes('6 to 12')?'b-amber':l.includes('Never')?'b-grey':'b-red';
  let rec=m.recency.map(r=>barRow(r[0],[[cf(r[0]),r[1]]],r[1]+' ('+Math.round(r[1]/m.groups*100)+'%)',mx)).join('');
- let dead=m.deadBig.map(g=>`<tr><td><a href="${g.url}" target="_blank" rel="noopener">${g.group}</a></td><td class="hidem">${g.city}</td><td>${g.country}</td><td class="num">${(g.members||0).toLocaleString()}</td><td>${g.last||'never'}</td></tr>`).join('');
+ let dead=m.deadBig.map(g=>`<tr><td><a href="${g.url}" target="_blank" rel="noopener">${g.group}</a></td><td class="hidem">${g.city}</td><td>${g.country}</td><td class="num">${(g.members||0).toLocaleString()}</td><td>${g.last?fmtD(g.last):'never'}</td></tr>`).join('');
  const M=m.map, ord={a:0,d:1,n:2};
  let dots='';
  M.points.slice().sort((p,q)=>ord[p[2]]-ord[q[2]]).forEach(p=>dots+=`<circle class="pt ${p[2]}" cx="${p[0]}" cy="${p[1]}" r="2" data-i="${p[3]}"/>`);
@@ -198,7 +200,7 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
    const rows=rowsFor(curCat), pages=Math.max(1,Math.ceil(rows.length/PAGE));
    if(curPage>pages)curPage=pages;
    const slice=rows.slice((curPage-1)*PAGE,curPage*PAGE);
-   $('mgbody').innerHTML=slice.length?slice.map(g=>`<tr><td><a href="${esc(g.url)}" target="_blank" rel="noopener">${esc(g.group)}</a>${dotFor(g.cat)}</td><td class="hidem">${esc(g.city)}</td><td>${esc(g.country)}</td><td class="num">${(g.members||0).toLocaleString()}</td><td>${esc(g.last)||'never'}</td></tr>`).join(''):`<tr><td colspan="5" style="color:var(--muted)">No groups in this category.</td></tr>`;
+   $('mgbody').innerHTML=slice.length?slice.map(g=>`<tr><td><a href="${esc(g.url)}" target="_blank" rel="noopener">${esc(g.group)}</a>${dotFor(g.cat)}</td><td class="hidem">${esc(g.city)}</td><td>${esc(g.country)}</td><td class="num">${(g.members||0).toLocaleString()}</td><td>${g.last?fmtD(g.last):'never'}</td></tr>`).join(''):`<tr><td colspan="5" style="color:var(--muted)">No groups in this category.</td></tr>`;
    const from=rows.length?(curPage-1)*PAGE+1:0, to=Math.min(curPage*PAGE,rows.length);
    $('mgfoot').textContent=`Showing ${from}–${to} of ${rows.length} groups.`;
    $('mgpager').innerHTML=`<button class="mgpg" data-p="prev"${curPage<=1?' disabled':''}>← Prev</button><span class="mgpginfo">Page ${curPage} / ${pages}</span><button class="mgpg" data-p="next"${curPage>=pages?' disabled':''}>Next →</button>`;
@@ -232,7 +234,7 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
    function show(el,cx,cy){
      const g=byId[el.getAttribute('data-i')]; if(!g)return;
      const loc=[g.city,g.country].filter(Boolean).map(esc).join(', ');
-     tip.innerHTML=(pinned?`<span class="cl" id="mtcl">×</span>`:'')+`<b>${esc(g.group)}</b><br>${loc}<br>${(g.members||0).toLocaleString()} members · last met ${esc(g.last)||'never'}<br><a href="${esc(g.url)}" target="_blank" rel="noopener noreferrer">Open group ↗</a>`;
+     tip.innerHTML=(pinned?`<span class="cl" id="mtcl">×</span>`:'')+`<b>${esc(g.group)}</b><br>${loc}<br>${(g.members||0).toLocaleString()} members · last met ${g.last?fmtD(g.last):'never'}<br><a href="${esc(g.url)}" target="_blank" rel="noopener noreferrer">Open group ↗</a>`;
      const r=wrap.getBoundingClientRect(); tip.style.display='block';
      let lx=Math.min(cx-r.left+12, r.width-tip.offsetWidth-6), ly=Math.min(cy-r.top+12, r.height-tip.offsetHeight-6);
      tip.style.left=Math.max(4,lx)+'px'; tip.style.top=Math.max(4,ly)+'px';
@@ -312,7 +314,7 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
    function hide(){cancelHide();tip.style.display='none';pinned=false;}
    function show(el,cx,cy){
      const g=EL[el.getAttribute('data-i')]; if(!g)return;
-     const line=[g.ty,g.d].filter(Boolean).map(esc).join(' · ');
+     const line=[g.ty?esc(g.ty):'', g.d?esc(fmtD(g.d)):''].filter(Boolean).join(' · ');
      tip.innerHTML=(pinned?`<span class="cl" id="mtcl2">×</span>`:'')+`<b>${esc(g.n)}</b><br>${esc(g.loc)}<br>${line}${g.u?`<br><a href="${esc(g.u)}" target="_blank" rel="noopener noreferrer">Event page ↗</a>`:''}`;
      const r=wrap.getBoundingClientRect(); tip.style.display='block';
      let lx=Math.min(cx-r.left+12, r.width-tip.offsetWidth-6), ly=Math.min(cy-r.top+12, r.height-tip.offsetHeight-6);
@@ -331,7 +333,7 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
 /* PIPELINE */
 (function(){
  const P=D.pipeline, order=P.funnelOrder;
- const counts={};order.forEach(s=>counts[s]=0);P.records.forEach(r=>{if(counts[r.stage]!==undefined)counts[r.stage]++});
+ const counts=P.funnelCounts||(function(){const c={};order.forEach(s=>c[s]=0);P.records.forEach(r=>{if(c[r.stage]!==undefined)c[r.stage]++});return c;})();
  const mx=Math.max(...Object.values(counts),1);
  let fh=order.map(s=>barRow(s,[['b-blue',counts[s]]],counts[s],mx)).join('');
  fh+=barRow('→ Scheduled',[['b-green',P.scheduledCount]],P.scheduledCount,mx);
@@ -353,12 +355,12 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
  }
 
  $('pipeline').innerHTML=
-  tiles([['hot',P.records.length,'in the funnel'],['good',P.scheduledCount,'confirmed'],['us',usN,'US in flight'],
+  tiles([['hot',(P.activeFunnelTotal!=null?P.activeFunnelTotal:P.records.length),'in the funnel'],['good',P.scheduledCount,'confirmed'],['us',usN,'US in flight'],
    ['',wcN,'WordCamps'],['',P.cancelledCount,'cancelled all-time'],['',P.declinedCount,'declined all-time']])
   +`<div class="card"><h2>Application funnel — where events are stuck</h2>${fh}
     <p class="foot">${P.testCount} test records excluded. A confirmed event has cleared every stage above.</p></div>`
   +mom
-  +`<div class="card"><h2>The ${P.records.length} events in flight — outreach list</h2>
+  +`<div class="card"><h2>The ${P.records.length} events in flight — outreach list</h2>${P.detailAsOf?`<p class="foot" style="margin:-4px 0 12px">Per-event detail as of ${fmtD(P.detailAsOf)}, refreshed manually. Funnel counts above are current.</p>`:''}
     <div class="controls"><input id="q" placeholder="Search title, city, country…">
     <select id="fmt"><option value="">All formats</option></select>
     <select id="stg"><option value="">All stages</option></select>
@@ -382,7 +384,12 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
  render();
 })();
 
-$('src').innerHTML=`<b>Sources.</b> Meetups: Meetup GraphQL API (official WordPress chapter). Events &amp; pipeline: WordCamp Central REST — public for scheduled/past, authenticated (your session) for the funnel and the status-change log. Momentum from the WordCamp Central <b>wordcamp-status</b> report. Financial reports intentionally excluded. events.wordpress.org / GatherPress will slot in as a fourth feed when live.`;
+const _dts=D.dates||{}, _U=iso=>fmtD(iso)||'—';
+let _upd=(_dts.meetups===_dts.events && _dts.events===_dts.pipelineCounts)
+  ? `Last updated ${_U(_dts.meetups)}`
+  : `Last updated — Meetups ${_U(_dts.meetups)} · Events ${_U(_dts.events)} · Pipeline counts ${_U(_dts.pipelineCounts)}`;
+if(_dts.pipelineDetail && _dts.pipelineDetail!==_dts.pipelineCounts) _upd+=` · pipeline detail ${_U(_dts.pipelineDetail)} (manual)`;
+$('src').innerHTML=`<b>${_upd}.</b><br><b>Sources.</b> Meetups: Meetup GraphQL API (official WordPress chapter). Events &amp; pipeline: WordCamp Central REST — public for scheduled/past, authenticated (your session) for the funnel and the status-change log. Momentum from the WordCamp Central <b>wordcamp-status</b> report. Financial reports intentionally excluded. events.wordpress.org / GatherPress will slot in as a fourth feed when live.`;
 
 document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
   document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
