@@ -129,14 +129,14 @@
   "dormant": 261,
   "neverHosted": 32,
   "met90d": 298,
-  "membershipsSum": 557817,
-  "officialMembers": 491555,
+  "membershipsSum": 557819,
+  "officialMembers": 491561,
   "officialCountries": 100,
   "officialEvents": 54308,
   "events90d": 679,
   "lowRsvp90": 110,
   "organizers": 2372,
-  "activeMembers90d": 23217,
+  "activeMembers90d": 23212,
   "pipeline": {
    "funnel": {
     "wcpt-needs-vetting": 1,
