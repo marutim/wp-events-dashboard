@@ -74,11 +74,14 @@ DETAIL_FIELDS = ["id", "status", "title", "link", "Start Date (YYYY-mm-dd)",
 def die(m): print("ERROR:", m); sys.exit(1)
 
 def load_secrets():
-    if not os.path.exists(SECRETS):
-        die("wccentral_secrets.json not found. Copy the .example, fill in username + app password.")
-    s = json.load(open(SECRETS))
-    if "PASTE" in s.get("username", "") or "xxxx" in s.get("app_password", ""):
-        die("wccentral_secrets.json still has placeholders.")
+    s = json.load(open(SECRETS)) if os.path.exists(SECRETS) else {}
+    e = os.environ  # env vars override the file (used by CI / GitHub Actions secrets)
+    if e.get("WCCENTRAL_USERNAME"): s["username"] = e["WCCENTRAL_USERNAME"]
+    if e.get("WCCENTRAL_APP_PASSWORD"): s["app_password"] = e["WCCENTRAL_APP_PASSWORD"]
+    if e.get("WCCENTRAL_BASE_URL"): s["base_url"] = e["WCCENTRAL_BASE_URL"]
+    if (not s.get("username") or not s.get("app_password")
+            or "PASTE" in s.get("username", "") or "xxxx" in s.get("app_password", "")):
+        die("No WordCamp Central credentials: set WCCENTRAL_USERNAME/WCCENTRAL_APP_PASSWORD (CI) or fill api/wccentral_secrets.json (local).")
     return s
 
 def opener(s):
