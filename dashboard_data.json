@@ -9,7 +9,7 @@
  "meetups": {
   "asOf": "2026-08-03",
   "groups": 707,
-  "members": 491555,
+  "members": 491561,
   "countries": 100,
   "active": 414,
   "dormant": 261,
@@ -99,7 +99,7 @@
     "group": "OC WordPress Group",
     "city": "Huntington Beach",
     "country": "USA",
-    "members": 2515,
+    "members": 2514,
     "last": "2024-12-02",
     "url": "https://www.meetup.com/OC-Wordpress-Group"
    },
@@ -4613,7 +4613,7 @@
     "group": "South Florida WordPress Meetup Group",
     "city": "Miami",
     "country": "USA",
-    "members": 5202,
+    "members": 5201,
     "last": "2025-11-18",
     "url": "https://www.meetup.com/sf-wordpress-users",
     "cat": "Fading"
@@ -4793,7 +4793,7 @@
     "group": "Boston WordPress",
     "city": "Cambridge",
     "country": "USA",
-    "members": 3043,
+    "members": 3042,
     "last": "2026-04-27",
     "url": "https://www.meetup.com/boston-wordpress-meetup",
     "cat": "Fading"
@@ -4933,7 +4933,7 @@
     "group": "OC WordPress Group",
     "city": "Huntington Beach",
     "country": "USA",
-    "members": 2515,
+    "members": 2514,
     "last": "2024-12-02",
     "url": "https://www.meetup.com/OC-Wordpress-Group",
     "cat": "Inactive"
@@ -5373,7 +5373,7 @@
     "group": "Faisalabad WordPress Meetup",
     "city": "Faisalabad",
     "country": "Pakistan",
-    "members": 1625,
+    "members": 1626,
     "last": "2026-05-16",
     "url": "https://www.meetup.com/faisalabad-wordpress-meetup",
     "cat": "Active"
@@ -5643,7 +5643,7 @@
     "group": "WordPress Cobb (Metro Atlanta) Users Group",
     "city": "Marietta",
     "country": "USA",
-    "members": 1433,
+    "members": 1432,
     "last": "2025-10-09",
     "url": "https://www.meetup.com/wpatlanta",
     "cat": "Fading"
@@ -5953,7 +5953,7 @@
     "group": "WP Pasadena",
     "city": "Pasadena",
     "country": "USA",
-    "members": 1173,
+    "members": 1172,
     "last": "2025-10-29",
     "url": "https://www.meetup.com/wordpress-pasadena",
     "cat": "Fading"
@@ -5963,7 +5963,7 @@
     "group": "Varanasi WordPress Meetup",
     "city": "Varanasi",
     "country": "India",
-    "members": 1167,
+    "members": 1168,
     "last": "2025-06-15",
     "url": "https://www.meetup.com/wpvaranasi",
     "cat": "Inactive"
@@ -6603,7 +6603,7 @@
     "group": "WordPress Meetup Brescia",
     "city": "Brescia",
     "country": "Italy",
-    "members": 843,
+    "members": 844,
     "last": "2024-11-28",
     "url": "https://www.meetup.com/wordpress-meetup-brescia",
     "cat": "Inactive"
@@ -7243,10 +7243,20 @@
     "group": "WordPress Lugo",
     "city": "Lugo",
     "country": "Spain",
-    "members": 637,
+    "members": 638,
     "last": "2026-06-25",
     "url": "https://www.meetup.com/wordpresslugo",
     "cat": "Active"
+   },
+   {
+    "id": 324,
+    "group": "Huelva WordPress Meetup",
+    "city": "Huelva",
+    "country": "Spain",
+    "members": 637,
+    "last": "2025-12-16",
+    "url": "https://www.meetup.com/Huelva-WordPress-Meetup",
+    "cat": "Fading"
    },
    {
     "id": 153,
@@ -7256,16 +7266,6 @@
     "members": 636,
     "last": "2026-03-07",
     "url": "https://www.meetup.com/brahmanbaria-wordpress-meetup",
-    "cat": "Fading"
-   },
-   {
-    "id": 324,
-    "group": "Huelva WordPress Meetup",
-    "city": "Huelva",
-    "country": "Spain",
-    "members": 636,
-    "last": "2025-12-16",
-    "url": "https://www.meetup.com/Huelva-WordPress-Meetup",
     "cat": "Fading"
    },
    {
@@ -8189,16 +8189,6 @@
     "cat": "Inactive"
    },
    {
-    "id": 168,
-    "group": "Diani Beach WordPress Meetup",
-    "city": "Diani Beach",
-    "country": "Kenya",
-    "members": 455,
-    "last": "2024-09-26",
-    "url": "https://www.meetup.com/diani-beach-wordpress-meetup",
-    "cat": "Inactive"
-   },
-   {
     "id": 511,
     "group": "Columbia WordPress Meetup",
     "city": "Columbia",
@@ -8227,6 +8217,16 @@
     "last": "2026-07-18",
     "url": "https://www.meetup.com/siliguri-wordpress-group",
     "cat": "Active"
+   },
+   {
+    "id": 168,
+    "group": "Diani Beach WordPress Meetup",
+    "city": "Diani Beach",
+    "country": "Kenya",
+    "members": 454,
+    "last": "2024-09-26",
+    "url": "https://www.meetup.com/diani-beach-wordpress-meetup",
+    "cat": "Inactive"
    },
    {
     "id": 411,
@@ -10619,6 +10619,16 @@
     "cat": "Inactive"
    },
    {
+    "id": 149,
+    "group": "Tortosa WordPress Meetup",
+    "city": "Tortosa",
+    "country": "Spain",
+    "members": 131,
+    "last": "2024-05-30",
+    "url": "https://www.meetup.com/tortosa-wordpress-meetup",
+    "cat": "Inactive"
+   },
+   {
     "id": 124,
     "group": "Jember WordPress Meetup",
     "city": "Jember",
@@ -10626,16 +10636,6 @@
     "members": 130,
     "last": "2024-10-26",
     "url": "https://www.meetup.com/jember-wordpress-meetup",
-    "cat": "Inactive"
-   },
-   {
-    "id": 149,
-    "group": "Tortosa WordPress Meetup",
-    "city": "Tortosa",
-    "country": "Spain",
-    "members": 130,
-    "last": "2024-05-30",
-    "url": "https://www.meetup.com/tortosa-wordpress-meetup",
     "cat": "Inactive"
    },
    {
@@ -10759,6 +10759,16 @@
     "cat": "Active"
    },
    {
+    "id": 71,
+    "group": "Irun WordPress Meetup",
+    "city": "Irun",
+    "country": "Spain",
+    "members": 114,
+    "last": "2026-03-11",
+    "url": "https://www.meetup.com/irun-wordpress",
+    "cat": "Fading"
+   },
+   {
     "id": 173,
     "group": "Olbia WordPress Meetup",
     "city": "Olbia",
@@ -10767,16 +10777,6 @@
     "last": "2023-07-19",
     "url": "https://www.meetup.com/olbia-wordpress-meetup",
     "cat": "Inactive"
-   },
-   {
-    "id": 71,
-    "group": "Irun WordPress Meetup",
-    "city": "Irun",
-    "country": "Spain",
-    "members": 113,
-    "last": "2026-03-11",
-    "url": "https://www.meetup.com/irun-wordpress",
-    "cat": "Fading"
    },
    {
     "id": 116,
@@ -11109,6 +11109,16 @@
     "cat": "Inactive"
    },
    {
+    "id": 193,
+    "group": "Hendaye WordPress Meetup",
+    "city": "Hendaye",
+    "country": "France",
+    "members": 73,
+    "last": "2022-09-12",
+    "url": "https://www.meetup.com/hendaye-wordpress-meetup",
+    "cat": "Inactive"
+   },
+   {
     "id": 14,
     "group": "WordPress Algemesí Meetup",
     "city": "Algemesí",
@@ -11117,16 +11127,6 @@
     "last": "2026-06-18",
     "url": "https://www.meetup.com/wordpress-algemesi-meetup",
     "cat": "Active"
-   },
-   {
-    "id": 193,
-    "group": "Hendaye WordPress Meetup",
-    "city": "Hendaye",
-    "country": "France",
-    "members": 72,
-    "last": "2022-09-12",
-    "url": "https://www.meetup.com/hendaye-wordpress-meetup",
-    "cat": "Inactive"
    },
    {
     "id": 20,
