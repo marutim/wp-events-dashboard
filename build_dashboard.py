@@ -115,9 +115,9 @@ tr.us td{background:var(--usrow)} td.num{text-align:right;font-variant-numeric:t
 <p class="sub" id="sub"></p>
 <div class="tabs">
   <div class="tab on" data-v="overview">Overview</div>
-  <div class="tab" data-v="pipeline">Pipeline</div>
   <div class="tab" data-v="meetups">Meetups</div>
   <div class="tab" data-v="events">Events &amp; WordCamps</div>
+  <div class="tab" data-v="pipeline">Pipeline</div>
 </div>
 <div class="view on" id="overview"></div>
 <div class="view" id="meetups"></div>
