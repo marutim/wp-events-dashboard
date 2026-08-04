@@ -1,0 +1,80 @@
+name: Refresh dashboard
+
+# Runs daily at 06:00 UTC (and on-demand via the "Run workflow" button).
+# Pulls the live feeds, assembles dashboard_data.json, rebuilds the HTML,
+# and commits only if something changed. GitHub Pages redeploys on push to main.
+#
+# Credentials come from repo Settings -> Secrets and variables -> Actions
+# (admin-only; never stored in the repo). Each pull step is skipped if its
+# secret is absent, so the workflow is safe to enable before every secret is set.
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-dashboard
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: python -m pip install --quiet "pyjwt[crypto]"
+
+      - name: Pull Meetup network (JWT)
+        env:
+          MEETUP_JWT_CLIENT_ID: ${{ secrets.MEETUP_JWT_CLIENT_ID }}
+          MEETUP_JWT_SIGNING_KEY_ID: ${{ secrets.MEETUP_JWT_SIGNING_KEY_ID }}
+          MEETUP_JWT_AUTHORIZED_MEMBER_ID: ${{ secrets.MEETUP_JWT_AUTHORIZED_MEMBER_ID }}
+          MEETUP_JWT_PRIVATE_KEY: ${{ secrets.MEETUP_JWT_PRIVATE_KEY }}
+          MEETUP_PRO_NETWORK: wordpress
+        run: |
+          if [ -n "$MEETUP_JWT_CLIENT_ID" ]; then
+            python3 api/pull_meetup.py
+          else
+            echo "Meetup secrets not set — skipping Meetup pull (dashboard keeps last data)."
+          fi
+
+      - name: Pull WordCamp Central pipeline (funnel counts)
+        env:
+          WCCENTRAL_USERNAME: ${{ secrets.WCCENTRAL_USERNAME }}
+          WCCENTRAL_APP_PASSWORD: ${{ secrets.WCCENTRAL_APP_PASSWORD }}
+        run: |
+          if [ -n "$WCCENTRAL_USERNAME" ]; then
+            python3 api/pull_pipeline.py --funnel
+          else
+            echo "WordCamp Central secrets not set — skipping pipeline pull (dashboard keeps last counts)."
+          fi
+
+      - name: Assemble data + build dashboard
+        run: |
+          python3 assemble.py
+          python3 build_dashboard.py
+          cp events-dashboard.html index.html
+
+      - name: Commit if changed
+        run: |
+          git config user.name "events-dashboard-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.js history.json dashboard_data.json \
+                  events-dashboard.html events-dashboard.artifact.html index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Automated refresh $(date -u +%Y-%m-%d)"
+            git push
+          fi

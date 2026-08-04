@@ -9,3 +9,9 @@ api/wccentral_secrets.json
 .DS_Store
 __pycache__/
 *.pyc
+
+# generated CSV export (not maintained by the refresh workflow)
+meetup_groups.csv
+
+# transient manual funnel-detail pull (see api/pull_funnel_detail.js)
+funnel_detail.json
