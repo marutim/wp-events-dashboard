@@ -99,5 +99,62 @@
    "declined": 571,
    "cancelled": 411
   }
+ },
+ {
+  "date": "2026-07-31",
+  "pipeline": {
+   "funnel": {
+    "wcpt-needs-vetting": 0,
+    "wcpt-needs-orientati": 0,
+    "wcpt-more-info-reque": 0,
+    "wcpt-interview-sched": 0,
+    "wcpt-approved-pre-pl": 0,
+    "wcpt-pre-planning": 26,
+    "wcpt-needs-budget-re": 0,
+    "wcpt-budget-rev-sche": 0,
+    "wcpt-needs-contract": 0,
+    "wcpt-needs-fill-list": 0,
+    "wcpt-needs-schedule": 0
+   },
+   "activeFunnelTotal": 26,
+   "scheduled": 44,
+   "declined": 0,
+   "cancelled": 412
+  }
+ },
+ {
+  "date": "2026-08-03",
+  "groups": 707,
+  "active": 414,
+  "dormant": 261,
+  "neverHosted": 32,
+  "met90d": 298,
+  "membershipsSum": 557819,
+  "officialMembers": 491561,
+  "officialCountries": 100,
+  "officialEvents": 54308,
+  "events90d": 679,
+  "lowRsvp90": 110,
+  "organizers": 2372,
+  "activeMembers90d": 23212,
+  "pipeline": {
+   "funnel": {
+    "wcpt-needs-vetting": 1,
+    "wcpt-needs-orientati": 20,
+    "wcpt-more-info-reque": 25,
+    "wcpt-interview-sched": 2,
+    "wcpt-approved-pre-pl": 19,
+    "wcpt-pre-planning": 26,
+    "wcpt-needs-budget-re": 1,
+    "wcpt-budget-rev-sche": 2,
+    "wcpt-needs-contract": 1,
+    "wcpt-needs-fill-list": 3,
+    "wcpt-needs-schedule": 1
+   },
+   "activeFunnelTotal": 101,
+   "scheduled": 42,
+   "declined": 574,
+   "cancelled": 412
+  }
  }
 ]

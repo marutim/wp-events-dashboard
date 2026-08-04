@@ -96,21 +96,31 @@ def die(msg):
     print("ERROR:", msg); sys.exit(1)
 
 def load_secrets():
-    if not os.path.exists(SECRETS):
-        die("meetup_secrets.json not found. Copy meetup_secrets.example.json -> meetup_secrets.json and fill it in.")
-    return json.load(open(SECRETS))
+    s = json.load(open(SECRETS)) if os.path.exists(SECRETS) else {}
+    e = os.environ  # env vars override the file (used by CI / GitHub Actions secrets)
+    if e.get("MEETUP_ACCESS_TOKEN"): s["access_token"] = e["MEETUP_ACCESS_TOKEN"]
+    for ek, k in [("MEETUP_JWT_CLIENT_ID", "jwt_client_id"),
+                  ("MEETUP_JWT_SIGNING_KEY_ID", "jwt_signing_key_id"),
+                  ("MEETUP_JWT_AUTHORIZED_MEMBER_ID", "jwt_authorized_member_id"),
+                  ("MEETUP_PRO_NETWORK", "pro_network_urlname")]:
+        if e.get(ek): s[k] = e[ek]
+    if e.get("MEETUP_JWT_PRIVATE_KEY"): s["jwt_private_key"] = e["MEETUP_JWT_PRIVATE_KEY"]  # PEM contents
+    if not s:
+        die("No Meetup credentials: set env vars (CI) or create api/meetup_secrets.json (local).")
+    return s
 
 def get_token(s):
     tok = (s.get("access_token") or "").strip()
     if tok and not tok.startswith("PASTE_"):
         return tok
-    # JWT server-to-server fallback
-    if s.get("jwt_client_id") and s.get("jwt_private_key_path"):
+    # JWT server-to-server fallback (private key from env contents or a file path)
+    if s.get("jwt_client_id") and (s.get("jwt_private_key") or s.get("jwt_private_key_path")):
         try:
             import jwt, time
         except ImportError:
             die("JWT path needs PyJWT: pip install pyjwt")
-        key = open(os.path.expanduser(s["jwt_private_key_path"]), "rb").read()
+        key = (s["jwt_private_key"].encode() if s.get("jwt_private_key")
+               else open(os.path.expanduser(s["jwt_private_key_path"]), "rb").read())
         now = int(time.time())
         assertion = jwt.encode({
             "sub": s["jwt_authorized_member_id"], "iss": s["jwt_client_id"],
@@ -224,8 +234,11 @@ def append_history(rows, official):
         hist = json.load(open(HISTORY))
     except Exception:
         hist = []
-    hist = [h for h in hist if h.get("date") != snap["date"]]  # one row per day, latest wins
-    hist.append(snap)
+    row = next((h for h in hist if h.get("date") == snap["date"]), None)  # one row per day
+    if row is None:
+        row = {}
+        hist.append(row)
+    row.update(snap)  # merge meetup fields, preserving other feeds' keys (e.g. pipeline)
     hist.sort(key=lambda h: h["date"])
     json.dump(hist, open(HISTORY, "w"), indent=1)
     print("history: %d snapshots (%s → %s)" % (len(hist), hist[0]["date"], hist[-1]["date"]))
