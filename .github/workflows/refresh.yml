@@ -1,6 +1,6 @@
 name: Refresh dashboard
 
-# Runs daily at 06:00 UTC (and on-demand via the "Run workflow" button).
+# Runs daily at 03:13 UTC (and on-demand via the "Run workflow" button).
 # Pulls the live feeds, assembles dashboard_data.json, rebuilds the HTML,
 # and commits only if something changed. GitHub Pages redeploys on push to main.
 #
@@ -10,7 +10,7 @@ name: Refresh dashboard
 
 on:
   schedule:
-    - cron: "0 6 * * *"
+    - cron: "13 3 * * *"
   workflow_dispatch: {}
 
 permissions:
