@@ -4,7 +4,7 @@
   "meetups": "2026-08-04",
   "events": "2026-08-04",
   "pipelineCounts": "2026-08-04",
-  "pipelineDetail": "2026-08-03"
+  "pipelineDetail": "2026-08-04"
  },
  "meetups": {
   "asOf": "2026-08-04",
@@ -13254,6 +13254,21 @@
   "testCount": 2,
   "records": [
    {
+    "id": 15628178,
+    "slug": "wcpt-needs-vetting",
+    "stage": "Needs Vetting",
+    "title": "WordPress Campus Connect Lira Public Library, Mentor SS, St Gracious SS(SAGRASS) Main, St Gracious SS(SAGRASS) Leo Atubo Campus, Wisdom High School Akalo, Lira Town College, Lango College, Dr Obote College, Uganda Technical College-Lira, All Saints University Lira, Uganda Christian Institute of Proffessional Development, Lira University, Top Star SS, Ebenezer University, Dara Christian High School.",
+    "start": "2027-02-13",
+    "location": "Lira City, Uganda",
+    "organizer": "Okwanga Oscar",
+    "anticipated": "4500",
+    "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-lira-public-library-mentor-ss-st-gracious-sssagrass-main-st-gracious-sssagrass-leo-atubo-campus-wisdom-high-school-akalo-lira-town-college-lango-college-dr-obote-co/",
+    "format": "Campus Connect",
+    "country": "Uganda",
+    "us": false,
+    "test": false
+   },
+   {
     "id": 14724230,
     "slug": "wcpt-needs-vetting",
     "stage": "Needs Vetting",
@@ -14278,7 +14293,7 @@
     "slug": "wcpt-pre-planning",
     "stage": "In Pre-Planning",
     "title": "WordPress Campus Connect Kolhapur 2026",
-    "start": "2026-07-26",
+    "start": "2026-08-17",
     "location": "Kolhapur, India",
     "organizer": "Makarand Gangaram Mane",
     "anticipated": "400",
@@ -14741,63 +14756,63 @@
   ],
   "momentum": {
    "2026-01": {
-    "newApps": 19,
+    "newApps": 24,
     "confirmed": 15,
     "closed": 10,
     "cancelled": 3,
-    "declined": 0
+    "declined": 6
    },
    "2026-02": {
-    "newApps": 24,
+    "newApps": 32,
     "confirmed": 11,
     "closed": 9,
     "cancelled": 6,
-    "declined": 0
+    "declined": 6
    },
    "2026-03": {
-    "newApps": 19,
+    "newApps": 24,
     "confirmed": 22,
     "closed": 15,
     "cancelled": 8,
-    "declined": 0
+    "declined": 6
    },
    "2026-04": {
-    "newApps": 25,
+    "newApps": 26,
     "confirmed": 9,
     "closed": 12,
     "cancelled": 6,
-    "declined": 0
+    "declined": 3
    },
    "2026-05": {
-    "newApps": 24,
+    "newApps": 26,
     "confirmed": 15,
     "closed": 13,
     "cancelled": 3,
-    "declined": 0
+    "declined": 2
    },
    "2026-06": {
-    "newApps": 22,
+    "newApps": 23,
     "confirmed": 37,
     "closed": 4,
     "cancelled": 5,
-    "declined": 0
+    "declined": 1
    },
    "2026-07": {
-    "newApps": 20,
+    "newApps": 21,
     "confirmed": 35,
     "closed": 7,
     "cancelled": 2,
-    "declined": 0
+    "declined": 3
    },
    "2026-08": {
-    "newApps": 1,
+    "newApps": 3,
     "confirmed": 3,
     "closed": 2,
     "cancelled": 0,
-    "declined": 0
+    "declined": 1
    }
   },
-  "detailAsOf": "2026-08-03",
+  "detailAsOf": "2026-08-04",
   "funnelCounts": {
    "Needs Vetting": 2,
    "Needs Orientation/Interview": 20,
