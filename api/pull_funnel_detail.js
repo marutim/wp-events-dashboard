@@ -13,8 +13,8 @@
  *        python3 api/merge_funnel_detail.py funnel_detail.json
  *
  * MOMENTUM NOTE: newApps (from creation date) and closed (from event date) are
- * exact; confirmed and attrition are approximate (derived from the last-modified
- * date, the closest available signal to when an event was scheduled or lost).
+ * exact; confirmed, cancelled, and declined are approximate (derived from the
+ * last-modified date, the closest signal to when an event changed status).
  * ==========================================================================*/
 (async () => {
   const nonce = (window.wpApiSettings && wpApiSettings.nonce) || null;
@@ -73,7 +73,7 @@
   for (const status of ["wcpt-scheduled", "wcpt-closed", "wcpt-cancelled", "wcpt-rejected"]) {
     let page = 1;
     while (page <= 12) {
-      const res = await get(`/wp-json/wp/v2/wordcamps?status=${status}&per_page=100&page=${page}&orderby=modified&order=desc`);
+      const res = await get(`/wp-json/wp/v2/wordcamps?status=${status}&per_page=100&page=${page}&orderby=modified&order=desc&context=edit`);
       if (!res.ok) break;
       const batch = await res.json();
       if (!Array.isArray(batch) || !batch.length) break;
@@ -93,13 +93,14 @@
 
   // 3) monthly momentum for this year
   const M = {};
-  const bump = (m, k) => { if (!m || !m.startsWith(YEAR)) return; (M[m] = M[m] || { newApps: 0, confirmed: 0, closed: 0, attrition: 0 })[k]++; };
+  const bump = (m, k) => { if (!m || !m.startsWith(YEAR)) return; (M[m] = M[m] || { newApps: 0, confirmed: 0, closed: 0, cancelled: 0, declined: 0 })[k]++; };
   for (const e of flow) {
     if (e.test) continue;
     bump(e.created, "newApps");                                            // exact: entered funnel
     if (e.status === "wcpt-scheduled" || e.status === "wcpt-closed") bump(e.modified, "confirmed"); // approx
     if (e.status === "wcpt-closed") bump(e.startMonth, "closed");          // exact-ish: happened
-    if (e.status === "wcpt-cancelled" || e.status === "wcpt-rejected") bump(e.modified, "attrition"); // approx
+    if (e.status === "wcpt-cancelled") bump(e.modified, "cancelled");      // approx (last-change date)
+    if (e.status === "wcpt-rejected") bump(e.modified, "declined");        // approx (last-change date)
   }
   const momentum = {}; Object.keys(M).sort().forEach(k => momentum[k] = M[k]);
 

@@ -420,15 +420,17 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
  let mom='';
  if(P.momentum){
    const mos=Object.keys(P.momentum).sort();
-   const allv=mos.flatMap(k=>[P.momentum[k].newApps,P.momentum[k].confirmed,P.momentum[k].attrition]);
+   const can=d=>d.cancelled||0, dec=d=>d.declined!=null?d.declined:(d.attrition||0);  // back-compat: old 'attrition' shown as declined
+   const allv=mos.flatMap(k=>{const d=P.momentum[k];return [d.newApps||0,d.confirmed||0,can(d),dec(d)];});
    const mmax=Math.max(...allv,1);
    const wbar=(cls,v)=>`<div class="mbar"><div class="t ${cls}" style="width:${Math.max(2,Math.round(v/mmax*180))}px"></div><div class="v">${v}</div></div>`;
    const rows=mos.map(k=>{const d=P.momentum[k];const nm=k.slice(5)+'/'+k.slice(2,4);
-     return `<div class="mrow"><div class="mo">${nm}</div><div class="mbars">${wbar('b-blue',d.newApps)}${wbar('b-green',d.confirmed)}${wbar('b-red',d.attrition)}</div></div>`;}).join('');
-   const T=k=>mos.reduce((a,m)=>a+P.momentum[m][k],0);
+     return `<div class="mrow"><div class="mo">${nm}</div><div class="mbars">${wbar('b-blue',d.newApps||0)}${wbar('b-green',d.confirmed||0)}${wbar('b-amber',can(d))}${wbar('b-red',dec(d))}</div></div>`;}).join('');
+   const T=k=>mos.reduce((a,m)=>a+(P.momentum[m][k]||0),0);
+   const Tcan=mos.reduce((a,m)=>a+can(P.momentum[m]),0), Tdec=mos.reduce((a,m)=>a+dec(P.momentum[m]),0);
    mom=`<div class="card"><h2>Pipeline momentum — 2026 monthly flow</h2>${rows}
-     <div class="legend"><span><i class="dot b-blue"></i>new applications</span><span><i class="dot b-green"></i>confirmed (→ scheduled)</span><span><i class="dot b-red"></i>lost (cancelled/declined)</span></div>
-     <p class="foot">YTD: <b>${T('newApps')}</b> new applications entered the funnel, <b>${T('confirmed')}</b> reached scheduled, <b>${T('closed')}</b> happened, <b>${T('attrition')}</b> were lost. New applications and completed events are exact (creation and event dates); confirmed and lost are approximate (last status-change dates). From WordCamp Central.</p></div>`;
+     <div class="legend"><span><i class="dot b-blue"></i>new applications</span><span><i class="dot b-green"></i>confirmed (&rarr; scheduled)</span><span><i class="dot b-amber"></i>cancelled</span><span><i class="dot b-red"></i>declined</span></div>
+     <p class="foot">YTD: <b>${T('newApps')}</b> new applications entered the funnel, <b>${T('confirmed')}</b> reached scheduled, <b>${T('closed')}</b> happened, <b>${Tcan}</b> were cancelled and <b>${Tdec}</b> declined. New applications and completed events are exact (creation and event dates); confirmed, cancelled, and declined are dated by last status-change. From WordCamp Central.</p></div>`;
  }
 
  $('pipeline').innerHTML=

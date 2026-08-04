@@ -14744,49 +14744,57 @@
     "newApps": 19,
     "confirmed": 15,
     "closed": 10,
-    "attrition": 3
+    "cancelled": 3,
+    "declined": 0
    },
    "2026-02": {
     "newApps": 24,
     "confirmed": 11,
     "closed": 9,
-    "attrition": 6
+    "cancelled": 6,
+    "declined": 0
    },
    "2026-03": {
     "newApps": 19,
     "confirmed": 22,
     "closed": 15,
-    "attrition": 8
+    "cancelled": 8,
+    "declined": 0
    },
    "2026-04": {
     "newApps": 25,
     "confirmed": 9,
     "closed": 12,
-    "attrition": 6
+    "cancelled": 6,
+    "declined": 0
    },
    "2026-05": {
     "newApps": 24,
     "confirmed": 15,
     "closed": 13,
-    "attrition": 3
+    "cancelled": 3,
+    "declined": 0
    },
    "2026-06": {
     "newApps": 22,
     "confirmed": 37,
     "closed": 4,
-    "attrition": 5
+    "cancelled": 5,
+    "declined": 0
    },
    "2026-07": {
     "newApps": 20,
     "confirmed": 35,
     "closed": 7,
-    "attrition": 2
+    "cancelled": 2,
+    "declined": 0
    },
    "2026-08": {
     "newApps": 1,
     "confirmed": 3,
     "closed": 2,
-    "attrition": 0
+    "cancelled": 0,
+    "declined": 0
    }
   },
   "detailAsOf": "2026-08-03",
