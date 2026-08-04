@@ -1,33 +1,33 @@
 {
- "asOf": "2026-08-03",
+ "asOf": "2026-08-04",
  "dates": {
-  "meetups": "2026-08-03",
-  "events": "2026-08-03",
-  "pipelineCounts": "2026-08-03",
+  "meetups": "2026-08-04",
+  "events": "2026-08-04",
+  "pipelineCounts": "2026-08-04",
   "pipelineDetail": "2026-08-03"
  },
  "meetups": {
-  "asOf": "2026-08-03",
+  "asOf": "2026-08-04",
   "groups": 707,
-  "members": 491561,
+  "members": 491711,
   "countries": 100,
   "active": 414,
   "dormant": 261,
   "never": 32,
-  "met90": 298,
+  "met90": 295,
   "organizers": 2371,
   "recency": [
    [
     "In the last 30 days",
-    163
+    157
    ],
    [
     "1 to 3 months",
-    135
+    138
    ],
    [
     "3 to 6 months",
-    54
+    57
    ],
    [
     "6 to 12 months",
@@ -35,11 +35,11 @@
    ],
    [
     "1 to 2 years",
-    146
+    143
    ],
    [
     "More than 2 years",
-    115
+    118
    ],
    [
     "Never met",
@@ -187,7 +187,7 @@
     "group": "Comunidade WordPress Curitiba",
     "city": "Curitiba",
     "country": "Brazil",
-    "members": 1680,
+    "members": 1682,
     "last": "2022-08-30",
     "url": "https://www.meetup.com/wpcuritiba"
    },
@@ -219,7 +219,7 @@
     "group": "Agra WordPress Meetup",
     "city": "Agra",
     "country": "India",
-    "members": 1532,
+    "members": 1533,
     "last": "2024-12-14",
     "url": "https://www.meetup.com/agra-wordpress-meetup"
    },
@@ -232,20 +232,20 @@
     "url": "https://www.meetup.com/neowordpress"
    },
    {
+    "group": "Baghdad WordPress Meetup Group",
+    "city": "Baghdad",
+    "country": "Iraq",
+    "members": 1489,
+    "last": "2024-11-29",
+    "url": "https://www.meetup.com/Baghdad-WordPress-Meetup-Group"
+   },
+   {
     "group": "Sacramento WordPress Meetup",
     "city": "Sacramento",
     "country": "USA",
     "members": 1489,
     "last": "2024-07-02",
     "url": "https://www.meetup.com/sacramento-wordpress"
-   },
-   {
-    "group": "Baghdad WordPress Meetup Group",
-    "city": "Baghdad",
-    "country": "Iraq",
-    "members": 1487,
-    "last": "2024-11-29",
-    "url": "https://www.meetup.com/Baghdad-WordPress-Meetup-Group"
    },
    {
     "group": "WordPress Istanbul",
@@ -288,7 +288,7 @@
     "url": "https://www.meetup.com/Raleigh-WordPress-Meetup-Group"
    }
   ],
-  "toWatch": 116,
+  "toWatch": 119,
   "us": {
    "groups": 147,
    "met90": 51
@@ -4553,7 +4553,7 @@
     "group": "Learn WordPress Online Workshops",
     "city": "San Francisco",
     "country": "USA",
-    "members": 9510,
+    "members": 9509,
     "last": "2026-07-14",
     "url": "https://www.meetup.com/learn-wordpress-online-workshops",
     "cat": "Active"
@@ -4563,7 +4563,7 @@
     "group": "WordPress Delhi NCR Meetup Group",
     "city": "Delhi",
     "country": "India",
-    "members": 8992,
+    "members": 8991,
     "last": "2026-05-27",
     "url": "https://www.meetup.com/wordpress-new-delhi",
     "cat": "Active"
@@ -4593,7 +4593,7 @@
     "group": "WordPress Mumbai Meetup",
     "city": "Mumbai",
     "country": "India",
-    "members": 5697,
+    "members": 5699,
     "last": "2026-07-11",
     "url": "https://www.meetup.com/wpmumbai",
     "cat": "Active"
@@ -4603,7 +4603,7 @@
     "group": "WordPress Meetups Lahore",
     "city": "Lahore",
     "country": "Pakistan",
-    "members": 5226,
+    "members": 5228,
     "last": "2026-07-04",
     "url": "https://www.meetup.com/WordPress-Lahore",
     "cat": "Active"
@@ -4703,7 +4703,7 @@
     "group": "WordPress Brisbane",
     "city": "Brisbane",
     "country": "Australia",
-    "members": 3352,
+    "members": 3357,
     "last": "2026-07-23",
     "url": "https://www.meetup.com/WordPress-Brisbane",
     "cat": "Active"
@@ -4713,7 +4713,7 @@
     "group": "The Vancouver WordPress Meetup Group",
     "city": "Vancouver",
     "country": "Canada",
-    "members": 3338,
+    "members": 3339,
     "last": "2026-07-14",
     "url": "https://www.meetup.com/vancouver-wordpress-meetup-group",
     "cat": "Active"
@@ -4723,7 +4723,7 @@
     "group": "Hong Kong WordPress Meetup",
     "city": "Hong Kong",
     "country": "Hong Kong",
-    "members": 3325,
+    "members": 3326,
     "last": "2026-07-23",
     "url": "https://www.meetup.com/hong-kong-wordpress-meetup",
     "cat": "Active"
@@ -4733,7 +4733,7 @@
     "group": "San José WordPress Meetup",
     "city": "San Jose",
     "country": "Costa Rica",
-    "members": 3304,
+    "members": 3307,
     "last": "2026-07-30",
     "url": "https://www.meetup.com/wpsanjose",
     "cat": "Active"
@@ -4783,7 +4783,7 @@
     "group": "WordPress Meetup Islamabad - Rawalpindi",
     "city": "Rawalpindi",
     "country": "Pakistan",
-    "members": 3055,
+    "members": 3057,
     "last": "2026-05-16",
     "url": "https://www.meetup.com/WordPress-Meetup-Islamabad-Rawalpindi",
     "cat": "Active"
@@ -4793,7 +4793,7 @@
     "group": "Boston WordPress",
     "city": "Cambridge",
     "country": "USA",
-    "members": 3042,
+    "members": 3043,
     "last": "2026-04-27",
     "url": "https://www.meetup.com/boston-wordpress-meetup",
     "cat": "Fading"
@@ -4813,7 +4813,7 @@
     "group": "Bengaluru WordPress",
     "city": "Bangalore",
     "country": "India",
-    "members": 2908,
+    "members": 2911,
     "last": "2026-07-18",
     "url": "https://www.meetup.com/bengaluruwordpress",
     "cat": "Active"
@@ -4913,7 +4913,7 @@
     "group": "WordPress Nairobi",
     "city": "Nairobi",
     "country": "Kenya",
-    "members": 2543,
+    "members": 2544,
     "last": "2026-07-25",
     "url": "https://www.meetup.com/wordpress-nairobi",
     "cat": "Active"
@@ -4983,7 +4983,7 @@
     "group": "WordPress Lisboa",
     "city": "Lisbon",
     "country": "Portugal",
-    "members": 2297,
+    "members": 2299,
     "last": "2026-07-14",
     "url": "https://www.meetup.com/WordPress-Lisboa",
     "cat": "Active"
@@ -4993,7 +4993,7 @@
     "group": "Accra WordPress Meetup",
     "city": "Accra",
     "country": "Ghana",
-    "members": 2293,
+    "members": 2294,
     "last": "2026-07-10",
     "url": "https://www.meetup.com/Accra-WordPress-Meetup",
     "cat": "Active"
@@ -5033,7 +5033,7 @@
     "group": "The Baltimore WordPress Group",
     "city": "Baltimore",
     "country": "USA",
-    "members": 2210,
+    "members": 2211,
     "last": "2026-05-21",
     "url": "https://www.meetup.com/the-baltimore-wordpress-group",
     "cat": "Active"
@@ -5163,7 +5163,7 @@
     "group": "Lagos WordPress Community",
     "city": "Lagos",
     "country": "Nigeria",
-    "members": 2071,
+    "members": 2072,
     "last": "2026-07-31",
     "url": "https://www.meetup.com/lagos-wordpress-meetup-group",
     "cat": "Active"
@@ -5223,7 +5223,7 @@
     "group": "Jinja WordPress Meetup",
     "city": "Jinja",
     "country": "Uganda",
-    "members": 1867,
+    "members": 1869,
     "last": "2026-07-30",
     "url": "https://www.meetup.com/Jinja-WordPress-Meetup",
     "cat": "Active"
@@ -5273,7 +5273,7 @@
     "group": "WordPress Málaga",
     "city": "Málaga",
     "country": "Spain",
-    "members": 1760,
+    "members": 1759,
     "last": "2026-07-31",
     "url": "https://www.meetup.com/WordPress-Malaga",
     "cat": "Active"
@@ -5313,7 +5313,7 @@
     "group": "Comunidade WordPress Curitiba",
     "city": "Curitiba",
     "country": "Brazil",
-    "members": 1680,
+    "members": 1682,
     "last": "2022-08-30",
     "url": "https://www.meetup.com/wpcuritiba",
     "cat": "Inactive"
@@ -5349,6 +5349,16 @@
     "cat": "Inactive"
    },
    {
+    "id": 215,
+    "group": "Faisalabad WordPress Meetup",
+    "city": "Faisalabad",
+    "country": "Pakistan",
+    "members": 1632,
+    "last": "2026-05-16",
+    "url": "https://www.meetup.com/faisalabad-wordpress-meetup",
+    "cat": "Active"
+   },
+   {
     "id": 374,
     "group": "Thessaloníki WordPress Meetup",
     "city": "Thessaloníki",
@@ -5366,16 +5376,6 @@
     "members": 1629,
     "last": "2026-07-29",
     "url": "https://www.meetup.com/bandung-wordpress-meetup",
-    "cat": "Active"
-   },
-   {
-    "id": 215,
-    "group": "Faisalabad WordPress Meetup",
-    "city": "Faisalabad",
-    "country": "Pakistan",
-    "members": 1626,
-    "last": "2026-05-16",
-    "url": "https://www.meetup.com/faisalabad-wordpress-meetup",
     "cat": "Active"
    },
    {
@@ -5399,6 +5399,16 @@
     "cat": "Active"
    },
    {
+    "id": 308,
+    "group": "Owerri WordPress Meetup",
+    "city": "Owerri",
+    "country": "Nigeria",
+    "members": 1604,
+    "last": "2026-07-31",
+    "url": "https://www.meetup.com/Owerri-WordPress-Meetup",
+    "cat": "Active"
+   },
+   {
     "id": 466,
     "group": "WordPress Granada",
     "city": "Granada",
@@ -5409,13 +5419,13 @@
     "cat": "Active"
    },
    {
-    "id": 308,
-    "group": "Owerri WordPress Meetup",
-    "city": "Owerri",
-    "country": "Nigeria",
-    "members": 1602,
-    "last": "2026-07-31",
-    "url": "https://www.meetup.com/Owerri-WordPress-Meetup",
+    "id": 185,
+    "group": "Thane WordPress Meetup",
+    "city": "Thane",
+    "country": "India",
+    "members": 1593,
+    "last": "2026-07-25",
+    "url": "https://www.meetup.com/thane-wordpress-meetup",
     "cat": "Active"
    },
    {
@@ -5427,16 +5437,6 @@
     "last": "2026-03-03",
     "url": "https://www.meetup.com/wpnashville",
     "cat": "Fading"
-   },
-   {
-    "id": 185,
-    "group": "Thane WordPress Meetup",
-    "city": "Thane",
-    "country": "India",
-    "members": 1591,
-    "last": "2026-07-25",
-    "url": "https://www.meetup.com/thane-wordpress-meetup",
-    "cat": "Active"
    },
    {
     "id": 353,
@@ -5493,7 +5493,7 @@
     "group": "WordPress Helsinki",
     "city": "Helsinki",
     "country": "Finland",
-    "members": 1539,
+    "members": 1540,
     "last": "2026-06-03",
     "url": "https://www.meetup.com/wphelsinki",
     "cat": "Active"
@@ -5503,7 +5503,7 @@
     "group": "Agra WordPress Meetup",
     "city": "Agra",
     "country": "India",
-    "members": 1532,
+    "members": 1533,
     "last": "2024-12-14",
     "url": "https://www.meetup.com/agra-wordpress-meetup",
     "cat": "Inactive"
@@ -5599,6 +5599,16 @@
     "cat": "Active"
    },
    {
+    "id": 242,
+    "group": "Baghdad WordPress Meetup Group",
+    "city": "Baghdad",
+    "country": "Iraq",
+    "members": 1489,
+    "last": "2024-11-29",
+    "url": "https://www.meetup.com/Baghdad-WordPress-Meetup-Group",
+    "cat": "Inactive"
+   },
+   {
     "id": 696,
     "group": "Sacramento WordPress Meetup",
     "city": "Sacramento",
@@ -5606,16 +5616,6 @@
     "members": 1489,
     "last": "2024-07-02",
     "url": "https://www.meetup.com/sacramento-wordpress",
-    "cat": "Inactive"
-   },
-   {
-    "id": 242,
-    "group": "Baghdad WordPress Meetup Group",
-    "city": "Baghdad",
-    "country": "Iraq",
-    "members": 1487,
-    "last": "2024-11-29",
-    "url": "https://www.meetup.com/Baghdad-WordPress-Meetup-Group",
     "cat": "Inactive"
    },
    {
@@ -5963,7 +5963,7 @@
     "group": "Varanasi WordPress Meetup",
     "city": "Varanasi",
     "country": "India",
-    "members": 1168,
+    "members": 1170,
     "last": "2025-06-15",
     "url": "https://www.meetup.com/wpvaranasi",
     "cat": "Inactive"
@@ -5973,7 +5973,7 @@
     "group": "Surabaya WordPress Meetup",
     "city": "Surabaya",
     "country": "Indonesia",
-    "members": 1164,
+    "members": 1166,
     "last": "2026-07-31",
     "url": "https://www.meetup.com/surabaya-wordpress-meetup",
     "cat": "Active"
@@ -6093,7 +6093,7 @@
     "group": "Rajshahi WordPress Meetup",
     "city": "Rajshahi",
     "country": "Bangladesh",
-    "members": 1115,
+    "members": 1117,
     "last": "2026-07-31",
     "url": "https://www.meetup.com/rajshahi-wordpress-meetup",
     "cat": "Active"
@@ -6149,6 +6149,16 @@
     "cat": "Inactive"
    },
    {
+    "id": 154,
+    "group": "Multan WordPress Meetup",
+    "city": "Multan",
+    "country": "Pakistan",
+    "members": 1089,
+    "last": "2024-04-27",
+    "url": "https://www.meetup.com/multan-wordpress-meetup",
+    "cat": "Inactive"
+   },
+   {
     "id": 123,
     "group": "Bogor WordPress Meetup",
     "city": "Bogor",
@@ -6157,16 +6167,6 @@
     "last": "2026-06-28",
     "url": "https://www.meetup.com/bogor-wordpress-meetup",
     "cat": "Active"
-   },
-   {
-    "id": 154,
-    "group": "Multan WordPress Meetup",
-    "city": "Multan",
-    "country": "Pakistan",
-    "members": 1088,
-    "last": "2024-04-27",
-    "url": "https://www.meetup.com/multan-wordpress-meetup",
-    "cat": "Inactive"
    },
    {
     "id": 150,
@@ -6293,7 +6293,7 @@
     "group": "WordPress Meetup Bonn #wpbn",
     "city": "Bonn",
     "country": "Germany",
-    "members": 995,
+    "members": 994,
     "last": "2026-07-01",
     "url": "https://www.meetup.com/wordpress-meetup-bonn-wpbn",
     "cat": "Active"
@@ -6313,7 +6313,7 @@
     "group": "Kumasi WordPress Meetup Group",
     "city": "Kumasi",
     "country": "Ghana",
-    "members": 973,
+    "members": 974,
     "last": "2026-02-21",
     "url": "https://www.meetup.com/kumasi-wordpress-meetup-group",
     "cat": "Fading"
@@ -6373,7 +6373,7 @@
     "group": "Ajmer WordPress Community",
     "city": "Ajmer",
     "country": "India",
-    "members": 930,
+    "members": 931,
     "last": "2026-07-26",
     "url": "https://www.meetup.com/ajmer-wordpress-meetup",
     "cat": "Active"
@@ -6403,7 +6403,7 @@
     "group": "Asaba WordPress Meetup Group",
     "city": "Asaba",
     "country": "Nigeria",
-    "members": 898,
+    "members": 900,
     "last": "2024-11-02",
     "url": "https://www.meetup.com/asaba-wordpress-meetup",
     "cat": "Inactive"
@@ -6429,23 +6429,23 @@
     "cat": "Active"
    },
    {
-    "id": 360,
-    "group": "WordPress Meetup Mannheim",
-    "city": "Mannheim",
-    "country": "Germany",
-    "members": 893,
-    "last": "2026-07-04",
-    "url": "https://www.meetup.com/wordpress-mannheim",
-    "cat": "Active"
-   },
-   {
     "id": 313,
     "group": "Butwal WordPress Meetup",
     "city": "Butwal",
     "country": "Nepal",
-    "members": 892,
+    "members": 893,
     "last": "2026-07-09",
     "url": "https://www.meetup.com/Butwal-WordPress-Meetup",
+    "cat": "Active"
+   },
+   {
+    "id": 360,
+    "group": "WordPress Meetup Mannheim",
+    "city": "Mannheim",
+    "country": "Germany",
+    "members": 892,
+    "last": "2026-07-04",
+    "url": "https://www.meetup.com/wordpress-mannheim",
     "cat": "Active"
    },
    {
@@ -6589,16 +6589,6 @@
     "cat": "Active"
    },
    {
-    "id": 679,
-    "group": "WordPress Winnipeg",
-    "city": "Winnipeg",
-    "country": "Canada",
-    "members": 845,
-    "last": "2026-07-01",
-    "url": "https://www.meetup.com/wordpresswinnipeg",
-    "cat": "Active"
-   },
-   {
     "id": 610,
     "group": "WordPress Meetup Brescia",
     "city": "Brescia",
@@ -6609,11 +6599,21 @@
     "cat": "Inactive"
    },
    {
+    "id": 679,
+    "group": "WordPress Winnipeg",
+    "city": "Winnipeg",
+    "country": "Canada",
+    "members": 844,
+    "last": "2026-07-01",
+    "url": "https://www.meetup.com/wordpresswinnipeg",
+    "cat": "Active"
+   },
+   {
     "id": 259,
     "group": "WordPress Rangpur Meetup",
     "city": "Rangpur",
     "country": "Bangladesh",
-    "members": 840,
+    "members": 842,
     "last": "2026-02-27",
     "url": "https://www.meetup.com/WordPress-Rangpur-Meetup",
     "cat": "Fading"
@@ -6653,7 +6653,7 @@
     "group": "Hisar (Haryana) WordPress Meetup Group",
     "city": "Hisar",
     "country": "India",
-    "members": 804,
+    "members": 806,
     "last": "2025-12-02",
     "url": "https://www.meetup.com/hisar-wordpress-meetup-group",
     "cat": "Fading"
@@ -6673,7 +6673,7 @@
     "group": "Port-au-Prince WordPress Meetup Group",
     "city": "Port-au-Prince",
     "country": "Haiti",
-    "members": 801,
+    "members": 802,
     "last": "2025-10-18",
     "url": "https://www.meetup.com/Port-au-Prince-WordPress-Meetup",
     "cat": "Fading"
@@ -6703,7 +6703,7 @@
     "group": "Chiba WordPress Meetup",
     "city": "Chiba",
     "country": "Japan",
-    "members": 795,
+    "members": 796,
     "last": "2026-07-26",
     "url": "https://www.meetup.com/chiba-wordpress-meetup",
     "cat": "Active"
@@ -6839,6 +6839,16 @@
     "cat": "Fading"
    },
    {
+    "id": 144,
+    "group": "Bogura WordPress Meetup",
+    "city": "Bogora",
+    "country": "Bangladesh",
+    "members": 751,
+    "last": "2026-01-07",
+    "url": "https://www.meetup.com/bogora-wordpress-meetup",
+    "cat": "Fading"
+   },
+   {
     "id": 198,
     "group": "Metro Detroit WordPress Meetup",
     "city": "Detroit",
@@ -6847,16 +6857,6 @@
     "last": "2024-10-07",
     "url": "https://www.meetup.com/metro-detroit-wordpress-meetup",
     "cat": "Inactive"
-   },
-   {
-    "id": 144,
-    "group": "Bogura WordPress Meetup",
-    "city": "Bogora",
-    "country": "Bangladesh",
-    "members": 749,
-    "last": "2026-01-07",
-    "url": "https://www.meetup.com/bogora-wordpress-meetup",
-    "cat": "Fading"
    },
    {
     "id": 290,
@@ -6913,7 +6913,7 @@
     "group": "Kano WordPress Meetup",
     "city": "Kano",
     "country": "Nigeria",
-    "members": 724,
+    "members": 725,
     "last": "2023-05-27",
     "url": "https://www.meetup.com/Kano-WordPress-Meetup",
     "cat": "Inactive"
@@ -7013,7 +7013,7 @@
     "group": "WordPress Meetup Shenzhen",
     "city": "Shenzhen",
     "country": "China",
-    "members": 698,
+    "members": 700,
     "last": "2026-07-19",
     "url": "https://www.meetup.com/wordpress-meetup-shenzhen",
     "cat": "Active"
@@ -7209,6 +7209,16 @@
     "cat": "Active"
    },
    {
+    "id": 264,
+    "group": "WordPress Lugo",
+    "city": "Lugo",
+    "country": "Spain",
+    "members": 641,
+    "last": "2026-06-25",
+    "url": "https://www.meetup.com/wordpresslugo",
+    "cat": "Active"
+   },
+   {
     "id": 529,
     "group": "WPinLille",
     "city": "Lille",
@@ -7229,6 +7239,16 @@
     "cat": "Inactive"
    },
    {
+    "id": 324,
+    "group": "Huelva WordPress Meetup",
+    "city": "Huelva",
+    "country": "Spain",
+    "members": 639,
+    "last": "2025-12-16",
+    "url": "https://www.meetup.com/Huelva-WordPress-Meetup",
+    "cat": "Fading"
+   },
+   {
     "id": 372,
     "group": "WordPress Santa Clarita Valley",
     "city": "Santa Clarita",
@@ -7237,26 +7257,6 @@
     "last": "2026-06-10",
     "url": "https://www.meetup.com/wordpressscv",
     "cat": "Active"
-   },
-   {
-    "id": 264,
-    "group": "WordPress Lugo",
-    "city": "Lugo",
-    "country": "Spain",
-    "members": 638,
-    "last": "2026-06-25",
-    "url": "https://www.meetup.com/wordpresslugo",
-    "cat": "Active"
-   },
-   {
-    "id": 324,
-    "group": "Huelva WordPress Meetup",
-    "city": "Huelva",
-    "country": "Spain",
-    "members": 637,
-    "last": "2025-12-16",
-    "url": "https://www.meetup.com/Huelva-WordPress-Meetup",
-    "cat": "Fading"
    },
    {
     "id": 153,
@@ -7363,7 +7363,7 @@
     "group": "Woodstock WordPress Meetup",
     "city": "Woodstock",
     "country": "USA",
-    "members": 609,
+    "members": 610,
     "last": "2026-03-05",
     "url": "https://www.meetup.com/Woodstock-WordPress-Meetup",
     "cat": "Fading"
@@ -7413,7 +7413,7 @@
     "group": "WordPress Meetup Koblenz",
     "city": "Koblenz",
     "country": "Germany",
-    "members": 601,
+    "members": 602,
     "last": "2026-06-10",
     "url": "https://www.meetup.com/wordpress-meetup-koblenz",
     "cat": "Active"
@@ -7463,7 +7463,7 @@
     "group": "WordPress Meetup Eindhoven",
     "city": "Eindhoven",
     "country": "Netherlands",
-    "members": 592,
+    "members": 593,
     "last": "2025-04-28",
     "url": "https://www.meetup.com/wordpress-meetup-eindhoven",
     "cat": "Inactive"
@@ -7473,7 +7473,7 @@
     "group": "WordPress Meetup Semarang",
     "city": "Semarang",
     "country": "Indonesia",
-    "members": 590,
+    "members": 591,
     "last": "2026-06-26",
     "url": "https://www.meetup.com/semarang-wordpress-meetup",
     "cat": "Active"
@@ -7499,16 +7499,6 @@
     "cat": "Active"
    },
    {
-    "id": 495,
-    "group": "The Reno WordPress Meetup Group",
-    "city": "Reno",
-    "country": "USA",
-    "members": 588,
-    "last": "2024-11-26",
-    "url": "https://www.meetup.com/reno-wordpress-meetups",
-    "cat": "Inactive"
-   },
-   {
     "id": 528,
     "group": "WordPress Meetup Nürnberg",
     "city": "Nürnberg",
@@ -7517,6 +7507,16 @@
     "last": "2026-01-10",
     "url": "https://www.meetup.com/nurnberg-wordpress-meetup",
     "cat": "Fading"
+   },
+   {
+    "id": 495,
+    "group": "The Reno WordPress Meetup Group",
+    "city": "Reno",
+    "country": "USA",
+    "members": 587,
+    "last": "2024-11-26",
+    "url": "https://www.meetup.com/reno-wordpress-meetups",
+    "cat": "Inactive"
    },
    {
     "id": 524,
@@ -7543,7 +7543,7 @@
     "group": "WordPress Alwar",
     "city": "Alwar",
     "country": "India",
-    "members": 577,
+    "members": 578,
     "last": "2025-12-14",
     "url": "https://www.meetup.com/wpalwar",
     "cat": "Fading"
@@ -7653,7 +7653,7 @@
     "group": "Palakkad WordPress Meetup",
     "city": "Palakkad",
     "country": "India",
-    "members": 559,
+    "members": 558,
     "last": "2024-05-27",
     "url": "https://www.meetup.com/Palakkad-WordPress-Meetup",
     "cat": "Inactive"
@@ -7674,7 +7674,7 @@
     "city": "Frankfurt",
     "country": "Germany",
     "members": 556,
-    "last": "2026-07-06",
+    "last": "2026-08-03",
     "url": "https://www.meetup.com/wpmeetup-frankfurt",
     "cat": "Active"
    },
@@ -7729,6 +7729,16 @@
     "cat": "Inactive"
    },
    {
+    "id": 520,
+    "group": "WordPress Tuluá",
+    "city": "Tuluá",
+    "country": "Colombia",
+    "members": 541,
+    "last": "2024-11-30",
+    "url": "https://www.meetup.com/WordPress-Tulua",
+    "cat": "Inactive"
+   },
+   {
     "id": 367,
     "group": "WordPress Cebu",
     "city": "Cebu",
@@ -7737,16 +7747,6 @@
     "last": "2026-02-21",
     "url": "https://www.meetup.com/wordpresscebu",
     "cat": "Fading"
-   },
-   {
-    "id": 520,
-    "group": "WordPress Tuluá",
-    "city": "Tuluá",
-    "country": "Colombia",
-    "members": 540,
-    "last": "2024-11-30",
-    "url": "https://www.meetup.com/WordPress-Tulua",
-    "cat": "Inactive"
    },
    {
     "id": 252,
@@ -7769,6 +7769,16 @@
     "cat": "Active"
    },
    {
+    "id": 141,
+    "group": "Kota WordPress Meetup Group",
+    "city": "Kota",
+    "country": "India",
+    "members": 534,
+    "last": "2024-05-27",
+    "url": "https://www.meetup.com/kota-wordpress-meetup-group",
+    "cat": "Inactive"
+   },
+   {
     "id": 288,
     "group": "WordPress Logroño",
     "city": "Logroño",
@@ -7787,16 +7797,6 @@
     "last": "2026-06-27",
     "url": "https://www.meetup.com/wpcartago",
     "cat": "Active"
-   },
-   {
-    "id": 141,
-    "group": "Kota WordPress Meetup Group",
-    "city": "Kota",
-    "country": "India",
-    "members": 532,
-    "last": "2024-05-27",
-    "url": "https://www.meetup.com/kota-wordpress-meetup-group",
-    "cat": "Inactive"
    },
    {
     "id": 664,
@@ -7863,7 +7863,7 @@
     "group": "Pabna WordPress Meetup Group",
     "city": "Pabna",
     "country": "Bangladesh",
-    "members": 522,
+    "members": 524,
     "last": "2024-07-09",
     "url": "https://www.meetup.com/pabna-wordpress-meetup-group",
     "cat": "Inactive"
@@ -7909,6 +7909,16 @@
     "cat": "Inactive"
    },
    {
+    "id": 596,
+    "group": "Olympia WordPress Meetup (OlyWP)",
+    "city": "Olympia",
+    "country": "USA",
+    "members": 517,
+    "last": "2026-07-16",
+    "url": "https://www.meetup.com/Olympia-WordPress-Meetup-OlyWP",
+    "cat": "Active"
+   },
+   {
     "id": 597,
     "group": "Cambodia WordPress Community",
     "city": "Phnom Penh",
@@ -7917,16 +7927,6 @@
     "last": "2024-08-31",
     "url": "https://www.meetup.com/Cambodia-WordPress-Community",
     "cat": "Inactive"
-   },
-   {
-    "id": 596,
-    "group": "Olympia WordPress Meetup (OlyWP)",
-    "city": "Olympia",
-    "country": "USA",
-    "members": 516,
-    "last": "2026-07-16",
-    "url": "https://www.meetup.com/Olympia-WordPress-Meetup-OlyWP",
-    "cat": "Active"
    },
    {
     "id": 325,
@@ -7943,7 +7943,7 @@
     "group": "Plovdiv WordPress Meetup",
     "city": "Plovdiv",
     "country": "Bulgaria",
-    "members": 514,
+    "members": 515,
     "last": "2026-06-17",
     "url": "https://www.meetup.com/plovdiv-wordpress-meetup",
     "cat": "Active"
@@ -8003,7 +8003,7 @@
     "group": "WordPress Meetup Fryslân",
     "city": "Leeuwarden",
     "country": "Netherlands",
-    "members": 505,
+    "members": 506,
     "last": "2026-06-11",
     "url": "https://www.meetup.com/WordPress-Meetup-Fryslan",
     "cat": "Active"
@@ -8043,7 +8043,7 @@
     "group": "Cumilla WordPress Meetup",
     "city": "Komilla",
     "country": "Bangladesh",
-    "members": 492,
+    "members": 493,
     "last": "2026-06-06",
     "url": "https://www.meetup.com/cumilla-wordpress-meetup",
     "cat": "Active"
@@ -8053,7 +8053,7 @@
     "group": "Guwahati WordPress Meetup",
     "city": "Guwahati",
     "country": "India",
-    "members": 490,
+    "members": 491,
     "last": "2025-07-06",
     "url": "https://www.meetup.com/guwahati-wordpress-meetup",
     "cat": "Inactive"
@@ -8159,6 +8159,16 @@
     "cat": "Fading"
    },
    {
+    "id": 164,
+    "group": "Pisa WordPress Meetup Group",
+    "city": "Pisa",
+    "country": "Italy",
+    "members": 460,
+    "last": "2026-07-15",
+    "url": "https://www.meetup.com/pisa-wordpress-meetup",
+    "cat": "Active"
+   },
+   {
     "id": 617,
     "group": "WordPress Downstate",
     "city": "Champaign",
@@ -8169,16 +8179,6 @@
     "cat": "Active"
    },
    {
-    "id": 164,
-    "group": "Pisa WordPress Meetup Group",
-    "city": "Pisa",
-    "country": "Italy",
-    "members": 459,
-    "last": "2026-07-15",
-    "url": "https://www.meetup.com/pisa-wordpress-meetup",
-    "cat": "Active"
-   },
-   {
     "id": 302,
     "group": "Morris County NJ WordPress Meetup",
     "city": "Parsippany",
@@ -8186,6 +8186,26 @@
     "members": 459,
     "last": "2022-05-23",
     "url": "https://www.meetup.com/Morris-County-NJ-WordPress-Group",
+    "cat": "Inactive"
+   },
+   {
+    "id": 90,
+    "group": "Siliguri WordPress Group",
+    "city": "Shiliguri",
+    "country": "India",
+    "members": 455,
+    "last": "2026-07-18",
+    "url": "https://www.meetup.com/siliguri-wordpress-group",
+    "cat": "Active"
+   },
+   {
+    "id": 168,
+    "group": "Diani Beach WordPress Meetup",
+    "city": "Diani Beach",
+    "country": "Kenya",
+    "members": 455,
+    "last": "2024-09-26",
+    "url": "https://www.meetup.com/diani-beach-wordpress-meetup",
     "cat": "Inactive"
    },
    {
@@ -8206,26 +8226,6 @@
     "members": 455,
     "last": "2023-12-05",
     "url": "https://www.meetup.com/WordPressDevNH",
-    "cat": "Inactive"
-   },
-   {
-    "id": 90,
-    "group": "Siliguri WordPress Group",
-    "city": "Shiliguri",
-    "country": "India",
-    "members": 454,
-    "last": "2026-07-18",
-    "url": "https://www.meetup.com/siliguri-wordpress-group",
-    "cat": "Active"
-   },
-   {
-    "id": 168,
-    "group": "Diani Beach WordPress Meetup",
-    "city": "Diani Beach",
-    "country": "Kenya",
-    "members": 454,
-    "last": "2024-09-26",
-    "url": "https://www.meetup.com/diani-beach-wordpress-meetup",
     "cat": "Inactive"
    },
    {
@@ -8273,7 +8273,7 @@
     "group": "WordPress Meetup Dresden",
     "city": "Dresden",
     "country": "Germany",
-    "members": 430,
+    "members": 429,
     "last": "2026-07-08",
     "url": "https://www.meetup.com/wp-meetup-dresden",
     "cat": "Active"
@@ -8333,7 +8333,7 @@
     "group": "Navsari WordPress Meetup Group",
     "city": "Navsari",
     "country": "India",
-    "members": 416,
+    "members": 417,
     "last": "2025-08-17",
     "url": "https://www.meetup.com/navsari-wordpress-meetup-group",
     "cat": "Fading"
@@ -8393,10 +8393,20 @@
     "group": "Khulna WordPress Meetup Group",
     "city": "Khulna",
     "country": "Bangladesh",
-    "members": 405,
+    "members": 407,
     "last": "2025-01-25",
     "url": "https://www.meetup.com/khulna-wordpress-meetup",
     "cat": "Inactive"
+   },
+   {
+    "id": 147,
+    "group": "JB WordPress Meetup | Johor Bahru",
+    "city": "Johor Bahru",
+    "country": "Malaysia",
+    "members": 406,
+    "last": "2026-07-11",
+    "url": "https://www.meetup.com/jb-wordpress-meetup",
+    "cat": "Active"
    },
    {
     "id": 472,
@@ -8409,21 +8419,11 @@
     "cat": "Inactive"
    },
    {
-    "id": 147,
-    "group": "JB WordPress Meetup | Johor Bahru",
-    "city": "Johor Bahru",
-    "country": "Malaysia",
-    "members": 404,
-    "last": "2026-07-11",
-    "url": "https://www.meetup.com/jb-wordpress-meetup",
-    "cat": "Active"
-   },
-   {
     "id": 63,
     "group": "WordPress Meetup Patna",
     "city": "Patna",
     "country": "India",
-    "members": 400,
+    "members": 401,
     "last": "2025-02-22",
     "url": "https://www.meetup.com/wordpress-meetup-patna",
     "cat": "Inactive"
@@ -8453,7 +8453,7 @@
     "group": "Toyama WordPress Meetup",
     "city": "Toyama",
     "country": "Japan",
-    "members": 393,
+    "members": 394,
     "last": "2026-07-15",
     "url": "https://www.meetup.com/Toyama-WordPress-Meetup",
     "cat": "Active"
@@ -8499,21 +8499,11 @@
     "cat": "Inactive"
    },
    {
-    "id": 523,
-    "group": "Boise WordPress Meetups",
-    "city": "Nampa",
-    "country": "USA",
-    "members": 383,
-    "last": "2025-01-21",
-    "url": "https://www.meetup.com/treasurevalleywp",
-    "cat": "Inactive"
-   },
-   {
     "id": 192,
     "group": "Benidorm WordPress Meetup",
     "city": "Benidorm",
     "country": "Spain",
-    "members": 382,
+    "members": 383,
     "last": "2026-06-25",
     "url": "https://www.meetup.com/wordpress-benidorm",
     "cat": "Active"
@@ -8523,10 +8513,20 @@
     "group": "Durham Region WordPress Meetup - WP Durham",
     "city": "Courtice",
     "country": "Canada",
-    "members": 382,
+    "members": 383,
     "last": "2026-05-14",
     "url": "https://www.meetup.com/durham-wordpress-meetup",
     "cat": "Active"
+   },
+   {
+    "id": 523,
+    "group": "Boise WordPress Meetups",
+    "city": "Nampa",
+    "country": "USA",
+    "members": 383,
+    "last": "2025-01-21",
+    "url": "https://www.meetup.com/treasurevalleywp",
+    "cat": "Inactive"
    },
    {
     "id": 577,
@@ -8569,6 +8569,16 @@
     "cat": "Fading"
    },
    {
+    "id": 94,
+    "group": "Shillong WordPress Meetup",
+    "city": "Shillong",
+    "country": "India",
+    "members": 375,
+    "last": "2024-09-28",
+    "url": "https://www.meetup.com/shillong-wordpress-meetup",
+    "cat": "Inactive"
+   },
+   {
     "id": 166,
     "group": "Pai WordPress Meetup",
     "city": "Pai",
@@ -8599,21 +8609,11 @@
     "cat": "Active"
    },
    {
-    "id": 94,
-    "group": "Shillong WordPress Meetup",
-    "city": "Shillong",
-    "country": "India",
-    "members": 373,
-    "last": "2024-09-28",
-    "url": "https://www.meetup.com/shillong-wordpress-meetup",
-    "cat": "Inactive"
-   },
-   {
     "id": 382,
     "group": "WordPress Meetup Neustadt",
     "city": "Neustadt",
     "country": "Germany",
-    "members": 370,
+    "members": 372,
     "last": "2025-10-23",
     "url": "https://www.meetup.com/WordPress-Meetup-Neustadt",
     "cat": "Fading"
@@ -8769,6 +8769,16 @@
     "cat": "Inactive"
    },
    {
+    "id": 137,
+    "group": "Toowoomba WordPress Meetup",
+    "city": "Toowoomba",
+    "country": "Australia",
+    "members": 346,
+    "last": "2026-07-02",
+    "url": "https://www.meetup.com/Toowoomba-WordPress-Meetup",
+    "cat": "Active"
+   },
+   {
     "id": 535,
     "group": "WordPress Meetup Bari",
     "city": "Bari",
@@ -8779,14 +8789,14 @@
     "cat": "Inactive"
    },
    {
-    "id": 137,
-    "group": "Toowoomba WordPress Meetup",
-    "city": "Toowoomba",
-    "country": "Australia",
+    "id": 184,
+    "group": "Kediri WordPress Meetup",
+    "city": "Kediri",
+    "country": "Indonesia",
     "members": 345,
-    "last": "2026-07-02",
-    "url": "https://www.meetup.com/Toowoomba-WordPress-Meetup",
-    "cat": "Active"
+    "last": "2025-12-21",
+    "url": "https://www.meetup.com/wpkediri",
+    "cat": "Fading"
    },
    {
     "id": 455,
@@ -8797,16 +8807,6 @@
     "last": "2025-05-23",
     "url": "https://www.meetup.com/WordPress-Chandigarh",
     "cat": "Inactive"
-   },
-   {
-    "id": 184,
-    "group": "Kediri WordPress Meetup",
-    "city": "Kediri",
-    "country": "Indonesia",
-    "members": 344,
-    "last": "2025-12-21",
-    "url": "https://www.meetup.com/wpkediri",
-    "cat": "Fading"
    },
    {
     "id": 355,
@@ -8839,6 +8839,16 @@
     "cat": "Fading"
    },
    {
+    "id": 175,
+    "group": "Igualada WordPress Meetup",
+    "city": "Igualada",
+    "country": "Spain",
+    "members": 340,
+    "last": "2026-03-14",
+    "url": "https://www.meetup.com/igualada-wordpress-meetup",
+    "cat": "Fading"
+   },
+   {
     "id": 635,
     "group": "WordPress Charleston",
     "city": "Charleston",
@@ -8867,16 +8877,6 @@
     "last": "2026-06-24",
     "url": "https://www.meetup.com/WordPress-Meetup-Montpellier",
     "cat": "Active"
-   },
-   {
-    "id": 175,
-    "group": "Igualada WordPress Meetup",
-    "city": "Igualada",
-    "country": "Spain",
-    "members": 337,
-    "last": "2026-03-14",
-    "url": "https://www.meetup.com/igualada-wordpress-meetup",
-    "cat": "Fading"
    },
    {
     "id": 537,
@@ -9069,6 +9069,16 @@
     "cat": "Active"
    },
    {
+    "id": 435,
+    "group": "Constanta WordPress Meetup",
+    "city": "Constanta",
+    "country": "Romania",
+    "members": 315,
+    "last": "2024-04-25",
+    "url": "https://www.meetup.com/Constanta-WordPress-Meetup",
+    "cat": "Inactive"
+   },
+   {
     "id": 396,
     "group": "Kingston WordPress Group",
     "city": "Kingston",
@@ -9086,16 +9096,6 @@
     "members": 313,
     "last": "2024-12-11",
     "url": "https://www.meetup.com/wpcoventry",
-    "cat": "Inactive"
-   },
-   {
-    "id": 435,
-    "group": "Constanta WordPress Meetup",
-    "city": "Constanta",
-    "country": "Romania",
-    "members": 313,
-    "last": "2024-04-25",
-    "url": "https://www.meetup.com/Constanta-WordPress-Meetup",
     "cat": "Inactive"
    },
    {
@@ -9163,7 +9163,7 @@
     "group": "Ostravská komunita tvůrců webů (nejen) na WordPressu",
     "city": "Ostrava",
     "country": "Czech Republic",
-    "members": 298,
+    "members": 299,
     "last": "2026-07-02",
     "url": "https://www.meetup.com/wordpress-ostrava",
     "cat": "Active"
@@ -9176,6 +9176,16 @@
     "members": 298,
     "last": "2025-08-01",
     "url": "https://www.meetup.com/Calabar-WordPress-Meetup",
+    "cat": "Inactive"
+   },
+   {
+    "id": 152,
+    "group": "San Pablo WordPress Meetup Group",
+    "city": "San Pablo",
+    "country": "Philippines",
+    "members": 296,
+    "last": "2024-10-12",
+    "url": "https://www.meetup.com/san-pablo-wordpress-meetup-group",
     "cat": "Inactive"
    },
    {
@@ -9219,14 +9229,14 @@
     "cat": "Active"
    },
    {
-    "id": 152,
-    "group": "San Pablo WordPress Meetup Group",
-    "city": "San Pablo",
-    "country": "Philippines",
-    "members": 291,
-    "last": "2024-10-12",
-    "url": "https://www.meetup.com/san-pablo-wordpress-meetup-group",
-    "cat": "Inactive"
+    "id": 92,
+    "group": "Manikganj WordPress Meetup",
+    "city": "Manikganj",
+    "country": "Bangladesh",
+    "members": 288,
+    "last": "",
+    "url": "https://www.meetup.com/manikganj-wordpress-meetup",
+    "cat": "Never"
    },
    {
     "id": 659,
@@ -9239,14 +9249,14 @@
     "cat": "Fading"
    },
    {
-    "id": 92,
-    "group": "Manikganj WordPress Meetup",
-    "city": "Manikganj",
-    "country": "Bangladesh",
+    "id": 9,
+    "group": "Vadodara WordPress Meetup",
+    "city": "Vadodara",
+    "country": "India",
     "members": 287,
-    "last": "",
-    "url": "https://www.meetup.com/manikganj-wordpress-meetup",
-    "cat": "Never"
+    "last": "2026-06-06",
+    "url": "https://www.meetup.com/vadodara-wordpress-meetup",
+    "cat": "Active"
    },
    {
     "id": 553,
@@ -9293,7 +9303,7 @@
     "group": "WordPress Meetup Ghotki",
     "city": "Ghotki",
     "country": "Pakistan",
-    "members": 277,
+    "members": 278,
     "last": "2024-08-03",
     "url": "https://www.meetup.com/WordPress-Meetup-Ghotki",
     "cat": "Inactive"
@@ -9307,16 +9317,6 @@
     "last": "2020-01-14",
     "url": "https://www.meetup.com/Jerusalem-WordPress-Meetup",
     "cat": "Inactive"
-   },
-   {
-    "id": 9,
-    "group": "Vadodara WordPress Meetup",
-    "city": "Vadodara",
-    "country": "India",
-    "members": 275,
-    "last": "2026-06-06",
-    "url": "https://www.meetup.com/vadodara-wordpress-meetup",
-    "cat": "Active"
    },
    {
     "id": 649,
@@ -9389,24 +9389,24 @@
     "cat": "Active"
    },
    {
-    "id": 239,
-    "group": "Salerno WordPress Meetup",
-    "city": "Salerno",
-    "country": "Italy",
-    "members": 269,
-    "last": "2024-07-25",
-    "url": "https://www.meetup.com/salerno-wordpress-meetup",
-    "cat": "Inactive"
-   },
-   {
     "id": 333,
     "group": "Shinshu WordPress Meetup",
     "city": "Matsumoto",
     "country": "Japan",
-    "members": 269,
+    "members": 270,
     "last": "2026-07-25",
     "url": "https://www.meetup.com/Shinshu-WordPress-Meetup",
     "cat": "Active"
+   },
+   {
+    "id": 239,
+    "group": "Salerno WordPress Meetup",
+    "city": "Salerno",
+    "country": "Italy",
+    "members": 268,
+    "last": "2024-07-25",
+    "url": "https://www.meetup.com/salerno-wordpress-meetup",
+    "cat": "Inactive"
    },
    {
     "id": 384,
@@ -9449,6 +9449,16 @@
     "cat": "Inactive"
    },
    {
+    "id": 167,
+    "group": "Gießen WordPress Meetup Group",
+    "city": "Gießen",
+    "country": "Germany",
+    "members": 262,
+    "last": "2024-10-16",
+    "url": "https://www.meetup.com/giessen-wordpress-meetup-group",
+    "cat": "Inactive"
+   },
+   {
     "id": 572,
     "group": "Turku WordPress Meetup",
     "city": "Turku",
@@ -9469,21 +9479,11 @@
     "cat": "Fading"
    },
    {
-    "id": 167,
-    "group": "Gießen WordPress Meetup Group",
-    "city": "Gießen",
-    "country": "Germany",
-    "members": 260,
-    "last": "2024-10-16",
-    "url": "https://www.meetup.com/giessen-wordpress-meetup-group",
-    "cat": "Inactive"
-   },
-   {
     "id": 129,
     "group": "WordPress-Meetup Konstanz",
     "city": "Konstanz",
     "country": "Germany",
-    "members": 259,
+    "members": 260,
     "last": "2026-07-13",
     "url": "https://www.meetup.com/konstanz-wordpress",
     "cat": "Active"
@@ -9633,7 +9633,7 @@
     "group": "Ishikawa WordPress Meetup",
     "city": "Kanazawa",
     "country": "Japan",
-    "members": 235,
+    "members": 236,
     "last": "2026-07-25",
     "url": "https://www.meetup.com/ishikawa-wordpress-meetup",
     "cat": "Active"
@@ -9699,6 +9699,16 @@
     "cat": "Active"
    },
    {
+    "id": 201,
+    "group": "Kortrijk WordPress Meetup",
+    "city": "Kortrijk",
+    "country": "Belgium",
+    "members": 231,
+    "last": "2026-06-18",
+    "url": "https://www.meetup.com/kortrijk-wordpress-meetup",
+    "cat": "Active"
+   },
+   {
     "id": 366,
     "group": "WordPress Aalborg",
     "city": "Aalborg",
@@ -9719,13 +9729,13 @@
     "cat": "Active"
    },
    {
-    "id": 201,
-    "group": "Kortrijk WordPress Meetup",
-    "city": "Kortrijk",
-    "country": "Belgium",
+    "id": 135,
+    "group": "WordPress Meetup Südsauerland",
+    "city": "Attendorn",
+    "country": "Germany",
     "members": 229,
-    "last": "2026-06-18",
-    "url": "https://www.meetup.com/kortrijk-wordpress-meetup",
+    "last": "2026-06-15",
+    "url": "https://www.meetup.com/sudsauerland-wordpress-meetup-group",
     "cat": "Active"
    },
    {
@@ -9737,16 +9747,6 @@
     "last": "2026-01-21",
     "url": "https://www.meetup.com/Spokane-WordPress-Meetup",
     "cat": "Fading"
-   },
-   {
-    "id": 135,
-    "group": "WordPress Meetup Südsauerland",
-    "city": "Attendorn",
-    "country": "Germany",
-    "members": 228,
-    "last": "2026-06-15",
-    "url": "https://www.meetup.com/sudsauerland-wordpress-meetup-group",
-    "cat": "Active"
    },
    {
     "id": 462,
@@ -9763,7 +9763,7 @@
     "group": "Demak WordPress Meetup",
     "city": "Demak",
     "country": "Indonesia",
-    "members": 223,
+    "members": 225,
     "last": "2026-05-30",
     "url": "https://www.meetup.com/demak-wordpress-meetup",
     "cat": "Active"
@@ -9779,6 +9779,16 @@
     "cat": "Inactive"
    },
    {
+    "id": 155,
+    "group": "WordPress Lakhimpur Kheri Meetup",
+    "city": "Kheri",
+    "country": "India",
+    "members": 222,
+    "last": "2025-12-28",
+    "url": "https://www.meetup.com/wordpress-lakhimpur-kheri-meetup",
+    "cat": "Fading"
+   },
+   {
     "id": 351,
     "group": "Katsina WordPress Meetup",
     "city": "Katsina",
@@ -9789,14 +9799,14 @@
     "cat": "Inactive"
    },
    {
-    "id": 155,
-    "group": "WordPress Lakhimpur Kheri Meetup",
-    "city": "Kheri",
-    "country": "India",
-    "members": 221,
-    "last": "2025-12-28",
-    "url": "https://www.meetup.com/wordpress-lakhimpur-kheri-meetup",
-    "cat": "Fading"
+    "id": 108,
+    "group": "Ughelli WordPress Meetup Group",
+    "city": "Ughelli",
+    "country": "Nigeria",
+    "members": 218,
+    "last": "2024-04-28",
+    "url": "https://www.meetup.com/ughelli-wordpress-meetup-group",
+    "cat": "Inactive"
    },
    {
     "id": 171,
@@ -9806,16 +9816,6 @@
     "members": 218,
     "last": "2025-03-04",
     "url": "https://www.meetup.com/wordpressrva",
-    "cat": "Inactive"
-   },
-   {
-    "id": 108,
-    "group": "Ughelli WordPress Meetup Group",
-    "city": "Ughelli",
-    "country": "Nigeria",
-    "members": 217,
-    "last": "2024-04-28",
-    "url": "https://www.meetup.com/ughelli-wordpress-meetup-group",
     "cat": "Inactive"
    },
    {
@@ -9839,6 +9839,16 @@
     "cat": "Never"
    },
    {
+    "id": 478,
+    "group": "WordPress Port Macquarie and Surrounds",
+    "city": "Port Macquarie",
+    "country": "Australia",
+    "members": 212,
+    "last": "2024-10-03",
+    "url": "https://www.meetup.com/wordpress-port-macquarie",
+    "cat": "Inactive"
+   },
+   {
     "id": 488,
     "group": "Nha Trang WordPress",
     "city": "Nha Trang",
@@ -9856,16 +9866,6 @@
     "members": 211,
     "last": "2024-10-10",
     "url": "https://www.meetup.com/vitoria-gasteiz-wordpress-meetup",
-    "cat": "Inactive"
-   },
-   {
-    "id": 478,
-    "group": "WordPress Port Macquarie and Surrounds",
-    "city": "Port Macquarie",
-    "country": "Australia",
-    "members": 211,
-    "last": "2024-10-03",
-    "url": "https://www.meetup.com/wordpress-port-macquarie",
     "cat": "Inactive"
    },
    {
@@ -9923,7 +9923,7 @@
     "group": "Ehime WordPress Meetup",
     "city": "Matsuyama",
     "country": "Japan",
-    "members": 202,
+    "members": 203,
     "last": "2026-06-27",
     "url": "https://www.meetup.com/ehime-wordpress-meetup",
     "cat": "Active"
@@ -9979,6 +9979,16 @@
     "cat": "Inactive"
    },
    {
+    "id": 47,
+    "group": "WordPress Faro",
+    "city": "Faro",
+    "country": "Portugal",
+    "members": 199,
+    "last": "2026-07-15",
+    "url": "https://www.meetup.com/wordpress-faro",
+    "cat": "Active"
+   },
+   {
     "id": 586,
     "group": "Jyväskylä WordPress Meetup",
     "city": "Jyväskylä",
@@ -9987,6 +9997,26 @@
     "last": "2025-03-06",
     "url": "https://www.meetup.com/jyvaskyla-wordpress-meetup",
     "cat": "Inactive"
+   },
+   {
+    "id": 32,
+    "group": "Bhola WordPress Meetup #WPBhola",
+    "city": "Bhola",
+    "country": "Bangladesh",
+    "members": 198,
+    "last": "2026-03-31",
+    "url": "https://www.meetup.com/wpbhola",
+    "cat": "Fading"
+   },
+   {
+    "id": 37,
+    "group": "Zamora WordPress Meetup Group",
+    "city": "Zamora",
+    "country": "Spain",
+    "members": 198,
+    "last": "2026-06-17",
+    "url": "https://www.meetup.com/zamora-wordpress-meetup-group",
+    "cat": "Active"
    },
    {
     "id": 342,
@@ -9999,26 +10029,6 @@
     "cat": "Inactive"
    },
    {
-    "id": 37,
-    "group": "Zamora WordPress Meetup Group",
-    "city": "Zamora",
-    "country": "Spain",
-    "members": 197,
-    "last": "2026-06-17",
-    "url": "https://www.meetup.com/zamora-wordpress-meetup-group",
-    "cat": "Active"
-   },
-   {
-    "id": 47,
-    "group": "WordPress Faro",
-    "city": "Faro",
-    "country": "Portugal",
-    "members": 197,
-    "last": "2026-07-15",
-    "url": "https://www.meetup.com/wordpress-faro",
-    "cat": "Active"
-   },
-   {
     "id": 273,
     "group": "WordPress Neuchâtel",
     "city": "Neuchatel",
@@ -10027,16 +10037,6 @@
     "last": "2024-06-21",
     "url": "https://www.meetup.com/WordPress-Neuchatel",
     "cat": "Inactive"
-   },
-   {
-    "id": 32,
-    "group": "Bhola WordPress Meetup #WPBhola",
-    "city": "Bhola",
-    "country": "Bangladesh",
-    "members": 196,
-    "last": "2026-03-31",
-    "url": "https://www.meetup.com/wpbhola",
-    "cat": "Fading"
    },
    {
     "id": 405,
@@ -10083,7 +10083,7 @@
     "group": "Zagarolo WordPress Meetup",
     "city": "Zagarolo",
     "country": "Italy",
-    "members": 191,
+    "members": 192,
     "last": "2025-06-25",
     "url": "https://www.meetup.com/zagarolo-wordpress-meetup",
     "cat": "Inactive"
@@ -10163,7 +10163,7 @@
     "group": "Baliuag WordPress Meetup",
     "city": "Baliuag",
     "country": "Philippines",
-    "members": 183,
+    "members": 184,
     "last": "",
     "url": "https://www.meetup.com/baliuag-wordpress-meetup",
     "cat": "Never"
@@ -10379,6 +10379,16 @@
     "cat": "Active"
    },
    {
+    "id": 190,
+    "group": "wp meetup ticino mobile",
+    "city": "Bellinzona",
+    "country": "Switzerland",
+    "members": 155,
+    "last": "2025-07-10",
+    "url": "https://www.meetup.com/wp-meetup-ticino-mobile",
+    "cat": "Inactive"
+   },
+   {
     "id": 226,
     "group": "Satkhira WordPress Meetup",
     "city": "Satkhira",
@@ -10387,16 +10397,6 @@
     "last": "2025-11-15",
     "url": "https://www.meetup.com/Satkhira-WordPress-Meetup",
     "cat": "Fading"
-   },
-   {
-    "id": 190,
-    "group": "wp meetup ticino mobile",
-    "city": "Bellinzona",
-    "country": "Switzerland",
-    "members": 154,
-    "last": "2025-07-10",
-    "url": "https://www.meetup.com/wp-meetup-ticino-mobile",
-    "cat": "Inactive"
    },
    {
     "id": 269,
@@ -10423,7 +10423,7 @@
     "group": "WordPress Nepalgunj Meetup",
     "city": "Nepalganj",
     "country": "Nepal",
-    "members": 150,
+    "members": 151,
     "last": "2026-07-31",
     "url": "https://www.meetup.com/nepalgunj-wordpress-meetup",
     "cat": "Active"
@@ -10443,10 +10443,10 @@
     "group": "Cholet WordPress Meetup",
     "city": "Cholet",
     "country": "France",
-    "members": 148,
+    "members": 149,
     "last": "2026-05-05",
     "url": "https://www.meetup.com/cholet-wordpress-meetup",
-    "cat": "Active"
+    "cat": "Fading"
    },
    {
     "id": 68,
@@ -10486,7 +10486,7 @@
     "members": 143,
     "last": "2026-05-05",
     "url": "https://www.meetup.com/lorient-wordpress-meetup-group",
-    "cat": "Active"
+    "cat": "Fading"
    },
    {
     "id": 641,
@@ -10683,20 +10683,10 @@
     "group": "WordPress Brasil Meetup Online",
     "city": "Paraná",
     "country": "Brazil",
-    "members": 124,
+    "members": 125,
     "last": "2026-07-29",
     "url": "https://www.meetup.com/brasil-wordpress-meetup",
     "cat": "Active"
-   },
-   {
-    "id": 75,
-    "group": "WordPress Castilla-La Mancha",
-    "city": "Cuenca",
-    "country": "Spain",
-    "members": 124,
-    "last": "2025-03-28",
-    "url": "https://www.meetup.com/wordpress-castilla-la-mancha",
-    "cat": "Inactive"
    },
    {
     "id": 143,
@@ -10709,11 +10699,21 @@
     "cat": "Inactive"
    },
    {
+    "id": 75,
+    "group": "WordPress Castilla-La Mancha",
+    "city": "Cuenca",
+    "country": "Spain",
+    "members": 123,
+    "last": "2025-03-28",
+    "url": "https://www.meetup.com/wordpress-castilla-la-mancha",
+    "cat": "Inactive"
+   },
+   {
     "id": 80,
     "group": "Panama City/Panama City Beach WordPress Meetup",
     "city": "Panama City",
     "country": "USA",
-    "members": 122,
+    "members": 123,
     "last": "2026-07-29",
     "url": "https://www.meetup.com/panama-city-wordpress-meetup",
     "cat": "Active"
@@ -10779,6 +10779,16 @@
     "cat": "Inactive"
    },
    {
+    "id": 5,
+    "group": "Dar es Salaam WordPress Meetup",
+    "city": "Dar es Salaam",
+    "country": "Tanzania",
+    "members": 112,
+    "last": "",
+    "url": "https://www.meetup.com/dar-es-salaam-meetup-wordpress",
+    "cat": "Never"
+   },
+   {
     "id": 116,
     "group": "WordPress Meetup Luzern (Lucerne)",
     "city": "Luzern",
@@ -10787,16 +10797,6 @@
     "last": "2026-05-11",
     "url": "https://www.meetup.com/luzern-wordpress",
     "cat": "Active"
-   },
-   {
-    "id": 5,
-    "group": "Dar es Salaam WordPress Meetup",
-    "city": "Dar es Salaam",
-    "country": "Tanzania",
-    "members": 111,
-    "last": "",
-    "url": "https://www.meetup.com/dar-es-salaam-meetup-wordpress",
-    "cat": "Never"
    },
    {
     "id": 311,
@@ -10813,7 +10813,7 @@
     "group": "Slidell WordPress Meetup Group",
     "city": "Slidell",
     "country": "USA",
-    "members": 109,
+    "members": 110,
     "last": "2025-02-22",
     "url": "https://www.meetup.com/slidell-wordpress-meetup-group",
     "cat": "Inactive"
@@ -10833,7 +10833,7 @@
     "group": "WordUP Częstochowa",
     "city": "Czestochowa",
     "country": "Poland",
-    "members": 105,
+    "members": 106,
     "last": "2026-02-12",
     "url": "https://www.meetup.com/czestochowa",
     "cat": "Fading"
@@ -11009,6 +11009,16 @@
     "cat": "Fading"
    },
    {
+    "id": 56,
+    "group": "Cavite WordPress Meetup Group",
+    "city": "Cavite",
+    "country": "Philippines",
+    "members": 84,
+    "last": "2026-06-02",
+    "url": "https://www.meetup.com/cavite-wordpress-meetup-group",
+    "cat": "Active"
+   },
+   {
     "id": 162,
     "group": "Keene WordPress Meetup",
     "city": "Keene",
@@ -11019,13 +11029,13 @@
     "cat": "Active"
    },
    {
-    "id": 56,
-    "group": "Cavite WordPress Meetup Group",
-    "city": "Cavite",
-    "country": "Philippines",
-    "members": 83,
-    "last": "2026-06-02",
-    "url": "https://www.meetup.com/cavite-wordpress-meetup-group",
+    "id": 8,
+    "group": "Mauritius WordPress Meetup Group",
+    "city": "Quatre Bornes",
+    "country": "Mauritius",
+    "members": 80,
+    "last": "2026-07-18",
+    "url": "https://www.meetup.com/mauritius-wordpress-meetup-group",
     "cat": "Active"
    },
    {
@@ -11037,16 +11047,6 @@
     "last": "2026-03-29",
     "url": "https://www.meetup.com/wordpress-meetup-beijing",
     "cat": "Fading"
-   },
-   {
-    "id": 8,
-    "group": "Mauritius WordPress Meetup Group",
-    "city": "Quatre Bornes",
-    "country": "Mauritius",
-    "members": 79,
-    "last": "2026-07-18",
-    "url": "https://www.meetup.com/mauritius-wordpress-meetup-group",
-    "cat": "Active"
    },
    {
     "id": 33,
@@ -11139,6 +11139,16 @@
     "cat": "Active"
    },
    {
+    "id": 13,
+    "group": "Prayagraj WordPress Meetup Group",
+    "city": "Allahabad",
+    "country": "India",
+    "members": 69,
+    "last": "",
+    "url": "https://www.meetup.com/prayagraj-wordpress-meetup-group",
+    "cat": "Never"
+   },
+   {
     "id": 228,
     "group": "Pátrai WordPress Meetup Group",
     "city": "Pátrai",
@@ -11166,17 +11176,7 @@
     "members": 66,
     "last": "2026-05-05",
     "url": "https://www.meetup.com/halsnaes-wordpress-meetup",
-    "cat": "Active"
-   },
-   {
-    "id": 13,
-    "group": "Prayagraj WordPress Meetup Group",
-    "city": "Allahabad",
-    "country": "India",
-    "members": 65,
-    "last": "",
-    "url": "https://www.meetup.com/prayagraj-wordpress-meetup-group",
-    "cat": "Never"
+    "cat": "Fading"
    },
    {
     "id": 209,
@@ -11259,6 +11259,16 @@
     "cat": "Inactive"
    },
    {
+    "id": 4,
+    "group": "Gazipur WordPress Meetup Group",
+    "city": "Gazipur",
+    "country": "Bangladesh",
+    "members": 50,
+    "last": "",
+    "url": "https://www.meetup.com/gazipur-wordpress-meetup-group",
+    "cat": "Never"
+   },
+   {
     "id": 31,
     "group": "Chilliwack WordPress Meetup Group",
     "city": "Chilliwack",
@@ -11289,13 +11299,13 @@
     "cat": "Never"
    },
    {
-    "id": 4,
-    "group": "Gazipur WordPress Meetup Group",
-    "city": "Gazipur",
-    "country": "Bangladesh",
-    "members": 47,
+    "id": 16,
+    "group": "Antequera WordPress Meetup",
+    "city": "Antequera",
+    "country": "Spain",
+    "members": 46,
     "last": "",
-    "url": "https://www.meetup.com/gazipur-wordpress-meetup-group",
+    "url": "https://www.meetup.com/antequera-wordpress-meetup",
     "cat": "Never"
    },
    {
@@ -11309,14 +11319,14 @@
     "cat": "Never"
    },
    {
-    "id": 16,
-    "group": "Antequera WordPress Meetup",
-    "city": "Antequera",
-    "country": "Spain",
-    "members": 45,
-    "last": "",
-    "url": "https://www.meetup.com/antequera-wordpress-meetup",
-    "cat": "Never"
+    "id": 145,
+    "group": "Graubünden WordPress Meetup Group",
+    "city": "Landquart",
+    "country": "Switzerland",
+    "members": 42,
+    "last": "2026-02-19",
+    "url": "https://www.meetup.com/graubuenden-wordpress-meetup-group",
+    "cat": "Fading"
    },
    {
     "id": 58,
@@ -11327,16 +11337,6 @@
     "last": "",
     "url": "https://www.meetup.com/tenerife-wordpress-meetup-group",
     "cat": "Never"
-   },
-   {
-    "id": 145,
-    "group": "Graubünden WordPress Meetup Group",
-    "city": "Landquart",
-    "country": "Switzerland",
-    "members": 40,
-    "last": "2026-02-19",
-    "url": "https://www.meetup.com/graubuenden-wordpress-meetup-group",
-    "cat": "Fading"
    },
    {
     "id": 10,
@@ -11413,7 +11413,7 @@
     "group": "Burlington WordPress Meetup",
     "city": "Burlington",
     "country": "USA",
-    "members": 29,
+    "members": 30,
     "last": "2026-07-15",
     "url": "https://www.meetup.com/burlington-vt-wordpress-meetup",
     "cat": "Active"
@@ -11459,6 +11459,16 @@
     "cat": "Never"
    },
    {
+    "id": 11,
+    "group": "Raipur WordPress Meetup",
+    "city": "Raipur",
+    "country": "India",
+    "members": 27,
+    "last": "",
+    "url": "https://www.meetup.com/raipur-wordpress-meetup",
+    "cat": "Never"
+   },
+   {
     "id": 12,
     "group": "Heredia WordPress Meetup",
     "city": "Heredia",
@@ -11466,16 +11476,6 @@
     "members": 27,
     "last": "",
     "url": "https://www.meetup.com/wpheredia",
-    "cat": "Never"
-   },
-   {
-    "id": 11,
-    "group": "Raipur WordPress Meetup",
-    "city": "Raipur",
-    "country": "India",
-    "members": 26,
-    "last": "",
-    "url": "https://www.meetup.com/raipur-wordpress-meetup",
     "cat": "Never"
    },
    {
@@ -11503,7 +11503,7 @@
     "group": "Firenze WordPress Meetup",
     "city": "Firenze",
     "country": "Italy",
-    "members": 23,
+    "members": 24,
     "last": "2026-06-29",
     "url": "https://www.meetup.com/firenze-meetup-wordpress",
     "cat": "Active"
@@ -11523,7 +11523,7 @@
     "group": "WordPress Meetup Hangzhou",
     "city": "Hangzhou",
     "country": "China",
-    "members": 18,
+    "members": 19,
     "last": "",
     "url": "https://www.meetup.com/wordpress-meetup-hangzhou",
     "cat": "Never"
@@ -11621,7 +11621,7 @@
   ]
  },
  "events": {
-  "asOf": "2026-08-03",
+  "asOf": "2026-08-04",
   "ytd": 77,
   "ytdPrev": 49,
   "calendar": 111,
@@ -14755,7 +14755,7 @@
   },
   "detailAsOf": "2026-08-03",
   "funnelCounts": {
-   "Needs Vetting": 1,
+   "Needs Vetting": 2,
    "Needs Orientation/Interview": 20,
    "On Hold (more info)": 25,
    "Interview Scheduled": 2,
@@ -14767,10 +14767,10 @@
    "Needs Listing": 3,
    "Needs Schedule": 1
   },
-  "activeFunnelTotal": 101,
+  "activeFunnelTotal": 102,
   "scheduledCount": 42,
   "cancelledCount": 412,
   "declinedCount": 574,
-  "countsAsOf": "2026-08-03"
+  "countsAsOf": "2026-08-04"
  }
 }
