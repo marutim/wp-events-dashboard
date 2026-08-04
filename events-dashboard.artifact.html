@@ -122,7 +122,7 @@ const MONTHS=['January','February','March','April','May','June','July','August',
 const fmtD=s=>{if(!s)return '';const m=/^(\d{4})-(\d{2})-(\d{2})/.exec(String(s));return m?`${m[1]}-${MONTHS[+m[2]-1]}-${m[3]}`:String(s);};
 $('sub').textContent='Meetups, WordCamps, and the WordCamp application pipeline.';
 function tiles(a){return `<div class="tiles">`+a.map(t=>`<div class="tile ${t[0]}"><div class="n">${t[1]}</div><div class="l">${t[2]}</div></div>`).join('')+`</div>`;}
-function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner=segs.map(s=>`<div class="bar ${s[0]}" style="width:${w(s[1])}%"></div>`).join('');return `<div class="frow"><div class="lbl">${lbl}</div><div class="barwrap">${inner}</div><div class="cnt">${total}</div></div>`;}
+function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner=segs.map(s=>`<div class="bar ${s[0]}"${s[2]?` data-t="${s[2]}: ${s[1]}"`:''} style="width:${w(s[1])}%"></div>`).join('');return `<div class="frow"><div class="lbl">${lbl}</div><div class="barwrap">${inner}</div><div class="cnt">${total}</div></div>`;}
 
 /* OVERVIEW — cross-cutting summary, two tiles per domain */
 (function(){
@@ -313,7 +313,7 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
 (function(){
  const e=D.events, yrs=Object.keys(e.byYear).sort();
  const ymax=Math.max(...yrs.map(y=>e.byYear[y].reduce((a,b)=>a+b,0)));
- let yl=yrs.map(y=>{const v=e.byYear[y];return barRow(y,[['b-blue',v[0]],['b-red',v[1]],['b-amber',v[2]],['b-green',v[3]]],v[0]+v[1]+v[2]+v[3],ymax);}).join('');
+ let yl=yrs.map(y=>{const v=e.byYear[y];return barRow(y,[['b-blue',v[0],'Flagship'],['b-red',v[1],'Local WordCamp'],['b-amber',v[2],'Campus Connect'],['b-green',v[3],'New Format']],v[0]+v[1]+v[2]+v[3],ymax);}).join('');
  const cmax=Math.max(...e.byCountry.map(c=>c[1]),1);
  let cl=e.byCountry.map(c=>barRow(c[0],[[c[0]==='United States'?'b-red':'b-blue',c[1]]],c[1],cmax)).join('');
  const fmax=Math.max(...e.formats.map(f=>f[1]));
@@ -341,12 +341,26 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
   +`<p class="foot" style="margin:-6px 0 16px">For the live, public list of upcoming events, see <a href="https://events.wordpress.org" target="_blank" rel="noopener">events.wordpress.org</a>. This dashboard focuses on what a public listing cannot show.</p>`
   +bench
   +emap
-  +`<div class="card"><h2>Community events by year</h2>${yl}
+  +`<div class="card"><h2>Community events by year</h2><div id="byyear" style="position:relative">${yl}<div class="maptip" id="bytip" style="pointer-events:none"></div></div>
     <div class="legend"><span><i class="dot b-blue"></i>Flagship</span><span><i class="dot b-red"></i>Local WordCamp</span><span><i class="dot b-amber"></i>Campus Connect</span><span><i class="dot b-green"></i>New Format</span></div>
-    <p class="foot">Local WordCamps fell from ${e.byYear['2019'][1]} in 2019 to ${e.byYear['2026'][1]} now, while Campus Connect (${e.byYear['2026'][2]}) and other new formats (${e.byYear['2026'][3]}) filled the gap this year.</p></div>`
-  +`<div class="card"><h2>2026 local WordCamps &amp; newer formats, by country</h2>${cl}
+    <p class="foot">Local WordCamps fell from ${e.byYear['2019'][1]} in 2019 to ${e.byYear['2026'][1]} now, while Campus Connect (${e.byYear['2026'][2]}) and other new formats (${e.byYear['2026'][3]}) filled the gap this year. <span style="color:var(--muted)">Hover a bar segment for its count.</span></p></div>`
+  +`<div class="card"><h2>2026 Local WordCamps, Campus Connect, and Newer Formats by Country</h2>${cl}
     <p class="foot">Flagships and meetups counted separately. The United States is at zero.</p></div>`
   +`<div class="card"><h2>2026 by format</h2>${fl}</div>`;
+
+ /* Community-events-by-year: hover a bar segment to see "<category>: <count>" */
+ (function(){
+   const wrap=$('byyear'), tip=$('bytip'); if(!wrap||!tip) return;
+   wrap.addEventListener('mousemove',e=>{
+     const b=e.target.closest?e.target.closest('.bar[data-t]'):null;
+     if(!b){tip.style.display='none';return;}
+     tip.textContent=b.getAttribute('data-t');
+     const r=wrap.getBoundingClientRect(); tip.style.display='block';
+     let lx=Math.min(e.clientX-r.left+12, r.width-tip.offsetWidth-6);
+     tip.style.left=Math.max(4,lx)+'px'; tip.style.top=Math.max(4,e.clientY-r.top+12)+'px';
+   });
+   wrap.addEventListener('mouseleave',()=>tip.style.display='none');
+ })();
 
  /* Interactive events map: zoom/pan + per-event popups (dependency-free) */
  (function(){
