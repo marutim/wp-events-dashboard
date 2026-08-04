@@ -117,6 +117,18 @@ def build_meetups(existing):
     counts = {"a": active, "d": dormant, "n": never}
     land = (((existing.get("meetups") or {}).get("map") or {}).get("land")) or ""
 
+    # Groups whose most recent event falls in the current calendar month (the data's
+    # asOf month), for the "where the community met this month" map. `count` is every
+    # such group; `points` only those we can place on the map (have coords).
+    month_key = (uni.get("asOf") or TODAY.isoformat())[:7]
+    month_met = [g for g in groups if (g.get("lastEvent") or "")[:7] == month_key]
+    month_points = []
+    for g in month_met:
+        lat, lon = g.get("lat"), g.get("lon")
+        if lat is None or lon is None: continue
+        x, y = proj(lat, lon)
+        month_points.append([x, y, g["_i"]])
+
     return {
         "asOf": uni.get("asOf") or TODAY.isoformat(),
         "groups": len(groups),
@@ -126,6 +138,7 @@ def build_meetups(existing):
         "met90": met90, "organizers": uni.get("organizersAllRoles") or uni.get("organizers") or 0,
         "recency": recency, "deadBig": deadBig, "toWatch": toWatch, "us": us,
         "map": {"land": land, "points": points, "counts": counts, "w": W, "h": H},
+        "monthMap": {"month": month_key, "points": month_points, "count": len(month_met)},
         "allGroups": allGroups,
     }, uni.get("asOf") or TODAY.isoformat()
 
