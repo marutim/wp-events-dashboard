@@ -61,7 +61,7 @@ h1{font-family:var(--serif);font-size:32px;font-weight:600;letter-spacing:-.01em
 .wmap{width:100%;height:auto;display:block;margin:0 0 4px}
 .wmap .land{fill:var(--chip);stroke:var(--line);stroke-width:.6}
 .wmap .pt{opacity:.85}.wmap .pt.a{fill:var(--green)}.wmap .pt.d{fill:var(--red)}.wmap .pt.n{fill:var(--grey)}
-.wmap .pt.ef{fill:var(--blue)}.wmap .pt.el{fill:var(--red)}.wmap .pt.en{fill:var(--green)}
+.wmap .pt.ef{fill:var(--blue)}.wmap .pt.el{fill:var(--red)}.wmap .pt.ec{fill:var(--amber)}.wmap .pt.en{fill:var(--green)}
 .mapwrap{position:relative}
 #wmap,#wmap2{cursor:grab;touch-action:none}
 #wmap.grabbing,#wmap2.grabbing{cursor:grabbing}
@@ -330,12 +330,12 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
 (function(){
  const e=D.events, yrs=Object.keys(e.byYear).sort();
  const ymax=Math.max(...yrs.map(y=>e.byYear[y].reduce((a,b)=>a+b,0)));
- let yl=yrs.map(y=>{const v=e.byYear[y];return barRow(y,[['b-red',v[1]],['b-blue',v[0]],['b-green',v[2]]],v[0]+v[1]+v[2],ymax);}).join('');
+ let yl=yrs.map(y=>{const v=e.byYear[y];return barRow(y,[['b-blue',v[0]],['b-red',v[1]],['b-amber',v[2]],['b-green',v[3]]],v[0]+v[1]+v[2]+v[3],ymax);}).join('');
  const cmax=Math.max(...e.byCountry.map(c=>c[1]),1);
  let cl=e.byCountry.map(c=>barRow(c[0],[[c[0]==='United States'?'b-red':'b-blue',c[1]]],c[1],cmax)).join('');
  const fmax=Math.max(...e.formats.map(f=>f[1]));
  let fl=e.formats.map(f=>barRow(f[0],[['b-blue',f[1]]],f[1],fmax)).join('');
- const EM=e.map, eord={f:2,l:1,n:0};
+ const EM=e.map, eord={n:0,l:1,c:2,f:3};
  let edots='';
  EM.points.slice().sort((p,q)=>eord[p[2]]-eord[q[2]]).forEach(p=>edots+=`<circle class="pt e${p[2]}" cx="${p[0]}" cy="${p[1]}" r="2.4" data-i="${p[3]}"/>`);
  const emap=`<div class="card"><h2>Where the events are, and where they are not</h2>
@@ -344,7 +344,7 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
     <div class="mapzoom"><button type="button" id="mzin2" aria-label="Zoom in">+</button><button type="button" id="mzout2" aria-label="Zoom out">&minus;</button><button type="button" id="mzr2" aria-label="Reset view" style="font-size:13px">&#8635;</button></div>
     <div class="maptip" id="maptip2"></div>
    </div>
-   <div class="legend"><span><i class="dot" style="background:var(--blue)"></i>flagship ${EM.counts.f}</span><span><i class="dot" style="background:var(--red)"></i>local WordCamp ${EM.counts.l}</span><span><i class="dot" style="background:var(--green)"></i>newer format ${EM.counts.n}</span></div>
+   <div class="legend"><span><i class="dot" style="background:var(--blue)"></i>Flagship ${EM.counts.f}</span><span><i class="dot" style="background:var(--red)"></i>Local WordCamp ${EM.counts.l}</span><span><i class="dot" style="background:var(--amber)"></i>Campus Connect ${EM.counts.c||0}</span><span><i class="dot" style="background:var(--green)"></i>New Format ${EM.counts.n}</span></div>
    <p class="foot">2026 events cluster in South Asia, Latin America, and Europe. The United States is a single dot, WordCamp US. <span style="color:var(--muted)">Scroll or use +/&minus; to zoom, drag to pan, hover or tap a dot for details.</span></p></div>`;
  const B=e.bench, bt=B?B.orgFirst+B.orgReturn:0, at=B?B.attFirst+B.attReturn:0;
  const bench=B?`<div class="card"><h2>Bench renewal — are we growing new organizers?</h2>
@@ -359,8 +359,8 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
   +bench
   +emap
   +`<div class="card"><h2>Community events by year</h2>${yl}
-    <div class="legend"><span><i class="dot b-red"></i>Local WordCamps</span><span><i class="dot b-blue"></i>Flagships</span><span><i class="dot b-green"></i>Newer formats</span></div>
-    <p class="foot">Local WordCamps fell from ${e.byYear['2019'][1]} in 2019 to ${e.byYear['2026'][1]} now. Newer formats went from zero to ${e.byYear['2026'][2]}.</p></div>`
+    <div class="legend"><span><i class="dot b-blue"></i>Flagship</span><span><i class="dot b-red"></i>Local WordCamp</span><span><i class="dot b-amber"></i>Campus Connect</span><span><i class="dot b-green"></i>New Format</span></div>
+    <p class="foot">Local WordCamps fell from ${e.byYear['2019'][1]} in 2019 to ${e.byYear['2026'][1]} now, while Campus Connect (${e.byYear['2026'][2]}) and other new formats (${e.byYear['2026'][3]}) filled the gap this year.</p></div>`
   +`<div class="card"><h2>2026 local WordCamps &amp; newer formats, by country</h2>${cl}
     <p class="foot">Flagships and meetups counted separately. The United States is at zero.</p></div>`
   +`<div class="card"><h2>2026 by format</h2>${fl}</div>`;

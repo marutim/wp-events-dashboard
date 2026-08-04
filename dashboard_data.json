@@ -11665,47 +11665,56 @@
    "2018": [
     2,
     141,
+    0,
     0
    ],
    "2019": [
     2,
     140,
+    0,
     0
    ],
    "2020": [
     1,
     32,
+    0,
     0
    ],
    "2021": [
     2,
     17,
+    0,
     0
    ],
    "2022": [
     2,
     24,
+    0,
     0
    ],
    "2023": [
     3,
     62,
+    0,
     5
    ],
    "2024": [
     3,
     53,
-    23
+    1,
+    22
    ],
    "2025": [
     3,
     52,
-    47
+    19,
+    28
    ],
    "2026": [
     3,
     39,
-    69
+    46,
+    23
    ]
   },
   "formats": [
@@ -11787,687 +11796,820 @@
   "map": {
    "points": [
     [
-     188.7,
-     157.1,
-     "f",
-     0
-    ],
-    [
-     555.4,
-     111.0,
-     "f",
-     1
-    ],
-    [
-     702.4,
-     197.0,
-     "f",
-     2
-    ],
-    [
-     755.1,
-     180.8,
-     "l",
-     3
-    ],
-    [
-     498.9,
-     140.3,
-     "l",
-     4
-    ],
-    [
-     715.6,
-     214.0,
-     "l",
-     5
-    ],
-    [
-     564.8,
-     131.4,
-     "l",
-     6
-    ],
-    [
-     547.4,
-     108.0,
-     "l",
-     7
-    ],
-    [
-     737.0,
-     173.0,
-     "l",
-     8
-    ],
-    [
-     260.5,
-     216.3,
-     "l",
-     9
-    ],
-    [
-     476.6,
-     129.6,
-     "l",
-     10
-    ],
-    [
-     528.9,
-     128.6,
-     "l",
-     11
-    ],
-    [
-     591.4,
-     243.8,
-     "l",
-     12
-    ],
-    [
-     566.0,
-     144.5,
-     "l",
-     13
-    ],
-    [
-     840.4,
-     220.2,
-     "l",
-     14
-    ],
-    [
-     710.6,
-     175.4,
-     "l",
-     15
-    ],
-    [
-     522.0,
-     237.1,
-     "l",
-     16
-    ],
-    [
-     158.0,
-     113.1,
-     "l",
-     17
-    ],
-    [
-     588.1,
-     250.9,
-     "l",
-     18
-    ],
-    [
-     511.9,
-     105.3,
-     "l",
-     19
-    ],
-    [
-     577.8,
-     322.3,
-     "l",
-     20
-    ],
-    [
-     592.3,
-     248.8,
-     "l",
-     21
-    ],
-    [
-     556.8,
-     125.5,
-     "l",
-     22
-    ],
-    [
-     746.2,
-     182.3,
-     "l",
-     23
-    ],
-    [
-     266.5,
-     222.4,
-     "l",
-     24
-    ],
-    [
-     487.5,
-     148.0,
-     "l",
-     25
-    ],
-    [
-     521.3,
-     124.9,
-     "l",
-     26
-    ],
-    [
-     590.5,
-     249.1,
-     "l",
-     27
-    ],
-    [
-     497.5,
-     134.3,
-     "l",
-     28
-    ],
-    [
-     545.4,
-     116.1,
-     "l",
-     29
-    ],
-    [
-     534.5,
-     107.4,
-     "l",
-     30
-    ],
-    [
-     590.9,
-     249.0,
-     "l",
-     31
-    ],
-    [
-     489.3,
-     137.8,
-     "l",
-     32
-    ],
-    [
-     706.2,
-     203.5,
-     "l",
-     33
-    ],
-    [
-     523.5,
-     112.5,
-     "l",
-     34
-    ],
-    [
-     495.3,
-     116.3,
-     "l",
-     35
-    ],
-    [
-     540.2,
-     122.1,
-     "l",
-     36
-    ],
-    [
-     475.9,
-     135.7,
-     "l",
-     37
-    ],
-    [
-     705.1,
-     198.5,
-     "l",
-     38
-    ],
-    [
-     520.2,
-     128.6,
-     "l",
-     39
-    ],
-    [
-     731.8,
-     173.1,
-     "l",
-     40
-    ],
-    [
-     519.5,
-     236.6,
-     "l",
-     41
-    ],
-    [
-     803.6,
-     270.9,
-     "n",
-     42
-    ],
-    [
-     701.5,
-     185.7,
-     "n",
-     43
-    ],
-    [
-     734.6,
-     173.1,
-     "n",
-     44
-    ],
-    [
-     876.4,
-     153.6,
-     "n",
-     45
-    ],
-    [
-     737.0,
-     173.0,
-     "n",
-     46
-    ],
-    [
-     803.2,
-     269.4,
-     "n",
-     47
-    ],
-    [
-     704.9,
-     181.7,
-     "n",
-     48
-    ],
-    [
-     590.2,
-     249.2,
-     "n",
-     49
-    ],
-    [
-     782.5,
-     241.7,
-     "n",
-     50
-    ],
-    [
-     702.2,
-     191.2,
-     "n",
-     51
-    ],
-    [
-     745.7,
-     187.3,
-     "n",
-     52
-    ],
-    [
-     877.0,
-     152.7,
-     "n",
-     53
-    ],
-    [
      590.4,
      248.2,
      "n",
-     54
+     0
     ],
     [
      499.1,
      140.4,
      "n",
-     55
+     1
     ],
     [
      478.0,
      147.2,
      "n",
-     56
-    ],
-    [
-     707.4,
-     176.7,
-     "n",
-     57
-    ],
-    [
-     836.3,
-     186.8,
-     "n",
-     58
+     2
     ],
     [
      174.1,
      155.6,
      "n",
-     59
-    ],
-    [
-     803.5,
-     270.6,
-     "n",
-     60
-    ],
-    [
-     248.6,
-     209.4,
-     "n",
-     61
-    ],
-    [
-     528.9,
-     128.6,
-     "n",
-     62
-    ],
-    [
-     746.3,
-     178.6,
-     "n",
-     63
-    ],
-    [
-     588.6,
-     251.2,
-     "n",
-     64
-    ],
-    [
-     555.4,
-     110.9,
-     "n",
-     65
-    ],
-    [
-     555.4,
-     110.9,
-     "n",
-     66
-    ],
-    [
-     888.1,
-     151.0,
-     "n",
-     67
-    ],
-    [
-     796.3,
-     267.4,
-     "n",
-     68
-    ],
-    [
-     812.9,
-     270.2,
-     "n",
-     69
-    ],
-    [
-     748.2,
-     180.8,
-     "n",
-     70
-    ],
-    [
-     587.0,
-     247.7,
-     "n",
-     71
-    ],
-    [
-     266.9,
-     222.6,
-     "n",
-     72
-    ],
-    [
-     799.0,
-     269.2,
-     "n",
-     73
-    ],
-    [
-     264.4,
-     222.3,
-     "n",
-     74
+     3
     ],
     [
      706.2,
      203.6,
      "n",
-     75
-    ],
-    [
-     737.0,
-     173.1,
-     "n",
-     76
+     4
     ],
     [
      706.2,
      203.5,
      "n",
-     77
-    ],
-    [
-     260.5,
-     216.9,
-     "n",
-     78
+     5
     ],
     [
      702.2,
      191.0,
      "n",
-     79
+     6
     ],
     [
      737.0,
      173.0,
      "n",
-     80
+     7
     ],
     [
      706.3,
      203.1,
      "n",
-     81
+     8
     ],
     [
      224.6,
      196.4,
      "n",
-     82
-    ],
-    [
-     506.8,
-     134.6,
-     "n",
-     83
+     9
     ],
     [
      592.4,
      248.6,
      "n",
-     84
-    ],
-    [
-     489.8,
-     134.2,
-     "n",
-     85
-    ],
-    [
-     703.0,
-     162.7,
-     "n",
-     86
+     10
     ],
     [
      755.2,
      180.8,
      "n",
-     87
+     11
     ],
     [
      248.6,
      209.4,
      "n",
-     88
+     12
     ],
     [
      266.9,
      222.6,
      "n",
-     89
+     13
     ],
     [
      751.0,
      183.9,
      "n",
-     90
+     14
     ],
     [
      733.3,
      171.6,
      "n",
-     91
-    ],
-    [
-     801.4,
-     271.3,
-     "n",
-     92
-    ],
-    [
-     501.7,
-     134.4,
-     "n",
-     93
+     15
     ],
     [
      707.3,
      176.5,
      "n",
-     94
-    ],
-    [
-     497.5,
-     134.3,
-     "n",
-     95
-    ],
-    [
-     488.8,
-     139.3,
-     "n",
-     96
-    ],
-    [
-     476.7,
-     129.6,
-     "n",
-     97
-    ],
-    [
-     538.5,
-     125.4,
-     "n",
-     98
-    ],
-    [
-     709.0,
-     214.6,
-     "n",
-     99
+     16
     ],
     [
      260.5,
      216.3,
      "n",
-     100
+     17
     ],
     [
      555.1,
      124.3,
      "n",
-     101
-    ],
-    [
-     787.9,
-     245.7,
-     "n",
-     102
-    ],
-    [
-     751.1,
-     183.9,
-     "n",
-     103
-    ],
-    [
-     745.5,
-     187.3,
-     "n",
-     104
-    ],
-    [
-     844.2,
-     221.4,
-     "n",
-     105
-    ],
-    [
-     591.4,
-     243.7,
-     "n",
-     106
+     18
     ],
     [
      266.6,
      222.5,
      "n",
-     107
+     19
     ],
     [
      266.6,
      222.4,
      "n",
-     108
+     20
     ],
     [
      522.1,
      236.1,
      "n",
+     21
+    ],
+    [
+     755.1,
+     180.8,
+     "l",
+     22
+    ],
+    [
+     498.9,
+     140.3,
+     "l",
+     23
+    ],
+    [
+     715.6,
+     214.0,
+     "l",
+     24
+    ],
+    [
+     564.8,
+     131.4,
+     "l",
+     25
+    ],
+    [
+     547.4,
+     108.0,
+     "l",
+     26
+    ],
+    [
+     737.0,
+     173.0,
+     "l",
+     27
+    ],
+    [
+     260.5,
+     216.3,
+     "l",
+     28
+    ],
+    [
+     476.6,
+     129.6,
+     "l",
+     29
+    ],
+    [
+     528.9,
+     128.6,
+     "l",
+     30
+    ],
+    [
+     591.4,
+     243.8,
+     "l",
+     31
+    ],
+    [
+     566.0,
+     144.5,
+     "l",
+     32
+    ],
+    [
+     840.4,
+     220.2,
+     "l",
+     33
+    ],
+    [
+     710.6,
+     175.4,
+     "l",
+     34
+    ],
+    [
+     522.0,
+     237.1,
+     "l",
+     35
+    ],
+    [
+     158.0,
+     113.1,
+     "l",
+     36
+    ],
+    [
+     588.1,
+     250.9,
+     "l",
+     37
+    ],
+    [
+     511.9,
+     105.3,
+     "l",
+     38
+    ],
+    [
+     577.8,
+     322.3,
+     "l",
+     39
+    ],
+    [
+     592.3,
+     248.8,
+     "l",
+     40
+    ],
+    [
+     556.8,
+     125.5,
+     "l",
+     41
+    ],
+    [
+     746.2,
+     182.3,
+     "l",
+     42
+    ],
+    [
+     266.5,
+     222.4,
+     "l",
+     43
+    ],
+    [
+     487.5,
+     148.0,
+     "l",
+     44
+    ],
+    [
+     521.3,
+     124.9,
+     "l",
+     45
+    ],
+    [
+     590.5,
+     249.1,
+     "l",
+     46
+    ],
+    [
+     497.5,
+     134.3,
+     "l",
+     47
+    ],
+    [
+     545.4,
+     116.1,
+     "l",
+     48
+    ],
+    [
+     534.5,
+     107.4,
+     "l",
+     49
+    ],
+    [
+     590.9,
+     249.0,
+     "l",
+     50
+    ],
+    [
+     489.3,
+     137.8,
+     "l",
+     51
+    ],
+    [
+     706.2,
+     203.5,
+     "l",
+     52
+    ],
+    [
+     523.5,
+     112.5,
+     "l",
+     53
+    ],
+    [
+     495.3,
+     116.3,
+     "l",
+     54
+    ],
+    [
+     540.2,
+     122.1,
+     "l",
+     55
+    ],
+    [
+     475.9,
+     135.7,
+     "l",
+     56
+    ],
+    [
+     705.1,
+     198.5,
+     "l",
+     57
+    ],
+    [
+     520.2,
+     128.6,
+     "l",
+     58
+    ],
+    [
+     731.8,
+     173.1,
+     "l",
+     59
+    ],
+    [
+     519.5,
+     236.6,
+     "l",
+     60
+    ],
+    [
+     803.6,
+     270.9,
+     "c",
+     61
+    ],
+    [
+     701.5,
+     185.7,
+     "c",
+     62
+    ],
+    [
+     734.6,
+     173.1,
+     "c",
+     63
+    ],
+    [
+     876.4,
+     153.6,
+     "c",
+     64
+    ],
+    [
+     737.0,
+     173.0,
+     "c",
+     65
+    ],
+    [
+     803.2,
+     269.4,
+     "c",
+     66
+    ],
+    [
+     704.9,
+     181.7,
+     "c",
+     67
+    ],
+    [
+     590.2,
+     249.2,
+     "c",
+     68
+    ],
+    [
+     782.5,
+     241.7,
+     "c",
+     69
+    ],
+    [
+     702.2,
+     191.2,
+     "c",
+     70
+    ],
+    [
+     745.7,
+     187.3,
+     "c",
+     71
+    ],
+    [
+     877.0,
+     152.7,
+     "c",
+     72
+    ],
+    [
+     707.4,
+     176.7,
+     "c",
+     73
+    ],
+    [
+     836.3,
+     186.8,
+     "c",
+     74
+    ],
+    [
+     803.5,
+     270.6,
+     "c",
+     75
+    ],
+    [
+     248.6,
+     209.4,
+     "c",
+     76
+    ],
+    [
+     528.9,
+     128.6,
+     "c",
+     77
+    ],
+    [
+     746.3,
+     178.6,
+     "c",
+     78
+    ],
+    [
+     588.6,
+     251.2,
+     "c",
+     79
+    ],
+    [
+     555.4,
+     110.9,
+     "c",
+     80
+    ],
+    [
+     555.4,
+     110.9,
+     "c",
+     81
+    ],
+    [
+     888.1,
+     151.0,
+     "c",
+     82
+    ],
+    [
+     796.3,
+     267.4,
+     "c",
+     83
+    ],
+    [
+     812.9,
+     270.2,
+     "c",
+     84
+    ],
+    [
+     748.2,
+     180.8,
+     "c",
+     85
+    ],
+    [
+     587.0,
+     247.7,
+     "c",
+     86
+    ],
+    [
+     266.9,
+     222.6,
+     "c",
+     87
+    ],
+    [
+     799.0,
+     269.2,
+     "c",
+     88
+    ],
+    [
+     264.4,
+     222.3,
+     "c",
+     89
+    ],
+    [
+     737.0,
+     173.1,
+     "c",
+     90
+    ],
+    [
+     260.5,
+     216.9,
+     "c",
+     91
+    ],
+    [
+     506.8,
+     134.6,
+     "c",
+     92
+    ],
+    [
+     489.8,
+     134.2,
+     "c",
+     93
+    ],
+    [
+     703.0,
+     162.7,
+     "c",
+     94
+    ],
+    [
+     801.4,
+     271.3,
+     "c",
+     95
+    ],
+    [
+     501.7,
+     134.4,
+     "c",
+     96
+    ],
+    [
+     497.5,
+     134.3,
+     "c",
+     97
+    ],
+    [
+     488.8,
+     139.3,
+     "c",
+     98
+    ],
+    [
+     476.7,
+     129.6,
+     "c",
+     99
+    ],
+    [
+     538.5,
+     125.4,
+     "c",
+     100
+    ],
+    [
+     709.0,
+     214.6,
+     "c",
+     101
+    ],
+    [
+     787.9,
+     245.7,
+     "c",
+     102
+    ],
+    [
+     751.1,
+     183.9,
+     "c",
+     103
+    ],
+    [
+     745.5,
+     187.3,
+     "c",
+     104
+    ],
+    [
+     844.2,
+     221.4,
+     "c",
+     105
+    ],
+    [
+     591.4,
+     243.7,
+     "c",
+     106
+    ],
+    [
+     188.7,
+     157.1,
+     "f",
+     107
+    ],
+    [
+     555.4,
+     111.0,
+     "f",
+     108
+    ],
+    [
+     702.4,
+     197.0,
+     "f",
      109
     ]
    ],
    "eventList": [
     {
-     "n": "WordCamp US 2026",
-     "loc": "Phoenix, AZ, USA",
-     "d": "2026-08-16",
-     "ty": "Flagship WordCamp",
-     "u": "https://central.wordcamp.org/wordcamps/wordcamp-us-2026/"
+     "n": "WordPress in Education Showcase Luweero 2026",
+     "loc": "Luweero, Uganda",
+     "d": "2026-08-07",
+     "ty": "Community event",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-in-education-showcase-luweero-2026/"
     },
     {
-     "n": "WordCamp Europe 2026",
-     "loc": "Krakow, Poland",
-     "d": "2026-06-04",
-     "ty": "Flagship WordCamp",
-     "u": "https://central.wordcamp.org/wordcamps/wordcamp-europe-2026/"
+     "n": "WordPress Day for AI Valencia 2026",
+     "loc": "Valencia, Spain",
+     "d": "2026-07-04",
+     "ty": "WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-day-for-ia-valencia-2026/"
     },
     {
-     "n": "WordCamp Asia 2026",
-     "loc": "Mumbai, India",
-     "d": "2026-04-09",
-     "ty": "Flagship WordCamp",
-     "u": "https://central.wordcamp.org/wordcamps/wordcamp-asia-2026/"
+     "n": "WordPress Day for AI Faro 2026",
+     "loc": "Faro, Portugal",
+     "d": "2026-10-24",
+     "ty": "WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/wp-day-for-ai-faro-2026/"
+    },
+    {
+     "n": "WordPress Student Club UCR-Esparza",
+     "loc": "UCR-Esparza",
+     "d": "2026-05-20",
+     "ty": "Student Club",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-student-club-ucr-esparza/"
+    },
+    {
+     "n": "Women WordPress day Kolhapur, India",
+     "loc": "Kolhapur, India",
+     "d": "2026-03-14",
+     "ty": "Women WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/kolhapur-india/"
+    },
+    {
+     "n": "WordPress Student Club DYPSEM, Kolhapur",
+     "loc": "asia",
+     "d": "2026-04-28",
+     "ty": "Student Club",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-student-club-dypsem/"
+    },
+    {
+     "n": "Women WordPress Day Surat 2026",
+     "loc": "Surat, India",
+     "d": "2026-03-08",
+     "ty": "Women WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-surat-2026/"
+    },
+    {
+     "n": "Women WordPress Day Kathmandu 2026",
+     "loc": "Kathmandu, Nepal",
+     "d": "2026-03-14",
+     "ty": "Women WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-kathmandu-2026/"
+    },
+    {
+     "n": "WordPress Student Club DYPATU, Kolhapur",
+     "loc": "Kolhapur, India",
+     "d": "2026-04-28",
+     "ty": "Student Club",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-student-club-dypatil/"
+    },
+    {
+     "n": "WordPress Day CDMX 2026",
+     "loc": "CDMX, Mexico",
+     "d": "2026-08-29",
+     "ty": "WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-day-cdmx-2026/"
+    },
+    {
+     "n": "Uganda Website Projects Competition 2026",
+     "loc": "Jinja, Uganda",
+     "d": "2026-06-09",
+     "ty": "Community event",
+     "u": "https://central.wordcamp.org/wordcamps/uganda-website-projects-competition-2026/"
+    },
+    {
+     "n": "Women WordPress Day Sylhet 2026",
+     "loc": "Sylhet, Bangladesh",
+     "d": "2026-02-08",
+     "ty": "Women WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-sylhet-2026/"
+    },
+    {
+     "n": "Women WordPress Day Guatemala 2026",
+     "loc": "Guatemala",
+     "d": "2026-03-28",
+     "ty": "Women WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-guatemala-2026/"
+    },
+    {
+     "n": "WordPress Women Day Cartago 2026",
+     "loc": "Cartago, Costa Rica",
+     "d": "2026-03-28",
+     "ty": "Women WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-cartago-2026/"
+    },
+    {
+     "n": "Women WordPress Day Dhaka 2026",
+     "loc": "Dhaka, Bangladesh",
+     "d": "2026-02-08",
+     "ty": "Women WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-dhaka-2026/"
+    },
+    {
+     "n": "Nepal Photo Festival 2026",
+     "loc": "Pokhara, Nepal",
+     "d": "2026-05-16",
+     "ty": "Community event",
+     "u": "https://central.wordcamp.org/wordcamps/nepal-photo-festival-2026/"
+    },
+    {
+     "n": "Women WordPress Day Ajmer 2026",
+     "loc": "Ajmer, India",
+     "d": "2026-03-08",
+     "ty": "Women WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-ajmer-2026/"
+    },
+    {
+     "n": "Women WordPress Day Nicaragua 2026",
+     "loc": "Managua, Nicaragua",
+     "d": "2026-03-08",
+     "ty": "Women WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-nicaragua-2026/"
+    },
+    {
+     "n": "WordPress Developer Day Novi Sad 2026",
+     "loc": "Novi Sad, Serbia",
+     "d": "2026-05-09",
+     "ty": "Community event",
+     "u": "https://central.wordcamp.org/wordcamps/developer-day-novi-sad-2026/"
+    },
+    {
+     "n": "WordPress Developer Day 2026 San José",
+     "loc": "San Jose, Costa Rica",
+     "d": "2026-02-21",
+     "ty": "Community event",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-developer-day-san-jose-2026/"
+    },
+    {
+     "n": "Women WordPress Day San José 2026",
+     "loc": "San José, Costa Rica",
+     "d": "2026-03-07",
+     "ty": "Women WordPress Day",
+     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-san-jose-2026/"
+    },
+    {
+     "n": "do_action Uyo 2026",
+     "loc": "Uyo, Akwa Ibom, Nigeria",
+     "d": "2026-08-01",
+     "ty": "do_action",
+     "u": "https://central.wordcamp.org/wordcamps/do_action-uyo-2026/"
     },
     {
      "n": "WordCamp Sylhet 2026",
@@ -12827,27 +12969,6 @@
      "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-uzumasa-campus-kyoto-university-of-advanced-science/"
     },
     {
-     "n": "WordPress in Education Showcase Luweero 2026",
-     "loc": "Luweero, Uganda",
-     "d": "2026-08-07",
-     "ty": "Community event",
-     "u": "https://central.wordcamp.org/wordcamps/wordpress-in-education-showcase-luweero-2026/"
-    },
-    {
-     "n": "WordPress Day for AI Valencia 2026",
-     "loc": "Valencia, Spain",
-     "d": "2026-07-04",
-     "ty": "WordPress Day",
-     "u": "https://central.wordcamp.org/wordcamps/wordpress-day-for-ia-valencia-2026/"
-    },
-    {
-     "n": "WordPress Day for AI Faro 2026",
-     "loc": "Faro, Portugal",
-     "d": "2026-10-24",
-     "ty": "WordPress Day",
-     "u": "https://central.wordcamp.org/wordcamps/wp-day-for-ai-faro-2026/"
-    },
-    {
      "n": "WordPress Campus Connect Ajmer",
      "loc": "Ajmer, India",
      "d": "2026-08-01",
@@ -12860,13 +12981,6 @@
      "d": "2026-05-24",
      "ty": "Campus Connect",
      "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-national-taitung-university-csie-department/"
-    },
-    {
-     "n": "WordPress Student Club UCR-Esparza",
-     "loc": "UCR-Esparza",
-     "d": "2026-05-20",
-     "ty": "Student Club",
-     "u": "https://central.wordcamp.org/wordcamps/wordpress-student-club-ucr-esparza/"
     },
     {
      "n": "WordPress Campus Connect Universitas Muhammadiyah Purwokerto",
@@ -12974,25 +13088,11 @@
      "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-ucr-sede-del-pacifico-esparza/"
     },
     {
-     "n": "Women WordPress day Kolhapur, India",
-     "loc": "Kolhapur, India",
-     "d": "2026-03-14",
-     "ty": "Women WordPress Day",
-     "u": "https://central.wordcamp.org/wordcamps/kolhapur-india/"
-    },
-    {
      "n": "WordPress Campus Connect KIST College, Kathmandu",
      "loc": "Kathmandu, Nepal",
      "d": "2026-03-27",
      "ty": "Campus Connect",
      "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-kist-college-kathmandu/"
-    },
-    {
-     "n": "WordPress Student Club DYPSEM, Kolhapur",
-     "loc": "asia",
-     "d": "2026-04-28",
-     "ty": "Student Club",
-     "u": "https://central.wordcamp.org/wordcamps/wordpress-student-club-dypsem/"
     },
     {
      "n": "WordPress Campus Connect Keiser University Latin American Campus",
@@ -13002,46 +13102,11 @@
      "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-keiser-university-latin-american-campus/"
     },
     {
-     "n": "Women WordPress Day Surat 2026",
-     "loc": "Surat, India",
-     "d": "2026-03-08",
-     "ty": "Women WordPress Day",
-     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-surat-2026/"
-    },
-    {
-     "n": "Women WordPress Day Kathmandu 2026",
-     "loc": "Kathmandu, Nepal",
-     "d": "2026-03-14",
-     "ty": "Women WordPress Day",
-     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-kathmandu-2026/"
-    },
-    {
-     "n": "WordPress Student Club DYPATU, Kolhapur",
-     "loc": "Kolhapur, India",
-     "d": "2026-04-28",
-     "ty": "Student Club",
-     "u": "https://central.wordcamp.org/wordcamps/wordpress-student-club-dypatil/"
-    },
-    {
-     "n": "WordPress Day CDMX 2026",
-     "loc": "CDMX, Mexico",
-     "d": "2026-08-29",
-     "ty": "WordPress Day",
-     "u": "https://central.wordcamp.org/wordcamps/wordpress-day-cdmx-2026/"
-    },
-    {
      "n": "WordPress Campus Connect Escola Pia Mataró",
      "loc": "Mataró, Spain",
      "d": "2026-02-18",
      "ty": "Campus Connect",
      "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-2026-tweek-escola-pia-mataro/"
-    },
-    {
-     "n": "Uganda Website Projects Competition 2026",
-     "loc": "Jinja, Uganda",
-     "d": "2026-06-09",
-     "ty": "Community event",
-     "u": "https://central.wordcamp.org/wordcamps/uganda-website-projects-competition-2026/"
     },
     {
      "n": "WordPress Campus Connect Ribera del Duero",
@@ -13058,41 +13123,6 @@
      "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-career-institute-faisalabad/"
     },
     {
-     "n": "Women WordPress Day Sylhet 2026",
-     "loc": "Sylhet, Bangladesh",
-     "d": "2026-02-08",
-     "ty": "Women WordPress Day",
-     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-sylhet-2026/"
-    },
-    {
-     "n": "Women WordPress Day Guatemala 2026",
-     "loc": "Guatemala",
-     "d": "2026-03-28",
-     "ty": "Women WordPress Day",
-     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-guatemala-2026/"
-    },
-    {
-     "n": "WordPress Women Day Cartago 2026",
-     "loc": "Cartago, Costa Rica",
-     "d": "2026-03-28",
-     "ty": "Women WordPress Day",
-     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-cartago-2026/"
-    },
-    {
-     "n": "Women WordPress Day Dhaka 2026",
-     "loc": "Dhaka, Bangladesh",
-     "d": "2026-02-08",
-     "ty": "Women WordPress Day",
-     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-dhaka-2026/"
-    },
-    {
-     "n": "Nepal Photo Festival 2026",
-     "loc": "Pokhara, Nepal",
-     "d": "2026-05-16",
-     "ty": "Community event",
-     "u": "https://central.wordcamp.org/wordcamps/nepal-photo-festival-2026/"
-    },
-    {
      "n": "WordPress Campus Connect STITNU Al Farabi Pangandaran",
      "loc": "Pangandaran, Indonesia",
      "d": "2026-03-12",
@@ -13105,13 +13135,6 @@
      "d": "2026-02-18",
      "ty": "Campus Connect",
      "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-universitat-lleida/"
-    },
-    {
-     "n": "Women WordPress Day Ajmer 2026",
-     "loc": "Ajmer, India",
-     "d": "2026-03-08",
-     "ty": "Women WordPress Day",
-     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-ajmer-2026/"
     },
     {
      "n": "WordPress Campus Connect Zaragoza 2026",
@@ -13149,20 +13172,6 @@
      "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-st-philomena-college-autonomous-puttur/"
     },
     {
-     "n": "Women WordPress Day Nicaragua 2026",
-     "loc": "Managua, Nicaragua",
-     "d": "2026-03-08",
-     "ty": "Women WordPress Day",
-     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-nicaragua-2026/"
-    },
-    {
-     "n": "WordPress Developer Day Novi Sad 2026",
-     "loc": "Novi Sad, Serbia",
-     "d": "2026-05-09",
-     "ty": "Community event",
-     "u": "https://central.wordcamp.org/wordcamps/developer-day-novi-sad-2026/"
-    },
-    {
      "n": "WordPress Campus Connect Universiti Teknologi Malaysia",
      "loc": "Johor Bahru, Malaysia",
      "d": "2026-01-03",
@@ -13198,31 +13207,32 @@
      "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-lira-uganda/"
     },
     {
-     "n": "WordPress Developer Day 2026 San José",
-     "loc": "San Jose, Costa Rica",
-     "d": "2026-02-21",
-     "ty": "Community event",
-     "u": "https://central.wordcamp.org/wordcamps/wordpress-developer-day-san-jose-2026/"
+     "n": "WordCamp US 2026",
+     "loc": "Phoenix, AZ, USA",
+     "d": "2026-08-16",
+     "ty": "Flagship WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-us-2026/"
     },
     {
-     "n": "Women WordPress Day San José 2026",
-     "loc": "San José, Costa Rica",
-     "d": "2026-03-07",
-     "ty": "Women WordPress Day",
-     "u": "https://central.wordcamp.org/wordcamps/women-wp-day-san-jose-2026/"
+     "n": "WordCamp Europe 2026",
+     "loc": "Krakow, Poland",
+     "d": "2026-06-04",
+     "ty": "Flagship WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-europe-2026/"
     },
     {
-     "n": "do_action Uyo 2026",
-     "loc": "Uyo, Akwa Ibom, Nigeria",
-     "d": "2026-08-01",
-     "ty": "do_action",
-     "u": "https://central.wordcamp.org/wordcamps/do_action-uyo-2026/"
+     "n": "WordCamp Asia 2026",
+     "loc": "Mumbai, India",
+     "d": "2026-04-09",
+     "ty": "Flagship WordCamp",
+     "u": "https://central.wordcamp.org/wordcamps/wordcamp-asia-2026/"
     }
    ],
    "counts": {
     "f": 3,
     "l": 39,
-    "n": 68
+    "c": 46,
+    "n": 22
    },
    "w": 1000,
    "h": 500

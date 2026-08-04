@@ -175,6 +175,7 @@ def ev_coords(r):
 def ev_code(title):
     s = (title or "").lower()
     if ("wordcamp us" in s) or ("wordcamp europe" in s) or ("wordcamp asia" in s): return "f"
+    if "campus connect" in s: return "c"       # split Campus Connect out of 'newer'
     if "wordcamp" in s: return "l"
     return "n"
 
@@ -217,8 +218,9 @@ def build_events(existing):
     for yr in range(2018, TODAY.year + 1):
         f = sum(1 for e in dated if e["d"] and e["d"].year == yr and live(e) and e["code"] == "f")
         l = sum(1 for e in dated if e["d"] and e["d"].year == yr and live(e) and e["code"] == "l")
+        c = sum(1 for e in dated if e["d"] and e["d"].year == yr and live(e) and e["code"] == "c")
         n = sum(1 for e in dated if e["d"] and e["d"].year == yr and live(e) and e["code"] == "n")
-        byYear[str(yr)] = [f, l, n]
+        byYear[str(yr)] = [f, l, c, n]   # Flagship, Local WordCamp, Campus Connect, New Format
 
     FORMAT_ORDER = ["Flagships", "Local WordCamps", "Campus Connect", "Women WP Day", "Other newer"]
     fmt = {k: 0 for k in FORMAT_ORDER}
@@ -227,7 +229,7 @@ def build_events(existing):
 
     bycountry = defaultdict(int)
     for e in y26:
-        if e["code"] in ("l", "n") and e["country"]:
+        if e["code"] in ("l", "c", "n") and e["country"]:
             bycountry[e["country"]] += 1
     byCountry = sorted(bycountry.items(), key=lambda kv: kv[1], reverse=True)[:12]
     if not any(c == "United States" for c, _ in byCountry):
@@ -236,8 +238,8 @@ def build_events(existing):
 
     # map: 2026 live events with coords
     points, eventList = [], []
-    eord = {"f": 0, "l": 1, "n": 2}
-    mcount = {"f": 0, "l": 0, "n": 0}
+    eord = {"n": 0, "l": 1, "c": 2, "f": 3}   # draw order: newer at bottom, flagship on top
+    mcount = {"f": 0, "l": 0, "c": 0, "n": 0}
     for e in sorted([e for e in y26 if e["coords"]], key=lambda e: eord[e["code"]]):
         x, y = proj(*e["coords"]); idx = len(eventList)
         points.append([x, y, e["code"], idx]); mcount[e["code"]] += 1
