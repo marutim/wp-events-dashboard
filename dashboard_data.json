@@ -11742,54 +11742,80 @@
   "byCountry": [
    [
     "India",
-    16
+    4,
+    7,
+    5
    ],
    [
     "Spain",
-    12
+    5,
+    6,
+    1
    ],
    [
     "Uganda",
-    11
+    5,
+    4,
+    2
    ],
    [
     "Indonesia",
-    7
+    0,
+    7,
+    0
    ],
    [
     "Nepal",
-    7
+    2,
+    3,
+    2
    ],
    [
     "Bangladesh",
-    7
+    2,
+    3,
+    2
    ],
    [
     "Costa Rica",
-    6
+    1,
+    2,
+    3
    ],
    [
     "Japan",
-    3
+    0,
+    3,
+    0
    ],
    [
     "Italy",
-    3
+    2,
+    1,
+    0
    ],
    [
     "Poland",
-    3
+    1,
+    2,
+    0
    ],
    [
     "Nicaragua",
-    3
+    1,
+    1,
+    1
    ],
    [
     "Nigeria",
-    3
+    2,
+    0,
+    1
    ],
    [
     "United States",
+    0,
+    0,
     1
    ]
   ],

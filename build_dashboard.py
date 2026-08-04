@@ -333,8 +333,8 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
  const e=D.events, yrs=Object.keys(e.byYear).sort();
  const ymax=Math.max(...yrs.map(y=>e.byYear[y].reduce((a,b)=>a+b,0)));
  let yl=yrs.map(y=>{const v=e.byYear[y];return barRow(y,[['b-blue',v[0],'Flagship'],['b-red',v[1],'Local WordCamp'],['b-amber',v[2],'Campus Connect'],['b-green',v[3],'New Format']],v[0]+v[1]+v[2]+v[3],ymax);}).join('');
- const cmax=Math.max(...e.byCountry.map(c=>c[1]),1);
- let cl=e.byCountry.map(c=>barRow(c[0],[[c[0]==='United States'?'b-red':'b-blue',c[1],c[0]]],c[1],cmax)).join('');
+ const cmax=Math.max(...e.byCountry.map(c=>c[1]+c[2]+c[3]),1);
+ let cl=e.byCountry.map(c=>barRow(c[0],[['b-red',c[1],'Local WordCamp'],['b-amber',c[2],'Campus Connect'],['b-green',c[3],'New Format']],c[1]+c[2]+c[3],cmax)).join('');
  const fmax=Math.max(...e.formats.map(f=>f[1]));
  let fl=e.formats.map(f=>barRow(f[0],[['b-blue',f[1]]],f[1],fmax)).join('');
  const EM=e.map, eord={n:0,l:1,c:2,f:3};
@@ -364,7 +364,8 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
     <div class="legend"><span><i class="dot b-blue"></i>Flagship</span><span><i class="dot b-red"></i>Local WordCamp</span><span><i class="dot b-amber"></i>Campus Connect</span><span><i class="dot b-green"></i>New Format</span></div>
     <p class="foot">Local WordCamps fell from ${e.byYear['2019'][1]} in 2019 to ${e.byYear['2026'][1]} now, while Campus Connect (${e.byYear['2026'][2]}) and other new formats (${e.byYear['2026'][3]}) filled the gap this year. <span style="color:var(--muted)">Hover a bar segment for its count.</span></p></div>`
   +`<div class="card"><h2>2026 Local WordCamps, Campus Connect, and Newer Formats by Country</h2><div id="bycountry" style="position:relative">${cl}<div class="maptip" id="bctip" style="pointer-events:none"></div></div>
-    <p class="foot">Flagships and meetups counted separately. The United States is at zero. <span style="color:var(--muted)">Hover a bar for its count.</span></p></div>`
+    <div class="legend"><span><i class="dot b-red"></i>Local WordCamp</span><span><i class="dot b-amber"></i>Campus Connect</span><span><i class="dot b-green"></i>New Format</span></div>
+    <p class="foot">Flagships and meetups counted separately. The United States is at zero. <span style="color:var(--muted)">Hover a segment for its count.</span></p></div>`
   +`<div class="card"><h2>2026 by format</h2>${fl}</div>`;
 
  /* hover tooltips (category + count) on the by-year and by-country bar charts */

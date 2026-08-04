@@ -227,14 +227,16 @@ def build_events(existing):
     for e in y26: fmt[ev_format_bucket(e["title"], e["code"])] += 1
     formats = [[k, fmt[k]] for k in FORMAT_ORDER if fmt[k] or k in ("Flagships", "Local WordCamps")]
 
-    bycountry = defaultdict(int)
+    # per-country split by category: [country, local, campusConnect, newFormat]
+    bycountry = defaultdict(lambda: {"l": 0, "c": 0, "n": 0})
     for e in y26:
         if e["code"] in ("l", "c", "n") and e["country"]:
-            bycountry[e["country"]] += 1
-    byCountry = sorted(bycountry.items(), key=lambda kv: kv[1], reverse=True)[:12]
-    if not any(c == "United States" for c, _ in byCountry):
-        byCountry.append(["United States", bycountry.get("United States", 0)])
-    byCountry = [[c, n] for c, n in byCountry]
+            bycountry[e["country"]][e["code"]] += 1
+    ctot = lambda v: v["l"] + v["c"] + v["n"]
+    ranked = sorted(bycountry.items(), key=lambda kv: ctot(kv[1]), reverse=True)[:12]
+    if not any(c == "United States" for c, _ in ranked):
+        ranked.append(("United States", bycountry.get("United States", {"l": 0, "c": 0, "n": 0})))
+    byCountry = [[c, v["l"], v["c"], v["n"]] for c, v in ranked]
 
     # map: 2026 live events with coords
     points, eventList = [], []
