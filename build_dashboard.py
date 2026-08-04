@@ -72,6 +72,13 @@ h1{font-family:var(--serif);font-size:32px;font-weight:600;letter-spacing:-.01em
 .mapzoom button:hover{border-color:var(--blue)}
 .maptip{position:absolute;display:none;z-index:6;max-width:210px;background:var(--card);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);padding:9px 11px;font-size:12px;line-height:1.45;color:var(--ink)}
 .maptip .cl{position:absolute;top:3px;right:7px;cursor:pointer;color:var(--muted);font-size:14px;line-height:1}
+/* "met this month" roll-up: country chips always, city names only while the list is short */
+.mocc{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.mocc span{display:inline-flex;align-items:baseline;gap:6px;font-size:12px;padding:3px 10px;border-radius:999px;background:var(--chip);border:1px solid var(--line);color:var(--ink);white-space:nowrap}
+.mocc span b{color:var(--muted);font-weight:600;font-variant-numeric:tabular-nums}
+.mocc span.more{background:none;border-color:transparent;color:var(--muted);padding-left:2px}
+.mocity{color:var(--muted);font-size:12px;margin:10px 0 0;line-height:1.7}
+.mocity b{color:var(--ink);font-weight:600}
 .mrow{display:grid;grid-template-columns:64px 1fr;align-items:center;gap:10px;margin:6px 0}
 .mrow .mo{font-size:12px;color:var(--muted);text-align:right}
 .mbars{display:flex;flex-direction:column;gap:3px}
@@ -153,6 +160,7 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
 /* MEETUPS */
 (function(){
  const m=D.meetups, mx=Math.max(...m.recency.map(r=>r[1]));
+ const esc=x=>String(x==null?'':x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
  const cf=l=>l.includes('30 days')||l.includes('1 to 3')?'b-green':l.includes('3 to 6')||l.includes('6 to 12')?'b-amber':l.includes('Never')?'b-grey':'b-red';
  let rec=m.recency.map(r=>barRow(r[0],[[cf(r[0]),r[1]]],r[1]+' ('+Math.round(r[1]/m.groups*100)+'%)',mx)).join('');
  let dead=m.deadBig.map(g=>`<tr><td><a href="${g.url}" target="_blank" rel="noopener">${g.group}</a></td><td class="hidem">${g.city}</td><td>${g.country}</td><td class="num">${(g.members||0).toLocaleString()}</td><td>${g.last?fmtD(g.last):'never'}</td></tr>`).join('');
@@ -167,10 +175,40 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
    </div>
    <div class="legend"><span><i class="dot" style="background:var(--green)"></i>active ${M.counts.a}</span><span><i class="dot" style="background:var(--red)"></i>inactive 12mo+ ${M.counts.d}</span><span><i class="dot" style="background:var(--grey)"></i>never met ${M.counts.n}</span></div>
    <p class="foot">Every registered group in the official chapter, placed by its city. Red is where an assembled audience has gone quiet. <span style="color:var(--muted)">Scroll or use +/&minus; to zoom, drag to pan, hover or tap a dot for details.</span></p></div>`;
+ const MO=m.monthMap||{points:[],count:0,month:''};
+ const moLbl=(()=>{const p=(MO.month||'').split('-');return p.length===2?MONTHS[+p[1]-1]+' '+p[0]:'this month';})();
+ let modots='';
+ MO.points.forEach(p=>modots+=`<circle class="pt en" cx="${p[0]}" cy="${p[1]}" r="2.6" data-i="${p[2]}"/>`);
+ /* Country roll-up + short-list of cities. Derived from allGroups, not MO.points, so groups
+    without map coordinates still get counted here even though no dot exists for them. */
+ const MOCC=10, MOCITY=12;
+ const moCohort=(m.allGroups||[]).filter(g=>(g.last||'').slice(0,7)===MO.month);
+ const moByC=Object.entries(moCohort.reduce((a,g)=>{const k=g.country||'Unknown';a[k]=(a[k]||0)+1;return a;},{}))
+   .sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]));
+ const moExtra=moByC.length-MOCC;
+ const moChips=moByC.length?`<div class="mocc">`
+   +moByC.slice(0,MOCC).map(c=>`<span>${esc(c[0])}<b>${c[1]}</b></span>`).join('')
+   +(moExtra>0?`<span class="more">+${moExtra} more ${moExtra===1?'country':'countries'}</span>`:'')
+   +`</div>`:'';
+ const moCities=(moCohort.length&&moCohort.length<=MOCITY)
+   ? `<p class="mocity">`+moCohort.slice()
+       .sort((a,b)=>(a.country||'').localeCompare(b.country||'')||(a.city||'').localeCompare(b.city||''))
+       .map(g=>`<b>${esc(g.city||'Unknown')}</b>, ${esc(g.country||'Unknown')}`).join(' &middot; ')+`</p>`
+   : '';
+ const monthCard=`<div class="card"><h2>Where the community met this month &mdash; ${moLbl}</h2>
+   <div class="mapwrap" id="mapwrap3">
+    <svg class="wmap" id="wmap3" viewBox="0 0 ${M.w} ${M.h}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="World map of WordPress meetup groups that met in ${moLbl}"><path class="land" d="${M.land}"/>${modots}</svg>
+    <div class="mapzoom"><button type="button" id="mzin3" aria-label="Zoom in">+</button><button type="button" id="mzout3" aria-label="Zoom out">&minus;</button><button type="button" id="mzr3" aria-label="Reset view" style="font-size:13px">&#8635;</button></div>
+    <div class="maptip" id="maptip3"></div>
+   </div>
+   <div class="legend"><span><i class="dot" style="background:var(--green)"></i>met in ${moLbl}</span></div>
+   ${moChips}${moCities}
+   <p class="foot"><b>${MO.count} ${MO.count===1?'group':'groups'} met this month</b> (${moLbl}).${MO.count>MO.points.length?` ${MO.count-MO.points.length} without map coordinates not shown.`:''} <span style="color:var(--muted)">Each dot is a group whose most recent event falls in the current calendar month. Scroll or use +/&minus; to zoom, drag to pan, hover or tap a dot for details.</span></p></div>`;
  $('meetups').innerHTML=
   tiles([['hot',m.groups,'groups'],['',m.members.toLocaleString(),'members'],['',m.countries,'countries'],
    ['good',m.met90,'met in 90 days'],['us',m.dormant,'inactive 12mo+'],['',m.organizers.toLocaleString(),'organizers']])
   +mapCard
+  +monthCard
   +`<div class="card"><h2>When each group last met</h2>${rec}
     <div class="legend"><span><i class="dot b-green"></i>active</span><span><i class="dot b-amber"></i>fading (3&ndash;12mo)</span><span><i class="dot b-red"></i>inactive 1yr+</span><span><i class="dot b-grey"></i>never</span></div>
     <p class="foot">${m.toWatch} groups last met 3&ndash;12 months ago &mdash; the ones most likely to go quiet next.</p></div>`
@@ -189,7 +227,6 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
  const PAGE=25, CATS=[['all','All'],['Active','Active'],['Fading','Fading'],['Inactive','Inactive'],['Never','Never']];
  let curCat='all', curPage=1;
  const rowsFor=c=>c==='all'?AG:AG.filter(g=>g.cat===c);
- const esc=x=>String(x==null?'':x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
  const CATDOT={Active:'b-green',Fading:'b-amber',Inactive:'b-red',Never:'b-grey'};
  const dotFor=c=>`<i class="dot dot-after ${CATDOT[c]||'b-grey'}" title="${c}" aria-label="${c}"></i>`;
  function drawTabs(){
@@ -239,6 +276,46 @@ function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner
      let lx=Math.min(cx-r.left+12, r.width-tip.offsetWidth-6), ly=Math.min(cy-r.top+12, r.height-tip.offsetHeight-6);
      tip.style.left=Math.max(4,lx)+'px'; tip.style.top=Math.max(4,ly)+'px';
      if(pinned){const c=$('mtcl'); if(c)c.onclick=hide;}
+   }
+   svg.addEventListener('mouseover',e=>{if(pinned||drag)return;if(e.target.classList.contains('pt')){cancelHide();show(e.target,e.clientX,e.clientY);}});
+   svg.addEventListener('mouseout',e=>{if(e.target.classList.contains('pt'))scheduleHide();});
+   svg.addEventListener('mouseleave',scheduleHide);
+   svg.addEventListener('click',e=>{if(e.target.classList.contains('pt')){pinned=true;cancelHide();show(e.target,e.clientX,e.clientY);}else hide();});
+   tip.addEventListener('mouseenter',cancelHide);
+   tip.addEventListener('mouseleave',()=>{if(!pinned)tip.style.display='none';});
+ })();
+
+ /* Interactive "met this month" map: same zoom/pan/tooltip, its own points */
+ (function(){
+   const svg=$('wmap3'), wrap=$('mapwrap3'), tip=$('maptip3');
+   if(!svg||!wrap||!tip) return;
+   const byId={}; (m.allGroups||[]).forEach(g=>byId[g.id]=g);
+   const W=M.w, H=M.h, ASPECT=H/W, MINW=110;
+   let vb={x:0,y:0,w:W,h:H}, pinned=false;
+   const clamp=()=>{vb.w=Math.min(W,vb.w);vb.h=vb.w*ASPECT;vb.x=Math.max(0,Math.min(W-vb.w,vb.x));vb.y=Math.max(0,Math.min(H-vb.h,vb.y));};
+   const apply=()=>svg.setAttribute('viewBox',`${vb.x} ${vb.y} ${vb.w} ${vb.h}`);
+   function zoomAt(cx,cy,f){const r=svg.getBoundingClientRect();const ux=vb.x+(cx-r.left)/r.width*vb.w,uy=vb.y+(cy-r.top)/r.height*vb.h;const nw=Math.min(W,Math.max(MINW,vb.w*f)),s=nw/vb.w;vb.x=ux-(ux-vb.x)*s;vb.y=uy-(uy-vb.y)*s;vb.w=nw;vb.h=nw*ASPECT;clamp();apply();}
+   const ctr=()=>{const r=svg.getBoundingClientRect();return[r.left+r.width/2,r.top+r.height/2];};
+   svg.addEventListener('wheel',e=>{e.preventDefault();zoomAt(e.clientX,e.clientY,e.deltaY<0?0.82:1.22);},{passive:false});
+   $('mzin3').onclick=()=>{const c=ctr();zoomAt(c[0],c[1],0.7);};
+   $('mzout3').onclick=()=>{const c=ctr();zoomAt(c[0],c[1],1.42);};
+   $('mzr3').onclick=()=>{vb={x:0,y:0,w:W,h:H};apply();hide();};
+   let drag=null;
+   svg.addEventListener('pointerdown',e=>{if(e.target.classList.contains('pt'))return;hide();drag={sx:e.clientX,sy:e.clientY,ox:vb.x,oy:vb.y};svg.classList.add('grabbing');try{svg.setPointerCapture(e.pointerId);}catch(_){}});
+   svg.addEventListener('pointermove',e=>{if(!drag)return;const r=svg.getBoundingClientRect();vb.x=drag.ox-(e.clientX-drag.sx)/r.width*vb.w;vb.y=drag.oy-(e.clientY-drag.sy)/r.height*vb.h;clamp();apply();});
+   ['pointerup','pointercancel','pointerleave'].forEach(ev=>svg.addEventListener(ev,()=>{drag=null;svg.classList.remove('grabbing');}));
+   let hideT=null;
+   const cancelHide=()=>{if(hideT){clearTimeout(hideT);hideT=null;}};
+   const scheduleHide=()=>{if(pinned)return;cancelHide();hideT=setTimeout(()=>{tip.style.display='none';},260);};
+   function hide(){cancelHide();tip.style.display='none';pinned=false;}
+   function show(el,cx,cy){
+     const g=byId[el.getAttribute('data-i')]; if(!g)return;
+     const loc=[g.city,g.country].filter(Boolean).map(esc).join(', ');
+     tip.innerHTML=(pinned?`<span class="cl" id="mtcl3">×</span>`:'')+`<b>${esc(g.group)}</b><br>${loc}<br>${(g.members||0).toLocaleString()} members · last met ${g.last?fmtD(g.last):'never'}<br><a href="${esc(g.url)}" target="_blank" rel="noopener noreferrer">Open group ↗</a>`;
+     const r=wrap.getBoundingClientRect(); tip.style.display='block';
+     let lx=Math.min(cx-r.left+12, r.width-tip.offsetWidth-6), ly=Math.min(cy-r.top+12, r.height-tip.offsetHeight-6);
+     tip.style.left=Math.max(4,lx)+'px'; tip.style.top=Math.max(4,ly)+'px';
+     if(pinned){const c=$('mtcl3'); if(c)c.onclick=hide;}
    }
    svg.addEventListener('mouseover',e=>{if(pinned||drag)return;if(e.target.classList.contains('pt')){cancelHide();show(e.target,e.clientX,e.clientY);}});
    svg.addEventListener('mouseout',e=>{if(e.target.classList.contains('pt'))scheduleHide();});

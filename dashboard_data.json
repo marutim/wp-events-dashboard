@@ -112,16 +112,16 @@
     "url": "https://www.meetup.com/wordpress-jeddah"
    },
    {
-    "group": "WordPress Medellín",
-    "city": "Medellín",
+    "group": "WordPress Medell\u00edn",
+    "city": "Medell\u00edn",
     "country": "Colombia",
     "members": 2116,
     "last": "2024-12-16",
     "url": "https://www.meetup.com/WordPressMedellin"
    },
    {
-    "group": "Communauté WordPress Montréal / Montreal WordPress Community",
-    "city": "Montréal",
+    "group": "Communaut\u00e9 WordPress Montr\u00e9al / Montreal WordPress Community",
+    "city": "Montr\u00e9al",
     "country": "Canada",
     "members": 2111,
     "last": "2025-05-12",
@@ -4730,7 +4730,7 @@
    },
    {
     "id": 568,
-    "group": "San José WordPress Meetup",
+    "group": "San Jos\u00e9 WordPress Meetup",
     "city": "San Jose",
     "country": "Costa Rica",
     "members": 3304,
@@ -4880,8 +4880,8 @@
    },
    {
     "id": 556,
-    "group": "Comunidade WordPress São Paulo",
-    "city": "São Paulo",
+    "group": "Comunidade WordPress S\u00e3o Paulo",
+    "city": "S\u00e3o Paulo",
     "country": "Brazil",
     "members": 2615,
     "last": "2025-12-09",
@@ -4901,7 +4901,7 @@
    {
     "id": 618,
     "group": "WordPress Mexico",
-    "city": "México City",
+    "city": "M\u00e9xico City",
     "country": "Mexico",
     "members": 2548,
     "last": "2026-07-04",
@@ -5090,8 +5090,8 @@
    },
    {
     "id": 516,
-    "group": "WordPress Medellín",
-    "city": "Medellín",
+    "group": "WordPress Medell\u00edn",
+    "city": "Medell\u00edn",
     "country": "Colombia",
     "members": 2116,
     "last": "2024-12-16",
@@ -5110,8 +5110,8 @@
    },
    {
     "id": 485,
-    "group": "Communauté WordPress Montréal / Montreal WordPress Community",
-    "city": "Montréal",
+    "group": "Communaut\u00e9 WordPress Montr\u00e9al / Montreal WordPress Community",
+    "city": "Montr\u00e9al",
     "country": "Canada",
     "members": 2111,
     "last": "2025-05-12",
@@ -5261,7 +5261,7 @@
    {
     "id": 341,
     "group": "Meetup WordPress Floripa",
-    "city": "Florianópolis",
+    "city": "Florian\u00f3polis",
     "country": "Brazil",
     "members": 1763,
     "last": "2026-06-13",
@@ -5270,8 +5270,8 @@
    },
    {
     "id": 525,
-    "group": "WordPress Málaga",
-    "city": "Málaga",
+    "group": "WordPress M\u00e1laga",
+    "city": "M\u00e1laga",
     "country": "Spain",
     "members": 1760,
     "last": "2026-07-31",
@@ -5350,8 +5350,8 @@
    },
    {
     "id": 374,
-    "group": "Thessaloníki WordPress Meetup",
-    "city": "Thessaloníki",
+    "group": "Thessalon\u00edki WordPress Meetup",
+    "city": "Thessalon\u00edki",
     "country": "Greece",
     "members": 1631,
     "last": "2026-05-13",
@@ -5520,8 +5520,8 @@
    },
    {
     "id": 534,
-    "group": "Bogotá WordPress Meetup",
-    "city": "Bogotá",
+    "group": "Bogot\u00e1 WordPress Meetup",
+    "city": "Bogot\u00e1",
     "country": "Colombia",
     "members": 1526,
     "last": "2025-09-13",
@@ -5590,8 +5590,8 @@
    },
    {
     "id": 507,
-    "group": "Düsseldorf WordPress Meetup",
-    "city": "Düsseldorf",
+    "group": "D\u00fcsseldorf WordPress Meetup",
+    "city": "D\u00fcsseldorf",
     "country": "Germany",
     "members": 1495,
     "last": "2026-07-22",
@@ -5790,8 +5790,8 @@
    },
    {
     "id": 514,
-    "group": "WordPress Meetup Köln",
-    "city": "Köln",
+    "group": "WordPress Meetup K\u00f6ln",
+    "city": "K\u00f6ln",
     "country": "Germany",
     "members": 1310,
     "last": "2026-07-16",
@@ -5820,8 +5820,8 @@
    },
    {
     "id": 232,
-    "group": "WordPress Coruña",
-    "city": "A Coruña",
+    "group": "WordPress Coru\u00f1a",
+    "city": "A Coru\u00f1a",
     "country": "Spain",
     "members": 1292,
     "last": "2026-07-23",
@@ -6080,8 +6080,8 @@
    },
    {
     "id": 590,
-    "group": "München WordPress Meetup",
-    "city": "München",
+    "group": "M\u00fcnchen WordPress Meetup",
+    "city": "M\u00fcnchen",
     "country": "Germany",
     "members": 1121,
     "last": "2026-07-08",
@@ -6101,7 +6101,7 @@
    {
     "id": 417,
     "group": "WordPress Zurich",
-    "city": "Zürich",
+    "city": "Z\u00fcrich",
     "country": "Switzerland",
     "members": 1115,
     "last": "2026-06-22",
@@ -6380,8 +6380,8 @@
    },
    {
     "id": 326,
-    "group": "WordPress Querétaro",
-    "city": "Querétaro",
+    "group": "WordPress Quer\u00e9taro",
+    "city": "Quer\u00e9taro",
     "country": "Mexico",
     "members": 922,
     "last": "2026-02-25",
@@ -6750,7 +6750,7 @@
    },
    {
     "id": 518,
-    "group": "WordPress Ⓦ Aix-en-Provence",
+    "group": "WordPress \u24cc Aix-en-Provence",
     "city": "Aix-en-Provence",
     "country": "France",
     "members": 779,
@@ -6830,8 +6830,8 @@
    },
    {
     "id": 668,
-    "group": "WordPress Meetups Genève (Geneva)",
-    "city": "Genève",
+    "group": "WordPress Meetups Gen\u00e8ve (Geneva)",
+    "city": "Gen\u00e8ve",
     "country": "Switzerland",
     "members": 752,
     "last": "2026-03-18",
@@ -6940,8 +6940,8 @@
    },
    {
     "id": 482,
-    "group": "WordPress Niš",
-    "city": "Niš",
+    "group": "WordPress Ni\u0161",
+    "city": "Ni\u0161",
     "country": "Serbia",
     "members": 717,
     "last": "2026-05-09",
@@ -7170,8 +7170,8 @@
    },
    {
     "id": 158,
-    "group": "Alcalá de Henares WordPress Meetup Group",
-    "city": "Alcalá de Henares",
+    "group": "Alcal\u00e1 de Henares WordPress Meetup Group",
+    "city": "Alcal\u00e1 de Henares",
     "country": "Spain",
     "members": 649,
     "last": "2026-06-17",
@@ -7301,7 +7301,7 @@
    {
     "id": 268,
     "group": "WordPress Denia",
-    "city": "Dénia",
+    "city": "D\u00e9nia",
     "country": "Spain",
     "members": 626,
     "last": "2025-12-02",
@@ -7510,8 +7510,8 @@
    },
    {
     "id": 528,
-    "group": "WordPress Meetup Nürnberg",
-    "city": "Nürnberg",
+    "group": "WordPress Meetup N\u00fcrnberg",
+    "city": "N\u00fcrnberg",
     "country": "Germany",
     "members": 588,
     "last": "2026-01-10",
@@ -7560,8 +7560,8 @@
    },
    {
     "id": 262,
-    "group": "WordPress Griñón",
-    "city": "Griñón",
+    "group": "WordPress Gri\u00f1\u00f3n",
+    "city": "Gri\u00f1\u00f3n",
     "country": "Spain",
     "members": 570,
     "last": "2025-12-02",
@@ -7610,8 +7610,8 @@
    },
    {
     "id": 387,
-    "group": "WordPress León meetup",
-    "city": "León",
+    "group": "WordPress Le\u00f3n meetup",
+    "city": "Le\u00f3n",
     "country": "Spain",
     "members": 565,
     "last": "2026-04-21",
@@ -7740,8 +7740,8 @@
    },
    {
     "id": 520,
-    "group": "WordPress Tuluá",
-    "city": "Tuluá",
+    "group": "WordPress Tulu\u00e1",
+    "city": "Tulu\u00e1",
     "country": "Colombia",
     "members": 540,
     "last": "2024-11-30",
@@ -7760,8 +7760,8 @@
    },
    {
     "id": 296,
-    "group": "WordUp Kraków",
-    "city": "Kraków",
+    "group": "WordUp Krak\u00f3w",
+    "city": "Krak\u00f3w",
     "country": "Poland",
     "members": 535,
     "last": "2026-05-11",
@@ -7770,8 +7770,8 @@
    },
    {
     "id": 288,
-    "group": "WordPress Logroño",
-    "city": "Logroño",
+    "group": "WordPress Logro\u00f1o",
+    "city": "Logro\u00f1o",
     "country": "Spain",
     "members": 534,
     "last": "2026-07-29",
@@ -7820,8 +7820,8 @@
    },
    {
     "id": 569,
-    "group": "Yaoundé WordPress Meetup",
-    "city": "Yaoundé",
+    "group": "Yaound\u00e9 WordPress Meetup",
+    "city": "Yaound\u00e9",
     "country": "Cameroon",
     "members": 528,
     "last": "2026-03-14",
@@ -7930,8 +7930,8 @@
    },
    {
     "id": 325,
-    "group": "WordPress Castelló",
-    "city": "Castelló",
+    "group": "WordPress Castell\u00f3",
+    "city": "Castell\u00f3",
     "country": "Spain",
     "members": 515,
     "last": "2026-04-21",
@@ -8000,7 +8000,7 @@
    },
    {
     "id": 567,
-    "group": "WordPress Meetup Fryslân",
+    "group": "WordPress Meetup Frysl\u00e2n",
     "city": "Leeuwarden",
     "country": "Netherlands",
     "members": 505,
@@ -8290,7 +8290,7 @@
    },
    {
     "id": 96,
-    "group": "WordPress Latinoamérica",
+    "group": "WordPress Latinoam\u00e9rica",
     "city": "Cartago",
     "country": "Costa Rica",
     "members": 423,
@@ -8440,7 +8440,7 @@
    },
    {
     "id": 229,
-    "group": "NášWP WordPress komunita",
+    "group": "N\u00e1\u0161WP WordPress komunita",
     "city": "Prague",
     "country": "Czech Republic",
     "members": 394,
@@ -8691,7 +8691,7 @@
    {
     "id": 601,
     "group": "Larissa WordPress Meetup",
-    "city": "Lárisa",
+    "city": "L\u00e1risa",
     "country": "Greece",
     "members": 360,
     "last": "2025-05-31",
@@ -8730,7 +8730,7 @@
    },
    {
     "id": 241,
-    "group": "彰化 WordPress Meetup group",
+    "group": "\u5f70\u5316 WordPress Meetup group",
     "city": "Changhwa",
     "country": "Taiwan",
     "members": 349,
@@ -9160,7 +9160,7 @@
    },
    {
     "id": 180,
-    "group": "Ostravská komunita tvůrců webů (nejen) na WordPressu",
+    "group": "Ostravsk\u00e1 komunita tv\u016frc\u016f web\u016f (nejen) na WordPressu",
     "city": "Ostrava",
     "country": "Czech Republic",
     "members": 298,
@@ -9410,8 +9410,8 @@
    },
    {
     "id": 384,
-    "group": "WordPress Meetup Vršac #WPVŠ",
-    "city": "Vršac",
+    "group": "WordPress Meetup Vr\u0161ac #WPV\u0160",
+    "city": "Vr\u0161ac",
     "country": "Serbia",
     "members": 267,
     "last": "2026-05-29",
@@ -9470,8 +9470,8 @@
    },
    {
     "id": 167,
-    "group": "Gießen WordPress Meetup Group",
-    "city": "Gießen",
+    "group": "Gie\u00dfen WordPress Meetup Group",
+    "city": "Gie\u00dfen",
     "country": "Germany",
     "members": 260,
     "last": "2024-10-16",
@@ -9490,8 +9490,8 @@
    },
    {
     "id": 148,
-    "group": "WordPress Mataró",
-    "city": "Mataró",
+    "group": "WordPress Matar\u00f3",
+    "city": "Matar\u00f3",
     "country": "Spain",
     "members": 259,
     "last": "2026-05-20",
@@ -9500,8 +9500,8 @@
    },
    {
     "id": 513,
-    "group": "WordPress Meetup Québec",
-    "city": "Québec",
+    "group": "WordPress Meetup Qu\u00e9bec",
+    "city": "Qu\u00e9bec",
     "country": "Canada",
     "members": 258,
     "last": "2025-10-09",
@@ -9520,8 +9520,8 @@
    },
    {
     "id": 261,
-    "group": "WordPress Vitória Meetup",
-    "city": "Vitória",
+    "group": "WordPress Vit\u00f3ria Meetup",
+    "city": "Vit\u00f3ria",
     "country": "Brazil",
     "members": 253,
     "last": "2024-03-02",
@@ -9560,8 +9560,8 @@
    },
    {
     "id": 531,
-    "group": "WPMeetup Würzburg",
-    "city": "Würzburg",
+    "group": "WPMeetup W\u00fcrzburg",
+    "city": "W\u00fcrzburg",
     "country": "Germany",
     "members": 248,
     "last": "2026-07-21",
@@ -9570,8 +9570,8 @@
    },
    {
     "id": 187,
-    "group": "Wrocław WordPress Meetup",
-    "city": "Wrocław",
+    "group": "Wroc\u0142aw WordPress Meetup",
+    "city": "Wroc\u0142aw",
     "country": "Poland",
     "members": 247,
     "last": "2026-06-11",
@@ -9740,7 +9740,7 @@
    },
    {
     "id": 135,
-    "group": "WordPress Meetup Südsauerland",
+    "group": "WordPress Meetup S\u00fcdsauerland",
     "city": "Attendorn",
     "country": "Germany",
     "members": 228,
@@ -9770,7 +9770,7 @@
    },
    {
     "id": 236,
-    "group": "WordPress Goiânia",
+    "group": "WordPress Goi\u00e2nia",
     "city": "Goiania",
     "country": "Brazil",
     "members": 223,
@@ -9900,8 +9900,8 @@
    },
    {
     "id": 194,
-    "group": "Mérida WordPress Meetup",
-    "city": "Mérida",
+    "group": "M\u00e9rida WordPress Meetup",
+    "city": "M\u00e9rida",
     "country": "Mexico",
     "members": 204,
     "last": "2026-04-10",
@@ -9940,8 +9940,8 @@
    },
    {
     "id": 214,
-    "group": "WordPress Alhaurín",
-    "city": "Alhaurín de la Torre",
+    "group": "WordPress Alhaur\u00edn",
+    "city": "Alhaur\u00edn de la Torre",
     "country": "Spain",
     "members": 201,
     "last": "2024-07-26",
@@ -9980,8 +9980,8 @@
    },
    {
     "id": 586,
-    "group": "Jyväskylä WordPress Meetup",
-    "city": "Jyväskylä",
+    "group": "Jyv\u00e4skyl\u00e4 WordPress Meetup",
+    "city": "Jyv\u00e4skyl\u00e4",
     "country": "Finland",
     "members": 199,
     "last": "2025-03-06",
@@ -10020,7 +10020,7 @@
    },
    {
     "id": 273,
-    "group": "WordPress Neuchâtel",
+    "group": "WordPress Neuch\u00e2tel",
     "city": "Neuchatel",
     "country": "Switzerland",
     "members": 197,
@@ -10100,8 +10100,8 @@
    },
    {
     "id": 62,
-    "group": "Cádiz WordPress Meetup",
-    "city": "Cádiz",
+    "group": "C\u00e1diz WordPress Meetup",
+    "city": "C\u00e1diz",
     "country": "Spain",
     "members": 188,
     "last": "2025-06-19",
@@ -10210,8 +10210,8 @@
    },
    {
     "id": 429,
-    "group": "Seinäjoki WordPress Meetup",
-    "city": "Seinäjoki",
+    "group": "Sein\u00e4joki WordPress Meetup",
+    "city": "Sein\u00e4joki",
     "country": "Finland",
     "members": 175,
     "last": "2025-01-28",
@@ -10251,7 +10251,7 @@
    {
     "id": 181,
     "group": "Prishtina WordPress Meetup",
-    "city": "Prishtinë",
+    "city": "Prishtin\u00eb",
     "country": "Kosovo",
     "members": 171,
     "last": "2023-08-24",
@@ -10340,8 +10340,8 @@
    },
    {
     "id": 385,
-    "group": "WordPress São Carlos",
-    "city": "São Carlos",
+    "group": "WordPress S\u00e3o Carlos",
+    "city": "S\u00e3o Carlos",
     "country": "Brazil",
     "members": 160,
     "last": "2019-05-29",
@@ -10591,7 +10591,7 @@
    {
     "id": 220,
     "group": "WordPress Lome",
-    "city": "Lomé",
+    "city": "Lom\u00e9",
     "country": "Togo",
     "members": 136,
     "last": "2023-07-01",
@@ -10610,8 +10610,8 @@
    },
    {
     "id": 74,
-    "group": "WordPress Meetup Ciudad de Panamá",
-    "city": "Panamá",
+    "group": "WordPress Meetup Ciudad de Panam\u00e1",
+    "city": "Panam\u00e1",
     "country": "Panama",
     "members": 131,
     "last": "2025-03-27",
@@ -10681,7 +10681,7 @@
    {
     "id": 15,
     "group": "WordPress Brasil Meetup Online",
-    "city": "Paraná",
+    "city": "Paran\u00e1",
     "country": "Brazil",
     "members": 124,
     "last": "2026-07-29",
@@ -10740,8 +10740,8 @@
    },
    {
     "id": 200,
-    "group": "Asunción WordPress Meetup",
-    "city": "Asunción",
+    "group": "Asunci\u00f3n WordPress Meetup",
+    "city": "Asunci\u00f3n",
     "country": "Paraguay",
     "members": 117,
     "last": "2024-05-08",
@@ -10830,7 +10830,7 @@
    },
    {
     "id": 93,
-    "group": "WordUP Częstochowa",
+    "group": "WordUP Cz\u0119stochowa",
     "city": "Czestochowa",
     "country": "Poland",
     "members": 105,
@@ -10981,7 +10981,7 @@
    {
     "id": 527,
     "group": "WordPress Meetup Saarland",
-    "city": "Saarbrücken",
+    "city": "Saarbr\u00fccken",
     "country": "Germany",
     "members": 88,
     "last": "2026-04-23",
@@ -11090,8 +11090,8 @@
    },
    {
     "id": 73,
-    "group": "WordPress Estelí",
-    "city": "Estelí",
+    "group": "WordPress Estel\u00ed",
+    "city": "Estel\u00ed",
     "country": "Nicaragua",
     "members": 76,
     "last": "2025-07-02",
@@ -11120,8 +11120,8 @@
    },
    {
     "id": 14,
-    "group": "WordPress Algemesí Meetup",
-    "city": "Algemesí",
+    "group": "WordPress Algemes\u00ed Meetup",
+    "city": "Algemes\u00ed",
     "country": "Spain",
     "members": 72,
     "last": "2026-06-18",
@@ -11140,8 +11140,8 @@
    },
    {
     "id": 228,
-    "group": "Pátrai WordPress Meetup Group",
-    "city": "Pátrai",
+    "group": "P\u00e1trai WordPress Meetup Group",
+    "city": "P\u00e1trai",
     "country": "Greece",
     "members": 68,
     "last": "",
@@ -11160,8 +11160,8 @@
    },
    {
     "id": 81,
-    "group": "Halsnæs WordPress Meetup",
-    "city": "Frederiksværk",
+    "group": "Halsn\u00e6s WordPress Meetup",
+    "city": "Frederiksv\u00e6rk",
     "country": "Denmark",
     "members": 66,
     "last": "2026-05-05",
@@ -11300,8 +11300,8 @@
    },
    {
     "id": 6,
-    "group": "Córdoba WordPress Meetup Group",
-    "city": "Córdoba",
+    "group": "C\u00f3rdoba WordPress Meetup Group",
+    "city": "C\u00f3rdoba",
     "country": "Spain",
     "members": 45,
     "last": "",
@@ -11330,7 +11330,7 @@
    },
    {
     "id": 145,
-    "group": "Graubünden WordPress Meetup Group",
+    "group": "Graub\u00fcnden WordPress Meetup Group",
     "city": "Landquart",
     "country": "Switzerland",
     "members": 40,
@@ -11370,7 +11370,7 @@
    },
    {
     "id": 106,
-    "group": "Metairie WordPress 😃",
+    "group": "Metairie WordPress \ud83d\ude03",
     "city": "Metairie",
     "country": "USA",
     "members": 36,
@@ -11400,8 +11400,8 @@
    },
    {
     "id": 35,
-    "group": "WordPress Meetup Münster / Osnabrück",
-    "city": "Münster",
+    "group": "WordPress Meetup M\u00fcnster / Osnabr\u00fcck",
+    "city": "M\u00fcnster",
     "country": "Germany",
     "members": 30,
     "last": "2026-05-28",
@@ -11440,8 +11440,8 @@
    },
    {
     "id": 86,
-    "group": "Vale do Iguaçu WordPress",
-    "city": "União da Victória",
+    "group": "Vale do Igua\u00e7u WordPress",
+    "city": "Uni\u00e3o da Vict\u00f3ria",
     "country": "Brazil",
     "members": 28,
     "last": "2019-03-16",
@@ -11510,7 +11510,7 @@
    },
    {
     "id": 51,
-    "group": "Cerdanyola del Vallès WordPress Meetup",
+    "group": "Cerdanyola del Vall\u00e8s WordPress Meetup",
     "city": "Cerdanyola",
     "country": "Spain",
     "members": 20,
@@ -11570,8 +11570,8 @@
    },
    {
     "id": 30,
-    "group": "Durrës WordPress Community",
-    "city": "Durrës",
+    "group": "Durr\u00ebs WordPress Community",
+    "city": "Durr\u00ebs",
     "country": "Albania",
     "members": 15,
     "last": "2026-07-22",
@@ -11618,7 +11618,38 @@
     "url": "https://www.meetup.com/florence-wordpress-meetup-group",
     "cat": "Never"
    }
-  ]
+  ],
+  "monthMap": {
+   "month": "2026-08",
+   "points": [
+    [
+     521.8,
+     236.1,
+     336
+    ],
+    [
+     755.0,
+     188.0,
+     418
+    ],
+    [
+     701.6,
+     186.0,
+     538
+    ],
+    [
+     705.1,
+     198.5,
+     622
+    ],
+    [
+     230.2,
+     158.7,
+     672
+    ]
+   ],
+   "count": 5
+  }
  },
  "events": {
   "asOf": "2026-08-03",
@@ -12462,8 +12493,8 @@
      "u": "https://central.wordcamp.org/wordcamps/wordcamp-sofia-2026/"
     },
     {
-     "n": "WordCamp Wrocław 2026",
-     "loc": "Wrocław, Poland",
+     "n": "WordCamp Wroc\u0142aw 2026",
+     "loc": "Wroc\u0142aw, Poland",
      "d": "2026-10-02",
      "ty": "WordCamp",
      "u": "https://central.wordcamp.org/wordcamps/wordcamp-wroclaw-2026/"
@@ -12484,7 +12515,7 @@
     },
     {
      "n": "WordCamp Galicia 2026",
-     "loc": "A Coruña, Galicia, Spain",
+     "loc": "A Coru\u00f1a, Galicia, Spain",
      "d": "2026-10-16",
      "ty": "WordCamp",
      "u": "https://central.wordcamp.org/wordcamps/wordcamp-galicia-2026/"
@@ -12588,8 +12619,8 @@
      "u": "https://central.wordcamp.org/wordcamps/wordcamp-costa-rica-2026/"
     },
     {
-     "n": "WordCamp Málaga 2026",
-     "loc": "Málaga, Málaga, Spain",
+     "n": "WordCamp M\u00e1laga 2026",
+     "loc": "M\u00e1laga, M\u00e1laga, Spain",
      "d": "2026-04-24",
      "ty": "WordCamp",
      "u": "https://central.wordcamp.org/wordcamps/wordcamp-malaga-2026/"
@@ -12869,14 +12900,14 @@
     },
     {
      "n": "WordPress Campus Connect Politechnika Krakowska",
-     "loc": "Kraków, Poland",
+     "loc": "Krak\u00f3w, Poland",
      "d": "2026-04-13",
      "ty": "Campus Connect",
      "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-politechnika-krakowska-cracow-university-of-technology/"
     },
     {
      "n": "WordPress Campus Connect Uniwersytet Ekonomiczny w Krakowie",
-     "loc": "Kraków, Poland",
+     "loc": "Krak\u00f3w, Poland",
      "d": "2026-04-13",
      "ty": "Campus Connect",
      "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-uniwersytet-ekonomiczny-w-krakowie/"
@@ -12931,7 +12962,7 @@
      "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-universitas-ekuitas-indonesia-or-nick-name-ekuitas-university/"
     },
     {
-     "n": "WordPress Campus Connect UCR Sede del Pacífico Esparza",
+     "n": "WordPress Campus Connect UCR Sede del Pac\u00edfico Esparza",
      "loc": "Puntarenas, Costa Rica",
      "d": "2026-08-29",
      "ty": "Campus Connect",
@@ -12994,8 +13025,8 @@
      "u": "https://central.wordcamp.org/wordcamps/wordpress-day-cdmx-2026/"
     },
     {
-     "n": "WordPress Campus Connect Escola Pia Mataró",
-     "loc": "Mataró, Spain",
+     "n": "WordPress Campus Connect Escola Pia Matar\u00f3",
+     "loc": "Matar\u00f3, Spain",
      "d": "2026-02-18",
      "ty": "Campus Connect",
      "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-2026-tweek-escola-pia-mataro/"
@@ -13009,7 +13040,7 @@
     },
     {
      "n": "WordPress Campus Connect Ribera del Duero",
-     "loc": "Aranda de Duero, España",
+     "loc": "Aranda de Duero, Espa\u00f1a",
      "d": "2026-01-30",
      "ty": "Campus Connect",
      "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-wordpress-campus-connect-ribera-del-duero-2026/"
@@ -13092,8 +13123,8 @@
      "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-campus-connect-toledo/"
     },
     {
-     "n": "WordPress Campus Connect Liceo la Paz A Coruña",
-     "loc": "A Coruña, Spain",
+     "n": "WordPress Campus Connect Liceo la Paz A Coru\u00f1a",
+     "loc": "A Coru\u00f1a, Spain",
      "d": "2026-05-07",
      "ty": "Campus Connect",
      "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-liceo-la-paz-a-coruna/"
@@ -13162,15 +13193,15 @@
      "u": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-lira-uganda/"
     },
     {
-     "n": "WordPress Developer Day 2026 San José",
+     "n": "WordPress Developer Day 2026 San Jos\u00e9",
      "loc": "San Jose, Costa Rica",
      "d": "2026-02-21",
      "ty": "Community event",
      "u": "https://central.wordcamp.org/wordcamps/wordpress-developer-day-san-jose-2026/"
     },
     {
-     "n": "Women WordPress Day San José 2026",
-     "loc": "San José, Costa Rica",
+     "n": "Women WordPress Day San Jos\u00e9 2026",
+     "loc": "San Jos\u00e9, Costa Rica",
      "d": "2026-03-07",
      "ty": "Women WordPress Day",
      "u": "https://central.wordcamp.org/wordcamps/women-wp-day-san-jose-2026/"
@@ -13686,7 +13717,7 @@
     "id": 14320729,
     "slug": "wcpt-more-info-reque",
     "stage": "On Hold (more info)",
-    "title": "WordPress Campus Connect Colegio San Luis Beltrán",
+    "title": "WordPress Campus Connect Colegio San Luis Beltr\u00e1n",
     "start": "2026-10-15",
     "location": "Chinandega, Nicaragua",
     "organizer": "Lua Salazar",
@@ -13716,9 +13747,9 @@
     "id": 13970084,
     "slug": "wcpt-more-info-reque",
     "stage": "On Hold (more info)",
-    "title": "DevDay 2027 San José, Costa Rica",
+    "title": "DevDay 2027 San Jos\u00e9, Costa Rica",
     "start": null,
-    "location": "San José, Costa Rica",
+    "location": "San Jos\u00e9, Costa Rica",
     "organizer": "Ronny Freites",
     "anticipated": "",
     "link": "https://central.wordcamp.org/wordcamps/san-jose-costa-rica-3/",
@@ -13731,9 +13762,9 @@
     "id": 13954799,
     "slug": "wcpt-more-info-reque",
     "stage": "On Hold (more info)",
-    "title": "Women WordPress Day San José 2027",
+    "title": "Women WordPress Day San Jos\u00e9 2027",
     "start": null,
-    "location": "San José, Costa Rica",
+    "location": "San Jos\u00e9, Costa Rica",
     "organizer": "Rita Robles Loaiza",
     "anticipated": "",
     "link": "https://central.wordcamp.org/wordcamps/women-wp-day-san-jose-2027/",
@@ -13911,9 +13942,9 @@
     "id": 15592082,
     "slug": "wcpt-approved-pre-pl",
     "stage": "Approved for Pre-Planning",
-    "title": "WordPress Campus Connect Universidad de A Coruña",
+    "title": "WordPress Campus Connect Universidad de A Coru\u00f1a",
     "start": "2026-09-30",
-    "location": "A Coruña, Spain",
+    "location": "A Coru\u00f1a, Spain",
     "organizer": "Carla Pumutxa",
     "anticipated": "35",
     "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-universidad-de-a-coruna/",
@@ -14031,10 +14062,10 @@
     "id": 15124816,
     "slug": "wcpt-approved-pre-pl",
     "stage": "Approved for Pre-Planning",
-    "title": "WordPress Campus Connect Universidad Fidélitas, San José",
+    "title": "WordPress Campus Connect Universidad Fid\u00e9litas, San Jos\u00e9",
     "start": "2026-10-24",
-    "location": "San José, Costa Rica",
-    "organizer": "Nicole Pamela Gómez Vargas",
+    "location": "San Jos\u00e9, Costa Rica",
+    "organizer": "Nicole Pamela G\u00f3mez Vargas",
     "anticipated": "80",
     "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-fidelitas/",
     "format": "Campus Connect",
@@ -14256,10 +14287,10 @@
     "id": 14803975,
     "slug": "wcpt-pre-planning",
     "stage": "In Pre-Planning",
-    "title": "WordCamp Kraków",
+    "title": "WordCamp Krak\u00f3w",
     "start": null,
-    "location": "Kraków, Poland",
-    "organizer": "Sebastian Miśniakiewicz",
+    "location": "Krak\u00f3w, Poland",
+    "organizer": "Sebastian Mi\u015bniakiewicz",
     "anticipated": "500",
     "link": "https://central.wordcamp.org/wordcamps/wordcamp-krakow-2/",
     "format": "WordCamp",
@@ -14289,7 +14320,7 @@
     "title": "WordCamp Portugal 2027",
     "start": null,
     "location": "Lisbon, Portugal",
-    "organizer": "Fábio Nunes",
+    "organizer": "F\u00e1bio Nunes",
     "anticipated": "250",
     "link": "https://central.wordcamp.org/wordcamps/wordcamp-portugal-2027/",
     "format": "WordCamp",
@@ -14379,7 +14410,7 @@
     "title": "WordCamp Sevilla 2027",
     "start": null,
     "location": "Sevilla, Spain",
-    "organizer": "Mariano Pérez Caro",
+    "organizer": "Mariano P\u00e9rez Caro",
     "anticipated": "300",
     "link": "https://central.wordcamp.org/wordcamps/wordcamp-sevilla-2027/",
     "format": "WordCamp",
@@ -14421,9 +14452,9 @@
     "id": 13694854,
     "slug": "wcpt-pre-planning",
     "stage": "In Pre-Planning",
-    "title": "WordPress Student Talks San José 2026",
+    "title": "WordPress Student Talks San Jos\u00e9 2026",
     "start": "2026-11-14",
-    "location": "San José, Costa Rica",
+    "location": "San Jos\u00e9, Costa Rica",
     "organizer": "Rita Robles Loaiza",
     "anticipated": "100",
     "link": "https://central.wordcamp.org/wordcamps/wordpress-student-talks-san-jose-2026/",
@@ -14571,10 +14602,10 @@
     "id": 10657857,
     "slug": "wcpt-pre-planning",
     "stage": "In Pre-Planning",
-    "title": "WordPress Campus Connect Universidad de Cádiz",
+    "title": "WordPress Campus Connect Universidad de C\u00e1diz",
     "start": null,
-    "location": "Cádiz, Spain",
-    "organizer": "Vanessa Martínez Hernández",
+    "location": "C\u00e1diz, Spain",
+    "organizer": "Vanessa Mart\u00ednez Hern\u00e1ndez",
     "anticipated": "",
     "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-cadiz/",
     "format": "Campus Connect",
@@ -14676,7 +14707,7 @@
     "id": 10025773,
     "slug": "wcpt-needs-fill-list",
     "stage": "Needs Listing",
-    "title": "Trilogía WordPress Latam",
+    "title": "Trilog\u00eda WordPress Latam",
     "start": "2026-10-22",
     "location": "LATAM",
     "organizer": "Alex Cuadra",
