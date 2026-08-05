@@ -148,7 +148,6 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
  const esc=x=>String(x==null?'':x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
  const cf=l=>l.includes('30 days')||l.includes('1 to 3')?'b-green':l.includes('3 to 6')||l.includes('6 to 12')?'b-amber':l.includes('Never')?'b-grey':'b-red';
  let rec=m.recency.map(r=>barRow(r[0],[[cf(r[0]),r[1]]],r[1]+' ('+Math.round(r[1]/m.groups*100)+'%)',mx)).join('');
- let dead=m.deadBig.map(g=>`<tr><td><a href="${g.url}" target="_blank" rel="noopener">${g.group}</a></td><td class="hidem">${g.city}</td><td>${g.country}</td><td class="num">${(g.members||0).toLocaleString()}</td><td>${g.last?fmtD(g.last):'never'}</td></tr>`).join('');
  const M=m.map, ord={a:0,d:1,n:2};
  let dots='';
  M.points.slice().sort((p,q)=>ord[p[2]]-ord[q[2]]).forEach(p=>dots+=`<circle class="pt ${p[2]}" cx="${p[0]}" cy="${p[1]}" r="2" data-i="${p[3]}"/>`);
@@ -203,9 +202,6 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
     <table><thead><tr><th>Group</th><th class="hidem">City</th><th>Country</th><th class="num">Members</th><th>Last met</th></tr></thead><tbody id="mgbody"></tbody></table>
     <div class="mgpager" id="mgpager"></div>
     <p class="foot" id="mgfoot"></p></div>`
-  +`<div class="card"><h2>Big audiences that stopped meeting &mdash; top reactivation targets</h2>
-    <table><thead><tr><th>Group</th><th class="hidem">City</th><th>Country</th><th class="num">Members</th><th>Last met</th></tr></thead><tbody>${dead}</tbody></table>
-    <p class="foot">Groups over 500 members with no event in a year or more. The audience is already assembled.</p></div>`
   +`<div class="card"><h2>United States</h2><p style="margin:0">${m.us.groups} US groups, ${m.us.met90} of them (${Math.round(m.us.met90/m.us.groups*100)}%) met in the last 90 days. Meetups here are not the problem &mdash; what is missing is anything built on top of them.</p></div>`;
 
  /* All-groups table: tabs (All/Active/Fading/Inactive/Never) + 25-per-page pagination */
