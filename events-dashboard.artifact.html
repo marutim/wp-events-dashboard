@@ -198,6 +198,7 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
     <div class="legend"><span><i class="dot b-green"></i>active</span><span><i class="dot b-amber"></i>fading (3&ndash;12mo)</span><span><i class="dot b-red"></i>inactive 1yr+</span><span><i class="dot b-grey"></i>never</span></div>
     <p class="foot">${m.toWatch} groups last met 3&ndash;12 months ago &mdash; the ones most likely to go quiet next.</p></div>`
   +`<div class="card"><h2>All groups by activity</h2>
+    <div class="controls" style="margin-bottom:12px"><label style="font-size:13px;color:var(--muted)">Country</label><select id="mgcountry"></select></div>
     <div class="mgtabs" id="mgtabs"></div>
     <table><thead><tr><th>Group</th><th class="hidem">City</th><th>Country</th><th class="num">Members</th><th>Last met</th></tr></thead><tbody id="mgbody"></tbody></table>
     <div class="mgpager" id="mgpager"></div>
@@ -210,10 +211,14 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
  /* All-groups table: tabs (All/Active/Fading/Inactive/Never) + 25-per-page pagination */
  const AG=(m.allGroups||[]).slice();  // pre-sorted members desc
  const PAGE=25, CATS=[['all','All'],['Active','Active'],['Fading','Fading'],['Inactive','Inactive'],['Never','Never']];
- let curCat='all', curPage=1;
- const rowsFor=c=>c==='all'?AG:AG.filter(g=>g.cat===c);
+ let curCat='all', curCountry='all', curPage=1;
+ const base=()=>curCountry==='all'?AG:AG.filter(g=>(g.country||'')===curCountry);
+ const rowsFor=c=>{const b=base();return c==='all'?b:b.filter(g=>g.cat===c);};
  const CATDOT={Active:'b-green',Fading:'b-amber',Inactive:'b-red',Never:'b-grey'};
  const dotFor=c=>`<i class="dot dot-after ${CATDOT[c]||'b-grey'}" title="${c}" aria-label="${c}"></i>`;
+ const _cc={}; AG.forEach(g=>{const k=g.country||'Unknown';_cc[k]=(_cc[k]||0)+1;});
+ $('mgcountry').innerHTML=`<option value="all">All countries (${AG.length})</option>`+Object.keys(_cc).sort((a,b)=>_cc[b]-_cc[a]||a.localeCompare(b)).map(k=>`<option value="${esc(k)}">${esc(k)} (${_cc[k]})</option>`).join('');
+ $('mgcountry').onchange=e=>{curCountry=e.target.value;curPage=1;drawTabs();drawTable();};
  function drawTabs(){
    $('mgtabs').innerHTML=CATS.map(c=>`<button class="mgtab${c[0]===curCat?' on':''}" data-c="${c[0]}">${c[1]}<span class="mgn">${rowsFor(c[0]).length}</span></button>`).join('');
    $('mgtabs').querySelectorAll('.mgtab').forEach(b=>b.onclick=()=>{curCat=b.dataset.c;curPage=1;drawTabs();drawTable();});
