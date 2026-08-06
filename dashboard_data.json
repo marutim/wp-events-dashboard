@@ -4,7 +4,7 @@
   "meetups": "2026-08-06",
   "events": "2026-08-06",
   "pipelineCounts": "2026-08-06",
-  "pipelineDetail": "2026-08-04"
+  "pipelineDetail": "2026-08-06"
  },
  "meetups": {
   "asOf": "2026-08-06",
@@ -13355,10 +13355,25 @@
   "testCount": 2,
   "records": [
    {
+    "id": 15641609,
+    "slug": "wcpt-needs-orientati",
+    "stage": "Needs Orientation/Interview",
+    "title": "WordPress Campus Connect SMK Bina Insan Mandiri, Jakarta",
+    "start": "2026-10-07",
+    "location": "Jakarta Barat, Indonesia",
+    "organizer": "Rio Burhan",
+    "anticipated": "80",
+    "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-smk-bina-insan-mandiri-jakarta/",
+    "format": "Campus Connect",
+    "country": "Indonesia",
+    "us": false,
+    "test": false
+   },
+   {
     "id": 15628178,
-    "slug": "wcpt-needs-vetting",
-    "stage": "Needs Vetting",
-    "title": "WordPress Campus Connect Lira Public Library, Mentor SS, St Gracious SS(SAGRASS) Main, St Gracious SS(SAGRASS) Leo Atubo Campus, Wisdom High School Akalo, Lira Town College, Lango College, Dr Obote College, Uganda Technical College-Lira, All Saints University Lira, Uganda Christian Institute of Proffessional Development, Lira University, Top Star SS, Ebenezer University, Dara Christian High School.",
+    "slug": "wcpt-needs-orientati",
+    "stage": "Needs Orientation/Interview",
+    "title": "WordPress Campus Connect Lira",
     "start": "2027-02-13",
     "location": "Lira City, Uganda",
     "organizer": "Okwanga Oscar",
@@ -13366,21 +13381,6 @@
     "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-lira-public-library-mentor-ss-st-gracious-sssagrass-main-st-gracious-sssagrass-leo-atubo-campus-wisdom-high-school-akalo-lira-town-college-lango-college-dr-obote-co/",
     "format": "Campus Connect",
     "country": "Uganda",
-    "us": false,
-    "test": false
-   },
-   {
-    "id": 14724230,
-    "slug": "wcpt-needs-vetting",
-    "stage": "Needs Vetting",
-    "title": "WordPress Campus Connect MMU, Melaka",
-    "start": "2026-08-24",
-    "location": "Melaka, Malaysia",
-    "organizer": "TEO YU XUAN",
-    "anticipated": "40",
-    "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-multimedia-university-mmu-melaka-campus/",
-    "format": "Campus Connect",
-    "country": "Malaysia",
     "us": false,
     "test": false
    },
@@ -13471,6 +13471,21 @@
     "link": "https://central.wordcamp.org/wordcamps/wordcamp-uyo-akwa-ibom-nigeria/",
     "format": "WordCamp",
     "country": "Nigeria",
+    "us": false,
+    "test": false
+   },
+   {
+    "id": 14724230,
+    "slug": "wcpt-needs-orientati",
+    "stage": "Needs Orientation/Interview",
+    "title": "WordPress Campus Connect MMU, Melaka",
+    "start": "2026-08-24",
+    "location": "Melaka, Malaysia",
+    "organizer": "TEO YU XUAN",
+    "anticipated": "40",
+    "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-multimedia-university-mmu-melaka-campus/",
+    "format": "Campus Connect",
+    "country": "Malaysia",
     "us": false,
     "test": false
    },
@@ -13580,21 +13595,6 @@
     "test": false
    },
    {
-    "id": 12934094,
-    "slug": "wcpt-needs-orientati",
-    "stage": "Needs Orientation/Interview",
-    "title": "WordPress Campus Connect Begum Rokeya University, Rangpur",
-    "start": "2026-02-28",
-    "location": "Rangpur, Bangladesh",
-    "organizer": "Jaed Mosharraf",
-    "anticipated": "70",
-    "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-begum-rokeya-university-rangpur/",
-    "format": "Campus Connect",
-    "country": "Bangladesh",
-    "us": false,
-    "test": false
-   },
-   {
     "id": 12690032,
     "slug": "wcpt-needs-orientati",
     "stage": "Needs Orientation/Interview",
@@ -13621,51 +13621,6 @@
     "link": "https://central.wordcamp.org/wordcamps/india/",
     "format": "Other",
     "country": "India",
-    "us": false,
-    "test": false
-   },
-   {
-    "id": 10878715,
-    "slug": "wcpt-needs-orientati",
-    "stage": "Needs Orientation/Interview",
-    "title": "do_action Mukono",
-    "start": "2025-06-04",
-    "location": "Mukono/Uganda",
-    "organizer": "Moses Cursor Ssebunya",
-    "anticipated": "",
-    "link": "https://central.wordcamp.org/wordcamps/do_action-mukono/",
-    "format": "do_action",
-    "country": "Mukono/Uganda",
-    "us": false,
-    "test": false
-   },
-   {
-    "id": 10605063,
-    "slug": "wcpt-needs-orientati",
-    "stage": "Needs Orientation/Interview",
-    "title": "WordCamp Monterrey 2026",
-    "start": null,
-    "location": "Monterrey, Nuevo Leon. Mexico",
-    "organizer": "Salvador Aguilar",
-    "anticipated": "100-200",
-    "link": "https://central.wordcamp.org/wordcamps/wordcamp-monterrey-2026/",
-    "format": "WordCamp",
-    "country": "Nuevo Leon. Mexico",
-    "us": false,
-    "test": false
-   },
-   {
-    "id": 10446713,
-    "slug": "wcpt-needs-orientati",
-    "stage": "Needs Orientation/Interview",
-    "title": "WordCamp IA Week Colombia 2025",
-    "start": null,
-    "location": "WordCamp IA Week Colombia",
-    "organizer": "Viviana Lopez",
-    "anticipated": "",
-    "link": "https://central.wordcamp.org/wordcamps/wordcamp-ia-week-colombia-2025/",
-    "format": "WordCamp",
-    "country": "WordCamp IA Week Colombia",
     "us": false,
     "test": false
    },
@@ -13820,21 +13775,6 @@
     "test": false
    },
    {
-    "id": 14481024,
-    "slug": "wcpt-more-info-reque",
-    "stage": "On Hold (more info)",
-    "title": "WordPress Campus Connect Cal State University",
-    "start": "2026-06-10",
-    "location": "Los Angeles, United States",
-    "organizer": "Erica Stewart",
-    "anticipated": "30",
-    "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-cal-state-university/",
-    "format": "Campus Connect",
-    "country": "United States",
-    "us": true,
-    "test": false
-   },
-   {
     "id": 14320729,
     "slug": "wcpt-more-info-reque",
     "stage": "On Hold (more info)",
@@ -13895,36 +13835,6 @@
     "test": false
    },
    {
-    "id": 13800060,
-    "slug": "wcpt-more-info-reque",
-    "stage": "On Hold (more info)",
-    "title": "WordPress Campus Connect Journal of Business Innovation",
-    "start": "2026-03-29",
-    "location": "10th of Ramadan city",
-    "organizer": "Journal of Business Innovation",
-    "anticipated": "50000",
-    "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-journal-of-business-innovation/",
-    "format": "Campus Connect",
-    "country": "10th of Ramadan city",
-    "us": false,
-    "test": false
-   },
-   {
-    "id": 12758189,
-    "slug": "wcpt-more-info-reque",
-    "stage": "On Hold (more info)",
-    "title": "WordCamp Shenzhen, Guangdong, China 2026",
-    "start": null,
-    "location": "Shenzhen, Guangdong, China",
-    "organizer": "Duncan Gu",
-    "anticipated": "200",
-    "link": "https://central.wordcamp.org/wordcamps/wordcamp-shenzhen-guangdong-china/",
-    "format": "WordCamp",
-    "country": "China",
-    "us": false,
-    "test": false
-   },
-   {
     "id": 12349700,
     "slug": "wcpt-more-info-reque",
     "stage": "On Hold (more info)",
@@ -13955,21 +13865,6 @@
     "test": false
    },
    {
-    "id": 12098834,
-    "slug": "wcpt-more-info-reque",
-    "stage": "On Hold (more info)",
-    "title": "WordCamp Narayanganj, Bangladesh",
-    "start": null,
-    "location": "Narayanganj, Bangladesh",
-    "organizer": "Ibrahim Riaz",
-    "anticipated": "1-25",
-    "link": "https://central.wordcamp.org/wordcamps/wordcamp-narayanganj-bangladesh/",
-    "format": "WordCamp",
-    "country": "Bangladesh",
-    "us": false,
-    "test": false
-   },
-   {
     "id": 10322622,
     "slug": "wcpt-more-info-reque",
     "stage": "On Hold (more info)",
@@ -13981,51 +13876,6 @@
     "link": "https://central.wordcamp.org/wordcamps/wordcamp-saint-petersburg-2/",
     "format": "WordCamp",
     "country": "Saint Petersburg",
-    "us": false,
-    "test": false
-   },
-   {
-    "id": 10133048,
-    "slug": "wcpt-more-info-reque",
-    "stage": "On Hold (more info)",
-    "title": "do_action VADODARA",
-    "start": null,
-    "location": "",
-    "organizer": "Krishna Patel",
-    "anticipated": "",
-    "link": "https://central.wordcamp.org/wordcamps/do_action-vadodara/",
-    "format": "do_action",
-    "country": "",
-    "us": false,
-    "test": false
-   },
-   {
-    "id": 7477807,
-    "slug": "wcpt-more-info-reque",
-    "stage": "On Hold (more info)",
-    "title": "do_action Owerri",
-    "start": null,
-    "location": "Owerri",
-    "organizer": "Arize Nnonyelu",
-    "anticipated": "",
-    "link": "https://central.wordcamp.org/wordcamps/do_action-owerri/",
-    "format": "do_action",
-    "country": "Owerri",
-    "us": false,
-    "test": false
-   },
-   {
-    "id": 6849101,
-    "slug": "wcpt-more-info-reque",
-    "stage": "On Hold (more info)",
-    "title": "Belgrade Serbia",
-    "start": null,
-    "location": "Belgrade Serbia",
-    "organizer": "Aleksandar Savkovic",
-    "anticipated": "",
-    "link": "https://central.wordcamp.org/wordcamps/belgrade-serbia/",
-    "format": "Other",
-    "country": "Belgrade Serbia",
     "us": false,
     "test": false
    },
@@ -14408,12 +14258,12 @@
     "id": 14803975,
     "slug": "wcpt-pre-planning",
     "stage": "In Pre-Planning",
-    "title": "WordCamp Kraków",
+    "title": "WordCamp Kraków 2027",
     "start": null,
     "location": "Kraków, Poland",
     "organizer": "Sebastian Miśniakiewicz",
     "anticipated": "500",
-    "link": "https://central.wordcamp.org/wordcamps/wordcamp-krakow-2/",
+    "link": "https://central.wordcamp.org/wordcamps/wordcamp-krakow-2027/",
     "format": "WordCamp",
     "country": "Poland",
     "us": false,
@@ -14690,6 +14540,21 @@
     "test": false
    },
    {
+    "id": 11699333,
+    "slug": "wcpt-pre-planning",
+    "stage": "In Pre-Planning",
+    "title": "WordCamp Santa Clarita 2027",
+    "start": null,
+    "location": "Santa Clarita, California",
+    "organizer": "Joe A Simpson Jr",
+    "anticipated": "200-300",
+    "link": "https://central.wordcamp.org/wordcamps/wordcamp-santa-clarita-2027/",
+    "format": "WordCamp",
+    "country": "California",
+    "us": false,
+    "test": false
+   },
+   {
     "id": 11137321,
     "slug": "wcpt-pre-planning",
     "stage": "In Pre-Planning",
@@ -14810,21 +14675,6 @@
     "test": false
    },
    {
-    "id": 12349237,
-    "slug": "wcpt-needs-fill-list",
-    "stage": "Needs Listing",
-    "title": "WP Future Kozhikode 2026",
-    "start": "2026-09-05",
-    "location": "Kozhikode , India",
-    "organizer": "AJAY M ARAVIND",
-    "anticipated": "150",
-    "link": "https://central.wordcamp.org/wordcamps/wordpress-future-kozhikode-2026/",
-    "format": "Other",
-    "country": "India",
-    "us": false,
-    "test": false
-   },
-   {
     "id": 10025773,
     "slug": "wcpt-needs-fill-list",
     "stage": "Needs Listing",
@@ -14836,21 +14686,6 @@
     "link": "https://central.wordcamp.org/wordcamps/trilogia-latam/",
     "format": "Other",
     "country": "LATAM",
-    "us": false,
-    "test": false
-   },
-   {
-    "id": 11699333,
-    "slug": "wcpt-needs-schedule",
-    "stage": "Needs Schedule",
-    "title": "WordCamp Santa Clarita 2027",
-    "start": null,
-    "location": "Santa Clarita, California",
-    "organizer": "Joe A Simpson Jr",
-    "anticipated": "200-300",
-    "link": "https://central.wordcamp.org/wordcamps/wordcamp-santa-clarita-2026/",
-    "format": "WordCamp",
-    "country": "California",
     "us": false,
     "test": false
    }
@@ -14906,14 +14741,14 @@
     "declined": 3
    },
    "2026-08": {
-    "newApps": 3,
-    "confirmed": 3,
+    "newApps": 4,
+    "confirmed": 4,
     "closed": 2,
-    "cancelled": 0,
+    "cancelled": 11,
     "declined": 1
    }
   },
-  "detailAsOf": "2026-08-04",
+  "detailAsOf": "2026-08-06",
   "funnelCounts": {
    "Needs Vetting": 0,
    "Needs Orientation/Interview": 19,
