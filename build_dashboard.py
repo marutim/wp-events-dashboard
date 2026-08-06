@@ -205,14 +205,31 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
    <div class="legend"><span><i class="dot" style="background:var(--green)"></i>met in ${moLbl}</span></div>
    ${moChips}${moCities}
    <p class="foot"><b>${MO.count} ${MO.count===1?'group':'groups'} met this month</b> (${moLbl}).${MO.count>MO.points.length?` ${MO.count-MO.points.length} without map coordinates not shown.`:''} <span style="color:var(--muted)">Each dot is a group whose most recent event falls in the current calendar month. Scroll or use +/&minus; to zoom, drag to pan, hover or tap a dot for details.</span></p></div>`;
+ /* Reactivation scoreboard (renders only if reactivation data is present) */
+ const RX=m.reactivation; let reactCard='';
+ if(RX){
+   const netN=RX.reactivated.length-RX.newlyQuiet.length;
+   reactCard=`<div class="card"><h2>Reactivation scoreboard</h2>
+     <p class="foot" style="margin:-4px 0 14px">Who's re-engaging: groups that had gone quiet for 3+ months and are now meeting again, versus active groups that have just gone quiet. Tracked continuously to gauge whether outreach is reviving communities. <b>Preview window ${fmtD(RX.from)} &ndash; ${fmtD(RX.to)}</b> &mdash; this widens into a rolling quarterly/yearly view as tracking accumulates.</p>
+     ${tiles([['good',RX.reactivated.length,'reactivated'],['us',RX.newlyQuiet.length,'newly quiet'],['hot',(netN>=0?'+':'')+netN,'net revival'],['',RX.membersBack.toLocaleString(),'members brought back']])}
+     <h3 style="font-family:var(--serif);font-size:15px;margin:18px 0 6px">Reactivated <span style="color:var(--muted);font-weight:400;font-size:13px">&mdash; started meeting again after a 3+ month break</span></h3>
+     <table><thead><tr><th>Group</th><th class="hidem">Country</th><th class="num">Members</th><th>Gap</th><th>Met again</th></tr></thead><tbody id="rxbody"></tbody></table>
+     <div class="mgpager" id="rxpager"></div>
+     <h3 style="font-family:var(--serif);font-size:15px;margin:22px 0 6px">Newly gone quiet <span style="color:var(--muted);font-weight:400;font-size:13px">&mdash; active &rarr; fading, catch them early</span></h3>
+     <table><thead><tr><th>Group</th><th class="hidem">Country</th><th class="num">Members</th><th>Last met</th><th>Quiet for</th><th>Status</th></tr></thead><tbody id="rqbody"></tbody></table>
+     <div class="mgpager" id="rqpager"></div>
+     <div class="legend"><span><i class="dot b-green"></i>reactivated</span><span><i class="dot b-amber"></i>fading</span><span><i class="dot b-red"></i>inactive</span></div>
+     <p class="foot">Detected by comparing daily snapshots over this window. A longer, continuous view unlocks once the Meetup pull captures each group's event history.</p></div>`;
+ }
  $('meetups').innerHTML=
   tiles([['hot',m.groups,'groups'],['',m.members.toLocaleString(),'members'],['',m.countries,'countries'],
    ['good',m.met90,'met in 90 days'],['us',m.dormant,'inactive 12mo+'],['',m.organizers.toLocaleString(),'organizers']])
   +mapCard
-  +monthCard
   +`<div class="card"><h2>When each group last met</h2>${rec}
     <div class="legend"><span><i class="dot b-green"></i>active</span><span><i class="dot b-amber"></i>fading (3&ndash;12mo)</span><span><i class="dot b-red"></i>inactive 1yr+</span><span><i class="dot b-grey"></i>never</span></div>
     <p class="foot">${m.toWatch} groups last met 3&ndash;12 months ago &mdash; the ones most likely to go quiet next.</p></div>`
+  +monthCard
+  +reactCard
   +`<div class="card"><h2>All groups by activity</h2>
     <div class="controls" style="margin-bottom:12px"><label style="font-size:13px;color:var(--muted)">Country</label><select id="mgcountry"></select></div>
     <div class="mgtabs" id="mgtabs"></div>
@@ -220,6 +237,24 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
     <div class="mgpager" id="mgpager"></div>
     <p class="foot" id="mgfoot"></p></div>`
   +`<div class="card"><h2>United States</h2><p style="margin:0">${m.us.groups} US groups, ${m.us.met90} of them (${Math.round(m.us.met90/m.us.groups*100)}%) met in the last 90 days. Meetups here are not the problem &mdash; what is missing is anything built on top of them.</p></div>`;
+
+ /* Reactivation scoreboard: paginate each section (10 rows per page) */
+ if(RX){
+   const RP=10;
+   const mo=(a,b)=>Math.max(0,Math.round((new Date(b)-new Date(a))/2592e6));
+   const rxRow=g=>`<tr><td><span class="dot b-green"></span><a href="${esc(g.url)}" target="_blank" rel="noopener noreferrer">${esc(g.group)}</a></td><td class="hidem">${esc(g.country)}</td><td class="num">${(g.members||0).toLocaleString()}</td><td>${Math.round(g.gapDays/30)} mo</td><td>${fmtD(g.met)}</td></tr>`;
+   const rqRow=g=>`<tr><td><span class="dot ${g.cat==='Inactive'?'b-red':'b-amber'}"></span><a href="${esc(g.url)}" target="_blank" rel="noopener noreferrer">${esc(g.group)}</a></td><td class="hidem">${esc(g.country)}</td><td class="num">${(g.members||0).toLocaleString()}</td><td>${fmtD(g.last)}</td><td>${mo(g.last,RX.to)} mo</td><td>${g.cat}</td></tr>`;
+   const drawSec=(list,rowFn,bodyId,pagerId,page,onp)=>{
+     const pages=Math.max(1,Math.ceil(list.length/RP)); if(page>pages)page=pages;
+     $(bodyId).innerHTML=list.slice((page-1)*RP,page*RP).map(rowFn).join('')||`<tr><td colspan="6" style="color:var(--muted)">None in this window.</td></tr>`;
+     $(pagerId).innerHTML=list.length>RP?`<button class="mgpg" data-p="prev"${page<=1?' disabled':''}>← Prev</button><span class="mgpginfo">${(page-1)*RP+1}–${Math.min(page*RP,list.length)} of ${list.length}</span><button class="mgpg" data-p="next"${page>=pages?' disabled':''}>Next →</button>`:'';
+     $(pagerId).querySelectorAll('.mgpg').forEach(b=>b.onclick=()=>onp(b.dataset.p==='next'?1:-1,pages));
+   };
+   let rxp=1,rqp=1;
+   const drawRx=()=>drawSec(RX.reactivated,rxRow,'rxbody','rxpager',rxp,(d,pg)=>{rxp=Math.max(1,Math.min(pg,rxp+d));drawRx();});
+   const drawRq=()=>drawSec(RX.newlyQuiet,rqRow,'rqbody','rqpager',rqp,(d,pg)=>{rqp=Math.max(1,Math.min(pg,rqp+d));drawRq();});
+   drawRx();drawRq();
+ }
 
  /* All-groups table: tabs (All/Active/Fading/Inactive/Never) + 25-per-page pagination */
  const AG=(m.allGroups||[]).slice();  // pre-sorted members desc

@@ -4648,6 +4648,215 @@
    ],
    "count": 19
   },
+  "reactivation": {
+   "from": "2026-07-20",
+   "to": "2026-08-06",
+   "reactivated": [
+    {
+     "group": "Lagos WordPress Community",
+     "country": "Nigeria",
+     "members": 2072,
+     "gapDays": 104,
+     "met": "2026-07-31",
+     "url": "https://www.meetup.com/lagos-wordpress-meetup-group"
+    },
+    {
+     "group": "WordPress Jaipur",
+     "country": "India",
+     "members": 2065,
+     "gapDays": 91,
+     "met": "2026-07-25",
+     "url": "https://www.meetup.com/wordpress-jaipur"
+    },
+    {
+     "group": "Yogyakarta WordPress Meetup",
+     "country": "Indonesia",
+     "members": 1617,
+     "gapDays": 279,
+     "met": "2026-07-31",
+     "url": "https://www.meetup.com/yogyakarta-wordpress-meetup"
+    },
+    {
+     "group": "Owerri WordPress Meetup",
+     "country": "Nigeria",
+     "members": 1606,
+     "gapDays": 147,
+     "met": "2026-07-31",
+     "url": "https://www.meetup.com/Owerri-WordPress-Meetup"
+    },
+    {
+     "group": "Thane WordPress Meetup",
+     "country": "India",
+     "members": 1593,
+     "gapDays": 385,
+     "met": "2026-07-25",
+     "url": "https://www.meetup.com/thane-wordpress-meetup"
+    },
+    {
+     "group": "Chattogram WordPress Meetup",
+     "country": "Bangladesh",
+     "members": 1566,
+     "gapDays": 220,
+     "met": "2026-08-02",
+     "url": "https://www.meetup.com/Chattogram-WordPress-Meetup"
+    },
+    {
+     "group": "Kuala Lumpur WordPress Meetup",
+     "country": "Malaysia",
+     "members": 1363,
+     "gapDays": 365,
+     "met": "2026-07-25",
+     "url": "https://www.meetup.com/Kuala-Lumpur-WordPress-Meetup"
+    },
+    {
+     "group": "Surabaya WordPress Meetup",
+     "country": "Indonesia",
+     "members": 1170,
+     "gapDays": 112,
+     "met": "2026-07-31",
+     "url": "https://www.meetup.com/surabaya-wordpress-meetup"
+    },
+    {
+     "group": "Rajshahi WordPress Meetup",
+     "country": "Bangladesh",
+     "members": 1124,
+     "gapDays": 154,
+     "met": "2026-07-31",
+     "url": "https://www.meetup.com/rajshahi-wordpress-meetup"
+    },
+    {
+     "group": "Uyo WordPress Meetup",
+     "country": "Nigeria",
+     "members": 1003,
+     "gapDays": 155,
+     "met": "2026-08-01",
+     "url": "https://www.meetup.com/uyo-wordpress-meetup"
+    },
+    {
+     "group": "Shinshu WordPress Meetup",
+     "country": "Japan",
+     "members": 270,
+     "gapDays": 119,
+     "met": "2026-07-25",
+     "url": "https://www.meetup.com/Shinshu-WordPress-Meetup"
+    },
+    {
+     "group": "WPMeetup Würzburg",
+     "country": "Germany",
+     "members": 248,
+     "gapDays": 308,
+     "met": "2026-07-21",
+     "url": "https://www.meetup.com/wuerzburg-wordpress-meetup"
+    }
+   ],
+   "newlyQuiet": [
+    {
+     "group": "WordPress Barcelona",
+     "country": "Spain",
+     "members": 4552,
+     "last": "2026-04-24",
+     "url": "https://www.meetup.com/wordpressbcn",
+     "cat": "Fading"
+    },
+    {
+     "group": "Boston WordPress",
+     "country": "USA",
+     "members": 3043,
+     "last": "2026-04-27",
+     "url": "https://www.meetup.com/boston-wordpress-meetup",
+     "cat": "Fading"
+    },
+    {
+     "group": "Meetup WordPress POA",
+     "country": "Brazil",
+     "members": 1297,
+     "last": "2026-04-22",
+     "url": "https://www.meetup.com/wp-poa",
+     "cat": "Fading"
+    },
+    {
+     "group": "The San Antonio WordPress Meetup Group",
+     "country": "USA",
+     "members": 1290,
+     "last": "2026-04-30",
+     "url": "https://www.meetup.com/sanantoniowordpress",
+     "cat": "Fading"
+    },
+    {
+     "group": "WordPress León meetup",
+     "country": "Spain",
+     "members": 565,
+     "last": "2026-04-21",
+     "url": "https://www.meetup.com/leon-wordpress-meetup",
+     "cat": "Fading"
+    },
+    {
+     "group": "WordPress Castelló",
+     "country": "Spain",
+     "members": 515,
+     "last": "2026-04-21",
+     "url": "https://www.meetup.com/meetup-wordpress-castello",
+     "cat": "Fading"
+    },
+    {
+     "group": "Ipoh WordPress Meetup",
+     "country": "Malaysia",
+     "members": 252,
+     "last": "2026-05-01",
+     "url": "https://www.meetup.com/ipoh-wordpress-meetup",
+     "cat": "Fading"
+    },
+    {
+     "group": "Udupi WordPress Meetup Group",
+     "country": "India",
+     "members": 164,
+     "last": "2026-05-02",
+     "url": "https://www.meetup.com/wpudupi",
+     "cat": "Fading"
+    },
+    {
+     "group": "Cholet WordPress Meetup",
+     "country": "France",
+     "members": 149,
+     "last": "2026-05-05",
+     "url": "https://www.meetup.com/cholet-wordpress-meetup",
+     "cat": "Fading"
+    },
+    {
+     "group": "WordPress Lorient - Groupe Meetup",
+     "country": "France",
+     "members": 143,
+     "last": "2026-05-05",
+     "url": "https://www.meetup.com/lorient-wordpress-meetup-group",
+     "cat": "Fading"
+    },
+    {
+     "group": "Guanacaste WordPress Meetup",
+     "country": "Costa Rica",
+     "members": 90,
+     "last": "2026-04-22",
+     "url": "https://www.meetup.com/wpguanacaste",
+     "cat": "Fading"
+    },
+    {
+     "group": "WordPress Meetup Saarland",
+     "country": "Germany",
+     "members": 88,
+     "last": "2026-04-23",
+     "url": "https://www.meetup.com/wordpress-meetup-saarland",
+     "cat": "Fading"
+    },
+    {
+     "group": "Halsnæs WordPress Meetup",
+     "country": "Denmark",
+     "members": 67,
+     "last": "2026-05-05",
+     "url": "https://www.meetup.com/halsnaes-wordpress-meetup",
+     "cat": "Fading"
+    }
+   ],
+   "membersBack": 15697
+  },
   "allGroups": [
    {
     "id": 204,
@@ -11725,7 +11934,7 @@
   "asOf": "2026-08-06",
   "ytd": 77,
   "ytdPrev": 49,
-  "calendar": 111,
+  "calendar": 112,
   "byYear": {
    "2018": [
     2,
@@ -11779,7 +11988,7 @@
     3,
     39,
     46,
-    23
+    24
    ]
   },
   "formats": [
@@ -11801,7 +12010,7 @@
    ],
    [
     "Other newer",
-    12
+    13
    ]
   ],
   "byCountry": [
@@ -11809,7 +12018,7 @@
     "India",
     4,
     7,
-    5
+    6
    ],
    [
     "Spain",
@@ -11995,380 +12204,380 @@
      17
     ],
     [
-     555.1,
-     124.3,
+     710.7,
+     218.7,
      "n",
      18
     ],
     [
-     266.6,
-     222.5,
+     555.1,
+     124.3,
      "n",
      19
     ],
     [
      266.6,
-     222.4,
+     222.5,
      "n",
      20
+    ],
+    [
+     266.6,
+     222.4,
+     "n",
+     21
     ],
     [
      522.1,
      236.1,
      "n",
-     21
+     22
     ],
     [
      755.1,
      180.8,
      "l",
-     22
+     23
     ],
     [
      498.9,
      140.3,
      "l",
-     23
+     24
     ],
     [
      715.6,
      214.0,
      "l",
-     24
+     25
     ],
     [
      564.8,
      131.4,
      "l",
-     25
+     26
     ],
     [
      547.4,
      108.0,
      "l",
-     26
+     27
     ],
     [
      737.0,
      173.0,
      "l",
-     27
+     28
     ],
     [
      260.5,
      216.3,
      "l",
-     28
+     29
     ],
     [
      476.6,
      129.6,
      "l",
-     29
+     30
     ],
     [
      528.9,
      128.6,
      "l",
-     30
+     31
     ],
     [
      591.4,
      243.8,
      "l",
-     31
+     32
     ],
     [
      566.0,
      144.5,
      "l",
-     32
+     33
     ],
     [
      840.4,
      220.2,
      "l",
-     33
+     34
     ],
     [
      710.6,
      175.4,
      "l",
-     34
+     35
     ],
     [
      522.0,
      237.1,
      "l",
-     35
+     36
     ],
     [
      158.0,
      113.1,
      "l",
-     36
+     37
     ],
     [
      588.1,
      250.9,
      "l",
-     37
+     38
     ],
     [
      511.9,
      105.3,
      "l",
-     38
+     39
     ],
     [
      577.8,
      322.3,
      "l",
-     39
+     40
     ],
     [
      592.3,
      248.8,
      "l",
-     40
+     41
     ],
     [
      556.8,
      125.5,
      "l",
-     41
+     42
     ],
     [
      746.2,
      182.3,
      "l",
-     42
+     43
     ],
     [
      266.5,
      222.4,
      "l",
-     43
+     44
     ],
     [
      487.5,
      148.0,
      "l",
-     44
+     45
     ],
     [
      521.3,
      124.9,
      "l",
-     45
+     46
     ],
     [
      590.5,
      249.1,
      "l",
-     46
+     47
     ],
     [
      497.5,
      134.3,
      "l",
-     47
+     48
     ],
     [
      545.4,
      116.1,
      "l",
-     48
+     49
     ],
     [
      534.5,
      107.4,
      "l",
-     49
+     50
     ],
     [
      590.9,
      249.0,
      "l",
-     50
+     51
     ],
     [
      489.3,
      137.8,
      "l",
-     51
+     52
     ],
     [
      706.2,
      203.5,
      "l",
-     52
+     53
     ],
     [
      523.5,
      112.5,
      "l",
-     53
+     54
     ],
     [
      495.3,
      116.3,
      "l",
-     54
+     55
     ],
     [
      540.2,
      122.1,
      "l",
-     55
+     56
     ],
     [
      475.9,
      135.7,
      "l",
-     56
+     57
     ],
     [
      705.1,
      198.5,
      "l",
-     57
+     58
     ],
     [
      520.2,
      128.6,
      "l",
-     58
+     59
     ],
     [
      731.8,
      173.1,
      "l",
-     59
+     60
     ],
     [
      519.5,
      236.6,
      "l",
-     60
+     61
     ],
     [
      803.6,
      270.9,
      "c",
-     61
+     62
     ],
     [
      701.5,
      185.7,
      "c",
-     62
+     63
     ],
     [
      734.6,
      173.1,
      "c",
-     63
+     64
     ],
     [
      876.4,
      153.6,
      "c",
-     64
+     65
     ],
     [
      737.0,
      173.0,
      "c",
-     65
+     66
     ],
     [
      803.2,
      269.4,
      "c",
-     66
+     67
     ],
     [
      704.9,
      181.7,
      "c",
-     67
+     68
     ],
     [
      590.2,
      249.2,
      "c",
-     68
+     69
     ],
     [
      782.5,
      241.7,
      "c",
-     69
+     70
     ],
     [
      702.2,
      191.2,
      "c",
-     70
+     71
     ],
     [
      745.7,
      187.3,
      "c",
-     71
+     72
     ],
     [
      877.0,
      152.7,
      "c",
-     72
+     73
     ],
     [
      707.4,
      176.7,
      "c",
-     73
+     74
     ],
     [
      836.3,
      186.8,
      "c",
-     74
+     75
     ],
     [
      803.5,
      270.6,
      "c",
-     75
+     76
     ],
     [
      248.6,
      209.4,
      "c",
-     76
+     77
     ],
     [
      528.9,
      128.6,
      "c",
-     77
+     78
     ],
     [
      746.3,
      178.6,
      "c",
-     78
+     79
     ],
     [
      588.6,
      251.2,
-     "c",
-     79
-    ],
-    [
-     555.4,
-     110.9,
      "c",
      80
     ],
@@ -12379,172 +12588,178 @@
      81
     ],
     [
+     555.4,
+     110.9,
+     "c",
+     82
+    ],
+    [
      888.1,
      151.0,
      "c",
-     82
+     83
     ],
     [
      796.3,
      267.4,
      "c",
-     83
+     84
     ],
     [
      812.9,
      270.2,
      "c",
-     84
+     85
     ],
     [
      748.2,
      180.8,
      "c",
-     85
+     86
     ],
     [
      587.0,
      247.7,
      "c",
-     86
+     87
     ],
     [
      266.9,
      222.6,
      "c",
-     87
+     88
     ],
     [
      799.0,
      269.2,
      "c",
-     88
+     89
     ],
     [
      264.4,
      222.3,
      "c",
-     89
+     90
     ],
     [
      737.0,
      173.1,
      "c",
-     90
+     91
     ],
     [
      260.5,
      216.9,
      "c",
-     91
+     92
     ],
     [
      506.8,
      134.6,
      "c",
-     92
+     93
     ],
     [
      489.8,
      134.2,
      "c",
-     93
+     94
     ],
     [
      703.0,
      162.7,
      "c",
-     94
+     95
     ],
     [
      801.4,
      271.3,
      "c",
-     95
+     96
     ],
     [
      501.7,
      134.4,
      "c",
-     96
+     97
     ],
     [
      497.5,
      134.3,
      "c",
-     97
+     98
     ],
     [
      488.8,
      139.3,
      "c",
-     98
+     99
     ],
     [
      476.7,
      129.6,
      "c",
-     99
+     100
     ],
     [
      538.5,
      125.4,
      "c",
-     100
+     101
     ],
     [
      709.0,
      214.6,
      "c",
-     101
+     102
     ],
     [
      787.9,
      245.7,
      "c",
-     102
+     103
     ],
     [
      751.1,
      183.9,
      "c",
-     103
+     104
     ],
     [
      745.5,
      187.3,
      "c",
-     104
+     105
     ],
     [
      844.2,
      221.4,
      "c",
-     105
+     106
     ],
     [
      591.4,
      243.7,
      "c",
-     106
+     107
     ],
     [
      188.7,
      157.1,
      "f",
-     107
+     108
     ],
     [
      555.4,
      111.0,
      "f",
-     108
+     109
     ],
     [
      702.4,
      197.0,
      "f",
-     109
+     110
     ]
    ],
    "eventList": [
@@ -12673,6 +12888,13 @@
      "d": "2026-03-08",
      "ty": "Women WordPress Day",
      "u": "https://central.wordcamp.org/wordcamps/women-wp-day-nicaragua-2026/"
+    },
+    {
+     "n": "WP Future Conclave Kozhikode 2026",
+     "loc": "Kozhikode , India",
+     "d": "2026-09-05",
+     "ty": "Community event",
+     "u": "https://central.wordcamp.org/wordcamps/wordpress-future-conclave-kozhikode-2026/"
     },
     {
      "n": "WordPress Developer Day Novi Sad 2026",
@@ -13323,7 +13545,7 @@
     "f": 3,
     "l": 39,
     "c": 46,
-    "n": 22
+    "n": 23
    },
    "w": 1000,
    "h": 500

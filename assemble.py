@@ -27,6 +27,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DATA_JS   = os.path.join(HERE, "data.js")
 HISTORY   = os.path.join(HERE, "history.json")
 DASH      = os.path.join(HERE, "dashboard_data.json")
+BASELINE  = os.path.join(HERE, "reactivation_baseline.json")
 TODAY     = datetime.date.today()
 W, H      = 1000, 500
 
@@ -73,6 +74,43 @@ def cat4(d):
     return "Inactive"
 
 STCODE = {"Active": "a", "Dormant": "d", "Not started": "n"}
+
+def build_reactivation(groups, cur_asof):
+    """Reactivation scoreboard: compare each group's last-meeting date in the live
+    daily data.js against a fixed baseline (reactivation_baseline.json). Reactivated =
+    met again after a 90+ day gap; newly quiet = was active at baseline, now fading/inactive.
+    Same Meetup source as everything else, just two points in time."""
+    if not os.path.exists(BASELINE):
+        return None
+    base = json.load(open(BASELINE))
+    blast = base.get("lastEvent", {})
+    b_asof = base.get("asOf")
+    def d(s):
+        try: return datetime.date.fromisoformat(s) if s else None
+        except Exception: return None
+    def cat(last, ref):
+        x = d(last)
+        if not x: return "Never"
+        days = (ref - x).days
+        return "Active" if days <= 90 else "Fading" if days <= 365 else "Inactive"
+    bref, cref = d(b_asof), d(cur_asof)
+    react, quiet = [], []
+    for g in groups:
+        url = g.get("url")
+        if not url or url not in blast: continue
+        ol, nl = d(blast.get(url)), d(g.get("lastEvent") or "")
+        if nl and ol and nl > ol and (nl - ol).days > 90:
+            react.append({"group": g.get("group",""), "country": g.get("country",""),
+                          "members": int(g.get("members") or 0), "gapDays": (nl - ol).days,
+                          "met": g.get("lastEvent"), "url": url})
+        elif nl and ol and nl == ol and cat(blast.get(url), bref) == "Active" and cat(g.get("lastEvent"), cref) in ("Fading", "Inactive"):
+            quiet.append({"group": g.get("group",""), "country": g.get("country",""),
+                          "members": int(g.get("members") or 0), "last": g.get("lastEvent"),
+                          "url": url, "cat": cat(g.get("lastEvent"), cref)})
+    react.sort(key=lambda x: x["members"], reverse=True)
+    quiet.sort(key=lambda x: x["members"], reverse=True)
+    return {"from": b_asof, "to": cur_asof, "reactivated": react, "newlyQuiet": quiet,
+            "membersBack": sum(r["members"] for r in react)}
 
 def build_meetups(existing):
     groups, uni, meta = load_meetups_source()
@@ -139,6 +177,7 @@ def build_meetups(existing):
         "recency": recency, "deadBig": deadBig, "toWatch": toWatch, "us": us,
         "map": {"land": land, "points": points, "counts": counts, "w": W, "h": H},
         "monthMap": {"month": month_key, "points": month_points, "count": len(month_met)},
+        "reactivation": build_reactivation(groups, uni.get("asOf") or TODAY.isoformat()),
         "allGroups": allGroups,
     }, uni.get("asOf") or TODAY.isoformat()
 
