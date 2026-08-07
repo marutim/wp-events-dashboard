@@ -568,6 +568,7 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
     <button class="btn" id="usbtn">US only</button></div>
     <table><thead><tr><th data-k="stage">Stage</th><th data-k="format">Format</th><th data-k="title">Event</th>
     <th data-k="location" class="hidem">Location</th><th data-k="country">Country</th></tr></thead><tbody id="tb"></tbody></table>
+    <div class="mgpager" id="tbpager"></div>
     <p class="foot" id="cnt"></p></div>`;
  if(stale.length){(function(){
    const SP=15; let sp=1;
@@ -583,14 +584,22 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
  $('stg').innerHTML+=order.map(s=>`<option>${s}</option>`).join('');
  const rank={};order.forEach((s,i)=>rank[s]=i);
  let st={q:'',fmt:'',stg:'',us:false,sort:'stage',dir:1};
+ const TBP=25; let tbPage=1;
  function rows(){let r=P.records.filter(x=>{if(st.us&&!x.us)return false;if(st.fmt&&x.format!==st.fmt)return false;if(st.stg&&x.stage!==st.stg)return false;if(st.q){const s=(x.title+' '+x.location+' '+x.country).toLowerCase();if(!s.includes(st.q))return false;}return true;});
    r.sort((a,b)=>{let av,bv;if(st.sort==='stage'){av=rank[a.stage];bv=rank[b.stage];}else{av=(a[st.sort]||'').toString().toLowerCase();bv=(b[st.sort]||'').toString().toLowerCase();}return av<bv?-st.dir:av>bv?st.dir:0;});return r;}
- function render(){const r=rows();$('tb').innerHTML=r.map(x=>`<tr class="${x.us?'us':''}"><td><span class="stage">${x.stage}</span></td><td><span class="fmt">${x.format}</span></td><td>${x.link?`<a href="${x.link}" target="_blank" rel="noopener">${x.title}</a>`:x.title}</td><td class="hidem">${x.location||'—'}</td><td>${x.us?'<span class="usdot">● </span>':''}${x.country}</td></tr>`).join('');$('cnt').textContent=`${r.length} shown${st.us?' · US only':''}`;}
- $('q').oninput=e=>{st.q=e.target.value.toLowerCase();render();};
- $('fmt').onchange=e=>{st.fmt=e.target.value;render();};
- $('stg').onchange=e=>{st.stg=e.target.value;render();};
- $('usbtn').onclick=e=>{st.us=!st.us;e.target.classList.toggle('on',st.us);render();};
- document.querySelectorAll('#pipeline th[data-k]').forEach(th=>th.onclick=()=>{const k=th.dataset.k;st.dir=(st.sort===k)?-st.dir:1;st.sort=k;render();});
+ function render(){const all=rows();const pages=Math.max(1,Math.ceil(all.length/TBP));if(tbPage>pages)tbPage=pages;
+   const r=all.slice((tbPage-1)*TBP,tbPage*TBP);
+   $('tb').innerHTML=r.map(x=>`<tr class="${x.us?'us':''}"><td><span class="stage">${x.stage}</span></td><td><span class="fmt">${x.format}</span></td><td>${x.link?`<a href="${x.link}" target="_blank" rel="noopener">${x.title}</a>`:x.title}</td><td class="hidem">${x.location||'—'}</td><td>${x.us?'<span class="usdot">● </span>':''}${x.country}</td></tr>`).join('');
+   const from=all.length?(tbPage-1)*TBP+1:0, to=Math.min(tbPage*TBP,all.length);
+   $('cnt').textContent=`${all.length?`Showing ${from}–${to} of ${all.length}`:'0 shown'}${st.us?' · US only':''}`;
+   $('tbpager').innerHTML=all.length>TBP?`<button class="mgpg" data-p="prev"${tbPage<=1?' disabled':''}>← Prev</button><span class="mgpginfo">Page ${tbPage} / ${pages}</span><button class="mgpg" data-p="next"${tbPage>=pages?' disabled':''}>Next →</button>`:'';
+   $('tbpager').querySelectorAll('.mgpg').forEach(b=>b.onclick=()=>{if(b.dataset.p==='prev'&&tbPage>1)tbPage--;else if(b.dataset.p==='next'&&tbPage<pages)tbPage++;render();});}
+ const apply=()=>{tbPage=1;render();};
+ $('q').oninput=e=>{st.q=e.target.value.toLowerCase();apply();};
+ $('fmt').onchange=e=>{st.fmt=e.target.value;apply();};
+ $('stg').onchange=e=>{st.stg=e.target.value;apply();};
+ $('usbtn').onclick=e=>{st.us=!st.us;e.target.classList.toggle('on',st.us);apply();};
+ document.querySelectorAll('#pipeline th[data-k]').forEach(th=>th.onclick=()=>{const k=th.dataset.k;st.dir=(st.sort===k)?-st.dir:1;st.sort=k;apply();});
  render();
 })();
 
