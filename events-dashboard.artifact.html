@@ -441,6 +441,41 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
  let fh=order.map(s=>barRow(s,[['b-blue',counts[s]]],counts[s],mx)).join('');
  fh+=barRow('→ Scheduled',[['b-green',P.scheduledCount]],P.scheduledCount,mx);
  const usN=P.records.filter(r=>r.us).length, wcN=P.records.filter(r=>r.format==='WordCamp').length;
+ const esc=x=>String(x==null?'':x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+ /* Stale applications: active-funnel apps that haven't changed stage in STALE_DAYS+ */
+ const STALE_DAYS=90;  // 3 months — change here to adjust the threshold
+ const _sref=P.detailAsOf?new Date(P.detailAsOf):new Date();
+ const stale=(P.records||[]).filter(r=>r.modified).map(r=>Object.assign({stuck:Math.round((_sref-new Date(r.modified))/864e5)},r)).filter(r=>r.stuck>=STALE_DAYS).sort((a,b)=>b.stuck-a.stuck);
+ /* event-date urgency: a stuck app whose planned date has passed (or is weeks away) is far more urgent */
+ const _urg=r=>{
+   if(!r.start) return {txt:'no date set',cls:'color:var(--muted)'};
+   const rw=Math.round((new Date(r.start)-_sref)/864e5);
+   if(rw<0) return {txt:fmtD(r.start)+' &middot; date passed',cls:'color:var(--red);font-weight:600'};
+   if(rw<=60) return {txt:fmtD(r.start)+' &middot; in '+rw+'d',cls:'color:var(--amber);font-weight:600'};
+   return {txt:fmtD(r.start),cls:'color:var(--muted)'};
+ };
+ let staleCard='';
+ if(stale.length){
+   const byS={}; stale.forEach(r=>byS[r.stage]=(byS[r.stage]||0)+1);
+   const bd=Object.entries(byS).sort((a,b)=>b[1]-a[1]).map(x=>`${esc(x[0])} ${x[1]}`).join(' · ');
+   const passedN=stale.filter(r=>r.start && new Date(r.start)<_sref).length;
+   const soonN=stale.filter(r=>{if(!r.start)return false;const rw=(new Date(r.start)-_sref)/864e5;return rw>=0&&rw<=60;}).length;
+   let urgLine='';
+   if(passedN||soonN){
+     const parts=[];
+     if(passedN) parts.push(`<b style="color:var(--red)">${passedN} already past their planned date</b>`);
+     if(soonN) parts.push(`<b style="color:var(--amber)">${soonN} within the next two months</b>`);
+     urgLine=` ${parts.join(' and ')} &mdash; those are the most urgent.`;
+   }
+   const stStgs=order.filter(s=>stale.some(r=>r.stage===s));
+   const stFmts=[...new Set(stale.map(r=>r.format))].sort();
+   staleCard=`<div class="card"><h2>Needs attention</h2>
+     <p class="foot" style="margin:-4px 0 12px"><b>${stale.length} applications haven't changed stage in ${Math.round(STALE_DAYS/30)}+ months.</b>${urgLine} <span style="color:var(--muted)">${bd}</span></p>
+     <div class="controls"><select id="ststg"><option value="">All stages</option>${stStgs.map(s=>`<option>${esc(s)}</option>`).join('')}</select>
+     <select id="stfmt"><option value="">All formats</option>${stFmts.map(f=>`<option>${esc(f)}</option>`).join('')}</select></div>
+     <table><thead><tr><th>Stage</th><th>Format</th><th>Event</th><th class="hidem">Location</th><th>Country</th><th>Event date</th><th>Stuck for</th></tr></thead><tbody id="stbody"></tbody></table>
+     <div class="mgpager" id="stpager"></div></div>`;
+ }
 
  // momentum (wordcamp-status flow)
  let mom='';
@@ -464,6 +499,7 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
    ['',wcN,'WordCamps'],['',P.cancelledCount,'cancelled all-time'],['',P.declinedCount,'declined all-time']])
   +`<div class="card"><h2>Application funnel — where events are stuck</h2>${fh}
     <p class="foot">${P.testCount} test records excluded. A confirmed event has cleared every stage above.</p></div>`
+  +staleCard
   +mom
   +`<div class="card"><h2>The ${P.records.length} events in flight — outreach list</h2>${P.detailAsOf?`<p class="foot" style="margin:-4px 0 12px">Per-event detail as of ${fmtD(P.detailAsOf)}, refreshed manually. Funnel counts above are current.</p>`:''}
     <div class="controls"><input id="q" placeholder="Search title, city, country…">
@@ -473,6 +509,15 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
     <table><thead><tr><th data-k="stage">Stage</th><th data-k="format">Format</th><th data-k="title">Event</th>
     <th data-k="location" class="hidem">Location</th><th data-k="country">Country</th></tr></thead><tbody id="tb"></tbody></table>
     <p class="foot" id="cnt"></p></div>`;
+ if(stale.length){(function(){
+   const SP=15; let sp=1;
+   const stg=$('ststg'), fmt=$('stfmt');
+   const row=r=>{const u=_urg(r);return `<tr><td><span class="stage">${esc(r.stage)}</span></td><td><span class="fmt">${esc(r.format)}</span></td><td>${r.link?`<a href="${esc(r.link)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a>`:esc(r.title)}</td><td class="hidem">${esc(r.location)||'—'}</td><td>${r.us?'<span class="usdot">● </span>':''}${esc(r.country)}</td><td><span style="${u.cls}">${u.txt}</span></td><td>${Math.max(1,Math.round(r.stuck/30))} mo</td></tr>`;};
+   function cur(){const s=stg.value,f=fmt.value;return stale.filter(r=>(!s||r.stage===s)&&(!f||r.format===f));}
+   function draw(){const list=cur();const pages=Math.max(1,Math.ceil(list.length/SP));if(sp>pages)sp=pages;$('stbody').innerHTML=list.length?list.slice((sp-1)*SP,sp*SP).map(row).join(''):'<tr><td colspan="7" style="color:var(--muted);padding:14px 10px">No applications match this filter.</td></tr>';$('stpager').innerHTML=list.length>SP?`<button class="mgpg" data-p="prev"${sp<=1?' disabled':''}>← Prev</button><span class="mgpginfo">${(sp-1)*SP+1}–${Math.min(sp*SP,list.length)} of ${list.length}</span><button class="mgpg" data-p="next"${sp>=pages?' disabled':''}>Next →</button>`:'';$('stpager').querySelectorAll('.mgpg').forEach(b=>b.onclick=()=>{sp+=b.dataset.p==='next'?1:-1;draw();});}
+   stg.onchange=fmt.onchange=()=>{sp=1;draw();};
+   draw();
+ })();}
  const fmts=[...new Set(P.records.map(r=>r.format))].sort();
  $('fmt').innerHTML+=fmts.map(f=>`<option>${f}</option>`).join('');
  $('stg').innerHTML+=order.map(s=>`<option>${s}</option>`).join('');

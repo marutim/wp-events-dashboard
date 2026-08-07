@@ -61,7 +61,7 @@
         const test = /test/i.test(title);
         recs.push({ id: r.id, slug, stage, title, start: ts ? new Date(+ts * 1000).toISOString().slice(0, 10) : null,
           location: loc, organizer: r["Organizer Name"] || "", anticipated: r["Number of Anticipated Attendees"] || "",
-          link: r.link || "", format: fmtType(title), country, us: /(usa|united states)/i.test(country), test });
+          link: r.link || "", format: fmtType(title), country, us: /(usa|united states)/i.test(country), modified: (r.modified || "").slice(0, 10), test });
         flow.push({ created: monthOf(r.date), modified: monthOf(r.modified), startMonth: startMonth(ts), status: slug, test });
       }
       if (batch.length < 100) break;
