@@ -43,6 +43,9 @@ query ($urlname: ID!, $cursor: String) {
           lon
           foundedDate
           memberships { totalCount }
+          leaders: memberships(first: 12, filter: { status: LEADER }) {
+            edges { node { id name memberUrl } }
+          }
           groupAnalytics {
             lastEventDate
             totalPastEvents
@@ -161,6 +164,24 @@ def gql(token, variables, query=None):
         die("GraphQL errors:\n" + json.dumps(resp["errors"], indent=2))
     return resp["data"]
 
+# The central chapter-program account is a "leader" of every group; it is not the
+# local organizer, so we drop it and keep only the actual local leadership.
+CENTRAL_LEADER_ID = "72560962"
+
+def extract_leaders(n):
+    out = []
+    for e in ((n.get("leaders") or {}).get("edges") or []):
+        mm = e.get("node") or {}
+        if str(mm.get("id")) == CENTRAL_LEADER_ID:
+            continue
+        if (mm.get("name") or "").strip().lower() == "wordpress":
+            continue
+        name = (mm.get("name") or "").strip()
+        if not name:
+            continue
+        out.append({"n": name, "u": mm.get("memberUrl") or ""})
+    return out
+
 def node_to_row(n):
     m = (n.get("memberships") or {}).get("totalCount") or 0
     url = n.get("link") or (("https://www.meetup.com/%s/" % n["urlname"]) if n.get("urlname") else "")
@@ -179,6 +200,7 @@ def node_to_row(n):
         "lat": n.get("lat"), "lon": n.get("lon"),
         "members": m, "lastEvent": le, "status": st, "platform": "meetup.com",
         "pastEvents": pe, "rsvpsPerEvent": round(rpe, 1),
+        "leaders": extract_leaders(n),
         "organizer": "", "reactivation": "—", "url": url,
         "note": ("%d past events · %.0f RSVPs/event" % (pe, rpe)) if pe else ""
     }

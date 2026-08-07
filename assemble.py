@@ -143,7 +143,7 @@ def build_meetups(existing):
     allGroups = sorted(
         [{"id": g["_i"], "group": g.get("group",""), "city": g.get("city",""), "country": g.get("country",""),
           "members": int(g.get("members") or 0), "last": g.get("lastEvent") or "", "url": g.get("url",""),
-          "cat": cat4(g["_days"])} for g in groups],
+          "leaders": g.get("leaders") or [], "cat": cat4(g["_days"])} for g in groups],
         key=lambda x: x["members"], reverse=True)
 
     points = []

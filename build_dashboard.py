@@ -163,6 +163,20 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
 (function(){
  const m=D.meetups, mx=Math.max(...m.recency.map(r=>r[1]));
  const esc=x=>String(x==null?'':x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+ /* One shared group-details card, used by both maps and the table click-popup.
+    Shows location, size, activity, the local organizer(s) with a one-click link to
+    their Meetup profile, and a link to the group page. */
+ const CATLBL={Active:'active',Fading:'fading',Inactive:'inactive',Never:'never met'};
+ function groupCard(g){
+   const loc=[g.city,g.country].filter(Boolean).map(esc).join(', ');
+   const stat=CATLBL[g.cat]?` · ${CATLBL[g.cat]}`:'';
+   const L=g.leaders||[];
+   const lead=L.length
+     ? `<br>Organizer${L.length>1?'s':''}: `+L.map(p=>p.u?`<a href="${esc(p.u)}" target="_blank" rel="noopener noreferrer">${esc(p.n)}</a>`:esc(p.n)).join(', ')
+     : '';
+   return `<b>${esc(g.group)}</b><br>${loc}<br>${(g.members||0).toLocaleString()} members · last met ${g.last?fmtD(g.last):'never'}${stat}`
+     +`${lead}<br><a href="${esc(g.url)}" target="_blank" rel="noopener noreferrer">Open group ↗</a>`;
+ }
  const cf=l=>l.includes('30 days')||l.includes('1 to 3')?'b-green':l.includes('3 to 6')||l.includes('6 to 12')?'b-amber':l.includes('Never')?'b-grey':'b-red';
  let rec=m.recency.map(r=>barRow(r[0],[[cf(r[0]),r[1]]],r[1]+' ('+Math.round(r[1]/m.groups*100)+'%)',mx)).join('');
  const M=m.map, ord={a:0,d:1,n:2};
@@ -238,12 +252,43 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
     <p class="foot" id="mgfoot"></p></div>`
   +`<div class="card"><h2>United States</h2><p style="margin:0">${m.us.groups} US groups, ${m.us.met90} of them (${Math.round(m.us.met90/m.us.groups*100)}%) met in the last 90 days. Meetups here are not the problem &mdash; what is missing is anything built on top of them.</p></div>`;
 
+ /* Shared group-details popup for table clicks — same card the maps show */
+ const GBYID={}, GBYURL={};
+ (m.allGroups||[]).forEach(g=>{GBYID[g.id]=g; if(g.url)GBYURL[g.url]=g;});
+ (function(){
+   let pop=document.getElementById('gpop');
+   if(!pop){
+     pop=document.createElement('div'); pop.id='gpop';
+     pop.style.cssText='display:none;position:fixed;inset:0;z-index:9999;background:rgba(30,30,30,.28)';
+     pop.innerHTML='<div id="gpopcard" style="position:absolute;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 34px rgba(0,0,0,.2);padding:15px 18px;max-width:300px;font-size:13px;line-height:1.55"></div>';
+     document.body.appendChild(pop);
+   }
+   const card=pop.querySelector('#gpopcard'), close=()=>{pop.style.display='none';};
+   function openG(g,x,y){
+     if(!g)return;
+     card.innerHTML='<span id="gpx" style="position:absolute;top:5px;right:10px;cursor:pointer;color:var(--muted);font-size:17px;line-height:1">×</span>'+groupCard(g);
+     pop.style.display='block';
+     const cw=card.offsetWidth||280, ch=card.offsetHeight||150;
+     card.style.left=Math.max(10,Math.min(x+12, window.innerWidth-cw-10))+'px';
+     card.style.top=Math.max(10,Math.min(y+12, window.innerHeight-ch-10))+'px';
+     document.getElementById('gpx').onclick=close;
+   }
+   pop.addEventListener('click',e=>{if(e.target===pop)close();});
+   document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
+   $('meetups').addEventListener('click',e=>{
+     const a=e.target.closest('.gname'); if(!a)return;
+     e.preventDefault();
+     const g=(a.dataset.gid!=null&&a.dataset.gid!=='')?GBYID[a.dataset.gid]:GBYURL[a.dataset.gurl];
+     openG(g, e.clientX, e.clientY);
+   });
+ })();
+
  /* Reactivation scoreboard: paginate each section (10 rows per page) */
  if(RX){
    const RP=10;
    const mo=(a,b)=>Math.max(0,Math.round((new Date(b)-new Date(a))/2592e6));
-   const rxRow=g=>`<tr><td><span class="dot b-green"></span><a href="${esc(g.url)}" target="_blank" rel="noopener noreferrer">${esc(g.group)}</a></td><td class="hidem">${esc(g.country)}</td><td class="num">${(g.members||0).toLocaleString()}</td><td>${Math.round(g.gapDays/30)} mo</td><td>${fmtD(g.met)}</td></tr>`;
-   const rqRow=g=>`<tr><td><span class="dot ${g.cat==='Inactive'?'b-red':'b-amber'}"></span><a href="${esc(g.url)}" target="_blank" rel="noopener noreferrer">${esc(g.group)}</a></td><td class="hidem">${esc(g.country)}</td><td class="num">${(g.members||0).toLocaleString()}</td><td>${fmtD(g.last)}</td><td>${mo(g.last,RX.to)} mo</td><td>${g.cat}</td></tr>`;
+   const rxRow=g=>`<tr><td><span class="dot b-green"></span><a href="${esc(g.url)}" class="gname" data-gurl="${esc(g.url)}" rel="noopener noreferrer">${esc(g.group)}</a></td><td class="hidem">${esc(g.country)}</td><td class="num">${(g.members||0).toLocaleString()}</td><td>${Math.round(g.gapDays/30)} mo</td><td>${fmtD(g.met)}</td></tr>`;
+   const rqRow=g=>`<tr><td><span class="dot ${g.cat==='Inactive'?'b-red':'b-amber'}"></span><a href="${esc(g.url)}" class="gname" data-gurl="${esc(g.url)}" rel="noopener noreferrer">${esc(g.group)}</a></td><td class="hidem">${esc(g.country)}</td><td class="num">${(g.members||0).toLocaleString()}</td><td>${fmtD(g.last)}</td><td>${mo(g.last,RX.to)} mo</td><td>${g.cat}</td></tr>`;
    const drawSec=(list,rowFn,bodyId,pagerId,page,onp)=>{
      const pages=Math.max(1,Math.ceil(list.length/RP)); if(page>pages)page=pages;
      $(bodyId).innerHTML=list.slice((page-1)*RP,page*RP).map(rowFn).join('')||`<tr><td colspan="6" style="color:var(--muted)">None in this window.</td></tr>`;
@@ -275,7 +320,7 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
    const rows=rowsFor(curCat), pages=Math.max(1,Math.ceil(rows.length/PAGE));
    if(curPage>pages)curPage=pages;
    const slice=rows.slice((curPage-1)*PAGE,curPage*PAGE);
-   $('mgbody').innerHTML=slice.length?slice.map(g=>`<tr><td><a href="${esc(g.url)}" target="_blank" rel="noopener">${esc(g.group)}</a>${dotFor(g.cat)}</td><td class="hidem">${esc(g.city)}</td><td>${esc(g.country)}</td><td class="num">${(g.members||0).toLocaleString()}</td><td>${g.last?fmtD(g.last):'never'}</td></tr>`).join(''):`<tr><td colspan="5" style="color:var(--muted)">No groups in this category.</td></tr>`;
+   $('mgbody').innerHTML=slice.length?slice.map(g=>`<tr><td><a href="${esc(g.url)}" class="gname" data-gid="${g.id}" rel="noopener">${esc(g.group)}</a>${dotFor(g.cat)}</td><td class="hidem">${esc(g.city)}</td><td>${esc(g.country)}</td><td class="num">${(g.members||0).toLocaleString()}</td><td>${g.last?fmtD(g.last):'never'}</td></tr>`).join(''):`<tr><td colspan="5" style="color:var(--muted)">No groups in this category.</td></tr>`;
    const from=rows.length?(curPage-1)*PAGE+1:0, to=Math.min(curPage*PAGE,rows.length);
    $('mgfoot').textContent=`Showing ${from}–${to} of ${rows.length} groups.`;
    $('mgpager').innerHTML=`<button class="mgpg" data-p="prev"${curPage<=1?' disabled':''}>← Prev</button><span class="mgpginfo">Page ${curPage} / ${pages}</span><button class="mgpg" data-p="next"${curPage>=pages?' disabled':''}>Next →</button>`;
@@ -308,8 +353,7 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
    function hide(){cancelHide();tip.style.display='none';pinned=false;}
    function show(el,cx,cy){
      const g=byId[el.getAttribute('data-i')]; if(!g)return;
-     const loc=[g.city,g.country].filter(Boolean).map(esc).join(', ');
-     tip.innerHTML=(pinned?`<span class="cl" id="mtcl">×</span>`:'')+`<b>${esc(g.group)}</b><br>${loc}<br>${(g.members||0).toLocaleString()} members · last met ${g.last?fmtD(g.last):'never'}<br><a href="${esc(g.url)}" target="_blank" rel="noopener noreferrer">Open group ↗</a>`;
+     tip.innerHTML=(pinned?`<span class="cl" id="mtcl">×</span>`:'')+groupCard(g);
      const r=wrap.getBoundingClientRect(); tip.style.display='block';
      let lx=Math.min(cx-r.left+12, r.width-tip.offsetWidth-6), ly=Math.min(cy-r.top+12, r.height-tip.offsetHeight-6);
      tip.style.left=Math.max(4,lx)+'px'; tip.style.top=Math.max(4,ly)+'px';
@@ -348,8 +392,7 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
    function hide(){cancelHide();tip.style.display='none';pinned=false;}
    function show(el,cx,cy){
      const g=byId[el.getAttribute('data-i')]; if(!g)return;
-     const loc=[g.city,g.country].filter(Boolean).map(esc).join(', ');
-     tip.innerHTML=(pinned?`<span class="cl" id="mtcl3">×</span>`:'')+`<b>${esc(g.group)}</b><br>${loc}<br>${(g.members||0).toLocaleString()} members · last met ${g.last?fmtD(g.last):'never'}<br><a href="${esc(g.url)}" target="_blank" rel="noopener noreferrer">Open group ↗</a>`;
+     tip.innerHTML=(pinned?`<span class="cl" id="mtcl3">×</span>`:'')+groupCard(g);
      const r=wrap.getBoundingClientRect(); tip.style.display='block';
      let lx=Math.min(cx-r.left+12, r.width-tip.offsetWidth-6), ly=Math.min(cy-r.top+12, r.height-tip.offsetHeight-6);
      tip.style.left=Math.max(4,lx)+'px'; tip.style.top=Math.max(4,ly)+'px';
