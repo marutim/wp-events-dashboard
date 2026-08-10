@@ -35,6 +35,23 @@ def main():
     p = d.setdefault("pipeline", {})
     live = [r for r in incoming if not r.get("test")]
     tests = sum(1 for r in incoming if r.get("test"))
+
+    # --- Preserve last-change dates ('modified') across merges. -----------------
+    # 'modified' is what powers the "Needs attention" section (stuck-for-3+-months).
+    # An OUT-OF-DATE copy of pull_funnel_detail.js omits it; without this guard,
+    # re-running such a copy silently wipes the field and the section disappears.
+    # So: if an incoming record lacks 'modified', carry it over from the previous
+    # merge (matched by id), and warn loudly if most records are missing it.
+    prev_mod = {str(r.get("id")): r.get("modified")
+                for r in (p.get("records") or []) if r.get("modified")}
+    incoming_mod = sum(1 for r in live if r.get("modified"))   # before any carry-over
+    carried = 0
+    for r in live:
+        if not r.get("modified") and prev_mod.get(str(r.get("id"))):
+            r["modified"] = prev_mod[str(r.get("id"))]
+            carried += 1
+    with_mod = sum(1 for r in live if r.get("modified"))       # after carry-over
+
     p["records"] = live
     p["testCount"] = tests
     if asof:
@@ -48,6 +65,19 @@ def main():
     from collections import Counter
     print(f"Merged {len(live)} funnel records ({tests} test records excluded), detail as of {asof}.")
     print("  by stage:", dict(Counter(r.get("stage") for r in live)))
+    if carried:
+        print(f"  carried over {carried} last-change date(s) from the previous merge.")
+    print(f"  last-change date present on {with_mod}/{len(live)} records.")
+    if incoming_mod < len(live) * 0.5:
+        print("\n  *** WARNING: this funnel_detail.json is missing the last-change date ***")
+        print("  *** ('modified') on most records — it came from an OLD copy of")
+        print("  *** api/pull_funnel_detail.js. Re-copy the CURRENT file contents into the")
+        print("  *** Central console and re-run to get fresh dates.")
+        if carried:
+            print(f"  *** (For now, {carried} date(s) were carried over from the last merge,")
+            print("  *** so the 'Needs attention' section is preserved but not fully current.)\n")
+        else:
+            print("  *** The 'Needs attention' section will be empty until this is fixed.\n")
     print("Next: python3 build_dashboard.py && cp events-dashboard.html index.html, then commit + push.")
 
 if __name__ == "__main__":

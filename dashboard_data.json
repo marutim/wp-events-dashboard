@@ -24988,7 +24988,8 @@
     "format": "Campus Connect",
     "country": "Indonesia",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-08-06"
    },
    {
     "id": 15572143,
@@ -25003,7 +25004,8 @@
     "format": "WordCamp",
     "country": "Bandung",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-30"
    },
    {
     "id": 15318417,
@@ -25018,7 +25020,8 @@
     "format": "Campus Connect",
     "country": "El Salvador",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-13"
    },
    {
     "id": 15295737,
@@ -25033,7 +25036,8 @@
     "format": "WordCamp",
     "country": "WordCamp Deutschland",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-08"
    },
    {
     "id": 15031314,
@@ -25048,7 +25052,8 @@
     "format": "Campus Connect",
     "country": "Atlantis",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-06-24"
    },
    {
     "id": 14851660,
@@ -25063,7 +25068,8 @@
     "format": "Campus Connect",
     "country": "Bangladesh",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-05-27"
    },
    {
     "id": 14731641,
@@ -25078,7 +25084,8 @@
     "format": "WordCamp",
     "country": "Nigeria",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-06-09"
    },
    {
     "id": 14724230,
@@ -25093,7 +25100,8 @@
     "format": "Campus Connect",
     "country": "Malaysia",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-08-05"
    },
    {
     "id": 14679251,
@@ -25108,7 +25116,8 @@
     "format": "WordCamp",
     "country": "Leipzig",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-06-22"
    },
    {
     "id": 14352706,
@@ -25123,7 +25132,8 @@
     "format": "Campus Connect",
     "country": "Italy",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-04-16"
    },
    {
     "id": 14350913,
@@ -25138,7 +25148,8 @@
     "format": "Campus Connect",
     "country": "Uganda",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-05-01"
    },
    {
     "id": 14343437,
@@ -25153,7 +25164,8 @@
     "format": "Campus Connect",
     "country": "United States",
     "us": true,
-    "test": false
+    "test": false,
+    "modified": "2026-04-12"
    },
    {
     "id": 13458185,
@@ -25168,7 +25180,8 @@
     "format": "Campus Connect",
     "country": "Costa Rica",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-02-02"
    },
    {
     "id": 13392262,
@@ -25183,7 +25196,8 @@
     "format": "Other",
     "country": "Managua Nicaragua",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-01-29"
    },
    {
     "id": 12690032,
@@ -25198,7 +25212,8 @@
     "format": "Campus Connect",
     "country": "Nigeria",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-01-26"
    },
    {
     "id": 12601402,
@@ -25213,7 +25228,8 @@
     "format": "Other",
     "country": "India",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-01-19"
    },
    {
     "id": 15608278,
@@ -25228,7 +25244,8 @@
     "format": "Campus Connect",
     "country": "Egypt",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-08-05"
    },
    {
     "id": 15579552,
@@ -25243,7 +25260,8 @@
     "format": "Other",
     "country": "Bangladesh",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-31"
    },
    {
     "id": 15522623,
@@ -25258,7 +25276,8 @@
     "format": "Campus Connect",
     "country": "Tanzania",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-28"
    },
    {
     "id": 15509650,
@@ -25273,7 +25292,8 @@
     "format": "Campus Connect",
     "country": "Indonesia",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-28"
    },
    {
     "id": 15093344,
@@ -25288,7 +25308,8 @@
     "format": "Campus Connect",
     "country": "Uganda",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-06-23"
    },
    {
     "id": 14910513,
@@ -25303,7 +25324,8 @@
     "format": "Campus Connect",
     "country": "Nigeria",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-06-01"
    },
    {
     "id": 14720519,
@@ -25318,7 +25340,8 @@
     "format": "Campus Connect",
     "country": "Tomorrowland",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-05-22"
    },
    {
     "id": 14617620,
@@ -25333,7 +25356,8 @@
     "format": "WordCamp",
     "country": "",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-05-05"
    },
    {
     "id": 14542138,
@@ -25348,7 +25372,8 @@
     "format": "Campus Connect",
     "country": "Narnia",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-05-04"
    },
    {
     "id": 14320729,
@@ -25363,7 +25388,8 @@
     "format": "Campus Connect",
     "country": "Nicaragua",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-08-03"
    },
    {
     "id": 14080323,
@@ -25378,7 +25404,8 @@
     "format": "Student Club",
     "country": "",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-03-19"
    },
    {
     "id": 13970084,
@@ -25393,7 +25420,8 @@
     "format": "Other",
     "country": "Costa Rica",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-03-31"
    },
    {
     "id": 13954799,
@@ -25408,7 +25436,8 @@
     "format": "Women WP Day",
     "country": "Costa Rica",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-05-03"
    },
    {
     "id": 12349700,
@@ -25423,7 +25452,8 @@
     "format": "Other",
     "country": "India",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-08"
    },
    {
     "id": 12287092,
@@ -25438,7 +25468,8 @@
     "format": "Student Club",
     "country": "",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2025-11-06"
    },
    {
     "id": 10322622,
@@ -25453,7 +25484,8 @@
     "format": "WordCamp",
     "country": "Saint Petersburg",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2025-04-21"
    },
    {
     "id": 14965118,
@@ -25468,7 +25500,8 @@
     "format": "Campus Connect",
     "country": "India",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-06-09"
    },
    {
     "id": 14429127,
@@ -25483,7 +25516,8 @@
     "format": "Campus Connect",
     "country": "Uganda",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-05-13"
    },
    {
     "id": 15628178,
@@ -25498,7 +25532,8 @@
     "format": "Campus Connect",
     "country": "Uganda",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-08-06"
    },
    {
     "id": 15592082,
@@ -25513,7 +25548,8 @@
     "format": "Campus Connect",
     "country": "Spain",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-08-06"
    },
    {
     "id": 15501777,
@@ -25528,7 +25564,8 @@
     "format": "Campus Connect",
     "country": "Indonesia",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-08-03"
    },
    {
     "id": 15455940,
@@ -25543,7 +25580,8 @@
     "format": "Campus Connect",
     "country": "Bangladesh",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-27"
    },
    {
     "id": 15427720,
@@ -25558,7 +25596,8 @@
     "format": "Campus Connect",
     "country": "Malaysia",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-28"
    },
    {
     "id": 15406383,
@@ -25573,7 +25612,8 @@
     "format": "Campus Connect",
     "country": "Bangladesh",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-26"
    },
    {
     "id": 15351781,
@@ -25588,7 +25628,8 @@
     "format": "Campus Connect",
     "country": "Spain",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-21"
    },
    {
     "id": 15258645,
@@ -25603,7 +25644,8 @@
     "format": "Campus Connect",
     "country": "Spain",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-05"
    },
    {
     "id": 15258180,
@@ -25618,7 +25660,8 @@
     "format": "Campus Connect",
     "country": "Indonesia",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-08-03"
    },
    {
     "id": 15124816,
@@ -25633,7 +25676,8 @@
     "format": "Campus Connect",
     "country": "Costa Rica",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-29"
    },
    {
     "id": 15090565,
@@ -25648,7 +25692,8 @@
     "format": "Campus Connect",
     "country": "Tanzania",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-06"
    },
    {
     "id": 14836851,
@@ -25663,7 +25708,8 @@
     "format": "Student Club",
     "country": "",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-05-28"
    },
    {
     "id": 14692221,
@@ -25678,7 +25724,8 @@
     "format": "Student Club",
     "country": "Bangladesh",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-15"
    },
    {
     "id": 14534261,
@@ -25693,7 +25740,8 @@
     "format": "Student Club",
     "country": "",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-05-21"
    },
    {
     "id": 14246225,
@@ -25708,7 +25756,8 @@
     "format": "Campus Connect",
     "country": "Namibia",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-08"
    },
    {
     "id": 14203183,
@@ -25723,7 +25772,8 @@
     "format": "Student Club",
     "country": "",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-05-21"
    },
    {
     "id": 13902033,
@@ -25738,7 +25788,8 @@
     "format": "Student Club",
     "country": "",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-05-21"
    },
    {
     "id": 13607491,
@@ -25753,7 +25804,8 @@
     "format": "Campus Connect",
     "country": "Pakistan",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-08-06"
    },
    {
     "id": 11993481,
@@ -25768,7 +25820,8 @@
     "format": "Student Club",
     "country": "Uganda",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2025-10-13"
    },
    {
     "id": 11993478,
@@ -25783,7 +25836,8 @@
     "format": "Student Club",
     "country": "Uganda",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2025-10-27"
    },
    {
     "id": 11993475,
@@ -25798,7 +25852,8 @@
     "format": "Student Club",
     "country": "Uganda",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2025-10-13"
    },
    {
     "id": 15436055,
@@ -25813,7 +25868,8 @@
     "format": "WordCamp",
     "country": "USA",
     "us": true,
-    "test": false
+    "test": false,
+    "modified": "2026-07-17"
    },
    {
     "id": 15001685,
@@ -25828,7 +25884,8 @@
     "format": "WordCamp",
     "country": "Guatemala",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-10"
    },
    {
     "id": 14978541,
@@ -25843,7 +25900,8 @@
     "format": "WordCamp",
     "country": "Romania",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-27"
    },
    {
     "id": 14803975,
@@ -25858,7 +25916,8 @@
     "format": "WordCamp",
     "country": "Poland",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-08-05"
    },
    {
     "id": 14776598,
@@ -25873,7 +25932,8 @@
     "format": "Campus Connect",
     "country": "Bangladesh",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-06-18"
    },
    {
     "id": 14732571,
@@ -25888,7 +25948,8 @@
     "format": "WordCamp",
     "country": "Portugal",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-06-30"
    },
    {
     "id": 14656109,
@@ -25903,7 +25964,8 @@
     "format": "WordCamp",
     "country": "Italy",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-06-23"
    },
    {
     "id": 14598162,
@@ -25918,7 +25980,8 @@
     "format": "WordCamp",
     "country": "Pakistan",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-30"
    },
    {
     "id": 14354561,
@@ -25933,7 +25996,8 @@
     "format": "Campus Connect",
     "country": "Bangladesh",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-06-18"
    },
    {
     "id": 14322120,
@@ -25948,7 +26012,8 @@
     "format": "WordCamp",
     "country": "Brazil",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-22"
    },
    {
     "id": 14274426,
@@ -25963,7 +26028,8 @@
     "format": "WordCamp",
     "country": "India",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-05-08"
    },
    {
     "id": 14175841,
@@ -25978,7 +26044,8 @@
     "format": "WordCamp",
     "country": "Spain",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-06-23"
    },
    {
     "id": 14175377,
@@ -25993,7 +26060,8 @@
     "format": "WordCamp",
     "country": "India",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-06-04"
    },
    {
     "id": 13878818,
@@ -26008,7 +26076,8 @@
     "format": "Campus Connect",
     "country": "Indonesia",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-15"
    },
    {
     "id": 13694854,
@@ -26023,7 +26092,8 @@
     "format": "Other",
     "country": "Costa Rica",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-05-21"
    },
    {
     "id": 13456791,
@@ -26038,7 +26108,8 @@
     "format": "Campus Connect",
     "country": "Lucknow",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-05-20"
    },
    {
     "id": 13217208,
@@ -26053,7 +26124,8 @@
     "format": "Other",
     "country": "Philippines",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-30"
    },
    {
     "id": 13111948,
@@ -26068,7 +26140,8 @@
     "format": "Campus Connect",
     "country": "India",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-02-02"
    },
    {
     "id": 13017380,
@@ -26083,7 +26156,8 @@
     "format": "WordCamp",
     "country": "Kenya",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-03-23"
    },
    {
     "id": 12880713,
@@ -26098,7 +26172,8 @@
     "format": "Campus Connect",
     "country": "Brazil",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-06-18"
    },
    {
     "id": 12362211,
@@ -26113,7 +26188,8 @@
     "format": "WordCamp",
     "country": "Bangladesh",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-03-30"
    },
    {
     "id": 12232845,
@@ -26128,7 +26204,8 @@
     "format": "Campus Connect",
     "country": "Philippines",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-31"
    },
    {
     "id": 11699333,
@@ -26143,7 +26220,8 @@
     "format": "WordCamp",
     "country": "California",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-08-05"
    },
    {
     "id": 11137321,
@@ -26158,7 +26236,8 @@
     "format": "WordCamp",
     "country": "Malaysia",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2025-08-11"
    },
    {
     "id": 10714320,
@@ -26173,7 +26252,8 @@
     "format": "WordCamp",
     "country": "NY",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2025-09-12"
    },
    {
     "id": 10657857,
@@ -26188,7 +26268,8 @@
     "format": "Campus Connect",
     "country": "Spain",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-02-11"
    },
    {
     "id": 10001226,
@@ -26203,7 +26284,8 @@
     "format": "WordCamp",
     "country": "Philippines",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-31"
    },
    {
     "id": 14471748,
@@ -26218,7 +26300,8 @@
     "format": "WordCamp",
     "country": "Nepal",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-03"
    },
    {
     "id": 11765528,
@@ -26233,7 +26316,8 @@
     "format": "WordCamp",
     "country": "Uganda",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-06-22"
    },
    {
     "id": 14474067,
@@ -26248,7 +26332,8 @@
     "format": "Campus Connect",
     "country": "India",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-07-09"
    },
    {
     "id": 10025773,
@@ -26263,7 +26348,8 @@
     "format": "Other",
     "country": "LATAM",
     "us": false,
-    "test": false
+    "test": false,
+    "modified": "2026-08-03"
    }
   ],
   "momentum": {
