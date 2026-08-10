@@ -4,7 +4,7 @@
   "meetups": "2026-08-10",
   "events": "2026-08-10",
   "pipelineCounts": "2026-08-10",
-  "pipelineDetail": "2026-08-07"
+  "pipelineDetail": "2026-08-10"
  },
  "meetups": {
   "asOf": "2026-08-10",
@@ -24931,6 +24931,51 @@
   "testCount": 2,
   "records": [
    {
+    "id": 15710097,
+    "slug": "wcpt-needs-vetting",
+    "stage": "Needs Vetting",
+    "title": "WordCamp Surabaya, East Java, Indonesia",
+    "start": null,
+    "location": "Surabaya, East Java, Indonesia",
+    "organizer": "Salman Alfarisi",
+    "anticipated": "500",
+    "link": "https://central.wordcamp.org/wordcamps/wordcamp-surabaya-east-java-indonesia-2/",
+    "format": "WordCamp",
+    "country": "Indonesia",
+    "us": false,
+    "test": false
+   },
+   {
+    "id": 15709695,
+    "slug": "wcpt-needs-vetting",
+    "stage": "Needs Vetting",
+    "title": "WordCamp Surabaya, East Java, Indonesia",
+    "start": null,
+    "location": "Surabaya, East Java, Indonesia",
+    "organizer": "Salman Alfarisi",
+    "anticipated": "500",
+    "link": "https://central.wordcamp.org/wordcamps/wordcamp-surabaya-east-java-indonesia/",
+    "format": "WordCamp",
+    "country": "Indonesia",
+    "us": false,
+    "test": false
+   },
+   {
+    "id": 15703614,
+    "slug": "wcpt-needs-vetting",
+    "stage": "Needs Vetting",
+    "title": "WordCamp Vienna 2027",
+    "start": "2027-04-02",
+    "location": "Vienna, Austria",
+    "organizer": "Dominik Liss",
+    "anticipated": "300",
+    "link": "https://central.wordcamp.org/wordcamps/wordcamp-vienna-2027/",
+    "format": "WordCamp",
+    "country": "Austria",
+    "us": false,
+    "test": false
+   },
+   {
     "id": 15641609,
     "slug": "wcpt-needs-orientati",
     "stage": "Needs Orientation/Interview",
@@ -24943,7 +24988,6 @@
     "format": "Campus Connect",
     "country": "Indonesia",
     "us": false,
-    "modified": "2026-08-06",
     "test": false
    },
    {
@@ -24959,7 +25003,6 @@
     "format": "WordCamp",
     "country": "Bandung",
     "us": false,
-    "modified": "2026-07-30",
     "test": false
    },
    {
@@ -24975,7 +25018,6 @@
     "format": "Campus Connect",
     "country": "El Salvador",
     "us": false,
-    "modified": "2026-07-13",
     "test": false
    },
    {
@@ -24991,7 +25033,6 @@
     "format": "WordCamp",
     "country": "WordCamp Deutschland",
     "us": false,
-    "modified": "2026-07-08",
     "test": false
    },
    {
@@ -25007,7 +25048,6 @@
     "format": "Campus Connect",
     "country": "Atlantis",
     "us": false,
-    "modified": "2026-06-24",
     "test": false
    },
    {
@@ -25023,7 +25063,6 @@
     "format": "Campus Connect",
     "country": "Bangladesh",
     "us": false,
-    "modified": "2026-05-27",
     "test": false
    },
    {
@@ -25039,7 +25078,6 @@
     "format": "WordCamp",
     "country": "Nigeria",
     "us": false,
-    "modified": "2026-06-09",
     "test": false
    },
    {
@@ -25055,7 +25093,6 @@
     "format": "Campus Connect",
     "country": "Malaysia",
     "us": false,
-    "modified": "2026-08-05",
     "test": false
    },
    {
@@ -25071,7 +25108,6 @@
     "format": "WordCamp",
     "country": "Leipzig",
     "us": false,
-    "modified": "2026-06-22",
     "test": false
    },
    {
@@ -25087,7 +25123,6 @@
     "format": "Campus Connect",
     "country": "Italy",
     "us": false,
-    "modified": "2026-04-16",
     "test": false
    },
    {
@@ -25103,7 +25138,6 @@
     "format": "Campus Connect",
     "country": "Uganda",
     "us": false,
-    "modified": "2026-05-01",
     "test": false
    },
    {
@@ -25119,7 +25153,6 @@
     "format": "Campus Connect",
     "country": "United States",
     "us": true,
-    "modified": "2026-04-12",
     "test": false
    },
    {
@@ -25135,7 +25168,6 @@
     "format": "Campus Connect",
     "country": "Costa Rica",
     "us": false,
-    "modified": "2026-02-02",
     "test": false
    },
    {
@@ -25151,7 +25183,6 @@
     "format": "Other",
     "country": "Managua Nicaragua",
     "us": false,
-    "modified": "2026-01-29",
     "test": false
    },
    {
@@ -25167,7 +25198,6 @@
     "format": "Campus Connect",
     "country": "Nigeria",
     "us": false,
-    "modified": "2026-01-26",
     "test": false
    },
    {
@@ -25183,7 +25213,6 @@
     "format": "Other",
     "country": "India",
     "us": false,
-    "modified": "2026-01-19",
     "test": false
    },
    {
@@ -25199,7 +25228,6 @@
     "format": "Campus Connect",
     "country": "Egypt",
     "us": false,
-    "modified": "2026-08-05",
     "test": false
    },
    {
@@ -25215,7 +25243,6 @@
     "format": "Other",
     "country": "Bangladesh",
     "us": false,
-    "modified": "2026-07-31",
     "test": false
    },
    {
@@ -25231,7 +25258,6 @@
     "format": "Campus Connect",
     "country": "Tanzania",
     "us": false,
-    "modified": "2026-07-28",
     "test": false
    },
    {
@@ -25247,7 +25273,6 @@
     "format": "Campus Connect",
     "country": "Indonesia",
     "us": false,
-    "modified": "2026-07-28",
     "test": false
    },
    {
@@ -25263,7 +25288,6 @@
     "format": "Campus Connect",
     "country": "Uganda",
     "us": false,
-    "modified": "2026-06-23",
     "test": false
    },
    {
@@ -25279,7 +25303,6 @@
     "format": "Campus Connect",
     "country": "Nigeria",
     "us": false,
-    "modified": "2026-06-01",
     "test": false
    },
    {
@@ -25295,7 +25318,6 @@
     "format": "Campus Connect",
     "country": "Tomorrowland",
     "us": false,
-    "modified": "2026-05-22",
     "test": false
    },
    {
@@ -25311,7 +25333,6 @@
     "format": "WordCamp",
     "country": "",
     "us": false,
-    "modified": "2026-05-05",
     "test": false
    },
    {
@@ -25327,7 +25348,6 @@
     "format": "Campus Connect",
     "country": "Narnia",
     "us": false,
-    "modified": "2026-05-04",
     "test": false
    },
    {
@@ -25343,7 +25363,6 @@
     "format": "Campus Connect",
     "country": "Nicaragua",
     "us": false,
-    "modified": "2026-08-03",
     "test": false
    },
    {
@@ -25359,7 +25378,6 @@
     "format": "Student Club",
     "country": "",
     "us": false,
-    "modified": "2026-03-19",
     "test": false
    },
    {
@@ -25375,7 +25393,6 @@
     "format": "Other",
     "country": "Costa Rica",
     "us": false,
-    "modified": "2026-03-31",
     "test": false
    },
    {
@@ -25391,7 +25408,6 @@
     "format": "Women WP Day",
     "country": "Costa Rica",
     "us": false,
-    "modified": "2026-05-03",
     "test": false
    },
    {
@@ -25407,7 +25423,6 @@
     "format": "Other",
     "country": "India",
     "us": false,
-    "modified": "2026-07-08",
     "test": false
    },
    {
@@ -25423,7 +25438,6 @@
     "format": "Student Club",
     "country": "",
     "us": false,
-    "modified": "2025-11-06",
     "test": false
    },
    {
@@ -25439,7 +25453,6 @@
     "format": "WordCamp",
     "country": "Saint Petersburg",
     "us": false,
-    "modified": "2025-04-21",
     "test": false
    },
    {
@@ -25455,7 +25468,6 @@
     "format": "Campus Connect",
     "country": "India",
     "us": false,
-    "modified": "2026-06-09",
     "test": false
    },
    {
@@ -25471,7 +25483,6 @@
     "format": "Campus Connect",
     "country": "Uganda",
     "us": false,
-    "modified": "2026-05-13",
     "test": false
    },
    {
@@ -25487,7 +25498,6 @@
     "format": "Campus Connect",
     "country": "Uganda",
     "us": false,
-    "modified": "2026-08-06",
     "test": false
    },
    {
@@ -25503,7 +25513,6 @@
     "format": "Campus Connect",
     "country": "Spain",
     "us": false,
-    "modified": "2026-08-06",
     "test": false
    },
    {
@@ -25519,7 +25528,6 @@
     "format": "Campus Connect",
     "country": "Indonesia",
     "us": false,
-    "modified": "2026-08-03",
     "test": false
    },
    {
@@ -25535,7 +25543,6 @@
     "format": "Campus Connect",
     "country": "Bangladesh",
     "us": false,
-    "modified": "2026-07-27",
     "test": false
    },
    {
@@ -25551,7 +25558,6 @@
     "format": "Campus Connect",
     "country": "Malaysia",
     "us": false,
-    "modified": "2026-07-28",
     "test": false
    },
    {
@@ -25567,7 +25573,6 @@
     "format": "Campus Connect",
     "country": "Bangladesh",
     "us": false,
-    "modified": "2026-07-26",
     "test": false
    },
    {
@@ -25583,7 +25588,6 @@
     "format": "Campus Connect",
     "country": "Spain",
     "us": false,
-    "modified": "2026-07-21",
     "test": false
    },
    {
@@ -25599,7 +25603,6 @@
     "format": "Campus Connect",
     "country": "Spain",
     "us": false,
-    "modified": "2026-07-05",
     "test": false
    },
    {
@@ -25615,7 +25618,6 @@
     "format": "Campus Connect",
     "country": "Indonesia",
     "us": false,
-    "modified": "2026-08-03",
     "test": false
    },
    {
@@ -25631,7 +25633,6 @@
     "format": "Campus Connect",
     "country": "Costa Rica",
     "us": false,
-    "modified": "2026-07-29",
     "test": false
    },
    {
@@ -25647,7 +25648,6 @@
     "format": "Campus Connect",
     "country": "Tanzania",
     "us": false,
-    "modified": "2026-07-06",
     "test": false
    },
    {
@@ -25663,7 +25663,6 @@
     "format": "Student Club",
     "country": "",
     "us": false,
-    "modified": "2026-05-28",
     "test": false
    },
    {
@@ -25679,7 +25678,6 @@
     "format": "Student Club",
     "country": "Bangladesh",
     "us": false,
-    "modified": "2026-07-15",
     "test": false
    },
    {
@@ -25695,7 +25693,6 @@
     "format": "Student Club",
     "country": "",
     "us": false,
-    "modified": "2026-05-21",
     "test": false
    },
    {
@@ -25711,7 +25708,6 @@
     "format": "Campus Connect",
     "country": "Namibia",
     "us": false,
-    "modified": "2026-07-08",
     "test": false
    },
    {
@@ -25727,7 +25723,6 @@
     "format": "Student Club",
     "country": "",
     "us": false,
-    "modified": "2026-05-21",
     "test": false
    },
    {
@@ -25743,7 +25738,6 @@
     "format": "Student Club",
     "country": "",
     "us": false,
-    "modified": "2026-05-21",
     "test": false
    },
    {
@@ -25759,7 +25753,6 @@
     "format": "Campus Connect",
     "country": "Pakistan",
     "us": false,
-    "modified": "2026-08-06",
     "test": false
    },
    {
@@ -25775,7 +25768,6 @@
     "format": "Student Club",
     "country": "Uganda",
     "us": false,
-    "modified": "2025-10-13",
     "test": false
    },
    {
@@ -25791,7 +25783,6 @@
     "format": "Student Club",
     "country": "Uganda",
     "us": false,
-    "modified": "2025-10-27",
     "test": false
    },
    {
@@ -25807,7 +25798,6 @@
     "format": "Student Club",
     "country": "Uganda",
     "us": false,
-    "modified": "2025-10-13",
     "test": false
    },
    {
@@ -25823,7 +25813,6 @@
     "format": "WordCamp",
     "country": "USA",
     "us": true,
-    "modified": "2026-07-17",
     "test": false
    },
    {
@@ -25839,7 +25828,6 @@
     "format": "WordCamp",
     "country": "Guatemala",
     "us": false,
-    "modified": "2026-07-10",
     "test": false
    },
    {
@@ -25855,23 +25843,6 @@
     "format": "WordCamp",
     "country": "Romania",
     "us": false,
-    "modified": "2026-07-27",
-    "test": false
-   },
-   {
-    "id": 14946143,
-    "slug": "wcpt-pre-planning",
-    "stage": "In Pre-Planning",
-    "title": "WordPress Campus Connect Kolhapur 2026",
-    "start": "2026-08-17",
-    "location": "Kolhapur, India",
-    "organizer": "Makarand Gangaram Mane",
-    "anticipated": "400",
-    "link": "https://central.wordcamp.org/wordcamps/campus-connect-kolhapur-2026/",
-    "format": "Campus Connect",
-    "country": "India",
-    "us": false,
-    "modified": "2026-08-03",
     "test": false
    },
    {
@@ -25887,7 +25858,6 @@
     "format": "WordCamp",
     "country": "Poland",
     "us": false,
-    "modified": "2026-08-05",
     "test": false
    },
    {
@@ -25903,7 +25873,6 @@
     "format": "Campus Connect",
     "country": "Bangladesh",
     "us": false,
-    "modified": "2026-06-18",
     "test": false
    },
    {
@@ -25919,7 +25888,6 @@
     "format": "WordCamp",
     "country": "Portugal",
     "us": false,
-    "modified": "2026-06-30",
     "test": false
    },
    {
@@ -25935,7 +25903,6 @@
     "format": "WordCamp",
     "country": "Italy",
     "us": false,
-    "modified": "2026-06-23",
     "test": false
    },
    {
@@ -25951,7 +25918,6 @@
     "format": "WordCamp",
     "country": "Pakistan",
     "us": false,
-    "modified": "2026-07-30",
     "test": false
    },
    {
@@ -25967,7 +25933,6 @@
     "format": "Campus Connect",
     "country": "Bangladesh",
     "us": false,
-    "modified": "2026-06-18",
     "test": false
    },
    {
@@ -25983,7 +25948,6 @@
     "format": "WordCamp",
     "country": "Brazil",
     "us": false,
-    "modified": "2026-07-22",
     "test": false
    },
    {
@@ -25999,7 +25963,6 @@
     "format": "WordCamp",
     "country": "India",
     "us": false,
-    "modified": "2026-05-08",
     "test": false
    },
    {
@@ -26015,7 +25978,6 @@
     "format": "WordCamp",
     "country": "Spain",
     "us": false,
-    "modified": "2026-06-23",
     "test": false
    },
    {
@@ -26031,7 +25993,6 @@
     "format": "WordCamp",
     "country": "India",
     "us": false,
-    "modified": "2026-06-04",
     "test": false
    },
    {
@@ -26047,7 +26008,6 @@
     "format": "Campus Connect",
     "country": "Indonesia",
     "us": false,
-    "modified": "2026-07-15",
     "test": false
    },
    {
@@ -26063,7 +26023,6 @@
     "format": "Other",
     "country": "Costa Rica",
     "us": false,
-    "modified": "2026-05-21",
     "test": false
    },
    {
@@ -26079,7 +26038,6 @@
     "format": "Campus Connect",
     "country": "Lucknow",
     "us": false,
-    "modified": "2026-05-20",
     "test": false
    },
    {
@@ -26095,7 +26053,6 @@
     "format": "Other",
     "country": "Philippines",
     "us": false,
-    "modified": "2026-07-30",
     "test": false
    },
    {
@@ -26111,7 +26068,6 @@
     "format": "Campus Connect",
     "country": "India",
     "us": false,
-    "modified": "2026-02-02",
     "test": false
    },
    {
@@ -26127,7 +26083,6 @@
     "format": "WordCamp",
     "country": "Kenya",
     "us": false,
-    "modified": "2026-03-23",
     "test": false
    },
    {
@@ -26143,7 +26098,6 @@
     "format": "Campus Connect",
     "country": "Brazil",
     "us": false,
-    "modified": "2026-06-18",
     "test": false
    },
    {
@@ -26159,7 +26113,6 @@
     "format": "WordCamp",
     "country": "Bangladesh",
     "us": false,
-    "modified": "2026-03-30",
     "test": false
    },
    {
@@ -26175,7 +26128,6 @@
     "format": "Campus Connect",
     "country": "Philippines",
     "us": false,
-    "modified": "2026-07-31",
     "test": false
    },
    {
@@ -26191,7 +26143,6 @@
     "format": "WordCamp",
     "country": "California",
     "us": false,
-    "modified": "2026-08-05",
     "test": false
    },
    {
@@ -26207,7 +26158,6 @@
     "format": "WordCamp",
     "country": "Malaysia",
     "us": false,
-    "modified": "2025-08-11",
     "test": false
    },
    {
@@ -26223,7 +26173,6 @@
     "format": "WordCamp",
     "country": "NY",
     "us": false,
-    "modified": "2025-09-12",
     "test": false
    },
    {
@@ -26239,7 +26188,6 @@
     "format": "Campus Connect",
     "country": "Spain",
     "us": false,
-    "modified": "2026-02-11",
     "test": false
    },
    {
@@ -26255,7 +26203,6 @@
     "format": "WordCamp",
     "country": "Philippines",
     "us": false,
-    "modified": "2026-07-31",
     "test": false
    },
    {
@@ -26271,7 +26218,6 @@
     "format": "WordCamp",
     "country": "Nepal",
     "us": false,
-    "modified": "2026-07-03",
     "test": false
    },
    {
@@ -26287,23 +26233,6 @@
     "format": "WordCamp",
     "country": "Uganda",
     "us": false,
-    "modified": "2026-06-22",
-    "test": false
-   },
-   {
-    "id": 15024834,
-    "slug": "wcpt-needs-contract",
-    "stage": "Needs Contract",
-    "title": "WordCamp Delhi 2026",
-    "start": null,
-    "location": "Delhi, India",
-    "organizer": "Mayank Kumar",
-    "anticipated": "500",
-    "link": "https://central.wordcamp.org/wordcamps/wordcamp-delhi-2026/",
-    "format": "WordCamp",
-    "country": "India",
-    "us": false,
-    "modified": "2026-07-30",
     "test": false
    },
    {
@@ -26319,7 +26248,6 @@
     "format": "Campus Connect",
     "country": "India",
     "us": false,
-    "modified": "2026-07-09",
     "test": false
    },
    {
@@ -26335,7 +26263,6 @@
     "format": "Other",
     "country": "LATAM",
     "us": false,
-    "modified": "2026-08-03",
     "test": false
    }
   ],
@@ -26384,20 +26311,20 @@
    },
    "2026-07": {
     "newApps": 21,
-    "confirmed": 35,
+    "confirmed": 33,
     "closed": 7,
     "cancelled": 2,
     "declined": 3
    },
    "2026-08": {
-    "newApps": 4,
-    "confirmed": 4,
-    "closed": 2,
+    "newApps": 7,
+    "confirmed": 8,
+    "closed": 4,
     "cancelled": 12,
     "declined": 1
    }
   },
-  "detailAsOf": "2026-08-07",
+  "detailAsOf": "2026-08-10",
   "funnelCounts": {
    "Needs Vetting": 1,
    "Needs Orientation/Interview": 17,
