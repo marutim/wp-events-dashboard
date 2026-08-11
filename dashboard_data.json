@@ -4,7 +4,7 @@
   "meetups": "2026-08-11",
   "events": "2026-08-11",
   "pipelineCounts": "2026-08-11",
-  "pipelineDetail": "2026-08-10"
+  "pipelineDetail": "2026-08-11"
  },
  "meetups": {
   "asOf": "2026-08-11",
@@ -24953,6 +24953,22 @@
   "testCount": 2,
   "records": [
    {
+    "id": 15722408,
+    "slug": "wcpt-needs-vetting",
+    "stage": "Needs Vetting",
+    "title": "WordPress Campus Connect Silver oak university",
+    "start": "2026-10-04",
+    "location": "Ahmedabad, India",
+    "organizer": "Hritik Raj",
+    "anticipated": "100",
+    "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-silver-oak-university/",
+    "format": "Campus Connect",
+    "country": "India",
+    "us": false,
+    "modified": "2026-08-10",
+    "test": false
+   },
+   {
     "id": 15710097,
     "slug": "wcpt-needs-vetting",
     "stage": "Needs Vetting",
@@ -25897,22 +25913,6 @@
     "test": false
    },
    {
-    "id": 15001685,
-    "slug": "wcpt-pre-planning",
-    "stage": "In Pre-Planning",
-    "title": "WordCamp Guatemala 2026",
-    "start": "2026-10-10",
-    "location": "Guatemala",
-    "organizer": "Frank Calderon",
-    "anticipated": "150",
-    "link": "https://central.wordcamp.org/wordcamps/wordcamp-guatemala-2026/",
-    "format": "WordCamp",
-    "country": "Guatemala",
-    "us": false,
-    "modified": "2026-07-10",
-    "test": false
-   },
-   {
     "id": 14978541,
     "slug": "wcpt-pre-planning",
     "stage": "In Pre-Planning",
@@ -26313,6 +26313,22 @@
     "test": false
    },
    {
+    "id": 15001685,
+    "slug": "wcpt-budget-rev-sche",
+    "stage": "Budget Review Scheduled",
+    "title": "WordCamp Guatemala 2026",
+    "start": "2026-10-10",
+    "location": "Guatemala",
+    "organizer": "Frank Calderon",
+    "anticipated": "150",
+    "link": "https://central.wordcamp.org/wordcamps/wordcamp-guatemala-2026/",
+    "format": "WordCamp",
+    "country": "Guatemala",
+    "us": false,
+    "modified": "2026-08-10",
+    "test": false
+   },
+   {
     "id": 14471748,
     "slug": "wcpt-budget-rev-sche",
     "stage": "Budget Review Scheduled",
@@ -26428,14 +26444,14 @@
     "declined": 3
    },
    "2026-08": {
-    "newApps": 7,
+    "newApps": 8,
     "confirmed": 8,
     "closed": 4,
     "cancelled": 12,
     "declined": 1
    }
   },
-  "detailAsOf": "2026-08-10",
+  "detailAsOf": "2026-08-11",
   "funnelCounts": {
    "Needs Vetting": 4,
    "Needs Orientation/Interview": 17,
