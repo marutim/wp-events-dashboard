@@ -488,8 +488,9 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
  const esc=x=>String(x==null?'':x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
  /* Stale applications: active-funnel apps that haven't changed stage in STALE_DAYS+ */
  const STALE_DAYS=90;  // 3 months — change here to adjust the threshold
+ const STALE_SKIP_FORMATS=['Student Club'];  // formats that follow a different timeline, excluded from this section
  const _sref=P.detailAsOf?new Date(P.detailAsOf):new Date();
- const stale=(P.records||[]).filter(r=>r.modified).map(r=>Object.assign({stuck:Math.round((_sref-new Date(r.modified))/864e5)},r)).filter(r=>r.stuck>=STALE_DAYS).sort((a,b)=>b.stuck-a.stuck);
+ const stale=(P.records||[]).filter(r=>r.modified&&!STALE_SKIP_FORMATS.includes(r.format)).map(r=>Object.assign({stuck:Math.round((_sref-new Date(r.modified))/864e5)},r)).filter(r=>r.stuck>=STALE_DAYS).sort((a,b)=>b.stuck-a.stuck);
  /* event-date urgency: a stuck app whose planned date has passed (or is weeks away) is far more urgent */
  const _urg=r=>{
    if(!r.start) return {txt:'no date set',cls:'color:var(--muted)'};
