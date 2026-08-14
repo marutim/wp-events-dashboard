@@ -4,7 +4,7 @@
   "meetups": "2026-08-14",
   "events": "2026-08-14",
   "pipelineCounts": "2026-08-14",
-  "pipelineDetail": "2026-08-11"
+  "pipelineDetail": "2026-08-14"
  },
  "meetups": {
   "asOf": "2026-08-14",
@@ -25144,19 +25144,51 @@
   "testCount": 2,
   "records": [
    {
-    "id": 15722408,
+    "id": 15751119,
     "slug": "wcpt-needs-vetting",
     "stage": "Needs Vetting",
-    "title": "WordPress Campus Connect Silver oak university",
-    "start": "2026-10-04",
-    "location": "Ahmedabad, India",
-    "organizer": "Hritik Raj",
+    "title": "WordPress Campus Connect Veer Kunwar Singh University (VKSU), Arrah",
+    "start": "2026-10-19",
+    "location": "Arrah, India",
+    "organizer": "Ashish pandit",
     "anticipated": "100",
-    "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-silver-oak-university/",
+    "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-veer-kunwar-singh-university-vksu-arrah/",
     "format": "Campus Connect",
     "country": "India",
     "us": false,
-    "modified": "2026-08-10",
+    "modified": "2026-08-13",
+    "test": false
+   },
+   {
+    "id": 15750656,
+    "slug": "wcpt-needs-vetting",
+    "stage": "Needs Vetting",
+    "title": "WordPress Campus Connect CIMAGE GROUP OF INSTITUTIONS, PATNA",
+    "start": "2026-10-05",
+    "location": "Patna, India",
+    "organizer": "Nilesh Pathak",
+    "anticipated": "150",
+    "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-cimage-group-of-institutions-patna/",
+    "format": "Campus Connect",
+    "country": "India",
+    "us": false,
+    "modified": "2026-08-13",
+    "test": false
+   },
+   {
+    "id": 15740470,
+    "slug": "wcpt-needs-vetting",
+    "stage": "Needs Vetting",
+    "title": "Kaliro, Uganda",
+    "start": null,
+    "location": "Kaliro, Uganda",
+    "organizer": "Kenneth Kipyeko",
+    "anticipated": "",
+    "link": "https://central.wordcamp.org/wordcamps/kaliro-uganda/",
+    "format": "Other",
+    "country": "Uganda",
+    "us": false,
+    "modified": "2026-08-12",
     "test": false
    },
    {
@@ -25192,9 +25224,41 @@
     "test": false
    },
    {
+    "id": 15738147,
+    "slug": "wcpt-needs-orientati",
+    "stage": "Needs Orientation/Interview",
+    "title": "WordPress Campus Connect TIT Group of Institution",
+    "start": "2026-09-30",
+    "location": "Bhopal, India",
+    "organizer": "Aniket Sahu",
+    "anticipated": "70",
+    "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-tit-group-of-institution/",
+    "format": "Campus Connect",
+    "country": "India",
+    "us": false,
+    "modified": "2026-08-13",
+    "test": false
+   },
+   {
+    "id": 15722408,
+    "slug": "wcpt-needs-orientati",
+    "stage": "Needs Orientation/Interview",
+    "title": "WordPress Campus Connect Silver Oak University",
+    "start": "2026-10-04",
+    "location": "Ahmedabad, India",
+    "organizer": "Hritik Raj",
+    "anticipated": "100",
+    "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-silver-oak-university/",
+    "format": "Campus Connect",
+    "country": "India",
+    "us": false,
+    "modified": "2026-08-11",
+    "test": false
+   },
+   {
     "id": 15703614,
-    "slug": "wcpt-needs-vetting",
-    "stage": "Needs Vetting",
+    "slug": "wcpt-needs-orientati",
+    "stage": "Needs Orientation/Interview",
     "title": "WordCamp Vienna 2027",
     "start": "2027-04-02",
     "location": "Vienna, Austria",
@@ -25204,23 +25268,7 @@
     "format": "WordCamp",
     "country": "Austria",
     "us": false,
-    "modified": "2026-08-09",
-    "test": false
-   },
-   {
-    "id": 15641609,
-    "slug": "wcpt-needs-orientati",
-    "stage": "Needs Orientation/Interview",
-    "title": "WordPress Campus Connect SMK Bina Insan Mandiri, Jakarta",
-    "start": "2026-10-07",
-    "location": "Jakarta Barat, Indonesia",
-    "organizer": "Rio Burhan",
-    "anticipated": "80",
-    "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-smk-bina-insan-mandiri-jakarta/",
-    "format": "Campus Connect",
-    "country": "Indonesia",
-    "us": false,
-    "modified": "2026-08-06",
+    "modified": "2026-08-11",
     "test": false
    },
    {
@@ -25412,7 +25460,7 @@
     "format": "Campus Connect",
     "country": "Costa Rica",
     "us": false,
-    "modified": "2026-02-02",
+    "modified": "2026-08-12",
     "test": false
    },
    {
@@ -25752,6 +25800,22 @@
     "test": false
    },
    {
+    "id": 15641609,
+    "slug": "wcpt-approved-pre-pl",
+    "stage": "Approved for Pre-Planning",
+    "title": "WordPress Campus Connect SMK Bina Insan Mandiri, Jakarta",
+    "start": "2026-10-07",
+    "location": "Jakarta Barat, Indonesia",
+    "organizer": "Rio Burhan",
+    "anticipated": "80",
+    "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-smk-bina-insan-mandiri-jakarta/",
+    "format": "Campus Connect",
+    "country": "Indonesia",
+    "us": false,
+    "modified": "2026-08-11",
+    "test": false
+   },
+   {
     "id": 15628178,
     "slug": "wcpt-approved-pre-pl",
     "stage": "Approved for Pre-Planning",
@@ -25775,12 +25839,12 @@
     "start": "2026-09-30",
     "location": "A Coruña, Spain",
     "organizer": "Carla Pumutxa",
-    "anticipated": "35",
+    "anticipated": "45",
     "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-universidad-de-a-coruna/",
     "format": "Campus Connect",
     "country": "Spain",
     "us": false,
-    "modified": "2026-08-06",
+    "modified": "2026-08-11",
     "test": false
    },
    {
@@ -25788,7 +25852,7 @@
     "slug": "wcpt-approved-pre-pl",
     "stage": "Approved for Pre-Planning",
     "title": "WordPress Campus Connect Universitas Jenderal Achmad Yani Yogyakarta",
-    "start": "2026-09-26",
+    "start": "2026-10-16",
     "location": "Yogyakarta, Indonesia",
     "organizer": "Ahmad Hanafi",
     "anticipated": "50",
@@ -25796,7 +25860,7 @@
     "format": "Campus Connect",
     "country": "Indonesia",
     "us": false,
-    "modified": "2026-08-03",
+    "modified": "2026-08-12",
     "test": false
    },
    {
@@ -26031,12 +26095,12 @@
     "start": "2026-03-25",
     "location": "Sukkur, Pakistan",
     "organizer": "Jamshed Ali",
-    "anticipated": "300",
+    "anticipated": "100",
     "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-sukkur-iba-university/",
     "format": "Campus Connect",
     "country": "Pakistan",
     "us": false,
-    "modified": "2026-08-09",
+    "modified": "2026-08-13",
     "test": false
    },
    {
@@ -26635,14 +26699,14 @@
     "declined": 3
    },
    "2026-08": {
-    "newApps": 8,
+    "newApps": 12,
     "confirmed": 8,
     "closed": 4,
     "cancelled": 12,
     "declined": 1
    }
   },
-  "detailAsOf": "2026-08-11",
+  "detailAsOf": "2026-08-14",
   "funnelCounts": {
    "Needs Vetting": 5,
    "Needs Orientation/Interview": 19,
