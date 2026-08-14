@@ -121,7 +121,7 @@ const D={"asOf": "2026-08-14", "dates": {"meetups": "2026-08-14", "events": "202
 const $=id=>document.getElementById(id);
 const MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
 const fmtD=s=>{if(!s)return '';const m=/^(\d{4})-(\d{2})-(\d{2})/.exec(String(s));return m?`${m[1]}-${MONTHS[+m[2]-1]}-${m[3]}`:String(s);};
-$('sub').textContent='Meetups, WordCamps, and the WordCamp application pipeline.';
+$('sub').textContent='Meetups, WordCamps, and the events application pipeline.';
 function tiles(a){return `<div class="tiles">`+a.map(t=>`<div class="tile ${t[0]}"><div class="n">${t[1]}</div><div class="l">${t[2]}</div></div>`).join('')+`</div>`;}
 function barRow(lbl,segs,total,max){const w=v=>Math.round(v/max*100);const inner=segs.map(s=>`<div class="bar ${s[0]}"${s[2]?` data-t="${s[2]}: ${s[1]}"`:''} style="width:${w(s[1])}%"></div>`).join('');return `<div class="frow"><div class="lbl">${lbl}</div><div class="barwrap">${inner}</div><div class="cnt">${total}</div></div>`;}
 /* Attach a hover tooltip to any bar-chart wrapper: shows a segment's data-t ("<label>: <count>") near the cursor. */
@@ -173,7 +173,7 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
     <div class="maptip" id="maptip"></div>
    </div>
    <div class="legend"><span><i class="dot" style="background:var(--green)"></i>active ${M.counts.a}</span><span><i class="dot" style="background:var(--red)"></i>inactive 12mo+ ${M.counts.d}</span><span><i class="dot" style="background:var(--grey)"></i>never met ${M.counts.n}</span></div>
-   <p class="foot">Every registered group in the official chapter, placed by its city. Red is where an assembled audience has gone quiet. <span style="color:var(--muted)">Scroll or use +/&minus; to zoom, drag to pan, hover or tap a dot for details.</span></p></div>`;
+   <p class="foot">Every group in the official chapter, placed by city. Red mark is where a group has gone quiet. <span style="color:var(--muted)">Zoom, pan, and tap a dot for details.</span></p></div>`;
  const MO=m.monthMap||{points:[],count:0,month:''};
  const moLbl=(()=>{const p=(MO.month||'').split('-');return p.length===2?MONTHS[+p[1]-1]+' '+p[0]:'this month';})();
  let modots='';
@@ -202,13 +202,13 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
    </div>
    <div class="legend"><span><i class="dot" style="background:var(--green)"></i>met in ${moLbl}</span></div>
    ${moChips}${moCities}
-   <p class="foot"><b>${MO.count} ${MO.count===1?'group':'groups'} met this month</b> (${moLbl}).${MO.count>MO.points.length?` ${MO.count-MO.points.length} without map coordinates not shown.`:''} <span style="color:var(--muted)">Each dot is a group whose most recent event falls in the current calendar month. Scroll or use +/&minus; to zoom, drag to pan, hover or tap a dot for details.</span></p></div>`;
+   <p class="foot"><b>${MO.count} ${MO.count===1?'group':'groups'} met this month</b> (${moLbl}).${MO.count>MO.points.length?` ${MO.count-MO.points.length} without map coordinates not shown.`:''} <span style="color:var(--muted)">Zoom, pan, and tap a dot for details.</span></p></div>`;
  /* Reactivation scoreboard (renders only if reactivation data is present) */
  const RX=m.reactivation; let reactCard='';
  if(RX){
    const netN=RX.reactivated.length-RX.newlyQuiet.length;
    reactCard=`<div class="card"><h2>Reactivation scoreboard</h2>
-     <p class="foot" style="margin:-4px 0 14px">Who's re-engaging: groups that had gone quiet for 3+ months and are now meeting again, versus active groups that have just gone quiet. Tracked continuously to gauge whether outreach is reviving communities. <b>Preview window ${fmtD(RX.from)} &ndash; ${fmtD(RX.to)}</b> &mdash; this widens into a rolling quarterly/yearly view as tracking accumulates.</p>
+     <p class="foot" style="margin:-4px 0 14px">Groups that went quiet for 3+ months and are meeting again, versus active groups that just went quiet. Window ${fmtD(RX.from)} &ndash; ${fmtD(RX.to)}, widening as tracking accumulates.</p>
      ${tiles([['good',RX.reactivated.length,'reactivated'],['us',RX.newlyQuiet.length,'newly quiet'],['hot',(netN>=0?'+':'')+netN,'net revival'],['',RX.membersBack.toLocaleString(),'members brought back']])}
      <h3 style="font-family:var(--serif);font-size:15px;margin:18px 0 6px">Reactivated <span style="color:var(--muted);font-weight:400;font-size:13px">&mdash; started meeting again after a 3+ month break</span></h3>
      <table><thead><tr><th>Group</th><th class="hidem">Country</th><th class="num">Members</th><th>Gap</th><th>Met again</th></tr></thead><tbody id="rxbody"></tbody></table>
@@ -217,7 +217,7 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
      <table><thead><tr><th>Group</th><th class="hidem">Country</th><th class="num">Members</th><th>Last met</th><th>Quiet for</th><th>Status</th></tr></thead><tbody id="rqbody"></tbody></table>
      <div class="mgpager" id="rqpager"></div>
      <div class="legend"><span><i class="dot b-green"></i>reactivated</span><span><i class="dot b-amber"></i>fading</span><span><i class="dot b-red"></i>inactive</span></div>
-     <p class="foot">Detected by comparing daily snapshots over this window. A longer, continuous view unlocks once the Meetup pull captures each group's event history.</p></div>`;
+     </div>`;
  }
  $('meetups').innerHTML=
   tiles([['hot',m.groups,'groups'],['',m.members.toLocaleString(),'members'],['',m.countries,'countries'],
@@ -234,7 +234,7 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
     <table><thead><tr><th>Group</th><th class="hidem">City</th><th>Country</th><th class="num">Members</th><th>Last met</th></tr></thead><tbody id="mgbody"></tbody></table>
     <div class="mgpager" id="mgpager"></div>
     <p class="foot" id="mgfoot"></p></div>`
-  +`<div class="card"><h2>United States</h2><p style="margin:0">${m.us.groups} US groups, ${m.us.met90} of them (${Math.round(m.us.met90/m.us.groups*100)}%) met in the last 90 days. Meetups here are not the problem &mdash; what is missing is anything built on top of them.</p></div>`;
+  +`<div class="card"><h2>United States</h2><p style="margin:0">${m.us.groups} US groups, ${m.us.met90} of them (${Math.round(m.us.met90/m.us.groups*100)}%) met in the last 90 days. A strong meetup base, with fewer larger events built on top.</p></div>`;
 
  /* Shared group-details popup for table clicks — same card the maps show */
  const GBYID={}, GBYURL={};
@@ -409,14 +409,14 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
     <div class="mapzoom"><button type="button" id="mzin2" aria-label="Zoom in">+</button><button type="button" id="mzout2" aria-label="Zoom out">&minus;</button><button type="button" id="mzr2" aria-label="Reset view" style="font-size:13px">&#8635;</button></div>
     <div class="maptip" id="maptip2"></div>
    </div>
-   <div class="legend"><span><i class="dot" style="background:var(--blue)"></i>Flagship ${EM.counts.f}</span><span><i class="dot" style="background:var(--red)"></i>Local WordCamp ${EM.counts.l}</span><span><i class="dot" style="background:var(--amber)"></i>Campus Connect ${EM.counts.c||0}</span><span><i class="dot" style="background:var(--green)"></i>New Format ${EM.counts.n}</span></div>
-   <p class="foot">2026 events cluster in South Asia, Latin America, and Europe. The United States is a single dot, WordCamp US. <span style="color:var(--muted)">Scroll or use +/&minus; to zoom, drag to pan, hover or tap a dot for details.</span></p></div>`;
+   <div class="legend"><span><i class="dot" style="background:var(--blue)"></i>Flagship ${e.byYear['2026'][0]}</span><span><i class="dot" style="background:var(--red)"></i>Local WordCamp ${e.byYear['2026'][1]}</span><span><i class="dot" style="background:var(--amber)"></i>Campus Connect ${e.byYear['2026'][2]}</span><span><i class="dot" style="background:var(--green)"></i>New Format ${e.byYear['2026'][3]}</span></div>
+   <p class="foot">2026 events cluster in South Asia, Latin America, and Europe. <span style="color:var(--muted)">Zoom, pan, and tap a dot for details.</span></p></div>`;
  const B=e.bench, bt=B?B.orgFirst+B.orgReturn:0, at=B?B.attFirst+B.attReturn:0;
  const bench=B?`<div class="card"><h2>Bench renewal — are we growing new organizers?</h2>
    ${barRow('Organizers',[['b-green',B.orgFirst],['b-grey',B.orgReturn]],Math.round(B.orgFirst/bt*100)+'% new',bt)}
    ${barRow('Attendees',[['b-green',B.attFirst],['b-grey',B.attReturn]],Math.round(B.attFirst/at*100)+'% new',at)}
    <div class="legend"><span><i class="dot b-green"></i>first-time</span><span><i class="dot b-grey"></i>returning</span></div>
-   <p class="foot"><b>${B.orgFirst}</b> first-time organizers stepped up this year, ${Math.round(B.orgFirst/bt*100)}% of the total. First-timers are the bench a WordCamp needs. From WordCamp Central's counts report, not visible on any public listing.</p></div>`:'';
+   <p class="foot"><b>${B.orgFirst}</b> first-time organizers stepped up this year, ${Math.round(B.orgFirst/bt*100)}% of the total. First-timers are the bench a WordCamp needs.</p></div>`:'';
  $('events').innerHTML=
   tiles([['',e.ytd,'events YTD'],['good','+'+Math.round((e.ytd-e.ytdPrev)/e.ytdPrev*100)+'%','vs '+e.ytdPrev+' last year'],
    ['us',0,'US local/newer events'],['hot',30,'countries ran an event']])
@@ -426,9 +426,9 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
   +`<div class="card"><h2>Community events by year</h2><div id="byyear" style="position:relative">${yl}<div class="maptip" id="bytip" style="pointer-events:none"></div></div>
     <div class="legend"><span><i class="dot b-blue"></i>Flagship</span><span><i class="dot b-red"></i>Local WordCamp</span><span><i class="dot b-amber"></i>Campus Connect</span><span><i class="dot b-green"></i>New Format</span></div>
     <p class="foot">Local WordCamps fell from ${e.byYear['2019'][1]} in 2019 to ${e.byYear['2026'][1]} now, while Campus Connect (${e.byYear['2026'][2]}) and other new formats (${e.byYear['2026'][3]}) filled the gap this year. <span style="color:var(--muted)">Hover a bar segment for its count.</span></p></div>`
-  +`<div class="card"><h2>2026 Local WordCamps, Campus Connect, and Newer Formats by Country</h2><div id="bycountry" style="position:relative">${cl}<div class="maptip" id="bctip" style="pointer-events:none"></div></div>
+  +`<div class="card"><h2>2026 events by country</h2><div id="bycountry" style="position:relative">${cl}<div class="maptip" id="bctip" style="pointer-events:none"></div></div>
     <div class="legend"><span><i class="dot b-red"></i>Local WordCamp</span><span><i class="dot b-amber"></i>Campus Connect</span><span><i class="dot b-green"></i>New Format</span></div>
-    <p class="foot">Flagships and meetups counted separately. The United States is at zero. <span style="color:var(--muted)">Hover a segment for its count.</span></p></div>`
+    <p class="foot">Flagships and meetups counted separately. <span style="color:var(--muted)">Hover a segment for its count.</span></p></div>`
   +`<div class="card"><h2>2026 by format</h2>${fl}</div>`;
 
  /* hover tooltips (category + count) on the by-year and by-country bar charts */
@@ -536,7 +536,7 @@ function attachBarTip(wrap,tip){if(!wrap||!tip)return;wrap.addEventListener('mou
    const Tcan=mos.reduce((a,m)=>a+can(P.momentum[m]),0), Tdec=mos.reduce((a,m)=>a+dec(P.momentum[m]),0);
    mom=`<div class="card"><h2>Pipeline momentum — 2026 monthly flow</h2>${rows}
      <div class="legend"><span><i class="dot b-blue"></i>new applications</span><span><i class="dot b-green"></i>confirmed (&rarr; scheduled)</span><span><i class="dot b-amber"></i>cancelled</span><span><i class="dot b-red"></i>declined</span></div>
-     <p class="foot">YTD: <b>${T('newApps')}</b> new applications entered the funnel, <b>${T('confirmed')}</b> reached scheduled, <b>${T('closed')}</b> happened, <b>${Tcan}</b> were cancelled and <b>${Tdec}</b> declined. New applications and completed events are exact (creation and event dates); confirmed, cancelled, and declined are dated by last status-change. From WordCamp Central.</p></div>`;
+     <p class="foot">YTD: <b>${T('newApps')}</b> new applications entered the funnel, <b>${T('confirmed')}</b> reached scheduled, <b>${T('closed')}</b> happened, <b>${Tcan}</b> cancelled, <b>${Tdec}</b> declined.</p></div>`;
  }
 
  $('pipeline').innerHTML=
@@ -593,7 +593,7 @@ let _upd=(_dts.meetups===_dts.events && _dts.events===_dts.pipelineCounts)
   ? `Last updated ${_U(_dts.meetups)}`
   : `Last updated — Meetups ${_U(_dts.meetups)} · Events ${_U(_dts.events)} · Pipeline counts ${_U(_dts.pipelineCounts)}`;
 if(_dts.pipelineDetail && _dts.pipelineDetail!==_dts.pipelineCounts) _upd+=` · pipeline detail ${_U(_dts.pipelineDetail)} (manual)`;
-$('src').innerHTML=`<b>${_upd}.</b><br><b>Sources.</b> Meetups: Meetup GraphQL API (official WordPress chapter). Events &amp; pipeline: WordCamp Central REST — public for scheduled/past, authenticated (your session) for the funnel and the status-change log. Momentum from the WordCamp Central <b>wordcamp-status</b> report. Financial reports intentionally excluded. events.wordpress.org / GatherPress will slot in as a fourth feed when live.`;
+$('src').innerHTML=`<b>${_upd}.</b><br><b>Sources:</b> Meetup.com and WordCamp Central. Financial reports intentionally excluded. events.wordpress.org / GatherPress will be added as a fourth source once live.`;
 
 document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
   document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
