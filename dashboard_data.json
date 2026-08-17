@@ -4,7 +4,7 @@
   "meetups": "2026-08-17",
   "events": "2026-08-17",
   "pipelineCounts": "2026-08-17",
-  "pipelineDetail": "2026-08-14"
+  "pipelineDetail": "2026-08-17"
  },
  "meetups": {
   "asOf": "2026-08-17",
@@ -25224,6 +25224,54 @@
   "testCount": 2,
   "records": [
    {
+    "id": 15790931,
+    "slug": "wcpt-needs-vetting",
+    "stage": "Needs Vetting",
+    "title": "WordCamp Kolkata, West Bengal, India",
+    "start": null,
+    "location": "Kolkata, West Bengal, India",
+    "organizer": "Ritika Roy",
+    "anticipated": "400",
+    "link": "https://central.wordcamp.org/wordcamps/wordcamp-kolkata-west-bengal-india-4/",
+    "format": "WordCamp",
+    "country": "India",
+    "us": false,
+    "modified": "2026-08-17",
+    "test": false
+   },
+   {
+    "id": 15774488,
+    "slug": "wcpt-needs-vetting",
+    "stage": "Needs Vetting",
+    "title": "WordPress Campus Connect Galgotias University",
+    "start": "2026-09-19",
+    "location": "Delhi, India",
+    "organizer": "Punit Pal",
+    "anticipated": "80",
+    "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-galgotias-university/",
+    "format": "Campus Connect",
+    "country": "India",
+    "us": false,
+    "modified": "2026-08-15",
+    "test": false
+   },
+   {
+    "id": 15769288,
+    "slug": "wcpt-needs-vetting",
+    "stage": "Needs Vetting",
+    "title": "WordPress Campus Connect Om Education Campus",
+    "start": "2026-09-07",
+    "location": "Junagadh, India",
+    "organizer": "Chetan Prajapati",
+    "anticipated": "90",
+    "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-om-education-campus/",
+    "format": "Campus Connect",
+    "country": "India",
+    "us": false,
+    "modified": "2026-08-15",
+    "test": false
+   },
+   {
     "id": 15751119,
     "slug": "wcpt-needs-vetting",
     "stage": "Needs Vetting",
@@ -25281,22 +25329,6 @@
     "organizer": "Salman Alfarisi",
     "anticipated": "500",
     "link": "https://central.wordcamp.org/wordcamps/wordcamp-surabaya-east-java-indonesia-2/",
-    "format": "WordCamp",
-    "country": "Indonesia",
-    "us": false,
-    "modified": "2026-08-10",
-    "test": false
-   },
-   {
-    "id": 15709695,
-    "slug": "wcpt-needs-vetting",
-    "stage": "Needs Vetting",
-    "title": "WordCamp Surabaya, East Java, Indonesia",
-    "start": null,
-    "location": "Surabaya, East Java, Indonesia",
-    "organizer": "Salman Alfarisi",
-    "anticipated": "500",
-    "link": "https://central.wordcamp.org/wordcamps/wordcamp-surabaya-east-java-indonesia/",
     "format": "WordCamp",
     "country": "Indonesia",
     "us": false,
@@ -25547,16 +25579,16 @@
     "id": 13392262,
     "slug": "wcpt-needs-orientati",
     "stage": "Needs Orientation/Interview",
-    "title": "Youth Day Managua",
+    "title": "WordPress Yout Day Nicarargua 2026",
     "start": null,
     "location": "Managua Nicaragua",
     "organizer": "valeria pilarte",
     "anticipated": "",
-    "link": "https://central.wordcamp.org/wordcamps/managua-nicaragua-3/",
+    "link": "https://central.wordcamp.org/wordcamps/yout-day-nicaragua/",
     "format": "Other",
     "country": "Managua Nicaragua",
     "us": false,
-    "modified": "2026-01-29",
+    "modified": "2026-08-14",
     "test": false
    },
    {
@@ -25956,7 +25988,7 @@
     "format": "Campus Connect",
     "country": "Bangladesh",
     "us": false,
-    "modified": "2026-07-27",
+    "modified": "2026-08-14",
     "test": false
    },
    {
@@ -25964,15 +25996,15 @@
     "slug": "wcpt-approved-pre-pl",
     "stage": "Approved for Pre-Planning",
     "title": "WordPress Campus Connect Wawasan Open University, Penang",
-    "start": "2026-09-23",
+    "start": "2026-09-24",
     "location": "Penang, Malaysia",
     "organizer": "Benjamin Leow Thian Loong",
-    "anticipated": "50",
+    "anticipated": "60",
     "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-wawasan-open-university/",
     "format": "Campus Connect",
     "country": "Malaysia",
     "us": false,
-    "modified": "2026-07-28",
+    "modified": "2026-08-16",
     "test": false
    },
    {
@@ -26236,7 +26268,7 @@
     "slug": "wcpt-pre-planning",
     "stage": "In Pre-Planning",
     "title": "WordCamp US 2027",
-    "start": null,
+    "start": "2027-01-01",
     "location": "USA",
     "organizer": "Megan Marcel",
     "anticipated": "",
@@ -26244,7 +26276,7 @@
     "format": "WordCamp",
     "country": "USA",
     "us": true,
-    "modified": "2026-07-17",
+    "modified": "2026-08-14",
     "test": false
    },
    {
@@ -26773,20 +26805,20 @@
    },
    "2026-07": {
     "newApps": 21,
-    "confirmed": 33,
+    "confirmed": 29,
     "closed": 7,
     "cancelled": 2,
     "declined": 3
    },
    "2026-08": {
-    "newApps": 12,
-    "confirmed": 8,
-    "closed": 4,
+    "newApps": 15,
+    "confirmed": 12,
+    "closed": 6,
     "cancelled": 12,
-    "declined": 1
+    "declined": 2
    }
   },
-  "detailAsOf": "2026-08-14",
+  "detailAsOf": "2026-08-17",
   "funnelCounts": {
    "Needs Vetting": 7,
    "Needs Orientation/Interview": 19,
