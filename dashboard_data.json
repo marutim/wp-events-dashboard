@@ -4,7 +4,7 @@
   "meetups": "2026-08-18",
   "events": "2026-08-18",
   "pipelineCounts": "2026-08-18",
-  "pipelineDetail": "2026-08-17"
+  "pipelineDetail": "2026-08-18"
  },
  "meetups": {
   "asOf": "2026-08-18",
@@ -25330,22 +25330,6 @@
     "test": false
    },
    {
-    "id": 15710097,
-    "slug": "wcpt-needs-vetting",
-    "stage": "Needs Vetting",
-    "title": "WordCamp Surabaya, East Java, Indonesia",
-    "start": null,
-    "location": "Surabaya, East Java, Indonesia",
-    "organizer": "Salman Alfarisi",
-    "anticipated": "500",
-    "link": "https://central.wordcamp.org/wordcamps/wordcamp-surabaya-east-java-indonesia-2/",
-    "format": "WordCamp",
-    "country": "Indonesia",
-    "us": false,
-    "modified": "2026-08-10",
-    "test": false
-   },
-   {
     "id": 15738147,
     "slug": "wcpt-needs-orientati",
     "stage": "Needs Orientation/Interview",
@@ -25375,6 +25359,22 @@
     "country": "India",
     "us": false,
     "modified": "2026-08-11",
+    "test": false
+   },
+   {
+    "id": 15710097,
+    "slug": "wcpt-needs-orientati",
+    "stage": "Needs Orientation/Interview",
+    "title": "WordCamp Surabaya, East Java, Indonesia",
+    "start": null,
+    "location": "Surabaya, East Java, Indonesia",
+    "organizer": "Salman Alfarisi",
+    "anticipated": "500",
+    "link": "https://central.wordcamp.org/wordcamps/wordcamp-surabaya-east-java-indonesia-2/",
+    "format": "WordCamp",
+    "country": "Indonesia",
+    "us": false,
+    "modified": "2026-08-18",
     "test": false
    },
    {
@@ -25583,22 +25583,6 @@
     "country": "Costa Rica",
     "us": false,
     "modified": "2026-08-12",
-    "test": false
-   },
-   {
-    "id": 13392262,
-    "slug": "wcpt-needs-orientati",
-    "stage": "Needs Orientation/Interview",
-    "title": "WordPress Yout Day Nicarargua 2026",
-    "start": null,
-    "location": "Managua Nicaragua",
-    "organizer": "valeria pilarte",
-    "anticipated": "",
-    "link": "https://central.wordcamp.org/wordcamps/yout-day-nicaragua/",
-    "format": "Other",
-    "country": "Managua Nicaragua",
-    "us": false,
-    "modified": "2026-08-14",
     "test": false
    },
    {
@@ -25922,6 +25906,22 @@
     "test": false
    },
    {
+    "id": 13392262,
+    "slug": "wcpt-interview-sched",
+    "stage": "Interview Scheduled",
+    "title": "WordPress Yout Day Nicarargua 2026",
+    "start": null,
+    "location": "Managua Nicaragua",
+    "organizer": "valeria pilarte",
+    "anticipated": "",
+    "link": "https://central.wordcamp.org/wordcamps/yout-day-nicaragua/",
+    "format": "Other",
+    "country": "Managua Nicaragua",
+    "us": false,
+    "modified": "2026-08-17",
+    "test": false
+   },
+   {
     "id": 15641609,
     "slug": "wcpt-approved-pre-pl",
     "stage": "Approved for Pre-Planning",
@@ -26014,7 +26014,7 @@
     "format": "Campus Connect",
     "country": "Malaysia",
     "us": false,
-    "modified": "2026-08-16",
+    "modified": "2026-08-18",
     "test": false
    },
    {
@@ -26069,16 +26069,16 @@
     "id": 15258180,
     "slug": "wcpt-approved-pre-pl",
     "stage": "Approved for Pre-Planning",
-    "title": "WordPress Campus Connect UIN Banten, Tangerang",
+    "title": "WordPress Campus Connect UIN Sultan Maulana Hasanuddin Banten 2026",
     "start": "2026-09-17",
-    "location": "Tangerang, Indonesia",
+    "location": "Serang, Indonesia",
     "organizer": "Ahmad Tabrani",
     "anticipated": "60",
     "link": "https://central.wordcamp.org/wordcamps/wordpress-campus-connect-universitas-islam-negeri-sultan-maulana-hasanuddin-banten/",
     "format": "Campus Connect",
     "country": "Indonesia",
     "us": false,
-    "modified": "2026-08-03",
+    "modified": "2026-08-18",
     "test": false
    },
    {
@@ -26828,7 +26828,7 @@
     "declined": 2
    }
   },
-  "detailAsOf": "2026-08-17",
+  "detailAsOf": "2026-08-18",
   "funnelCounts": {
    "Needs Vetting": 6,
    "Needs Orientation/Interview": 19,
